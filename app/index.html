@@ -5,11 +5,12 @@
 'title': 'Home',
 'swiper': '',
 })
+
 <body class="home">
-   <div class="wrapper">
-      @@include('./components/structure/_header.html')
-      <main>
-         <!-- * Подключение кнопок
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<!-- * Подключение кнопок
 				@@include('./components/base/_btn.html', {
 					'text': 'Premium access',
 					'modify': 'big grad-bg'
@@ -25,19 +26,21 @@
 					'modify': 'small dark-bg'
 				})
 			*-->
-         <!-- * Подключение спойлера
+			<!-- * Подключение спойлера
 				@@include('./components/base/_spoiler.html')
 			* -->
-         <section class="hero">
-            <div class="hero__container">
-               <h6>something</h6>
-            </div>
-         </section>
-      </main>
-      @@include('./components/structure/_footer.html')
-   </div>
-   @@include('./components/structure/_scripts.html', {
+			<section class="hero">
+				<div class="hero__container">
+					<h6>something</h6>
+				</div>
+			</section>
+
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
 	'swiper': '',
 	})
 </body>
+
 </html>
