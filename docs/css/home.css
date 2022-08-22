@@ -243,6 +243,11 @@ h2 {
   line-height: 1.3076923077;
 }
 
+h2.mobile {
+  font-size: 1.625em;
+  line-height: 1.3076923077;
+}
+
 h3 {
   font-weight: 700;
   font-size: 1.125em;
@@ -255,6 +260,19 @@ h4 {
   line-height: 1.5227272727;
 }
 
+h6 {
+  background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.8928571429;
+}
+
 .content-text {
   font-size: 0.9375em;
   line-height: 1.6;
@@ -263,6 +281,13 @@ h4 {
 .content-text-small {
   font-size: 0.75em;
   line-height: 1.6666666667;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  color: #1d1f21;
 }
 
 .header {
@@ -748,7 +773,10 @@ h4 {
 
   h4 {
     font-size: 1.625em;
-    line-height: 1.2884615385;
+  }
+
+  h6 {
+    font-size: 1.125em;
   }
 
   .content-text {
