@@ -1,0 +1,112 @@
+.btn {
+   cursor: pointer;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding-left: 17.5px;
+   padding-right: 17px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   border-radius: rem(16);
+   min-height: 52px;
+   position: relative;
+   &:after {
+      transition: all 0.3s ease;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+   }
+   a {
+      font-weight: 700;
+      @include fl(15, 26.5);
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+   }
+   @media (min-width: 1200px) {
+      min-height: 64px;
+      padding-left: 24px;
+      padding-right: 22px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      a {
+         @include fl(18, 26.5);
+      }
+   }
+   &.big {
+      max-width: 170px;
+      @media (min-width: 1200px) {
+         max-width: 209px;
+      }
+   }
+   &.small {
+      max-width: 117px;
+      @media (min-width: 1200px) {
+         max-width: 145px;
+      }
+   }
+   &.grad-bg {
+      background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+      i {
+         margin-right: 9.5px;
+         @media (min-width: 1200px) {
+            margin-right: 10px;
+         }
+      }
+      a {
+         color: $darkColor;
+      }
+   }
+
+   &.grad-text {
+      background: #000 linear-gradient(94.78deg, rgba(104, 201, 255, 0.25) 9.27%, rgba(209, 181, 255, 0.25) 84.06%);
+   }
+   &.dark-bg {
+      background-color: $darkColor;
+   }
+
+   &.grad-text,
+   &.dark-bg {
+      i {
+         display: none;
+      }
+      a {
+         background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         color: transparent;
+      }
+      &:hover {
+         a {
+            background: linear-gradient(270deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+         }
+      }
+   }
+   transition: all 0.3s ease;
+   &:hover {
+      transform: scale(1.1);
+      position: relative;
+      &:after {
+         background: rgba(0, 0, 0, 0.3);
+      }
+      a {
+         color: #fff;
+      }
+   }
+   &:active {
+      &:after {
+         background: rgba(0, 0, 0, 0.1);
+      }
+   }
+}

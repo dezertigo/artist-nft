@@ -1,0 +1,40 @@
+h1 {
+   font-weight: 700;
+   @include fl(36, 40);
+   @media (min-width: 1200px) {
+      @include fl(64, 65);
+   }
+}
+h2 {
+   font-weight: 700;
+   @include fl(26, 34);
+   @media (min-width: 1200px) {
+      @include fl(36, 49.5);
+   }
+}
+h3 {
+   font-weight: 700;
+   @include fl(18, 26);
+   @media (min-width: 1200px) {
+      @include fl(20, 30);
+   }
+}
+h4 {
+   font-weight: 700;
+   @include fl(22, 33.5);
+   @media (min-width: 1200px) {
+      @include fl(26, 33.5);
+   }
+}
+.content-text {
+   @include fl(15, 24);
+   @media (min-width: 1200px) {
+      @include fl(16, 28);
+   }
+}
+.content-text-small {
+   @include fl(12, 20);
+   @media (min-width: 1200px) {
+      @include fl(14, 21);
+   }
+}

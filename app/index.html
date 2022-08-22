@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/home.min.css',
+'title': 'Home',
+'swiper': '',
+})
+<body class="home">
+   <div class="wrapper">
+      @@include('./components/structure/_header.html')
+      <main>
+         <!-- * Подключение кнопок
+       
+			-->
+         @@include('./components/base/_btn.html', {
+				'text': 'Premium access',
+				'modify': 'big grad-bg'
+				})
+
+			@@include('./components/base/_btn.html', {
+				'text': 'Discover',
+				'modify': 'small grad-text'
+			})
+			
+			@@include('./components/base/_btn.html', {
+				'text': 'Buy',
+				'modify': 'small dark-bg'
+			})
+         <!-- * Подключение спойлера
+				@@include('./components/base/_spoiler.html')
+			* -->
+         <section class="hero">
+            <div class="hero__container"></div>
+         </section>
+      </main>
+      @@include('./components/structure/_footer.html')
+   </div>
+   @@include('./components/structure/_scripts.html', {
+	'swiper': '',
+	})
+</body>
+</html>
