@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ! Изменить все "catalog" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
 <html lang="en">
 
 <head>
@@ -7,13 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
 	
-	<link rel="stylesheet" href="./css/home.min.css">
+	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+	
+	<link rel="stylesheet" href="./css/catalog.min.css">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
-	<title>Home</title>
+	<title>catalog</title>
 </head>
-<body class="home">
-   <div class="wrapper">
-      <header class="header">
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="catalog">
+	<div class="wrapper">
+		<header class="header">
    <div class="header__container">
       <div class="header__body">
          <div class="header__burger burger">
@@ -49,24 +54,18 @@
    </div>
 </header>
 
-      <main>
-         <!-- * Подключение кнопок
+		<main>
+			<!-- ? Подключение кнопок
 				<div class="btn big grad-bg">
    <a href="#">Premium access</a>
 </div>
 
-	
 				<div class="btn small grad-text">
    <a href="#">Discover</a>
 </div>
 
-				
-				<div class="btn small dark-bg">
-   <a href="#">Buy</a>
-</div>
-
-			*-->
-         <!-- * Подключение спойлера
+			-->
+			<!-- ? Подключение спойлера
 				<section class="spoiler">
 	<div class="spoiler__preview">
 		<h4 class="spoiler__title">Today’s total</h4>
@@ -85,21 +84,25 @@
 		</div>
 	</div>
 </section>
-			* -->
-         <section class="hero">
-            <div class="hero__container">
-               <h6>something</h6>
-            </div>
-         </section>
-      </main>
-      <footer class="footer">
+			-->
+			<section class="hero">
+				<div class="hero__container">
+
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
    <div class="footer__container">
       <p>Footer</p>
    </div>
 </footer>
 
-   </div>
-   
+	</div>
+	
+<script src="js/swiper-bundle.min.js"></script>
+
 <script src="js/script.min.js"></script>
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
 </body>
+
 </html>
