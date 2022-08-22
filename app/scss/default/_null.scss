@@ -135,13 +135,15 @@ table {
 a {
    color: inherit;
    text-decoration: none;
+   font-family: inherit;
 }
 input {
    color: inherit;
-
+   font-family: inherit;
    &::placeholder {
       color: inherit;
       font-size: 1em;
+      font-family: inherit;
    }
    &:focus {
       outline: none;
