@@ -2,6 +2,12 @@
 
 /*Шрифты*/
 
+.burger.active .burger__wrapper span,
+.burger.active .burger__wrapper:before,
+.burger.active .burger__wrapper:after {
+  background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+}
+
 .header__premium-btn {
   background: #000 linear-gradient(94.78deg, rgba(104, 201, 255, 0.25) 9.27%, rgba(209, 181, 255, 0.25) 84.06%);
 }
@@ -657,210 +663,45 @@ h6 {
 .burger__wrapper:before,
 .burger__wrapper:after {
   height: 2px;
-  background-color: #fff;
+  background: linear-gradient(to right, #fff 0%, #fff 100%);
   transition: all 0.3s ease;
   transform: translate(0, 0);
   position: relative;
   left: 0;
   border-radius: 3px;
+  margin-left: auto;
 }
 
 .burger__wrapper:before {
   content: "";
-  -webkit-animation: burgerTopDisabled 0.7s ease 0s 1;
-  animation: burgerTopDisabled 0.7s ease 0s 1;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
   width: 50%;
-  margin-left: auto;
+  top: 0;
 }
 
 .burger__wrapper:after {
   content: "";
-  -webkit-animation: burgerBottomDisabled 0.7s ease 0s 1;
-  animation: burgerBottomDisabled 0.7s ease 0s 1;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
   width: 50%;
-  margin-left: auto;
+  top: 100%;
+  transform: translate(0, -300%);
 }
 
 .burger__wrapper span {
   top: 50%;
   transform: translate(0, -150%);
-  transition: background-color 0.3s ease, transform 0.7s ease 0s;
   width: 100%;
-}
-
-@-webkit-keyframes burgerTopDisabled {
-  0% {
-    top: 50%;
-    transform: translate(0, -50%) rotate(-45deg);
-    width: 100%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-
-  100% {
-    top: 0;
-    transform: translate(0, 0);
-    width: 50%;
-  }
-}
-
-@keyframes burgerTopDisabled {
-  0% {
-    top: 50%;
-    transform: translate(0, -50%) rotate(-45deg);
-    width: 100%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-
-  100% {
-    top: 0;
-    transform: translate(0, 0);
-    width: 50%;
-  }
-}
-
-@-webkit-keyframes burgerBottomDisabled {
-  0% {
-    top: 50%;
-    transform: translate(0, -250%) rotate(45deg);
-    width: 100%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -250%);
-  }
-
-  100% {
-    top: 100%;
-    transform: translate(0, -300%);
-    width: 50%;
-  }
-}
-
-@keyframes burgerBottomDisabled {
-  0% {
-    top: 50%;
-    transform: translate(0, -250%) rotate(45deg);
-    width: 100%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -250%);
-  }
-
-  100% {
-    top: 100%;
-    transform: translate(0, -300%);
-    width: 50%;
-  }
+  transition: all 0.3s ease;
 }
 
 .burger.active .burger__wrapper:before {
-  -webkit-animation: burgerTopActive 0.7s ease 0s 1;
-  animation: burgerTopActive 0.7s ease 0s 1;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.burger.active .burger__wrapper span {
-  transform: translate(0, -150%) scaleX(0);
-  transition: background-color 0.3s ease, transform 0.35s ease 0.3s;
+  width: 30%;
 }
 
 .burger.active .burger__wrapper:after {
-  -webkit-animation: burgerBottomActive 0.7s ease 0s 1;
-  animation: burgerBottomActive 0.7s ease 0s 1;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  width: 100%;
 }
 
-@-webkit-keyframes burgerTopActive {
-  0% {
-    top: 0;
-    transform: translate(0, 0);
-    width: 50%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-
-  100% {
-    top: 50%;
-    transform: translate(0, -50%) rotate(-45deg);
-    width: 100%;
-  }
-}
-
-@keyframes burgerTopActive {
-  0% {
-    top: 0;
-    transform: translate(0, 0);
-    width: 50%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-
-  100% {
-    top: 50%;
-    transform: translate(0, -50%) rotate(-45deg);
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes burgerBottomActive {
-  0% {
-    top: 100%;
-    transform: translate(0, -300%);
-    width: 50%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -250%);
-  }
-
-  100% {
-    top: 50%;
-    transform: translate(0, -250%) rotate(45deg);
-    width: 100%;
-  }
-}
-
-@keyframes burgerBottomActive {
-  0% {
-    top: 100%;
-    transform: translate(0, -300%);
-    width: 50%;
-  }
-
-  50% {
-    top: 50%;
-    transform: translate(0, -250%);
-  }
-
-  100% {
-    top: 50%;
-    transform: translate(0, -250%) rotate(45deg);
-    width: 100%;
-  }
+.burger.active .burger__wrapper span {
+  width: 65%;
 }
 
 .pop-up {
