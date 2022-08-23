@@ -951,11 +951,6 @@ h6 {
   background-color: #1d1f21;
 }
 
-.btn.grad-text i,
-.btn.dark-bg i {
-  display: none;
-}
-
 .btn.grad-text a,
 .btn.dark-bg a {
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
