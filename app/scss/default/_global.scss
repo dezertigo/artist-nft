@@ -1,11 +1,15 @@
 body.lock {
    overflow: hidden;
+   &:before {
+      display: none;
+   }
 }
 
 body {
    font-family: $ff1;
    @include fz(16);
    font-weight: 400;
+   background-color: $darkColor;
 }
 [class*="__container"] {
    padding-left: percent(15, 375);
