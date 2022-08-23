@@ -593,6 +593,10 @@ h6 {
   transform: translate(0, 3px) scale(1.2);
 }
 
+.header__action {
+  z-index: 2;
+}
+
 .header__buttons .btn.big {
   display: none;
 }
