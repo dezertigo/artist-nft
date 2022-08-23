@@ -23,6 +23,7 @@
       }
    }
    &__action {
+      z-index: 2;
       @media (max-width: 1049px) {
          transition: all 0.5s ease;
          position: fixed;
