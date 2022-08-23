@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- ! Изменить все "Start" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/home.min.css',
+'title': 'Start',
+'swiper': 'y',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="start">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<div class="btns-just-test">
+				@@include('./components/base/_btn.html', {
+				'text': 'Premium access',
+				'modify': 'big grad-bg',
+				'crown': 'crown'
+				})
+
+				@@include('./components/base/_btn.html', {
+				'text': 'Get custom now',
+				'modify': 'big grad-bg',
+				'lock': 'lock'
+				})
+
+				@@include('./components/base/_btn.html', {
+				'text': 'Discover',
+				'modify': 'small grad-text',
+				'empty': 'empty'
+				})
+
+				@@include('./components/base/_btn.html', {
+				'text': 'View',
+				'modify': 'small grad-text',
+				'arrow': 'arrow'
+				})
+
+				@@include('./components/base/_btn.html', {
+				'text': 'Buy',
+				'modify': 'small dark-bg',
+				'empty': 'empty'
+				})
+			</div>
+			<!--  Подключение спойлера
+				@@include('./components/base/_spoiler.html')
+			-->
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'yes',
+	})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>

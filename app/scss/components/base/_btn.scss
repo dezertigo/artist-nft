@@ -1,3 +1,36 @@
+.btns-just-test {
+   display: flex;
+   flex-direction: column;
+
+   row-gap: 20px;
+   padding: 30px;
+   background-color: lightgrey;
+}
+.btn {
+   i {
+      &.crown {
+         @include fl(15);
+         margin-right: 10px;
+         @media (min-width: 1000px) {
+            @include fl(20);
+         }
+      }
+      &.arrow-next-grad {
+         @include fl(12);
+         margin-left: 14px;
+         @extend %grad-text;
+      }
+   }
+   svg.lock {
+      margin-right: 12px;
+      width: 12px;
+      height: 16px;
+      @media (min-width: 1000px) {
+         width: 15px;
+         height: 20px;
+      }
+   }
+}
 .btn {
    cursor: pointer;
    overflow: hidden;
@@ -9,7 +42,7 @@
    padding-right: 17px;
    padding-top: 10px;
    padding-bottom: 10px;
-   border-radius: rem(16);
+   border-radius: rem(12);
    min-height: 52px;
    position: relative;
    &:after {
@@ -28,6 +61,7 @@
       position: relative;
       z-index: 1;
       transition: all 0.3s ease;
+      white-space: nowrap;
    }
    @media (min-width: 1200px) {
       min-height: 64px;
@@ -35,6 +69,8 @@
       padding-right: 22px;
       padding-top: 15px;
       padding-bottom: 15px;
+      border-radius: rem(16);
+
       a {
          @include fl(18, 26.5);
       }

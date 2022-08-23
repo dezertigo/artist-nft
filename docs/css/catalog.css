@@ -17,6 +17,7 @@
   background: #000 linear-gradient(94.78deg, rgba(104, 201, 255, 0.25) 9.27%, rgba(209, 181, 255, 0.25) 84.06%);
 }
 
+.btn i.arrow-next-grad,
 .menu li:hover a,
 .header__premium-btn i {
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
@@ -862,6 +863,32 @@ h6 {
   transform: rotate(180deg);
 }
 
+.btns-just-test {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 30px;
+  background-color: lightgrey;
+}
+
+.btn i.crown {
+  font-size: 0.9375em;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+.btn i.arrow-next-grad {
+  font-size: 0.75em;
+  line-height: 1;
+  margin-left: 14px;
+}
+
+.btn svg.lock {
+  margin-right: 12px;
+  width: 12px;
+  height: 16px;
+}
+
 .btn {
   cursor: pointer;
   overflow: hidden;
@@ -873,7 +900,7 @@ h6 {
   padding-right: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   min-height: 52px;
   position: relative;
   transition: all 0.3s ease;
@@ -897,6 +924,7 @@ h6 {
   position: relative;
   z-index: 1;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn.big {
@@ -973,6 +1001,18 @@ h6 {
 
   .header__premium-btn i {
     font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .btn i.crown {
+    font-size: 1.25em;
+    line-height: 1;
+  }
+
+  .btn svg.lock {
+    width: 15px;
+    height: 20px;
   }
 }
 
@@ -1093,6 +1133,7 @@ h6 {
     padding-right: 22px;
     padding-top: 15px;
     padding-bottom: 15px;
+    border-radius: 1rem;
   }
 
   .btn a {
