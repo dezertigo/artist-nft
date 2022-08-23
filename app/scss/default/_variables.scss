@@ -4,3 +4,18 @@ $ff2: "Manrope";
 
 //Цвета шрифтов
 $darkColor: #1d1f21;
+
+//Extends
+%grad-bg {
+   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+}
+%grad-bg-black {
+   background: #000 linear-gradient(94.78deg, rgba(104, 201, 255, 0.25) 9.27%, rgba(209, 181, 255, 0.25) 84.06%);
+}
+%grad-text {
+   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   color: transparent;
+}

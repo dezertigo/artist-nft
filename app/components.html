@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/home.min.css',
+'title': 'Components',
+'swiper': 'y',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="components">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<!-- Подключение кнопок -->
+			<div class="btns-just-test">
+				<!-- С иконкой короны -->
+				@@include('./components/base/_btn.html', {
+				'text': 'Premium access',
+				'modify': 'big grad-bg',
+				'crown': 'crown'
+				})
+				<!-- С иконкой замкф -->
+				@@include('./components/base/_btn.html', {
+				'text': 'Get custom now',
+				'modify': 'big grad-bg',
+				'lock': 'lock'
+				})
+
+				<!-- Просто текст -->
+				@@include('./components/base/_btn.html', {
+				'text': 'Discover',
+				'modify': 'small grad-text',
+				'empty': 'empty'
+				})
+
+				<!-- С градиентной стрелкой -->
+				@@include('./components/base/_btn.html', {
+				'text': 'View',
+				'modify': 'small grad-text',
+				'arrow': 'arrow'
+				})
+
+				<!-- Просто текст -->
+				@@include('./components/base/_btn.html', {
+				'text': 'Buy',
+				'modify': 'small dark-bg',
+				'empty': 'empty'
+				})
+			</div>
+			<!-- фоновый текст с обводкой -->
+			@@include('./components/blocks/_stroke-text.html', {
+			'text': 'make art'
+			})
+
+			<!--  Подключение спойлера
+				@@include('./components/base/_spoiler.html')
+			-->
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'yes',
+	})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>
