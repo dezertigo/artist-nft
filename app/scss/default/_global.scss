@@ -14,7 +14,7 @@ body {
 [class*="__container"] {
    padding-left: percent(15, 375);
    padding-right: percent(15, 375);
-   @media (min-width: 1000px) {
+   @media (min-width: 1250px) {
       padding-left: percent(150, 1440);
       padding-right: percent(150, 1440);
    }
