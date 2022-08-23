@@ -1,20 +1,29 @@
 .gallery {
+    overflow: hidden;
     background: $darkColor;
     color: #fff;
     padding: 26px 0 38px;
     position: relative;
+    @media (min-width:1200px) {
+        padding: 62px 0 76px;
+    }
     i {
         position: absolute;
         left: percent(356, 375);
         font-size: 36px;
     }
     &__title {
-        margin-bottom: 16px;
+        margin-bottom: 17px;
         text-align: center;
     }
     &__text {
-        margin-bottom: 48px;
         text-align: center;
+        max-width: 322px;
+        margin: 0 auto 46px;
+        @media (min-width:1200px) {
+            max-width: 400px;
+            margin-bottom: 48px;
+        }
     }
     &__inner {
         display: grid;
@@ -100,7 +109,6 @@
             left: 33px;
         }
     }
-    
     &__content {
         position: absolute;
         top: 0;
@@ -120,11 +128,13 @@
     }
     &__title {
         margin-bottom: 2px;
+        transform: translateY(5px);
     }
     &__text {
         max-width: 257px;
         margin: 0 auto 16px;
         text-align: center;
+        transform: translateY(10px);
     }
     &__price {
         margin-bottom: 24px;
@@ -160,20 +170,47 @@
             max-width: 134px;
             justify-content: start;
             padding: 18px 30px;
+            @media (min-width:1200px) {
+                padding: 18px 30px;
+                transform: translateY(-3px);
+            }
         }
     }
   }
-  .card-item--big {
-    .image {
-        padding-bottom: calc(200/345*100%);
-    }
-  }
+.card-item--big {
   .image {
+    padding-bottom: calc(200/345*100%);
   }
-  .arrow-next-grad {
-  }
-  .locked {
-  }
-  .none {
-  }
-  
+}
+
+i.star-decor {
+    top: 0;
+    @media (min-width:1200px) {
+        left: percent(390, 1440);
+        font-size: 62px;
+        // transform: translateY(-13px);
+        top: 50px;
+    }
+}
+
+.text-stroke {
+    display: none;
+    @include fl(80, 97);
+    font-family: $ff1;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    text-transform: uppercase;
+    opacity: 0.2;
+    position: absolute;
+    &--left {
+        left: percent(-38, 1440);
+    }
+    &--right {
+        right: percent(-26, 1440);
+    }
+    @media (min-width:1200px) {
+        display: block;
+        top: 87px;
+    }
+}
