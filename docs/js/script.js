@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
                body.classList.add("lock");
                window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
             }
-         } else if (!e.target.closest(".burger") && !e.target.closest(".menu")) {
+         } else if (!e.target.closest(".burger") && !e.target.closest(".header__action-wrapper")) {
             burger.classList.remove("active");
             header.classList.remove("active");
             headerAction.classList.remove("active");

@@ -1,18 +1,16 @@
 .header {
    position: relative;
-   &:before {
-      // Накрывает менюшки с position: fixed
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent; // todo Изменить на нужны цвет подложки
-      z-index: 1;
-   }
-   &__container {
-   }
+   // &:before {
+   //    // Накрывает менюшки с position: fixed
+   //    content: "";
+   //    position: absolute;
+   //    top: 0;
+   //    left: 0;
+   //    width: 100%;
+   //    height: 100%;
+   //    background-color: transparent; // todo Изменить на нужны цвет подложки
+   //    z-index: 1;
+   // }
    &__body {
       min-height: 64px; // todo Указываем минимальную высоту шапки
       display: flex;
@@ -46,22 +44,45 @@
       // display: none; // ! NONE
       transition: all 0.5s ease;
       position: fixed;
+      width: 100vw;
+      height: 100vh;
       top: 0;
       right: -100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      width: 100%;
-      padding-top: 64px;
-      padding-bottom: 20px;
-      background-color: $darkColor;
-      padding-right: percent(19, 375);
-      padding-left: percent(19, 375);
-      row-gap: 30px;
-      @media (min-width: 468px) {
-         width: auto;
-         border-radius: 0 0 0 16px;
+      &-wrapper {
+         padding-right: percent(15, 375);
+         padding-left: percent(15, 375);
+         position: absolute;
+         padding-top: 64px;
+         padding-bottom: 30px;
+         top: 0;
+         right: 0;
+         width: 100%;
+         height: 100%; // Навесить джсом скролл.высоту
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         background-color: $darkColor;
+         @media (min-width: 468px) {
+            border-radius: 0 0 0 16px;
+            width: auto;
+         }
       }
+      &-body {
+         overflow: auto;
+         display: inline-flex;
+         flex-direction: column;
+         align-items: flex-end;
+         background-color: $darkColor;
+         row-gap: 30px;
+         overflow: scroll;
+         width: 100%;
+         padding-right: 4px;
+         padding-left: 4px;
+         @media (min-width: 468px) {
+            width: auto;
+         }
+      }
+
       &:before {
          content: "";
          position: absolute;
