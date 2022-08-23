@@ -1,48 +1,311 @@
 .header {
    position: relative;
-   &:before {
-      // Накрывает менюшки с position: fixed
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent; // todo Изменить на нужны цвет подложки
-      z-index: 1;
-   }
-   &__container {
-   }
    &__body {
-      min-height: 70px; // todo Указываем минимальную высоту шапки
+      min-height: 64px; // todo Указываем минимальную высоту шапки
       display: flex;
       justify-content: space-between; // todo Позиционируем элементы по оси Х
       align-items: center;
+      padding-left: 8px;
+      @media (min-width: 1050px) {
+         column-gap: 20px;
+      }
+      @media (min-width: 1250px) {
+         column-gap: 34px;
+      }
    }
    &__logo {
       z-index: 2;
       font-size: 35px;
       transition: all 0.3s ease;
-
+      transform: translate(0, 3px);
       &:hover {
-         transform: scale(1.2);
+         transform: translate(0, 3px) scale(1.2);
+      }
+   }
+   &__action {
+      z-index: 2;
+      @media (max-width: 1049px) {
+         transition: all 0.5s ease;
+         position: fixed;
+         width: 100vw;
+         height: 100vh;
+         top: 0;
+         right: -100%;
+         &-wrapper {
+            padding-right: percent(15, 375);
+            padding-left: percent(15, 375);
+            position: absolute;
+            padding-top: 64px;
+            padding-bottom: 30px;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            // height: 100%; // Навесить джсом скролл.высоту
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: $darkColor;
+            @media (min-width: 468px) {
+               border-radius: 0 0 0 16px;
+               width: auto;
+            }
+         }
+         &-body {
+            overflow: auto;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: $darkColor;
+            row-gap: 30px;
+            width: 100%;
+            padding-right: 4px;
+            padding-left: 4px;
+            @media (min-width: 468px) {
+               width: auto;
+            }
+         }
+
+         &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: calc(-100vw + 100%);
+            width: 100vw;
+            height: 100vh;
+            opacity: 0;
+            backdrop-filter: blur(3px);
+            z-index: -1;
+            transition: all 0.3s ease 0.3s;
+         }
+         &.active {
+            right: 0;
+            &:before {
+               opacity: 1;
+            }
+         }
+      }
+      @media (min-width: 1050px) {
+         flex: 1 1 auto;
+         &-body {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            column-gap: 25px;
+         }
+      }
+   }
+   &__buttons {
+      @media (max-width: 1049px) {
+         display: flex;
+         justify-content: space-between;
+         align-items: baseline;
+         width: 100%;
+         column-gap: 32px;
+      }
+      @media (min-width: 1050px) {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         column-gap: 8px;
+      }
+      .btn.big {
+         display: none;
+         @media (min-width: 1050px) {
+            display: flex;
+         }
+      }
+   }
+   .spoiler {
+      background-color: #212426;
+      color: #c8d2dc;
+      border-radius: rem(7);
+      font-family: $ff2;
+      @include fl(14, 19);
+      &__preview {
+         cursor: pointer;
+         padding-top: 8px;
+         padding-bottom: 8px;
+         padding-left: 12px;
+         padding-right: 17px;
+         position: relative;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__title {
+         margin-right: 8px;
+      }
+      &__icon {
+         transition: all 0.3s ease;
+         @include fl(6);
+      }
+      &__wrapper {
+         height: 0;
+         overflow: hidden;
+         transition: all 0.5s ease;
+      }
+      &__body {
+         padding-top: 8px;
+         padding-bottom: 8px;
+         padding-left: 12px;
+         padding-right: 17px;
+         display: flex;
+         flex-direction: column;
+         row-gap: 8px;
+
+         p {
+            cursor: pointer;
+            display: inline-block;
+         }
+      }
+      &.opened {
+         .spoiler {
+            &__icon {
+               transform: rotate(180deg);
+            }
+         }
+      }
+   }
+   .btn {
+      min-height: 48px;
+      padding-left: 22px;
+      padding-right: 22px;
+      a {
+         @include fl(14, 20);
+         white-space: nowrap;
+      }
+   }
+   &__premium-btn {
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+      @extend %grad-bg-black;
+      padding: 8.5px;
+      margin-left: auto;
+      margin-right: 6px;
+      border-radius: rem(9);
+      @media (min-width: 769px) {
+         height: 40px;
+         width: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         i {
+            @include fz(24);
+         }
+      }
+      @media (min-width: 1050px) {
+         display: none;
+      }
+      i {
+         @include fl(15);
+         @extend %grad-text;
+      }
+      transition: all 0.3s ease;
+      &:hover {
+         transform: scale(1.1);
       }
    }
 }
 
-.header-action {
-   position: relative;
-   z-index: 2;
-   display: flex;
-   align-items: center;
+.menu {
+   @media (max-width: 1049px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      text-align: right;
+   }
+   @media (min-width: 1050px) {
+      flex: 1 1 auto;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 15px;
+      color: #fff;
+      max-width: 508px;
+   }
    li {
       cursor: pointer;
+      position: relative;
       transition: all 0.3s ease;
-      &:hover {
-         transform: scale(1.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 1049px) {
+         padding-top: 5px;
+         padding-bottom: 5px;
+         width: 100%;
       }
-      &:not(:last-child) {
-         margin-right: 15px;
+
+      &:after {
+         @extend %grad-bg;
+         @media (max-width: 1049px) {
+            pointer-events: none;
+            transition: all 0.3s ease;
+            content: "";
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            width: 100%;
+            height: 1px;
+            opacity: 0.1;
+         }
+      }
+      a {
+         transition: all 0.3s ease;
+         font-family: $ff2;
+         @include fl(16, 21);
+         background: linear-gradient(94.78deg, #c8d2dc 0%, #c8d2dc 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         color: transparent;
+         white-space: nowrap;
+         position: relative;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         svg {
+            margin-right: 12px;
+            transform: translate(1px, 1px);
+         }
+         @media (min-width: 1050px) {
+            padding-top: 5px;
+            padding-bottom: 5px;
+         }
+         &:after {
+            @media (min-width: 1050px) {
+               transition: all 0.5s ease;
+               content: "";
+               position: absolute;
+               top: calc(100% - 3px);
+               left: 0;
+               width: 0;
+               height: 1px;
+            }
+            @extend %grad-bg;
+         }
+         @media (min-width: 1050px) {
+            @include fl(14, 19);
+         }
+      }
+      transition: all 0.5s ease;
+      &:hover {
+         &:after {
+            opacity: 0.3;
+         }
+         a {
+            @extend %grad-text;
+            &:after {
+               @media (min-width: 1050px) {
+                  width: 100%;
+               }
+            }
+         }
       }
    }
 }
@@ -50,10 +313,12 @@
 .burger {
    position: relative;
    z-index: 2;
-   min-height: 40px; // Высота блока для удобства нажатия на иконку
-   width: 40px; // Ширина блока для удобства нажатия на иконку
+   min-height: 32px; // Высота блока для удобства нажатия на иконку
+   width: 32px; // Ширина блока для удобства нажатия на иконку
    // ? Двигаем на половину от разницы между width для .burger и width для .burger__wrapper что бы .burger прилип к контейнеру
-   margin-left: -5px;
+   // margin-left: -5px;
+   margin-right: rem(-4);
+
    // ? Двигаем на половину от разницы между width для .burger и width для .burger__wrapper что бы .burger прилип к контейнеру
    display: flex;
    align-items: center;
@@ -63,127 +328,71 @@
    &:hover {
       transform: scale(1.2);
    }
-   @media (min-width: 769px) {
+   @media (min-width: 1050px) {
       display: none;
    }
    // todo Если нужно изменить цвет бургера при наведении
-   /* 
    &:hover .burger__wrapper {
       span,
       &:before,
       &:after {
-         background-color: orange; 
+         @extend %grad-bg;
       }
    }
-	*/
    &__wrapper {
-      width: 30px; // todo Макетная ширина бургера
-      height: 20px; // todo Макетная высота бургера
+      width: 16px; // todo Макетная ширина бургера
+      height: 12px; // todo Макетная высота бургера
       position: relative;
       display: flex;
       flex-direction: column;
       span,
       &:before,
       &:after {
-         width: 100%;
+         // width: 100%;
          height: 2px;
-         background-color: #000;
+         background: linear-gradient(to right, #fff 0%, #fff 100%);
          transition: all 0.3s ease;
          transform: translate(0, 0);
          position: relative;
          left: 0;
+         border-radius: 1px;
+         margin-left: auto;
       }
       &:before {
          content: "";
-         animation: burgerTopDisabled 0.7s ease 0s 1;
-         animation-fill-mode: forwards;
+         width: 50%;
+         top: 0;
+         transform: translate(0, -50%);
       }
       &:after {
          content: "";
-         animation: burgerBottomDisabled 0.7s ease 0s 1;
-         animation-fill-mode: forwards;
+         width: 75%;
+         top: 100%;
+         transform: translate(0, -250%);
       }
       span {
          top: 50%;
          transform: translate(0, -150%);
-         // transition: background-color 0.3s ease, transform 0.3s ease 0.35s; //! Interesting effect (on desktop)
-         transition: background-color 0.3s ease, transform 0.3s ease 0s;
-      }
-
-      @keyframes burgerTopDisabled {
-         // Closing burger animation
-         0% {
-            top: 50%;
-            transform: translate(0, -50%) rotate(-45deg);
-         }
-         50% {
-            top: 50%;
-            transform: translate(0, -50%);
-         }
-         100% {
-            top: 0;
-            transform: translate(0, 0);
-         }
-      }
-      @keyframes burgerBottomDisabled {
-         // Closing burger animation
-         0% {
-            top: 50%;
-            transform: translate(0, -250%) rotate(45deg);
-         }
-         50% {
-            top: 50%;
-            transform: translate(0, -250%);
-         }
-         100% {
-            top: 100%;
-            transform: translate(0, -300%);
-         }
+         width: 100%;
+         transition: all 0.3s ease;
       }
    }
    &.active {
       // Opening burger animation
       .burger__wrapper {
-         &:before {
-            animation: burgerTopActive 0.7s ease 0s 1;
-            animation-fill-mode: forwards;
+         span,
+         &:before,
+         &:after {
+            @extend %grad-bg;
          }
-         span {
-            transform: translate(0, -150%) scale(0);
-            // transition: background-color 0.3s ease, transform 0.3s ease 0s; //! Interesting effect (on desktop)
-            transition: background-color 0.3s ease, transform 0.3s ease 0.3s;
+         &:before {
+            width: 30%;
          }
          &:after {
-            animation: burgerBottomActive 0.7s ease 0s 1;
-            animation-fill-mode: forwards;
+            width: 100%;
          }
-         @keyframes burgerTopActive {
-            0% {
-               top: 0;
-               transform: translate(0, 0);
-            }
-            50% {
-               top: 50%;
-               transform: translate(0, -50%);
-            }
-            100% {
-               top: 50%;
-               transform: translate(0, -50%) rotate(-45deg);
-            }
-         }
-         @keyframes burgerBottomActive {
-            0% {
-               top: 100%;
-               transform: translate(0, -300%);
-            }
-            50% {
-               top: 50%;
-               transform: translate(0, -250%);
-            }
-            100% {
-               top: 50%;
-               transform: translate(0, -250%) rotate(45deg);
-            }
+         span {
+            width: 65%;
          }
       }
    }

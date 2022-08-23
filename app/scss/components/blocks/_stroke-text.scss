@@ -1,0 +1,23 @@
+.stroke-text {
+   text-transform: uppercase;
+   position: absolute;
+   font-weight: 700;
+   @include fl(50);
+   -webkit-text-fill-color: transparent;
+   -webkit-text-stroke: 1px rgba(252, 255, 255, 0.2);
+   @media (min-width: 500px) {
+      @include fl(54);
+   }
+   @media (min-width: 700px) {
+      @include fl(62);
+   }
+   @media (min-width: 1000px) {
+      @include fl(70);
+   }
+   @media (min-width: 1200px) {
+      @include fl(75);
+   }
+   @media (min-width: 1400px) {
+      @include fl(80);
+   }
+}
