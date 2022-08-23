@@ -10,7 +10,7 @@
 
 <body class="catalog">
 	<div class="wrapper">
-		@@include('./components/structure/_header.html')
+		<!-- @@include('./components/structure/_header.html') -->
 		<main>
 			<!-- ? Подключение кнопок
 				@@include('./components/base/_btn.html', {
@@ -25,14 +25,307 @@
 			<!-- ? Подключение спойлера
 				@@include('./components/base/_spoiler.html')
 			-->
-			<section class="hero">
-				<div class="hero__container">
-					<div class="class__image image hv">
-						<picture>
-						   <source type="image/webp" srcset="@img/gallery/01.webp">
-						   <img src="@img/gallery/01.jpg" alt="product image">
-						</picture>
-					 </div>
+			<section class="gallery">
+				<i class="star-decor"></i>
+				<div class="gallery__container">
+					<h1 class="gallery__title">
+						Art which inspire
+					</h1>
+					<p class="gallery__text">
+						Indulgence announcing uncommonly met she continuing two unpleasing terminated
+					</p>
+					<div class="gallery__inner">
+						<div class="card-item card-item--big">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a><a class="card-item__btn btn  card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item locked none">
+							<div class="gallery__image image blur">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							</div>
+							<div class="card-item__locked">
+								<h6 class="card-item__locked-caption">
+									avalaible for premium
+								</h6>
+								<h4 class="card-item__locked-title">
+									<i class="lock"></i> CONTENT LOCKED
+								</h4>
+								<a class="card-item__btn btn card-item__btn--wide" href="#">
+									<span>Unlock</span>
+									<i class="arrow-next-grad"></i>
+								</a>
+							</div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn"  href="#">
+										<span> Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item none">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a><a class="card-item__btn btn  card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item card-item--big card-item--7">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item none">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-item none">
+							<div class="gallery__image image">
+								<picture>
+								   <source type="image/webp" srcset="@img/gallery/07.webp">
+								   <img src="@img/gallery/01.jpg" alt="product image">
+								</picture>
+							 </div>
+							<div class="card-item__content">
+								<h2 class="card-item__title">
+									Title of picture 
+								</h2>
+								<p class="card-item__text content-text-small">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+								</p>
+								<h4 class="card-item__price">
+									$100 322
+								</h4>
+								<div class="card-item__btns">
+									<a class="card-item__btn btn" href="#">
+										<span>Buy</span>
+									</a>
+									<a class="card-item__btn btn card-item__btn--wide" href="#">
+										<span>View</span>
+										<i class="arrow-next-grad"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
