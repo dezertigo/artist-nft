@@ -263,7 +263,7 @@ button {
 
 @font-face {
   font-family: "icons-font";
-  src: url("../fonts/icons-font.ttf?9j4qiy") format("truetype"), url("../fonts/icons-font.woff?9j4qiy") format("woff"), url("../fonts/icons-font.svg?9j4qiy#icons-font") format("svg");
+  src: url("../fonts/icons-font.ttf?a20t7x") format("truetype"), url("../fonts/icons-font.woff?a20t7x") format("woff"), url("../fonts/icons-font.svg?a20t7x#icons-font") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -280,6 +280,22 @@ i {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.instagram:before {
+  content: "\e912";
+}
+
+.pinterest:before {
+  content: "\e915";
+}
+
+.telegram:before {
+  content: "\e924";
+}
+
+.twitter:before {
+  content: "\e925";
 }
 
 .arrow-down:before {
