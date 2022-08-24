@@ -10,12 +10,16 @@
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
-			@@include('./components/blocks/_stroke-text.html', {
+			<!-- @@include('./components/blocks/_stroke-text.html', {
 			'text': 'make art'
-			})
+			}) -->
 
 			<section class="hero">
 				<div class="hero__container">
+					@@include('./components/blocks/_social-icons.html', {
+					'modify': 'grad'
+					})
+
 				</div>
 			</section>
 		</main>

@@ -47,14 +47,19 @@
 				'empty': 'empty'
 				})
 			</div>
+
 			<!-- фоновый текст с обводкой -->
 			@@include('./components/blocks/_stroke-text.html', {
 			'text': 'make art'
 			})
 
-			<!--  Подключение спойлера
-				@@include('./components/base/_spoiler.html')
-			-->
+			<!-- Социальные иконки (Убрать модификатор для вывода белых) -->
+			@@include('./components/blocks/_social-icons.html', {
+			'modify': 'grad'
+			})
+
+			<!--  Подключение спойлера -->
+			@@include('./components/base/_spoiler.html')
 		</main>
 		@@include('./components/structure/_footer.html')
 	</div>
