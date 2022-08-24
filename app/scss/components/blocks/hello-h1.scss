@@ -1,0 +1,24 @@
+.hello-h1 {
+   h1 {
+      color: #fff;
+      max-width: 263px;
+      margin-bottom: 9px;
+      letter-spacing: -0.002em;
+      @media (min-width: 1200px) {
+         max-width: 475px;
+         margin-bottom: 16px;
+      }
+   }
+   p {
+      color: #fff;
+      max-width: 271px;
+      margin-bottom: 22px;
+      @media (min-width: 1200px) {
+         margin-bottom: 40px;
+      }
+   }
+   &__buttons {
+      display: flex;
+      column-gap: 12px;
+   }
+}

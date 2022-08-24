@@ -17,6 +17,7 @@
   background: #000 linear-gradient(94.78deg, rgba(104, 201, 255, 0.25) 9.27%, rgba(209, 181, 255, 0.25) 84.06%);
 }
 
+.social-icons_grad i:before,
 .btn i.arrow-next-grad,
 .menu li:hover a,
 .header__premium-btn i {
@@ -261,8 +262,8 @@ button {
 }
 
 @font-face {
-  font-family: "icons";
-  src: url("../fonts/icons.ttf?n3atup") format("truetype"), url("../fonts/icons.woff?n3atup") format("woff"), url("../fonts/icons.svg?n3atup#icons") format("svg");
+  font-family: "icons-font";
+  src: url("../fonts/icons-font.ttf?9j4qiy") format("truetype"), url("../fonts/icons-font.woff?9j4qiy") format("woff"), url("../fonts/icons-font.svg?9j4qiy#icons-font") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -270,7 +271,7 @@ button {
 
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons" !important;
+  font-family: "icons-font" !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -310,151 +311,144 @@ i {
   color: #86a8ff;
 }
 
-.instagram:before {
-  content: "\e906";
-}
-
-.pinterest:before {
-  content: "\e907";
-}
-
-.telegram:before {
-  content: "\e908";
-}
-
-.twitter:before {
-  content: "\e909";
-}
-
-.usd:before {
-  content: "\e90a";
-}
-
-.turn-down:before {
-  content: "\e90b";
-  color: #c5ff98;
-}
-
-.star:before {
-  content: "\e90c";
-}
-
-.star-decor:before {
-  content: "\e90d";
-  color: #fcffff;
-}
-
-.workers:before {
-  content: "\e90e";
-}
-
-.video:before {
-  content: "\e90f";
-}
-
-.search:before {
-  content: "\e910";
-  color: #c8d2dc;
-}
-
-.orders:before {
-  content: "\e911";
-}
-
-.nft:before {
-  content: "\e912";
-}
-
-.messages:before {
-  content: "\e913";
-}
-
 .avatar .path1:before {
-  content: "\e914";
+  content: "\e906";
   color: rgb(252, 232, 227);
 }
 
 .avatar .path2:before {
-  content: "\e915";
+  content: "\e907";
   margin-left: -1em;
   color: rgb(226, 152, 143);
 }
 
 .avatar .path3:before {
-  content: "\e916";
+  content: "\e908";
   margin-left: -1em;
   color: rgb(216, 93, 99);
 }
 
 .avatar .path4:before {
-  content: "\e917";
+  content: "\e909";
   margin-left: -1em;
   color: rgb(183, 61, 73);
 }
 
 .avatar .path5:before {
-  content: "\e918";
+  content: "\e90a";
   margin-left: -1em;
   color: rgb(76, 34, 75);
 }
 
 .avatar .path6:before {
-  content: "\e919";
+  content: "\e90b";
   margin-left: -1em;
   color: rgb(226, 152, 143);
 }
 
 .avatar .path7:before {
-  content: "\e91a";
+  content: "\e90c";
   margin-left: -1em;
   color: rgb(196, 105, 102);
 }
 
 .avatar .path8:before {
-  content: "\e91b";
+  content: "\e90d";
   margin-left: -1em;
   color: rgb(196, 105, 102);
 }
 
 .avatar .path9:before {
-  content: "\e91c";
+  content: "\e90e";
   margin-left: -1em;
   color: rgb(196, 105, 102);
 }
 
 .avatar .path10:before {
-  content: "\e91d";
+  content: "\e90f";
   margin-left: -1em;
   color: rgb(196, 105, 102);
 }
 
 .avatar .path11:before {
-  content: "\e91e";
+  content: "\e910";
   margin-left: -1em;
   color: rgb(196, 105, 102);
 }
 
 .avatar .path12:before {
-  content: "\e91f";
+  content: "\e911";
   margin-left: -1em;
   color: rgb(76, 34, 75);
 }
 
 .copy:before {
-  content: "\e920";
+  content: "\e913";
 }
 
 .crown:before {
-  content: "\e921";
+  content: "\e914";
 }
 
 .diamond:before {
-  content: "\e922";
+  content: "\e916";
 }
 
 .lock:before {
-  content: "\e923";
+  content: "\e917";
   color: #c8d2dc;
+}
+
+.lock-btn:before {
+  content: "\e918";
+}
+
+.lock-header:before {
+  content: "\e919";
+  color: #c8d2dc;
+}
+
+.messages:before {
+  content: "\e91a";
+}
+
+.nft:before {
+  content: "\e91b";
+}
+
+.orders:before {
+  content: "\e91c";
+}
+
+.search:before {
+  content: "\e91d";
+  color: #c8d2dc;
+}
+
+.star-decor:before {
+  content: "\e91e";
+  color: #fcffff;
+}
+
+.star:before {
+  content: "\e91f";
+}
+
+.turn-down:before {
+  content: "\e920";
+  color: #c5ff98;
+}
+
+.usd:before {
+  content: "\e921";
+}
+
+.video:before {
+  content: "\e922";
+}
+
+.workers:before {
+  content: "\e923";
 }
 
 body.lock {
@@ -876,21 +870,26 @@ h6 {
 }
 
 .btn i.crown {
-  font-size: 0.9375em;
+  font-size: 0.875em;
   line-height: 1;
-  margin-right: 10px;
+  margin-right: 9px;
 }
 
 .btn i.arrow-next-grad {
   font-size: 0.75em;
   line-height: 1;
   margin-left: 14px;
+  order: 2;
 }
 
-.btn svg.lock {
+.btn i.arrow-next-grad + a {
+  order: 1;
+}
+
+.btn i.lock-btn {
   margin-right: 12px;
-  width: 12px;
-  height: 16px;
+  font-size: 1em;
+  line-height: 1;
 }
 
 .btn {
@@ -941,10 +940,6 @@ h6 {
 
 .btn.grad-bg {
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-}
-
-.btn.grad-bg i {
-  margin-right: 9.5px;
 }
 
 .btn.grad-bg a {
@@ -1004,6 +999,60 @@ h6 {
   -webkit-text-stroke: 1px rgba(252, 255, 255, 0.2);
 }
 
+.social-icons {
+  display: inline-flex;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:not(:last-child) {
+  margin-right: 19.5px;
+}
+
+.social-icons a:last-child {
+  transform: translate(2px, 0);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:last-child:hover {
+  transform: translate(2px, 0) scale(1.3);
+}
+
+.social-icons a:hover:not(:last-child) {
+  transform: scale(1.3);
+}
+
+.social-icons i {
+  font-size: 1.25em;
+  line-height: 1;
+}
+
+.social-icons i:before {
+  color: #fff;
+}
+
+.hello-h1 h1 {
+  color: #fff;
+  max-width: 263px;
+  margin-bottom: 9px;
+  letter-spacing: -0.002em;
+}
+
+.hello-h1 p {
+  color: #fff;
+  max-width: 271px;
+  margin-bottom: 22px;
+}
+
+.hello-h1__buttons {
+  display: flex;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+}
+
 @media (min-width: 500px) {
   .stroke-text {
     font-size: 3.375em;
@@ -1034,13 +1083,9 @@ h6 {
 
 @media (min-width: 1000px) {
   .btn i.crown {
-    font-size: 1.25em;
+    font-size: 1.1875em;
     line-height: 1;
-  }
-
-  .btn svg.lock {
-    width: 15px;
-    height: 20px;
+    margin-right: 9px;
   }
 
   .stroke-text {
@@ -1160,6 +1205,11 @@ h6 {
     line-height: 1.5;
   }
 
+  .btn i.lock-btn {
+    font-size: 1.25em;
+    line-height: 1;
+  }
+
   .btn {
     min-height: 64px;
     padding-left: 24px;
@@ -1182,13 +1232,18 @@ h6 {
     max-width: 145px;
   }
 
-  .btn.grad-bg i {
-    margin-right: 10px;
-  }
-
   .stroke-text {
     font-size: 4.6875em;
     line-height: 1;
+  }
+
+  .hello-h1 h1 {
+    max-width: 475px;
+    margin-bottom: 16px;
+  }
+
+  .hello-h1 p {
+    margin-bottom: 40px;
   }
 }
 
