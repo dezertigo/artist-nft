@@ -1034,14 +1034,14 @@ h6 {
   color: #fff;
 }
 
-.hello-h1 h1 {
+.hello-h1__title {
   color: #fff;
   max-width: 263px;
   margin-bottom: 9px;
   letter-spacing: -0.002em;
 }
 
-.hello-h1 p {
+.hello-h1__text {
   color: #fff;
   max-width: 271px;
   margin-bottom: 22px;
@@ -1051,6 +1051,15 @@ h6 {
   display: flex;
   -moz-column-gap: 12px;
   column-gap: 12px;
+}
+
+.hello-h2__title {
+  margin-top: -1px;
+  color: #fcffff;
+}
+
+.hello-h2__text {
+  color: #fcffff;
 }
 
 @media (min-width: 500px) {
@@ -1077,7 +1086,7 @@ h6 {
   }
 
   .header__premium-btn i {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 }
 
@@ -1237,13 +1246,17 @@ h6 {
     line-height: 1;
   }
 
-  .hello-h1 h1 {
+  .hello-h1__title {
     max-width: 475px;
     margin-bottom: 16px;
   }
 
-  .hello-h1 p {
+  .hello-h1__text {
     margin-bottom: 40px;
+  }
+
+  .hello-h2__text {
+    margin-top: 16px;
   }
 }
 

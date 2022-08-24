@@ -1,5 +1,5 @@
 .hello-h1 {
-   h1 {
+   &__title {
       color: #fff;
       max-width: 263px;
       margin-bottom: 9px;
@@ -9,7 +9,7 @@
          margin-bottom: 16px;
       }
    }
-   p {
+   &__text {
       color: #fff;
       max-width: 271px;
       margin-bottom: 22px;

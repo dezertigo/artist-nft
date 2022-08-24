@@ -43,7 +43,6 @@
 				@@include('./components/base/_btn.html', {
 				'text': 'Buy',
 				'modify': 'small dark-bg',
-				'icon': 'empty'
 				})
 			</div>
 
@@ -58,10 +57,10 @@
 			})
 
 			<!-- Блок тайтла + текст + кнопки -->
-			<!-- @@loop('./components/blocks/hello-h1.html', './json/main/hello-h1.json') -->
+			@@loop('./components/blocks/hello-h1.html', './json/main/hello-h1.json')
 
 			<!-- Блок лейбла + тайтла + текст -->
-			<!-- @@loop('./components/blocks/hello-h2.html', './json/main/hello-h2.json') -->
+			@@loop('./components/blocks/hello-h2.html', './json/main/hello-h2.json')
 
 			<!--  Подключение спойлера -->
 			@@include('./components/base/_spoiler.html')
