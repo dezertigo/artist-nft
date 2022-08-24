@@ -1,0 +1,14 @@
+.hello-h2__title {
+  margin-top: -1px;
+  color: #fcffff;
+}
+
+.hello-h2__text {
+  color: #fcffff;
+}
+
+@media (min-width: 1200px) {
+  .hello-h2__text {
+    margin-top: 16px;
+  }
+}
