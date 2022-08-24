@@ -1005,13 +1005,17 @@ h6 {
   -webkit-text-stroke: 1px rgba(252, 255, 255, 0.2);
 }
 
+.social-icons {
+  display: inline-flex;
+}
+
 .social-icons a {
   display: inline-block;
   transition: all 0.3s ease;
 }
 
 .social-icons a:not(:last-child) {
-  margin-right: 15.5px;
+  margin-right: 19.5px;
 }
 
 .social-icons a:last-child {
