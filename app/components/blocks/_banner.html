@@ -1,0 +1,22 @@
+<div class="banner banner_@@modify">
+	<div class="banner__content">
+		<i class="crown"></i>
+		<h2 class="banner__title">@@title</h2>
+		<p class="banner__text content-text">@@text</p>
+		@@if (context.item == "button") {
+		@@include("../base/_btn.html", {
+		"text": "Go to plans",
+		"modify": "small dark-bg"
+		})
+		}
+		@@if (context.item == "social") {
+		@@include("./_social-icons.html", {
+		"modify" : "grad"
+		})
+		}
+	</div>
+	<div class="banner__graphic">
+
+	</div>
+
+</div>
