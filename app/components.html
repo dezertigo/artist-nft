@@ -57,17 +57,17 @@
 			})
 
 			<!-- Блок тайтла + текст + кнопки -->
-			@@loop('./components/blocks/hello-h1.html', './json/main/hello-h1.json')
+			@@loop('./components/blocks/_hello-h1.html', './json/main/hello-h1.json')
 
 			<!-- Блок лейбла + тайтла + текст -->
-			@@loop('./components/blocks/hello-h2.html', './json/main/hello-h2.json')
+			@@loop('./components/blocks/_hello-h2.html', './json/main/hello-h2.json')
 
 			<!-- ! Double-block (нужно указать в стилях только отзывчивую ширину блоку) -->
 			<div style="max-width: 561px;" class="div">
 
-				@@include('./components/blocks/double-block.html', {
+				@@include('./components/blocks/_double-block.html', {
 				'modify' : 'square',
-				'img': '08',
+				'img': '05',
 				'imgAlt': 'product image',
 				})
 
