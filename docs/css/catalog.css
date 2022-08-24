@@ -1167,6 +1167,13 @@ h6 {
   padding-bottom: 57.9710144928%;
 }
 
+@media (min-width: 468px) {
+  .content-text {
+    font-size: 1em;
+    line-height: 1.5625;
+  }
+}
+
 @media (min-width: 630px) {
   .gallery__inner {
     grid-auto-flow: dense;

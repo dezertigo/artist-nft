@@ -6,7 +6,7 @@
 		@@if (context.item == "button") {
 		@@include("../base/_btn.html", {
 		"text": "Go to plans",
-		"modify": "small dark-bg"
+		"modify": "big dark-bg"
 		})
 		}
 		@@if (context.item == "social") {
@@ -14,7 +14,31 @@
 		}
 	</div>
 	<div class="banner__graphic">
+		<div class="banner-circle"></div>
+		<div class='banner__image banner__image_1'>
+			<picture>
+				<source type='image/webp' srcset='@img/bg/banner_02.webp'>
+				<img src='@img/bg/banner_02.png' alt='decor image'>
+			</picture>
+		</div>
+		<div class='banner__image banner__image_2'>
+			<picture>
+				<source type='image/webp' srcset='@img/bg/banner_03.webp'>
+				<img src='@img/bg/banner_03.png' alt='decor image'>
+			</picture>
+		</div>
+		<div class='banner__image banner__image_main'>
+			<picture>
+				<source type='image/webp' srcset='@img/bg/banner_@@img.webp'>
+				<img src='@img/bg/banner_@@img.png' alt='decor image'>
+			</picture>
+		</div>
+
 
 	</div>
+
+
+
+
 
 </div>
