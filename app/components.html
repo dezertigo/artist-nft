@@ -62,13 +62,16 @@
 			<!-- Блок лейбла + тайтла + текст -->
 			@@loop('./components/blocks/hello-h2.html', './json/main/hello-h2.json')
 
-			<!-- Double-block (нужно указать только отзывчивую ширину блоку) -->
-			@@include('./components/blocks/double-block.html', {
-			'modify' : 'square',
-			'img': '08',
-			'imgAlt': 'product image',
-			})
+			<!-- ! Double-block (нужно указать в стилях только отзывчивую ширину блоку) -->
+			<div style="max-width: 561px;" class="div">
 
+				@@include('./components/blocks/double-block.html', {
+				'modify' : 'square',
+				'img': '08',
+				'imgAlt': 'product image',
+				})
+
+			</div>
 			<!--  Подключение спойлера -->
 			@@include('./components/base/_spoiler.html')
 		</main>
