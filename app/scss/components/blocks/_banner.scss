@@ -1,4 +1,12 @@
 .banner {
+   &:hover {
+      .banner-circle {
+         width: 100vmax;
+         height: 100vmax;
+         top: -200%;
+         left: -100%;
+      }
+   }
    background: linear-gradient(140.92deg, #6880ff 3.3%, #3ca7f4 52.35%, #8c45ff 92.15%);
    color: #fff;
    border-radius: rem(24);
@@ -8,6 +16,8 @@
       padding-bottom: percent(28, 345);
       padding-left: percent(26, 345);
       padding-right: percent(26, 345);
+      position: relative;
+      z-index: 1;
    }
    .crown {
       display: inline-block;
@@ -43,7 +53,9 @@
       }
 
       .banner-circle {
+         transition: all 1.5s ease;
          position: absolute;
+         z-index: 0;
          top: 38px;
          left: calc((100% - percent(399, 345)) / 2);
          width: percent(399, 345);
@@ -94,8 +106,8 @@
          transform: rotate(-44.21deg);
          filter: blur(7px);
       }
-      &_main {
-      }
+      // &_main {
+      // }
    }
    &_regular {
       @media (min-width: 1200px) {

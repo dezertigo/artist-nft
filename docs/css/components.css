@@ -1134,11 +1134,20 @@ h6 {
   overflow: hidden;
 }
 
+.banner:hover .banner-circle {
+  width: 100vmax;
+  height: 100vmax;
+  top: -200%;
+  left: -100%;
+}
+
 .banner__content {
   padding-top: 10.4347826087%;
   padding-bottom: 8.115942029%;
   padding-left: 7.5362318841%;
   padding-right: 7.5362318841%;
+  position: relative;
+  z-index: 1;
 }
 
 .banner .crown {
@@ -1163,7 +1172,9 @@ h6 {
 }
 
 .banner__graphic .banner-circle {
+  transition: all 1.5s ease;
   position: absolute;
+  z-index: 0;
   top: 38px;
   left: -7.8260869565%;
   width: 115.652173913%;
