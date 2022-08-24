@@ -17,44 +17,63 @@
 				@@include('./components/base/_btn.html', {
 				'text': 'Premium access',
 				'modify': 'big grad-bg',
-				'crown': 'crown'
+				'icon': 'crown'
 				})
 				<!-- С иконкой замкф -->
 				@@include('./components/base/_btn.html', {
 				'text': 'Get custom now',
 				'modify': 'big grad-bg',
-				'lock': 'lock'
+				'icon': 'lock-btn'
 				})
 
 				<!-- Просто текст -->
 				@@include('./components/base/_btn.html', {
 				'text': 'Discover',
 				'modify': 'small grad-text',
-				'empty': 'empty'
 				})
 
 				<!-- С градиентной стрелкой -->
 				@@include('./components/base/_btn.html', {
 				'text': 'View',
 				'modify': 'small grad-text',
-				'arrow': 'arrow'
+				'icon': 'arrow-next-grad'
 				})
 
 				<!-- Просто текст -->
 				@@include('./components/base/_btn.html', {
 				'text': 'Buy',
 				'modify': 'small dark-bg',
-				'empty': 'empty'
 				})
 			</div>
+
 			<!-- фоновый текст с обводкой -->
 			@@include('./components/blocks/_stroke-text.html', {
 			'text': 'make art'
 			})
 
-			<!--  Подключение спойлера
-				@@include('./components/base/_spoiler.html')
-			-->
+			<!-- Социальные иконки (Убрать модификатор для вывода белых) -->
+			@@include('./components/blocks/_social-icons.html', {
+			'modify': 'grad'
+			})
+
+			<!-- Блок тайтла + текст + кнопки -->
+			@@loop('./components/blocks/hello-h1.html', './json/main/hello-h1.json')
+
+			<!-- Блок лейбла + тайтла + текст -->
+			@@loop('./components/blocks/hello-h2.html', './json/main/hello-h2.json')
+
+			<!-- ! Double-block (нужно указать в стилях только отзывчивую ширину блоку) -->
+			<div style="max-width: 561px;" class="div">
+
+				@@include('./components/blocks/double-block.html', {
+				'modify' : 'square',
+				'img': '08',
+				'imgAlt': 'product image',
+				})
+
+			</div>
+			<!--  Подключение спойлера -->
+			@@include('./components/base/_spoiler.html')
 		</main>
 		@@include('./components/structure/_footer.html')
 	</div>

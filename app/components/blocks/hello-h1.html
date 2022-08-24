@@ -1,0 +1,19 @@
+<div class="hello-h1">
+	<h1 class="hello-h1__title">@@title</h1>
+	<p class="hello-h1__text content-text">@@text</p>
+	@@if (context.modifyButton1) {
+	<div class="hello-h1__buttons">
+		@@include("../base/_btn.html", {
+		"text": "@@modifyButton1.text",
+		"modify": "@@modifyButton1.class",
+		"icon": "@@modifyButton1.icon"
+		})
+		@@if (context.modifyButton2) {
+		@@include("../base/_btn.html", {
+		"text": "@@modifyButton2.text",
+		"modify": "@@modifyButton2.class",
+		})
+		}
+	</div>
+	}
+</div>
