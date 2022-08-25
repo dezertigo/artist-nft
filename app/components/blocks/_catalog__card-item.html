@@ -1,0 +1,43 @@
+<div class="card-item @@if(context.modify) {card-item--@@modify}
+    @@if(context.none) {none}">
+    <div class="gallery__image image @@if(context.blur){blur}">
+        <picture>
+            <source type="image/webp" srcset="@img/gallery/@@img.webp">
+            <img src="@img/gallery/@@img.jpg" alt="product image">
+        </picture>
+    </div>
+    @@if(context.locked) {
+        <div class="card-item__locked">
+            <h6 class="card-item__locked-caption">
+                avalaible for premium
+            </h6>
+            <h4 class="card-item__locked-title">
+                <i class="lock"></i> CONTENT LOCKED
+            </h4>
+            <a class="card-item__btn btn card-item__btn--wide" href="#">
+                <span>Unlock</span>
+                <i class="arrow-next-grad"></i>
+            </a>
+        </div>
+    }
+    <div class="card-item__content">
+        <h2 class="card-item__title">
+            @@title
+        </h2>
+        <p class="card-item__text content-text-small">
+            @@text
+        </p>
+        <h4 class="card-item__price">
+            @@price
+        </h4>
+        <div class="card-item__btns">
+            <a class="card-item__btn btn" href="#">
+                <span>Buy</span>
+            </a>
+            <a class="card-item__btn btn card-item__btn--wide" href="#">
+                <span>View</span>
+                <i class="arrow-next-grad"></i>
+            </a>
+        </div>
+    </div>
+</div>
