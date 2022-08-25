@@ -1,5 +1,11 @@
 .header {
    position: relative;
+   &__container {
+      @media (min-width: 1250px) {
+         padding-left: percent(150, 1440);
+         padding-right: percent(150, 1440);
+      }
+   }
    &__body {
       min-height: 64px; // todo Указываем минимальную высоту шапки
       display: flex;

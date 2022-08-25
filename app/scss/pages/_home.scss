@@ -79,6 +79,10 @@ body.home {
             align-items: center;
             padding-top: 79px;
          }
+         @media (min-width: 1250px) {
+            padding-left: percent(150, 1440);
+            padding-right: percent(150, 1440);
+         }
       }
       // .hero__content
       &__content {
@@ -114,8 +118,6 @@ body.home {
             @media (min-width: 1000px) {
                max-width: percent(271, 440);
             }
-         }
-         .btn.big {
          }
          .btn.small {
             min-width: 117px;

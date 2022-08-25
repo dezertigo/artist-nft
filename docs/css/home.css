@@ -1859,6 +1859,11 @@ body.home .hero__image svg.second {
 
 @media (min-width: 1250px) {
   [class*=__container] {
+    padding-left: 11.4583333333%;
+    padding-right: 11.4583333333%;
+  }
+
+  .header__container {
     padding-left: 10.4166666667%;
     padding-right: 10.4166666667%;
   }
@@ -1866,6 +1871,11 @@ body.home .hero__image svg.second {
   .header__body {
     -moz-column-gap: 34px;
     column-gap: 34px;
+  }
+
+  body.home .hero__container {
+    padding-left: 10.4166666667%;
+    padding-right: 10.4166666667%;
   }
 }
 

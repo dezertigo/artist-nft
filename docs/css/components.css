@@ -1594,6 +1594,11 @@ h6 {
 
 @media (min-width: 1250px) {
   [class*=__container] {
+    padding-left: 11.4583333333%;
+    padding-right: 11.4583333333%;
+  }
+
+  .header__container {
     padding-left: 10.4166666667%;
     padding-right: 10.4166666667%;
   }
