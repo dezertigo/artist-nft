@@ -1750,12 +1750,13 @@ h6 {
 
 @media (max-width: 1049px) {
   .header__action {
-    transition: right 2s ease;
+    transition: transform 2s ease;
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
-    right: -100%;
+    right: 0;
+    transform: translate(100%, 0);
   }
 
   .header__action-wrapper {
@@ -1801,8 +1802,8 @@ h6 {
   }
 
   .header__action.active {
-    right: 0;
-    transition: right 1s ease;
+    transform: translate(0, 0);
+    transition: transform 1s ease;
   }
 
   .header__action.active:before {
