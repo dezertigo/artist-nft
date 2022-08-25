@@ -1,0 +1,51 @@
+<div class="card-item @@if(context.modify) {card-item--@@modify}
+    @@if(context.none) {none}">
+    <div class="gallery__image image @@if(context.blur){blur}">
+        <picture>
+            <source type="image/webp" srcset="@img/gallery/@@img.webp">
+            <img src="@img/gallery/@@img.jpg" alt="product image">
+        </picture>
+    </div>
+    @@if(context.locked) {
+        <div class="card-item__locked">
+            <h6 class="card-item__locked-caption">
+                avalaible for premium
+            </h6>
+            <div class="card-item__locked-text">
+                <i class="lock"></i> 
+                <h4 class="card-item__locked-title">
+                    CONTENT LOCKED
+                </h4>
+            </div>
+            @@include("../base/_btn.html", {
+                "text": "Unlock",
+                "modify": "small dark-bg",
+                "icon": "arrow-next-grad"
+            })
+        </div>
+    }
+    <div class="card-item__content">
+        <div class="card-item__content-box">
+            <h2 class="card-item__title">
+                @@title
+            </h2>
+            <p class="card-item__text content-text-small">
+                @@text
+            </p>
+            <h4 class="card-item__price">
+                @@price
+            </h4>
+            <div class="card-item__btns">
+                @@include("../base/_btn.html", {
+                    "text": "Buy",
+                    "modify": "small dark-bg",
+                })
+                @@include("../base/_btn.html", {
+                    "text": "View",
+                    "modify": "small dark-bg",
+                    "icon": "arrow-next-grad"
+                })
+            </div>
+        </div>
+    </div>
+</div>
