@@ -9,25 +9,28 @@
 .btn {
    i {
       &.crown {
-         @include fl(15);
-         margin-right: 10px;
+         @include fl(14);
+         margin-right: 9px;
          @media (min-width: 1000px) {
-            @include fl(20);
+            @include fl(19);
+            margin-right: 9px;
          }
       }
       &.arrow-next-grad {
          @include fl(12);
          margin-left: 14px;
          @extend %grad-text;
+         order: 2;
+         & + a {
+            order: 1;
+         }
       }
-   }
-   svg.lock {
-      margin-right: 12px;
-      width: 12px;
-      height: 16px;
-      @media (min-width: 1000px) {
-         width: 15px;
-         height: 20px;
+      &.lock-btn {
+         margin-right: 12px;
+         @include fl(16);
+         @media (min-width: 1200px) {
+            @include fl(20);
+         }
       }
    }
 }
@@ -89,12 +92,12 @@
    }
    &.grad-bg {
       background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-      i {
-         margin-right: 9.5px;
-         @media (min-width: 1200px) {
-            margin-right: 10px;
-         }
-      }
+      // i {
+      //    margin-right: 9.5px;
+      //    @media (min-width: 1200px) {
+      //       margin-right: 10px;
+      //    }
+      // }
       a {
          color: $darkColor;
       }

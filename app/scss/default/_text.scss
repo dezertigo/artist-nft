@@ -49,6 +49,9 @@ h6 {
 // .body
 .content-text {
    @include fl(15, 24);
+   @media (min-width: 468px) {
+      @include fl(16, 25);
+   }
    @media (min-width: 1200px) {
       @include fl(16, 28);
    }
