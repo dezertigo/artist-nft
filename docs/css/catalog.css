@@ -1672,7 +1672,7 @@ body.catalog .gallery__inner {
 
 @media (max-width: 1049px) {
   .header__action {
-    transition: all 0.5s ease;
+    transition: all 1.5s ease;
     position: fixed;
     width: 100vw;
     height: 100vh;
