@@ -580,6 +580,12 @@ h6 {
   color: #1d1f21;
 }
 
+.subtext {
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+}
+
 .header {
   position: relative;
 }
@@ -1095,7 +1101,6 @@ h6 {
 }
 
 .double-block_rect {
-  width: 255.91px;
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   transform: translate(15px, 0) rotate(-3.86deg);
   padding-top: 5px;
@@ -1266,6 +1271,11 @@ h6 {
     font-size: 1em;
     line-height: 1.5625;
   }
+
+  .subtext {
+    font-size: 0.9375em;
+    line-height: 1.7333333333;
+  }
 }
 
 @media (min-width: 500px) {
@@ -1290,6 +1300,13 @@ h6 {
   .stroke-text {
     font-size: 3.875em;
     line-height: 1;
+  }
+}
+
+@media (min-width: 760px) {
+  .subtext {
+    font-size: 1em;
+    line-height: 1.75;
   }
 }
 
@@ -1550,8 +1567,7 @@ h6 {
   }
 
   .double-block_rect {
-    width: 448.41px;
-    transform: translate(23px, 0) rotate(-3.86deg);
+    transform: translate(8px, 0) rotate(-3.86deg);
     padding-left: 0.10625rem;
     padding-right: 0.10625rem;
     padding-top: 10px;

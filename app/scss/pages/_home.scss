@@ -1,4 +1,7 @@
 body.home {
+   // ===================================================================================
+   // Hero ==== Hero ==== Hero ==== Hero === Hero ==== Hero ==== Hero ==== Hero ==== Hero
+   // ===================================================================================
    .hero {
       // .hero__decor
       position: relative;
@@ -235,6 +238,101 @@ body.home {
                }
             }
          }
+      }
+   }
+   // ===================================================================================
+   // Biography ==== Biography ==== Biography === Biography ==== Biography ==== Biography
+   // ===================================================================================
+   .biography {
+      overflow: hidden;
+      &__container {
+         padding-top: 62px;
+         padding-right: percent(13, 375);
+
+         @media (min-width: 769px) {
+            padding-top: 103px;
+            display: flex;
+            column-gap: 45px;
+         }
+         @media (min-width: 1200px) {
+         }
+      }
+      &__graphic {
+         > div {
+            width: percent(255.91, 345);
+         }
+         @media (max-width: 768px) {
+            margin-bottom: 42px;
+         }
+         @media (min-width: 769px) {
+            flex: 0 0 percent(448, 1110);
+            > div {
+               width: percent(448, 494);
+            }
+         }
+      }
+      &__content {
+         h2 {
+            @media (max-width: 768px) {
+               margin-bottom: 28px;
+            }
+         }
+         @media (min-width: 769px) {
+            padding-top: 26px;
+            flex: 1 1 380px;
+            max-width: 380px;
+            margin-right: 20px;
+         }
+         @media (min-width: 900px) {
+            flex: 1 1 450px;
+            max-width: 450px;
+         }
+         @media (min-width: 1000px) {
+            flex: 1 1 500px;
+            max-width: 500px;
+         }
+         @media (min-width: 1200px) {
+            flex: 0 0 percent(550, 1110);
+            max-width: 550px;
+            .content-text {
+               @include fl(16, 28);
+            }
+         }
+      }
+      &__slide {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      .swiper {
+         padding-top: 33px;
+         margin-right: -13px;
+         @media (min-width: 769px) {
+            padding-top: 41px;
+         }
+      }
+      &__num {
+         display: inline-block;
+         color: #c5ff98;
+         @include fl(14, 20);
+         font-weight: 700;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 4px 13px;
+         min-width: 60px;
+         min-height: 29px;
+         margin-bottom: 13px;
+         background: rgba(197, 255, 152, 0.1);
+         border-radius: rem(10);
+
+         @media (min-width: 760px) {
+            min-height: 32px;
+            margin-bottom: 10px;
+         }
+      }
+      &__subtext {
+         color: #fcffff;
       }
    }
 }

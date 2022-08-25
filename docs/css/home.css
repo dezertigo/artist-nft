@@ -580,6 +580,12 @@ h6 {
   color: #1d1f21;
 }
 
+.subtext {
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+}
+
 .header {
   position: relative;
 }
@@ -1095,7 +1101,6 @@ h6 {
 }
 
 .double-block_rect {
-  width: 255.91px;
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   transform: translate(15px, 0) rotate(-3.86deg);
   padding-top: 5px;
@@ -1387,10 +1392,60 @@ body.home .hero__image svg.second {
   display: none;
 }
 
+body.home .biography {
+  overflow: hidden;
+}
+
+body.home .biography__container {
+  padding-top: 62px;
+  padding-right: 3.4666666667%;
+}
+
+body.home .biography__graphic > div {
+  width: 74.1768115942%;
+}
+
+body.home .biography__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+body.home .biography .swiper {
+  padding-top: 33px;
+  margin-right: -13px;
+}
+
+body.home .biography__num {
+  display: inline-block;
+  color: #c5ff98;
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 13px;
+  min-width: 60px;
+  min-height: 29px;
+  margin-bottom: 13px;
+  background: rgba(197, 255, 152, 0.1);
+  border-radius: 0.625rem;
+}
+
+body.home .biography__subtext {
+  color: #fcffff;
+}
+
 @media (min-width: 468px) {
   .content-text {
     font-size: 1em;
     line-height: 1.5625;
+  }
+
+  .subtext {
+    font-size: 0.9375em;
+    line-height: 1.7333333333;
   }
 
   body.home .hero__image svg.first {
@@ -1420,6 +1475,18 @@ body.home .hero__image svg.second {
   .stroke-text {
     font-size: 3.875em;
     line-height: 1;
+  }
+}
+
+@media (min-width: 760px) {
+  .subtext {
+    font-size: 1em;
+    line-height: 1.75;
+  }
+
+  body.home .biography__num {
+    min-height: 32px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1627,6 +1694,39 @@ body.home .hero__image svg.second {
     width: 33.5347432024%;
     height: 59.3162393162%;
   }
+
+  body.home .biography__container {
+    padding-top: 103px;
+    display: flex;
+    -moz-column-gap: 45px;
+    column-gap: 45px;
+  }
+
+  body.home .biography__graphic {
+    flex: 0 0 40.3603603604%;
+  }
+
+  body.home .biography__graphic > div {
+    width: 90.6882591093%;
+  }
+
+  body.home .biography__content {
+    padding-top: 26px;
+    flex: 1 1 380px;
+    max-width: 380px;
+    margin-right: 20px;
+  }
+
+  body.home .biography .swiper {
+    padding-top: 41px;
+  }
+}
+
+@media (min-width: 900px) {
+  body.home .biography__content {
+    flex: 1 1 450px;
+    max-width: 450px;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -1652,6 +1752,11 @@ body.home .hero__image svg.second {
 
   body.home .hero__content .hello-h1__text {
     max-width: 61.5909090909%;
+  }
+
+  body.home .biography__content {
+    flex: 1 1 500px;
+    max-width: 500px;
   }
 }
 
@@ -1815,8 +1920,7 @@ body.home .hero__image svg.second {
   }
 
   .double-block_rect {
-    width: 448.41px;
-    transform: translate(23px, 0) rotate(-3.86deg);
+    transform: translate(8px, 0) rotate(-3.86deg);
     padding-left: 0.10625rem;
     padding-right: 0.10625rem;
     padding-top: 10px;
@@ -1854,6 +1958,16 @@ body.home .hero__image svg.second {
     font-size: 1.875em;
     line-height: 1;
     transform: translate(4px, 1px);
+  }
+
+  body.home .biography__content {
+    flex: 0 0 49.5495495495%;
+    max-width: 550px;
+  }
+
+  body.home .biography__content .content-text {
+    font-size: 1em;
+    line-height: 1.75;
   }
 }
 
@@ -1988,6 +2102,16 @@ body.home .hero__image svg.second {
     width: 100%;
     height: 1px;
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 768px) {
+  body.home .biography__graphic {
+    margin-bottom: 42px;
+  }
+
+  body.home .biography__content h2 {
+    margin-bottom: 28px;
   }
 }
 
