@@ -617,6 +617,10 @@ h6 {
   display: none;
 }
 
+.header__buttons .btn a {
+  transform: translate(0, 0);
+}
+
 .header .spoiler {
   background-color: #212426;
   color: #c8d2dc;
@@ -1775,13 +1779,6 @@ body.home .biography__subtext {
   }
 }
 
-@media (min-width: 900px) {
-  body.home .biography__content {
-    flex: 1 1 450px;
-    max-width: 450px;
-  }
-}
-
 @media (min-width: 800px) {
   .footer {
     padding-top: 17px;
@@ -1825,6 +1822,13 @@ body.home .biography__subtext {
 
   .footer .social-icons {
     transform: translate(-6px, 4px);
+  }
+}
+
+@media (min-width: 900px) {
+  body.home .biography__content {
+    flex: 1 1 450px;
+    max-width: 450px;
   }
 }
 
@@ -2077,8 +2081,8 @@ body.home .biography__subtext {
   }
 
   .header__container {
-    padding-left: 11.4583333333%;
-    padding-right: 11.4583333333%;
+    padding-left: 10.4166666667%;
+    padding-right: 10.4166666667%;
   }
 
   .header__body {

@@ -579,6 +579,12 @@ h6 {
   color: #1d1f21;
 }
 
+.subtext {
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+}
+
 .header {
   position: relative;
 }
@@ -608,6 +614,10 @@ h6 {
 
 .header__buttons .btn.big {
   display: none;
+}
+
+.header__buttons .btn a {
+  transform: translate(0, 0);
 }
 
 .header .spoiler {
@@ -670,6 +680,8 @@ h6 {
   min-height: 48px;
   padding-left: 22px;
   padding-right: 22px;
+  border-radius: 0.75rem;
+  height: 48px;
 }
 
 .header .btn a {
@@ -690,7 +702,7 @@ h6 {
 }
 
 .header__premium-btn i {
-  font-size: 0.9375em;
+  font-size: 0.8125em;
   line-height: 1;
 }
 
@@ -996,6 +1008,7 @@ h6 {
   z-index: 1;
   transition: all 0.3s ease;
   white-space: nowrap;
+  transform: translate(-1px, -1px);
 }
 
 .btn.big {
@@ -1061,6 +1074,18 @@ h6 {
   .content-text {
     font-size: 1em;
     line-height: 1.5625;
+  }
+
+  .subtext {
+    font-size: 0.9375em;
+    line-height: 1.7333333333;
+  }
+}
+
+@media (min-width: 760px) {
+  .subtext {
+    font-size: 1em;
+    line-height: 1.75;
   }
 }
 
@@ -1275,6 +1300,11 @@ h6 {
   [class*=__container] {
     padding-left: 11.4583333333%;
     padding-right: 11.4583333333%;
+  }
+
+  .header__container {
+    padding-left: 10.4166666667%;
+    padding-right: 10.4166666667%;
   }
 
   .header__body {

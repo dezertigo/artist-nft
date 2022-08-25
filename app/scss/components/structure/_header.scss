@@ -122,6 +122,11 @@
             display: flex;
          }
       }
+      .btn {
+         a {
+            transform: translate(0, 0);
+         }
+      }
    }
    .spoiler {
       background-color: #212426;
