@@ -54,23 +54,23 @@ window.addEventListener("load", () => {
          }
       }
       //  Изменение высоты выезжающего меню после открытия бургера
+      const headerActionWrapper = qs(".header__action-wrapper");
+      const headerActionBody = qs(".header__action-body");
+      const wrapperHeight = headerActionWrapper.scrollHeight;
+      const bodyHeight = headerActionBody.scrollHeight;
+      const total = wrapperHeight + bodyHeight;
       function actualizeHeight(e) {
-         // const headerActionWrapper = qs(".header__action-wrapper");
-         // const headerActionBody = qs(".header__action-body");
-         // const wrapperHeight = headerActionWrapper.scrollHeight;
-         // const bodyHeight = headerActionBody.scrollHeight;
-         // const total = wrapperHeight + bodyHeight;
-         // if (headerAction.classList.contains("active")) {
-         //    if (total >= window.innerHeight) {
-         //       headerActionWrapper.style.height = "100%";
-         //    } else {
-         //       headerActionWrapper.style.height = wrapperHeight + bodyHeight + "px";
-         //    }
-         // } else {
-         //    setTimeout(() => {
-         //       headerActionWrapper.style.height = null;
-         //    }, 500);
-         // }
+         if (headerAction.classList.contains("active")) {
+            if (total >= window.innerHeight) {
+               headerActionWrapper.style.height = "100%";
+            } else {
+               headerActionWrapper.style.height = wrapperHeight + bodyHeight + "px";
+            }
+         } else {
+            setTimeout(() => {
+               headerActionWrapper.style.height = null;
+            }, 1000);
+         }
       }
    }
 
