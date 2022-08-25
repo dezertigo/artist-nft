@@ -1719,7 +1719,7 @@ body.catalog .gallery__inner {
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     z-index: -1;
-    transition: all 0.5s ease 1s;
+    transition: opacity 0s ease 0s;
   }
 
   .header__action.active {
@@ -1728,6 +1728,7 @@ body.catalog .gallery__inner {
 
   .header__action.active:before {
     opacity: 1;
+    transition: opacity 0.5s ease 1s;
   }
 
   .header__buttons {

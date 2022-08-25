@@ -82,12 +82,13 @@
             opacity: 0;
             backdrop-filter: blur(3px);
             z-index: -1;
-            transition: all 0.5s ease 1s;
+            transition: opacity 0s ease 0s;
          }
          &.active {
             right: 0;
             &:before {
                opacity: 1;
+               transition: opacity 0.5s ease 1s;
             }
          }
       }
