@@ -1672,7 +1672,7 @@ body.catalog .gallery__inner {
 
 @media (max-width: 1049px) {
   .header__action {
-    transition: all 1s ease;
+    transition: right 1s ease;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -1719,7 +1719,7 @@ body.catalog .gallery__inner {
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     z-index: -1;
-    transition: all 0.3s ease 0.3s;
+    transition: all 0.5s ease 1s;
   }
 
   .header__action.active {
