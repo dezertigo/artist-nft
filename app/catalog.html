@@ -14,7 +14,7 @@
 		<main>
 			<section class="gallery">
 				@@include('./components/blocks/_stroke-text.html', {
-					'text': 'make art'
+					'text': 'make art',
 					})
 				@@include('./components/blocks/_stroke-text.html', {
 					'text': 'not war',
@@ -28,7 +28,7 @@
 						Indulgence announcing uncommonly met she continuing two unpleasing terminated
 					</p>
 					<div class="gallery__inner">
-						@@loop('.components/blocks/_catalog__card-item.html' , './json/catalog/catalog__card-item.json')
+						@@loop('./components/blocks/_catalog__card-item.html', './json/catalog/catalog__card-item.json')
 					</div>
 				</div>
 			</section>
