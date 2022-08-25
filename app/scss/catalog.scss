@@ -19,6 +19,7 @@
 @import "./components/base/btn";
 @import "./components/blocks/stroke-text";
 @import "./components/blocks/catalog__card-item";
+@import "./components/blocks/social-icons";
+
 //Подключение стилей конкретной страницы
-// ! Переменовать текущий файл и файл подлючающий стили страницы ниже(renameMe) в нужное имя (имеется ввиду файл который нужно создать в папке app/scss/pages), после чего удалить эту строку
 @import "./pages/catalog";
