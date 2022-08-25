@@ -1,10 +1,18 @@
 .banner {
    &:hover {
-      .banner-circle {
-         width: 100vmax;
-         height: 100vmax;
-         top: -200%;
-         left: -100%;
+      .banner {
+         &-circle {
+            width: 100vmax;
+            height: 100vmax;
+            top: -200%;
+            left: -100%;
+         }
+         &__image_1 {
+            filter: blur(0px) saturate(210%) hue-rotate(360deg);
+         }
+         &__image_2 {
+            filter: blur(0);
+         }
       }
    }
    background: linear-gradient(140.92deg, #6880ff 3.3%, #3ca7f4 52.35%, #8c45ff 92.15%);
@@ -59,7 +67,6 @@
          top: 38px;
          left: calc((100% - percent(399, 345)) / 2);
          width: percent(399, 345);
-         // padding-bottom: 100%;
          height: percent(399, 213);
          border-radius: 50%;
          border: 48px solid transparent;
@@ -82,6 +89,8 @@
    }
    &__image {
       position: absolute;
+      transition: all 0.5s ease;
+
       img {
          position: absolute;
          top: 0;
@@ -110,10 +119,13 @@
       // }
    }
    &_regular {
-      @media (min-width: 1200px) {
+      @media (min-width: 769px) {
+         background: linear-gradient(94.78deg, #6880ff 9.27%, #3ca7f4 50.77%, #8c45ff 84.06%);
+      }
+      @media (min-width: 769px) {
          display: flex;
          align-items: center;
-         padding-left: 110px;
+         column-gap: 32px;
       }
       .btn {
          max-width: 135px;
@@ -121,14 +133,106 @@
             max-width: 167px;
          }
       }
-      .banner__image_main {
-         width: percent(207, 345);
-         padding-bottom: percent(149, 345);
-         top: 2px;
-         left: 50%;
-         transform: translate(-50%, 0);
-         img {
-            object-fit: contain;
+      .crown {
+         @media (min-width: 769px) {
+            @include fl(22);
+         }
+         @media (min-width: 1000px) {
+            @include fl(26);
+         }
+         @media (min-width: 1200px) {
+            @include fl(30);
+            transform: translate(4px, 1px);
+         }
+      }
+      .banner-circle {
+         @media (min-width: 769px) {
+            height: percent(512, 446);
+            width: percent(512, 554);
+            top: -20px;
+            left: 207px;
+            top: percent(-20, 446);
+            left: percent(207, 554);
+         }
+         @media (min-width: 1400px) {
+            border: 64px solid transparent;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) border-box;
+            mask: radial-gradient(
+                     farthest-side at bottom left,
+                     transparent calc(100% - 64px),
+                     #fff calc(100% - 64px) 100%
+                  )
+                  top right/50% 50%,
+               radial-gradient(farthest-side at top right, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%)
+                  bottom left / 50% 50%,
+               radial-gradient(farthest-side at top left, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%)
+                  bottom right/50% 50%,
+               radial-gradient(
+                     farthest-side at bottom right,
+                     transparent calc(100% - 64px),
+                     #fff calc(100% - 64px) 100%
+                  )
+                  top left / 50% 50%,
+               linear-gradient(#fff, #fff) top / 100% 64px, linear-gradient(#fff, #fff) bottom/100% 64px,
+               linear-gradient(#fff, #fff) left / 64px 100%, linear-gradient(#fff, #fff) right / 64px 100%;
+            mask-repeat: no-repeat;
+         }
+      }
+      .banner {
+         &__content {
+            @media (min-width: 769px) {
+               flex: 0 0 percent(554, 1140);
+               padding-left: percent(110, 1140);
+               padding-right: 0;
+               padding-top: 90px;
+               padding-bottom: 84px;
+            }
+         }
+         &__graphic {
+            @media (min-width: 769px) {
+               flex: 0 0 percent(554, 1140);
+               width: auto;
+               height: auto;
+               margin: 0;
+               padding-bottom: percent(446, 1140);
+            }
+         }
+         &__image {
+            &_1 {
+               @media (min-width: 769px) {
+                  top: percent(-17, 446);
+                  left: percent(125, 554);
+                  width: percent(165, 554);
+                  padding-bottom: percent(107, 554);
+                  transform: rotate(-10.49deg);
+               }
+            }
+            &_2 {
+               @media (min-width: 769px) {
+                  top: percent(302, 446);
+                  left: percent(328, 554);
+                  width: percent(220.3, 554);
+                  padding-bottom: percent(153.86, 554);
+                  transform: rotate(-44.21deg);
+               }
+            }
+            &_main {
+               width: percent(207, 345);
+               padding-bottom: percent(149, 345);
+               top: 2px;
+               left: 50%;
+               transform: translate(-50%, 0);
+               img {
+                  object-fit: contain;
+               }
+               @media (min-width: 769px) {
+                  width: percent(331.98, 554);
+                  padding-bottom: percent(239.82, 554);
+                  top: percent(112, 446);
+                  left: percent(123, 554);
+                  transform: rotate(8.04deg);
+               }
+            }
          }
       }
    }
