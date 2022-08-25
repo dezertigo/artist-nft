@@ -1,9 +1,14 @@
 body.catalog {
     .stroke-text {
+        display: none;
+        transform: translateY(32px);
         left: percent(-38, 1440);
         &:nth-child(2) {
             right: percent(-28, 1440);
             left: unset;
+        }
+        @media (min-width: 1200px) {
+            display: block;
         }
     }
 
@@ -13,10 +18,20 @@ body.catalog {
         padding: 26px 0 38px;
         position: relative;
         overflow: hidden;
-        i {
+        @media (min-width: 1200px) {
+            padding: 62px 0 76px;
+        }
+        .star-decor {
            position: absolute;
+           top: 0;
            left: percent(356, 375);
            font-size: 36px;
+           @media (min-width: 1200px) {
+            left: percent(390, 1440);
+            top: 50px;
+            font-size: 60px;
+            line-height: 1;
+            }
         }
         &__title {
            margin-bottom: 16px;
@@ -25,13 +40,17 @@ body.catalog {
         &__text {
            margin-bottom: 48px;
            text-align: center;
+           @media (min-width: 1200px) {
+            max-width: 415px;
+            margin: 0 auto 48px;
+           }
         }
         &__inner {
            display: grid;
            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
            justify-content: center;
            justify-content: stretch;
-           gap: 19px;
+           gap: 18px;
            @media (min-width: 630px) {
               grid-auto-flow: dense;
            }
@@ -42,7 +61,7 @@ body.catalog {
            }
            @media (min-width: 1200px) {
               column-gap: 29px;
-              row-gap: 24px;
+              row-gap: 22px;
            }
            @media (min-width: 1600px) {
               grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

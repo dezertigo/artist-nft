@@ -1,5 +1,4 @@
 .card-item {
-    max-width: 345px;
     max-width: 100%;
     position: relative;
     border-radius: 12px;
@@ -9,7 +8,12 @@
     }
     &--big {
        @media (min-width: 630px) {
-          grid-column: span 2;
+        grid-column: span 2;
+       }
+       @media (min-width:1200px) {
+        .card-item__text {
+            transform: translateY(6px);
+        }
        }
     }
     .image {
@@ -31,23 +35,54 @@
        justify-content: center;
        border: 1px solid #525960;
        border-radius: 12px;
-       .card-item__btn {
-          i {
-             left: calc(102 / 134 * 100%);
-          }
+       .btn.small {
+        max-width: 134px;
+        width: 100%;
+        transform: translate(3px, -4px);
+        a {
+            z-index: 0;
+        }
        }
     }
     &__locked-caption {
        text-transform: lowercase;
     }
+    &__locked-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        transform: translateY(-3px);
+       i {
+        font-size: 33px;
+       }
+    }
     &__locked-title {
        max-width: 285px;
        width: 100%;
        text-align: right;
-       margin-bottom: 19px;
+       margin-left: 16px;
+       transform: translateX(6px);
        i {
           left: 33px;
        }
+    }
+    &__content-box {
+        width: 100%;
+        max-height: 232px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        @media (min-width: 1200px) {
+            .card-item__title {
+                transform: translateY(7px);
+            }
+            .card-item__price {
+                transform: translateY(-4px);
+            }
+        }
     }
     &__content {
        position: absolute;
@@ -85,9 +120,20 @@
     }
     &__btns {
        display: flex;
+       align-items: center;
+       justify-content: center;
        gap: 12px;
-       max-width: 268px;
        width: 100%;
+       .btn:first-child {
+        max-width: 122px;
+        width: 100%;
+        padding-left: 21px;
+       }
+       .btn:last-child {
+        max-width: 134px;
+        width: 100%;
+        padding-left: 13px;
+       }
     }
     &__btn {
        max-width: 122px;

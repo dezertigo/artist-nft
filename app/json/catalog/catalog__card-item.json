@@ -1,13 +1,13 @@
 [
     {
         "modify": "big",
-        "img": "07",
+        "img": "04",
         "title": "Title of picture or NFT",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "blur": "true",
         "locked": "s",
         "title": "Title of picture",
@@ -15,26 +15,26 @@
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "none": "true",
         "title": "Title of picture",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "title": "Title of picture",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "title": "Title of picture",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "none": "true",
         "title": "Title of picture",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
@@ -42,26 +42,26 @@
     },
     {
         "modify": "big",
-        "img": "07",
+        "img": "04",
         "title": "Title of picture or NFT",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "title": "Title of picture",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "none": "true",
         "title": "Title of picture",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
         "price": "$100 322"
     },
     {
-        "img": "07",
+        "img": "04",
         "none": "true",
         "title": "Title of picture",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
