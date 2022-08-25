@@ -9,9 +9,9 @@
 
 // Иконочный шрифт
 @font-face {
-   font-family: "icons";
-   src: url("../fonts/icons.ttf?n3atup") format("truetype"), url("../fonts/icons.woff?n3atup") format("woff"),
-      url("../fonts/icons.svg?n3atup#icons") format("svg");
+   font-family: "icons-font";
+   src: url("../fonts/icons-font.ttf?a20t7x") format("truetype"), url("../fonts/icons-font.woff?a20t7x") format("woff"),
+      url("../fonts/icons-font.svg?a20t7x#icons-font") format("svg");
    font-weight: normal;
    font-style: normal;
    font-display: block;
@@ -19,17 +19,30 @@
 
 i {
    /* use !important to prevent issues with browser extensions that change fonts */
-   font-family: "icons" !important;
+   font-family: "icons-font" !important;
    font-style: normal;
    font-weight: normal;
    font-variant: normal;
    text-transform: none;
    line-height: 1;
+
    /* Better Font Rendering =========== */
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
 
+.instagram:before {
+   content: "\e912";
+}
+.pinterest:before {
+   content: "\e915";
+}
+.telegram:before {
+   content: "\e924";
+}
+.twitter:before {
+   content: "\e925";
+}
 .arrow-down:before {
    content: "\e900";
    color: #c8d2dc;
@@ -53,120 +66,115 @@ i {
    content: "\e905";
    color: #86a8ff;
 }
-.instagram:before {
-   content: "\e906";
-}
-.pinterest:before {
-   content: "\e907";
-}
-.telegram:before {
-   content: "\e908";
-}
-.twitter:before {
-   content: "\e909";
-}
-.usd:before {
-   content: "\e90a";
-}
-.turn-down:before {
-   content: "\e90b";
-   color: #c5ff98;
-}
-.star:before {
-   content: "\e90c";
-}
-.star-decor:before {
-   content: "\e90d";
-   color: #fcffff;
-}
-.workers:before {
-   content: "\e90e";
-}
-.video:before {
-   content: "\e90f";
-}
-.search:before {
-   content: "\e910";
-   color: #c8d2dc;
-}
-.orders:before {
-   content: "\e911";
-}
-.nft:before {
-   content: "\e912";
-}
-.messages:before {
-   content: "\e913";
-}
 .avatar .path1:before {
-   content: "\e914";
+   content: "\e906";
    color: rgb(252, 232, 227);
 }
 .avatar .path2:before {
-   content: "\e915";
+   content: "\e907";
    margin-left: -1em;
    color: rgb(226, 152, 143);
 }
 .avatar .path3:before {
-   content: "\e916";
+   content: "\e908";
    margin-left: -1em;
    color: rgb(216, 93, 99);
 }
 .avatar .path4:before {
-   content: "\e917";
+   content: "\e909";
    margin-left: -1em;
    color: rgb(183, 61, 73);
 }
 .avatar .path5:before {
-   content: "\e918";
+   content: "\e90a";
    margin-left: -1em;
    color: rgb(76, 34, 75);
 }
 .avatar .path6:before {
-   content: "\e919";
+   content: "\e90b";
    margin-left: -1em;
    color: rgb(226, 152, 143);
 }
 .avatar .path7:before {
-   content: "\e91a";
+   content: "\e90c";
    margin-left: -1em;
    color: rgb(196, 105, 102);
 }
 .avatar .path8:before {
-   content: "\e91b";
+   content: "\e90d";
    margin-left: -1em;
    color: rgb(196, 105, 102);
 }
 .avatar .path9:before {
-   content: "\e91c";
+   content: "\e90e";
    margin-left: -1em;
    color: rgb(196, 105, 102);
 }
 .avatar .path10:before {
-   content: "\e91d";
+   content: "\e90f";
    margin-left: -1em;
    color: rgb(196, 105, 102);
 }
 .avatar .path11:before {
-   content: "\e91e";
+   content: "\e910";
    margin-left: -1em;
    color: rgb(196, 105, 102);
 }
 .avatar .path12:before {
-   content: "\e91f";
+   content: "\e911";
    margin-left: -1em;
    color: rgb(76, 34, 75);
 }
 .copy:before {
-   content: "\e920";
+   content: "\e913";
 }
 .crown:before {
-   content: "\e921";
+   content: "\e914";
 }
 .diamond:before {
-   content: "\e922";
+   content: "\e916";
 }
 .lock:before {
-   content: "\e923";
+   content: "\e917";
    color: #c8d2dc;
+}
+.lock-btn:before {
+   content: "\e918";
+}
+.lock-header:before {
+   content: "\e919";
+   color: #c8d2dc;
+}
+.messages:before {
+   content: "\e91a";
+}
+.nft:before {
+   content: "\e91b";
+}
+.orders:before {
+   content: "\e91c";
+}
+.search:before {
+   content: "\e91d";
+   color: #c8d2dc;
+}
+.star-decor:before {
+   content: "\e91e";
+   color: #fcffff;
+}
+.star:before {
+   content: "\e91f";
+}
+.turn-down:before {
+   content: "\e920";
+   color: #c5ff98;
+}
+.usd:before {
+   content: "\e921";
+}
+.video:before {
+   content: "\e922";
+}
+.workers:before {
+   content: "\e923";
 }

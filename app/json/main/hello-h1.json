@@ -1,0 +1,15 @@
+[
+	{
+		"title" : "We are here to inspire and share art",
+		"text" : "Indulgence announcing uncommonly met she continuing two unpleasing terminated",
+		"modifyButton1" : {
+			"text" : "Premium access",
+			"class" : "big grad-bg",
+			"icon": "crown"
+		},
+			"modifyButton2" : {
+			"text" : "Discover",
+			"class" : "small grad-text"
+		}
+	}
+]

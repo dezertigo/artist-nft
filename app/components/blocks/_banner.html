@@ -1,0 +1,44 @@
+<div class="banner banner_@@modify">
+	<div class="banner__content">
+		<i class="crown"></i>
+		<h2 class="banner__title">@@title</h2>
+		<p class="banner__text content-text">@@text</p>
+		@@if (context.item == "button") {
+		@@include("../base/_btn.html", {
+		"text": "Go to plans",
+		"modify": "big dark-bg"
+		})
+		}
+		@@if (context.item == "social") {
+		@@include("./_social-icons.html")
+		}
+	</div>
+	<div class="banner__graphic">
+		<div class="banner-circle"></div>
+		<div class='banner__image banner__image_1'>
+			<picture>
+				<source type='image/webp' srcset='@img/bg/banner_02.webp'>
+				<img src='@img/bg/banner_02.png' alt='decor image'>
+			</picture>
+		</div>
+		<div class='banner__image banner__image_2'>
+			<picture>
+				<source type='image/webp' srcset='@img/bg/banner_03.webp'>
+				<img src='@img/bg/banner_03.png' alt='decor image'>
+			</picture>
+		</div>
+		<div class='banner__image banner__image_main'>
+			<picture>
+				<source type='image/webp' srcset='@img/bg/banner_@@img.webp'>
+				<img src='@img/bg/banner_@@img.png' alt='decor image'>
+			</picture>
+		</div>
+
+
+	</div>
+
+
+
+
+
+</div>
