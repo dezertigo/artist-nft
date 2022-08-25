@@ -30,8 +30,11 @@
    }
    &__action {
       z-index: 2;
+      transition: all 1s ease;
+      @media (min-width: 1050px) {
+         transition: all 0s ease;
+      }
       @media (max-width: 1049px) {
-         transition: all 1.5s ease;
          position: fixed;
          width: 100vw;
          height: 100vh;

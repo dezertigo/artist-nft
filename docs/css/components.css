@@ -611,6 +611,7 @@ h6 {
 
 .header__action {
   z-index: 2;
+  transition: all 1s ease;
 }
 
 .header__buttons .btn.big {
@@ -1517,6 +1518,10 @@ h6 {
   }
 
   .header__action {
+    transition: all 0s ease;
+  }
+
+  .header__action {
     flex: 1 1 auto;
   }
 
@@ -1746,7 +1751,6 @@ h6 {
 
 @media (max-width: 1049px) {
   .header__action {
-    transition: all 1.5s ease;
     position: fixed;
     width: 100vw;
     height: 100vh;
