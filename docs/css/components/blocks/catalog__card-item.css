@@ -78,6 +78,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding: 10px 0;
 }
 
 .card-item__content {
@@ -179,6 +180,10 @@
 @media (min-width: 1200px) {
   .card-item--big .card-item__text {
     transform: translateY(6px);
+  }
+
+  .card-item__content-box {
+    padding: 0;
   }
 
   .card-item__content-box .card-item__title {
