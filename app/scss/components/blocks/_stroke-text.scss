@@ -5,6 +5,7 @@
    @include fl(50);
    -webkit-text-fill-color: transparent;
    -webkit-text-stroke: 1px rgba(252, 255, 255, 0.2);
+   white-space: nowrap;
    @media (min-width: 500px) {
       @include fl(54);
    }

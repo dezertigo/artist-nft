@@ -172,6 +172,9 @@
       min-height: 48px;
       padding-left: 22px;
       padding-right: 22px;
+      border-radius: rem(12);
+      height: 48px;
+
       a {
          @include fl(14, 20);
          white-space: nowrap;
@@ -200,7 +203,7 @@
          display: none;
       }
       i {
-         @include fl(15);
+         @include fl(13);
          @extend %grad-text;
       }
       transition: all 0.3s ease;

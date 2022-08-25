@@ -1,0 +1,238 @@
+body.home {
+   .hero {
+      // .hero__decor
+      position: relative;
+      overflow: hidden;
+      &__decor {
+         & > * {
+            position: absolute;
+            pointer-events: none;
+         }
+         :nth-child(1) {
+            top: percent(5, 375);
+            left: percent(187, 375);
+            @media (min-width: 769px) {
+               top: percent(50, 1440);
+               left: percent(-17, 1440);
+            }
+         }
+         :nth-child(2) {
+            display: none;
+            @media (min-width: 769px) {
+               display: block;
+               top: percent(1260, 1440);
+               left: percent(482, 1440);
+            }
+         }
+         :nth-child(3) {
+            @include fl(48);
+            left: percent(302, 375);
+            top: percent(361, 717);
+            @media (min-width: 769px) {
+               z-index: 1;
+               @include fl(62);
+               top: percent(59, 712);
+               left: percent(737, 1440);
+            }
+         }
+         :nth-child(4) {
+            z-index: 1;
+            @include fl(41);
+            left: 0;
+            top: percent(368, 717);
+            @media (min-width: 769px) {
+               @include fl(48);
+               top: percent(540, 712);
+               left: percent(633, 1440);
+            }
+         }
+         :nth-child(5) {
+            z-index: 1;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            left: percent(105, 375);
+            top: percent(398, 717);
+            border: 1px solid rgba(252, 255, 255, 0.4);
+            @media (min-width: 769px) {
+               left: percent(762, 1440);
+               top: percent(228, 712);
+            }
+         }
+         :nth-child(6) {
+            @media (min-width: 769px) {
+               z-index: 1;
+               width: 10px;
+               height: 10px;
+               border-radius: 50%;
+               top: percent(49, 712);
+               left: percent(1260, 1440);
+               border: 1px solid rgba(252, 255, 255, 0.4);
+            }
+         }
+      }
+      // .hero__container
+      &__container {
+         padding-top: 62px;
+         @media (min-width: 769px) {
+            display: flex;
+            align-items: center;
+            padding-top: 79px;
+         }
+      }
+      // .hero__content
+      &__content {
+         @media (min-width: 769px) {
+            position: relative;
+            top: -30px;
+         }
+         .social-icons {
+            display: none;
+            @media (min-width: 769px) {
+               display: flex;
+               margin-bottom: 31px;
+            }
+         }
+         .hello-h1__title {
+            margin-bottom: 8px;
+            max-width: percent(271, 345);
+            @media (min-width: 769px) {
+               margin-bottom: 11px;
+               transform: translate(0, -5px);
+               max-width: 90%;
+            }
+            @media (min-width: 1000px) {
+               max-width: none;
+            }
+         }
+         .hello-h1__text {
+            max-width: percent(271, 345);
+            @media (min-width: 769px) {
+               max-width: percent(271, 448);
+               max-width: 90%;
+            }
+            @media (min-width: 1000px) {
+               max-width: percent(271, 440);
+            }
+         }
+         .btn.big {
+         }
+         .btn.small {
+            min-width: 117px;
+            @media (min-width: 769px) {
+               min-width: 145px;
+            }
+         }
+         @media (min-width: 769px) {
+            margin-left: 15px;
+         }
+      }
+      // .hero__graphic
+
+      // .hero__graphic
+
+      &__graphic {
+         margin-top: 32px;
+         position: relative;
+         padding-bottom: percent(349, 345);
+         @media (min-width: 769px) {
+            width: 100%;
+            flex: 0 0 percent(662, (1440 - 150 * 2));
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-right: 15px;
+            position: relative;
+            &:after {
+               content: "";
+               position: absolute;
+               bottom: 0;
+               left: 100%;
+               width: 30px;
+               height: 30%;
+               background: $darkColor;
+            }
+         }
+      }
+
+      // .hero__graphic-gradient
+
+      &__graphic-gradient {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 100%;
+         padding-bottom: percent(306, 345);
+         border-radius: rem(24);
+         overflow: hidden;
+         @media (min-width: 769px) {
+            position: relative;
+            width: percent(460, 662);
+            padding-bottom: percent(633, 662);
+            margin-left: auto;
+         }
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      // .hero__image
+
+      &__image {
+         position: absolute;
+         width: percent(395, 330);
+         padding-bottom: percent(349, 345);
+         filter: drop-shadow(-7px -14px 53px rgba(0, 0, 0, 0.25));
+         @media (min-width: 769px) {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding-bottom: percent(585, 662);
+            // overflow: hidden;
+         }
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 26px -1px;
+            @media (min-width: 769px) {
+               object-position: 0px 0px;
+               width: 104%;
+            }
+         }
+         svg {
+            position: absolute;
+            &.first {
+               bottom: 10px;
+               bottom: percent(49, 349);
+               left: percent(10, 451);
+               width: percent(136, 412);
+               height: percent(210, 349);
+               @media (min-width: 468px) {
+                  left: 0;
+               }
+               @media (min-width: 769px) {
+                  display: none;
+               }
+            }
+            &.second {
+               display: none;
+               @media (min-width: 769px) {
+                  display: block;
+                  top: percent(152, 585);
+                  left: percent(-26, 662);
+                  width: percent(222, 662);
+                  height: percent(347, 585);
+               }
+            }
+         }
+      }
+   }
+}
