@@ -611,6 +611,7 @@ h6 {
 
 .header__action {
   z-index: 2;
+  transition: transform 1s ease;
 }
 
 .header__buttons .btn.big {
@@ -1505,6 +1506,10 @@ body.home .biography__subtext {
     line-height: 1.7333333333;
   }
 
+  .header__action {
+    transition: transform 2s ease;
+  }
+
   body.home .hero__image svg.first {
     left: 0;
   }
@@ -2118,13 +2123,12 @@ body.home .biography__subtext {
 
 @media (max-width: 1049px) {
   .header__action {
-    transition: transform 2s ease;
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     right: 0;
-    transform: translate(100%, 0);
+    transform: translate(200%, 0);
   }
 
   .header__action-wrapper {
@@ -2176,7 +2180,7 @@ body.home .biography__subtext {
 
   .header__action.active:before {
     opacity: 1;
-    transition: opacity 0.5s ease 1s;
+    transition: opacity 0.5s ease 0.8s;
   }
 
   .header__buttons {
