@@ -1475,6 +1475,10 @@ body.catalog .gallery__inner {
   }
 
   .header__action {
+    z-index: 12;
+  }
+
+  .header__action {
     flex: 1 1 auto;
     z-index: 12;
   }
