@@ -90,6 +90,8 @@
    &__image {
       position: absolute;
       transition: all 0.5s ease;
+      animation: changeColor 5s ease 0s;
+      animation-iteration-count: infinite;
 
       img {
          position: absolute;
@@ -117,6 +119,17 @@
       }
       // &_main {
       // }
+      @keyframes changeColor {
+         0% {
+            filter: saturate(210%) hue-rotate(360deg);
+         }
+         50% {
+            filter: saturate(110%) hue-rotate(0deg);
+         }
+         100% {
+            filter: saturate(210%) hue-rotate(360deg);
+         }
+      }
    }
    &_regular {
       @media (min-width: 769px) {
