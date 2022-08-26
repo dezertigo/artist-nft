@@ -114,7 +114,11 @@
 				</div>
 			</section>
 			<section class="slider">
-
+				<div class="swiper nft-swiper">
+					<div class="swiper-wrapper">
+						@@loop('./components/blocks/_nft-card-item.html', './json/main/nft-cards.json')
+					</div>
+				</div>
 			</section>
 		</main>
 		@@include('./components/structure/_footer.html')

@@ -1,0 +1,30 @@
+.nft-card-item {
+   // .nft-card-item__body
+   &__body {
+   }
+
+   // .nft-card-item__label
+   &__label {
+   }
+
+   // .nft-card-item__title
+   &__title {
+   }
+
+   // .nft-card-item__text
+   &__text {
+   }
+
+   // .nft-card-item__row
+   &__row {
+      &_modified {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+   }
+
+   // .nft-card-item__price
+   &__price {
+   }
+}

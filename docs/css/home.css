@@ -549,6 +549,13 @@ h4 {
   line-height: 1.5227272727;
 }
 
+h5 {
+  font-weight: 700;
+  font-size: 1.125em;
+  line-height: 1.4444444444;
+  color: #fcffff;
+}
+
 h6 {
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   background-clip: text;
@@ -1982,6 +1989,11 @@ body.home .premium__container {
 
   h4 {
     font-size: 1.625em;
+  }
+
+  h5 {
+    font-size: 1.25em;
+    line-height: 1.5;
   }
 
   h6 {

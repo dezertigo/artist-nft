@@ -28,7 +28,16 @@ h4 {
    font-weight: 700;
    @include fl(22, 33.5);
    @media (min-width: 1200px) {
-      @include fz(26);
+      @include fz(26m 33.5);
+   }
+}
+// title/title-mobile
+h5 {
+   font-weight: 700;
+   @include fl(18, 26);
+   color: #fcffff;
+   @media (min-width: 1200px) {
+      @include fl(20, 30);
    }
 }
 // .caption
