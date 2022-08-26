@@ -6,7 +6,7 @@
         padding-top: 17px;
         padding-bottom: 0;
         .header__logo {
-            transform: translate(-7px,5px);
+            transform: translate(-7px,2px);
         }
     }
     &__inner {
@@ -17,9 +17,12 @@
         margin-bottom: 21px;
         @media (min-width:800px) {
             margin-bottom: 0px;
-            padding-bottom: 17px;
+            padding-bottom: 15px;
             border-bottom: 1px solid rgba(252, 255, 255, 0.05);
         }
+    }
+    &__logo {
+        transform: translate(8px, 3px);
     }
     &__links {
         order: 1;
@@ -33,7 +36,7 @@
             flex-direction: row;
             column-gap: 27px;
             margin-top: 8px;
-            transform: translateX(-11px);
+            transform: translate(-12px,-3px);
         }
     }
     &__link {
@@ -46,10 +49,16 @@
             border-bottom: 1px solid rgba(252, 255, 255, 0.05);
             padding-bottom: 15px;
         }
+        &:last-child {
+            transform: translate(-2px, -1px);
+        }
         @media (min-width:800px) {
             &:first-child {
                 border-bottom: none;
                 padding-bottom: 0;
+            }
+            &:last-child {
+                transform: translate(1px,0px);
             }
         }
 
