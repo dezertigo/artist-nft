@@ -1284,8 +1284,6 @@ h6 {
 .banner__image {
   position: absolute;
   transition: all 0.5s ease;
-  -webkit-animation: changeColor 5s ease 0s;
-  animation: changeColor 5s ease 0s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
