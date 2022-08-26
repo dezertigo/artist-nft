@@ -8,9 +8,9 @@
 			})
 			<h6 class="nft-card-item__label">@@label</h6>
 			<h5 class="nft-card-item__title">@@title</h5>
-			<h4 class="nft-card-item__text">@@text</h4>
+			<p class="nft-card-item__text">@@text</p>
 			<div class="nft-card-item__row @@if (context.modifyClass) {nft-card-item__row_modified}">
-				<div class="nft-card-item__price">@@price</div>
+				<h4 class="nft-card-item__price">@@price</h4>
 				@@include("../base/_btn.html", {
 				"text": "@@buttonText",
 				"modify": "small grad-bg",

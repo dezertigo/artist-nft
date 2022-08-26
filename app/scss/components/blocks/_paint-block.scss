@@ -1,4 +1,19 @@
 .paint-block {
+   position: relative;
+   padding-bottom: 100%;
+   border-radius: rem(12);
+
+   img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 102%;
+      // width: percent(183.61, 253);
+      height: 100%;
+      // height: percent(241.43, 253);
+      object-fit: cover;
+      object-position: 1px 71%;
+   }
    &_green {
       background-color: #c5ff98;
    }

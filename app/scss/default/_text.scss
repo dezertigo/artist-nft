@@ -28,7 +28,7 @@ h4 {
    font-weight: 700;
    @include fl(22, 33.5);
    @media (min-width: 1200px) {
-      @include fz(26m 33.5);
+      @include fl(26, 33.5);
    }
 }
 // title/title-mobile
