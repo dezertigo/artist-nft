@@ -17,6 +17,11 @@
 
 // Подключение стилей компонентов
 @import "./components/base/btn";
+@import "./components/blocks/stroke-text";
+@import "./components/blocks/hello-h1";
+@import "./components/blocks/double-block";
+@import "./components/blocks/catalog__card-item";
+@import "./components/blocks/social-icons";
 
 //Подключение стилей конкретной страницы
 @import "./pages/product";

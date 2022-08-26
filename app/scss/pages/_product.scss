@@ -1,0 +1,81 @@
+body.product {
+    .product {
+        position: relative;
+        padding-top: 62px;
+        color: #fff;
+        &__decor {
+            & > * {
+                position: absolute;
+                pointer-events: none;
+            }
+            :nth-child(1) {
+                display: none;
+            }
+            :nth-child(2) {
+                top: 11px;
+                left: percent(81, 375);
+            }
+            :nth-child(3) {
+                font-size: 41px;
+                top: 368px;
+                
+            }
+            :nth-child(4) {
+                font-size: 48px;
+                top: 361px;
+                right: percent(37, 375);
+            }
+        }
+        &__circle {}
+        &__inner {
+        }
+        &__content {
+            .hello-h1__title {
+                max-width: percent(263, 345);
+            }
+            .hello-h1__text {
+                max-width: percent(271, 345);
+            }
+            .btn {
+                max-width: 194px;
+                width: 100%;
+                .lock-btn {
+                    color: #1D1F21;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+        &__graphic {
+            margin-top: 46px;
+            margin-bottom: 56px;
+            >div {
+                max-width: percent(309,345);
+            }
+        }
+        &__gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            justify-content: center;
+            justify-content: stretch;
+            gap: 18px;
+            @media (min-width: 630px) {
+               grid-auto-flow: dense;
+            }
+            @media (min-width: 800px) {
+               .none {
+                  display: block;
+               }
+            }
+            @media (min-width: 1200px) {
+               column-gap: 29px;
+               row-gap: 23px;
+            }
+            @media (min-width: 1600px) {
+               grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            }
+        }
+      }
+      .star-decor {
+      }
+      
+}
