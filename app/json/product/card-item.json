@@ -1,0 +1,68 @@
+[   
+    {
+        "img": "04",
+        "none": "true",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "modify": "big",
+        "img": "04",
+        "title": "Title of picture or NFT",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "img": "04",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "img": "04",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "img": "04",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "modify": "big",
+        "img": "04",
+        "title": "Title of picture or NFT",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "img": "04",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "img": "04",
+        "none": "true",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "img": "04",
+        "none": "true",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    },
+    {
+        "img": "04",
+        "none": "true",
+        "title": "Title of picture",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+        "price": "$100 322"
+    }
+]

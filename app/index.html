@@ -3,39 +3,118 @@
 'lang':'en',
 'css': './css/home.min.css',
 'title': 'Home',
-'swiper': '',
+'swiper': 'y',
 })
 
 <body class="home">
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
-			<!-- @@include('./components/blocks/_stroke-text.html', {
-			'text': 'make art'
-			}) -->
-
 			<section class="hero">
+				<div class="hero__decor">
+					@@include('./components/blocks/_stroke-text.html', {
+					'text': 'make art'
+					})
+					@@include('./components/blocks/_stroke-text.html', {
+					'text': 'not war'
+					})
+					<i class="star-decor"></i>
+					<i class="star-decor"></i>
+					<div class="hero__circle"></div>
+					<div class="hero__circle"></div>
+				</div>
 				<div class="hero__container">
-					@@include('./components/blocks/_social-icons.html', {
-					'modify': 'grad'
-					})
-					@@loop('./components/blocks/_hello-h1.html', './json/main/hello-h1.json')
-					@@loop('./components/blocks/_hello-h2.html', './json/main/hello-h2.json')
-					@@include('./components/blocks/_double-block.html', {
-					'modify' : 'rect',
-					'img': '02',
-					'imgAlt': 'designer photo',
-					})
-					@@loop('./components/blocks/_banner.html', './json/main/banner.json')
-					@@loop('./components/blocks/_banner.html', './json/auction/banner.json')
+					<div class="hero__content">
+						@@include('./components/blocks/_social-icons.html', {
+						'modify': 'grad'
+						})
+						@@loop('./components/blocks/_hello-h1.html', './json/main/hello-h1.json')
+					</div>
+					<div class="hero__graphic">
+						<div class="hero__graphic-gradient">
+							<picture>
+								<source type='image/webp' srcset='@img/bg/card-bg.webp'>
+								<img src='@img/bg/card-bg.png' alt='background decor'>
+							</picture>
+						</div>
+						<div class='hero__image'>
+							<svg class="first" width="136" height="210" viewBox="0 0 136 210" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M133 15.8585C110.245 2.95121 47.8419 -10.2495 17.041 51.3039C-20.817 126.961 48.9372 204.106 72.4867 205"
+									stroke="url(#paint0_linear_44_817)" stroke-width="10" />
+								<defs>
+									<linearGradient id="paint0_linear_44_817" x1="107.96" y1="5.13551"
+										x2="69.5583" y2="205.011" gradientUnits="userSpaceOnUse">
+										<stop stop-color="white" stop-opacity="0" />
+										<stop offset="0.455466" stop-color="white" stop-opacity="0.544534" />
+										<stop offset="1" stop-color="white" stop-opacity="0" />
+									</linearGradient>
+								</defs>
+							</svg>
+							<svg class="second" width="222" height="347" viewBox="0 0 222 347" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M219.019 24C180.853 2.33335 76.1822 -19.8258 24.5193 83.5C-38.9807 210.5 78.0194 340 117.519 341.5"
+									stroke="url(#paint0_linear_5_34)" stroke-width="10" />
+								<defs>
+									<linearGradient id="paint0_linear_5_34" x1="177.019" y1="6" x2="112.51"
+										y2="341.5" gradientUnits="userSpaceOnUse">
+										<stop stop-color="white" stop-opacity="0" />
+										<stop offset="0.455466" stop-color="white" stop-opacity="0.544534" />
+										<stop offset="1" stop-color="white" stop-opacity="0" />
+									</linearGradient>
+								</defs>
+							</svg>
 
+							<picture>
+								<source type='image/webp' srcset='@img/gallery/01.webp'>
+								<img src='@img/gallery/01.png' alt='designer photo'>
+							</picture>
+						</div>
+					</div>
 				</div>
 			</section>
+			<div class="biography">
+				<div class="biography__container">
+					<div class="biography__graphic">
+						@@include('./components/blocks/_double-block.html', {
+						'modify' : 'rect',
+						'img': '02',
+						'imgAlt': 'designer photo',
+						})
+					</div>
+					<div class="biography__content">
+						@@loop('./components/blocks/_hello-h2.html', './json/main/hello-h2.json')
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide biography__slide">
+									<div class="biography__num">2007</div>
+									<div class="biography__subtext subtext">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit</div>
+								</div>
+								<div class="swiper-slide biography__slide">
+									<div class="biography__num">2014</div>
+									<div class="biography__subtext subtext">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit</div>
+								</div>
+								<div class="swiper-slide biography__slide">
+									<div class="biography__num">2019</div>
+									<div class="biography__subtext subtext">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--@@loop('./components/blocks/_banner.html', './json/main/banner.json')-->
 		</main>
 		@@include('./components/structure/_footer.html')
 	</div>
 	@@include('./components/structure/_scripts.html', {
-	'swiper': '',
+	'swiper': 'y',
 	})
 </body>
 

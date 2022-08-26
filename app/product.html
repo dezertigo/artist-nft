@@ -3,7 +3,6 @@
 'lang':'en',
 'css': './css/product.min.css',
 'title': 'product',
-'swiper': 'y',
 })
 
 <body class="product">
@@ -11,8 +10,33 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="product">
+				<div class="product__decor">
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'CUTOM BY YOUR OWN',
+					})
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'UNIQUE CLOTHES',
+					})
+					<i class="star-decor"></i>
+					<i class="star-decor"></i>
+					<div class="product__circle"></div>
+				</div>
 				<div class="product__container">
-
+					<div class="product__inner">
+						<div class="product__content">
+							@@loop('./components/blocks/_hello-h1.html', './json/product/hello-h1.json')
+						</div>
+						<div class="product__graphic">
+							@@include("./components/blocks/_double-block.html", {
+								"modify" : "square",
+								"img": "05",
+								"imgAlt": "product image",
+								})
+						</div>
+					</div>
+					<div class="product__gallery">
+						@@loop('./components/blocks/_catalog__card-item.html', './json/product/card-item.json')
+					</div>
 				</div>
 			</section>
 		</main>

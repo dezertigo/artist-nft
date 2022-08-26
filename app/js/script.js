@@ -105,4 +105,44 @@ window.addEventListener("load", () => {
          }
       }
    }
+
+   // ! index.html
+   if (qs("body.home")) {
+      // Move graphic
+      window.addEventListener("resize", moveBlock);
+      moveBlock();
+      function moveBlock(e) {
+         console.log(window.innerWidth);
+
+         if (window.innerWidth <= 768) {
+            qs(".hello-h2__title").after(qs(".biography__graphic"));
+         } else if (window.innerWidth > 768) {
+            qs(".biography__container").prepend(qs(".biography__graphic"));
+         }
+      }
+
+      // slider
+      const swiper = new Swiper(".swiper", {
+         spaceBetween: 22,
+         slidesPerView: 2.47,
+         slideToClickedSlide: true,
+         breakpoints: {
+            460: {
+               slidesPerView: 2.75,
+               spaceBetween: 28,
+            },
+            769: {
+               slidesPerView: 2,
+            },
+            1000: {
+               slidesPerView: 2.5,
+               spaceBetween: 35,
+            },
+            1200: {
+               slidesPerView: 3,
+               spaceBetween: 9,
+            },
+         },
+      });
+   }
 });

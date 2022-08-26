@@ -13,7 +13,6 @@
 }
 
 .double-block_rect {
-  width: 255.91px;
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   transform: translate(15px, 0) rotate(-3.86deg);
   padding-top: 5px;
@@ -53,8 +52,7 @@
   }
 
   .double-block_rect {
-    width: 448.41px;
-    transform: translate(23px, 0) rotate(-3.86deg);
+    transform: translate(8px, 0) rotate(-3.86deg);
     padding-left: rem(1.7);
     padding-right: rem(1.7);
     padding-top: 10px;

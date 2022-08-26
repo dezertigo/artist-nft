@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
 	
+	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+	
 	<link rel="stylesheet" href="./css/home.min.css">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 	<title>Home</title>
@@ -26,7 +28,7 @@
 
 						<ul class="header__menu menu">
 							<li class="menu__item">
-								<a href="index.html">Main page</a>
+								<a href="components.html">Main page</a>
 							</li>
 							<li class="menu__item">
 
@@ -92,11 +94,18 @@
 	</div>
 </header>
 		<main>
-			
-
 			<section class="hero">
+				<div class="hero__decor">
+					<p class="stroke-text">make art</p>
+					<p class="stroke-text">not war</p>
+					<i class="star-decor"></i>
+					<i class="star-decor"></i>
+					<div class="hero__circle"></div>
+					<div class="hero__circle"></div>
+				</div>
 				<div class="hero__container">
-					<div class="social-icons social-icons_grad">
+					<div class="hero__content">
+						<div class="social-icons social-icons_grad">
 	<a target="_blank" href="https://www.instagram.com/">
 		<i class="instagram"></i>
 	</a>
@@ -110,7 +119,7 @@
 		<i class="pinterest"></i>
 	</a>
 </div>
-					<div class="hello-h1">
+						<div class="hello-h1">
 	<h1 class="hello-h1__title">We are here to inspire and share art</h1>
 	<p class="hello-h1__text content-text">Indulgence announcing uncommonly met she continuing two unpleasing terminated</p>
 	
@@ -130,15 +139,56 @@
 	</div>
 	
 </div>
-					<div class="hello-h2">
-	<h6 class="hello-h2__label">BIOGRAPHY</h6>
-	<h2 class="hello-h2__title">Perchen Arts. Biography</h2>
-	
-	<p class="hello-h2__text content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</br> Turpis egestes maecenas pharetra convallis posuere morbi leo urna molestie at. Diam in arcu curcus euismod quis viverra nibh cras. In ante metus dictum at tempor commodo ullamcorper. Ultrices eros in curcus turpis massa.</p>
-	
+					</div>
+					<div class="hero__graphic">
+						<div class="hero__graphic-gradient">
+							<picture>
+								<source type='image/webp' srcset='img/bg/card-bg.webp'>
+								<img src='img/bg/card-bg.png' alt='background decor'>
+							</picture>
+						</div>
+						<div class='hero__image'>
+							<svg class="first" width="136" height="210" viewBox="0 0 136 210" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M133 15.8585C110.245 2.95121 47.8419 -10.2495 17.041 51.3039C-20.817 126.961 48.9372 204.106 72.4867 205"
+									stroke="url(#paint0_linear_44_817)" stroke-width="10" />
+								<defs>
+									<linearGradient id="paint0_linear_44_817" x1="107.96" y1="5.13551"
+										x2="69.5583" y2="205.011" gradientUnits="userSpaceOnUse">
+										<stop stop-color="white" stop-opacity="0" />
+										<stop offset="0.455466" stop-color="white" stop-opacity="0.544534" />
+										<stop offset="1" stop-color="white" stop-opacity="0" />
+									</linearGradient>
+								</defs>
+							</svg>
+							<svg class="second" width="222" height="347" viewBox="0 0 222 347" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M219.019 24C180.853 2.33335 76.1822 -19.8258 24.5193 83.5C-38.9807 210.5 78.0194 340 117.519 341.5"
+									stroke="url(#paint0_linear_5_34)" stroke-width="10" />
+								<defs>
+									<linearGradient id="paint0_linear_5_34" x1="177.019" y1="6" x2="112.51"
+										y2="341.5" gradientUnits="userSpaceOnUse">
+										<stop stop-color="white" stop-opacity="0" />
+										<stop offset="0.455466" stop-color="white" stop-opacity="0.544534" />
+										<stop offset="1" stop-color="white" stop-opacity="0" />
+									</linearGradient>
+								</defs>
+							</svg>
 
-</div>
-					<div class="double-block double-block_rect">
+							<picture>
+								<source type='image/webp' srcset='img/gallery/01.webp'>
+								<img src='img/gallery/01.png' alt='designer photo'>
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="biography">
+				<div class="biography__container">
+					<div class="biography__graphic">
+						<div class="double-block double-block_rect">
 	<div class='double-block__image'>
 		<picture>
 			<source type='image/webp' srcset='img/gallery/02.webp'>
@@ -146,7 +196,40 @@
 		</picture>
 	</div>
 </div>
-					<div class="banner banner_regular">
+					</div>
+					<div class="biography__content">
+						<div class="hello-h2">
+	<h6 class="hello-h2__label">BIOGRAPHY</h6>
+	<h2 class="hello-h2__title">Perchen Arts. Biography</h2>
+	
+	<p class="hello-h2__text content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</br> Turpis egestes maecenas pharetra convallis posuere morbi leo urna molestie at. Diam in arcu curcus euismod quis viverra nibh cras. In ante metus dictum at tempor commodo ullamcorper. Ultrices eros in curcus turpis massa.</p>
+	
+
+</div>
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide biography__slide">
+									<div class="biography__num">2007</div>
+									<div class="biography__subtext subtext">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit</div>
+								</div>
+								<div class="swiper-slide biography__slide">
+									<div class="biography__num">2014</div>
+									<div class="biography__subtext subtext">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit</div>
+								</div>
+								<div class="swiper-slide biography__slide">
+									<div class="biography__num">2019</div>
+									<div class="biography__subtext subtext">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--<div class="banner banner_regular">
 	<div class="banner__content">
 		<i class="crown"></i>
 		<h2 class="banner__title">Get the premium access</h2>
@@ -187,67 +270,12 @@
 
 
 
-</div>
-					<div class="banner banner_social">
-	<div class="banner__content">
-		<i class="crown"></i>
-		<h2 class="banner__title">Liked the work?</h2>
-		<p class="banner__text content-text">Share with friends in social media</p>
-		
-		
-		<div class="social-icons ">
-	<a target="_blank" href="https://www.instagram.com/">
-		<i class="instagram"></i>
-	</a>
-	<a target="_blank" href="https://twitter.com/">
-		<i class="twitter"></i>
-	</a>
-	<a target="_blank" href="https://web.telegram.org/">
-		<i class="telegram"></i>
-	</a>
-	<a target="_blank" href="https://www.pinterest.com/">
-		<i class="pinterest"></i>
-	</a>
-</div>
-		
-	</div>
-	<div class="banner__graphic">
-		<div class="banner-circle"></div>
-		<div class='banner__image banner__image_1'>
-			<picture>
-				<source type='image/webp' srcset='img/bg/banner_02.webp'>
-				<img src='img/bg/banner_02.png' alt='decor image'>
-			</picture>
-		</div>
-		<div class='banner__image banner__image_2'>
-			<picture>
-				<source type='image/webp' srcset='img/bg/banner_03.webp'>
-				<img src='img/bg/banner_03.png' alt='decor image'>
-			</picture>
-		</div>
-		<div class='banner__image banner__image_main'>
-			<picture>
-				<source type='image/webp' srcset='img/bg/banner_04.webp'>
-				<img src='img/bg/banner_04.png' alt='decor image'>
-			</picture>
-		</div>
-
-
-	</div>
-
-
-
-
-
-</div>
-
-				</div>
-			</section>
+</div>-->
 		</main>
 		<footer class="footer">
    <div class="footer__container">
       <div class="footer__inner">
-         <a class="header__logo" href="index.html">
+         <a class="header__logo footer__logo" href="index.html">
             <img src="img/logo.svg" alt="logo">
          </a>
          <div class="footer__links">
@@ -279,6 +307,8 @@
 
 	</div>
 	
+<script src="js/swiper-bundle.min.js"></script>
+
 <script src="js/script.min.js"></script>
 </body>
 

@@ -70,3 +70,14 @@ h6 {
    @include fl(14, 20);
    color: $darkColor;
 }
+// .14 semibold
+.subtext {
+   font-weight: 600;
+   @include fl(14, 24);
+   @media (min-width: 468px) {
+      @include fl(15, 26);
+   }
+   @media (min-width: 760px) {
+      @include fl(16, 28);
+   }
+}

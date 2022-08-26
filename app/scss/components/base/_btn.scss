@@ -65,6 +65,7 @@
       z-index: 1;
       transition: all 0.3s ease;
       white-space: nowrap;
+      transform: translate(-1px, -1px);
    }
    @media (min-width: 1200px) {
       min-height: 64px;
