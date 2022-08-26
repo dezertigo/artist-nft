@@ -1,0 +1,11 @@
+[
+	{
+		"title" : "Are you ready to get custom clothes? ",
+		"text" : "Indulgence announcing uncommonly met she continuing two unpleasing terminated",
+		"modifyButton1" : {
+			"text" : "Get custom now",
+			"class" : "big grad-bg",
+			"icon": "lock-btn"
+		}	
+	}
+]
