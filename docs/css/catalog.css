@@ -852,6 +852,10 @@ h6 {
   margin-bottom: 21px;
 }
 
+.footer__logo {
+  transform: translate(8px, 3px);
+}
+
 .footer__links {
   order: 1;
   flex-basis: 100%;
@@ -871,6 +875,10 @@ h6 {
 .footer__link:first-child {
   border-bottom: 1px solid rgba(252, 255, 255, 0.05);
   padding-bottom: 15px;
+}
+
+.footer__link:last-child {
+  transform: translate(-2px, -1px);
 }
 
 .footer__rights {
@@ -1140,7 +1148,7 @@ h6 {
 .card-item__locked .btn.small {
   max-width: 134px;
   width: 100%;
-  transform: translate(3px, -4px);
+  transform: translate(6px, -4px);
 }
 
 .card-item__locked .btn.small a {
@@ -1156,7 +1164,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  transform: translateY(-3px);
+  transform: translate(1px, -3px);
 }
 
 .card-item__locked-text i {
@@ -1204,6 +1212,14 @@ h6 {
 .card-item__content:hover {
   background: linear-gradient(175deg, rgba(104, 128, 255, 0.9) 0%, rgba(60, 167, 244, 0.9) 55.2%, rgba(140, 69, 255, 0.9) 100%);
   opacity: 1;
+}
+
+.card-item__locked ~ .card-item__content {
+  pointer-events: none;
+}
+
+.card-item__locked ~ .card-item__content:hover {
+  display: none;
 }
 
 .card-item__title {
@@ -1419,12 +1435,12 @@ body.catalog .gallery__inner {
   }
 
   .footer .header__logo {
-    transform: translate(-7px, 5px);
+    transform: translate(-7px, 2px);
   }
 
   .footer__inner {
     margin-bottom: 0px;
-    padding-bottom: 17px;
+    padding-bottom: 15px;
     border-bottom: 1px solid rgba(252, 255, 255, 0.05);
   }
 
@@ -1435,12 +1451,16 @@ body.catalog .gallery__inner {
     -moz-column-gap: 27px;
     column-gap: 27px;
     margin-top: 8px;
-    transform: translateX(-11px);
+    transform: translate(-12px, -3px);
   }
 
   .footer__link:first-child {
     border-bottom: none;
     padding-bottom: 0;
+  }
+
+  .footer__link:last-child {
+    transform: translate(1px, 0px);
   }
 
   .footer__rights {
@@ -1633,6 +1653,10 @@ body.catalog .gallery__inner {
     transform: translateY(6px);
   }
 
+  .card-item__locked-caption {
+    transform: translateX(2px);
+  }
+
   .card-item__content-box {
     padding: 0;
   }
@@ -1668,7 +1692,7 @@ body.catalog .gallery__inner {
   body.catalog .gallery__inner {
     -moz-column-gap: 29px;
     column-gap: 29px;
-    row-gap: 22px;
+    row-gap: 23px;
   }
 }
 
