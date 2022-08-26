@@ -115,8 +115,32 @@ window.addEventListener("load", () => {
          }
       }
 
-      // slider
-      const swiper = new Swiper(".swiper", {
+      // swiperBiography
+      const swiperBiography = new Swiper(".biography__swiper", {
+         spaceBetween: 22,
+         slidesPerView: 2.47,
+         slideToClickedSlide: true,
+         breakpoints: {
+            460: {
+               slidesPerView: 2.75,
+               spaceBetween: 28,
+            },
+            769: {
+               slidesPerView: 2,
+            },
+            1000: {
+               slidesPerView: 2.5,
+               spaceBetween: 35,
+            },
+            1200: {
+               slidesPerView: 3,
+               spaceBetween: 9,
+            },
+         },
+      });
+
+      // swiperCards
+      const swiperNft = new Swiper(".nft __swiper", {
          spaceBetween: 22,
          slidesPerView: 2.47,
          slideToClickedSlide: true,

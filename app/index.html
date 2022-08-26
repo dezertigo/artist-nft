@@ -75,7 +75,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="biography">
+			<section class="biography">
 				<div class="biography__container">
 					<div class="biography__graphic">
 						@@include('./components/blocks/_double-block.html', {
@@ -86,7 +86,7 @@
 					</div>
 					<div class="biography__content">
 						@@loop('./components/blocks/_hello-h2.html', './json/main/hello-h2.json')
-						<div class="swiper">
+						<div class="swiper biography__swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide biography__slide">
 									<div class="biography__num">2007</div>
@@ -107,9 +107,15 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+			<section class="premium">
+				<div class="premium__container">
+					@@loop('./components/blocks/_banner.html', './json/main/banner.json')
+				</div>
+			</section>
+			<section class="slider">
 
-			<!--@@loop('./components/blocks/_banner.html', './json/main/banner.json')-->
+			</section>
 		</main>
 		@@include('./components/structure/_footer.html')
 	</div>

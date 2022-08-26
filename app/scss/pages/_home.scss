@@ -335,4 +335,22 @@ body.home {
          color: #fcffff;
       }
    }
+   // ===================================================================================
+   // Premium === Premium ==== Premium ==== Premium ==== Premium === Premium ==== Premium
+   // ===================================================================================
+   .premium {
+      &__container {
+         padding-top: 31px;
+         @media (min-width: 769px) {
+            padding-top: percent(81, 1440);
+         }
+         @media (min-width: 1250px) {
+            padding-left: percent(150, 1440);
+            padding-right: percent(150, 1440);
+         }
+      }
+   }
+   // ===================================================================================
+   // Slider === Slider === Slider === Slider === Slider === Slider === Slider === Slider
+   // ===================================================================================
 }

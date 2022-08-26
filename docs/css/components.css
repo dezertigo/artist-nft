@@ -1421,10 +1421,7 @@ h6 {
 
   .banner_regular .banner__content {
     flex: 0 0 48.5964912281%;
-    padding-left: 9.649122807%;
     padding-right: 0;
-    padding-top: 90px;
-    padding-bottom: 84px;
   }
 
   .banner_regular .banner__graphic {
@@ -1727,6 +1724,12 @@ h6 {
     font-size: 1.875em;
     line-height: 1;
     transform: translate(4px, 1px);
+  }
+
+  .banner_regular .banner__content {
+    padding-left: 9.649122807%;
+    padding-top: 90px;
+    padding-bottom: 84px;
   }
 }
 

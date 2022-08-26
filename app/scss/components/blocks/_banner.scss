@@ -182,8 +182,10 @@
          &__content {
             @media (min-width: 769px) {
                flex: 0 0 percent(554, 1140);
-               padding-left: percent(110, 1140);
                padding-right: 0;
+            }
+            @media (min-width: 1200px) {
+               padding-left: percent(110, 1140);
                padding-top: 90px;
                padding-bottom: 84px;
             }
