@@ -66,10 +66,6 @@ window.addEventListener("load", () => {
             } else {
                headerActionWrapper.style.height = wrapperHeight + bodyHeight + "px";
             }
-         } else {
-            setTimeout(() => {
-               headerActionWrapper.style.height = null;
-            }, 1000);
          }
       }
    }
@@ -112,8 +108,6 @@ window.addEventListener("load", () => {
       window.addEventListener("resize", moveBlock);
       moveBlock();
       function moveBlock(e) {
-         console.log(window.innerWidth);
-
          if (window.innerWidth <= 768) {
             qs(".hello-h2__title").after(qs(".biography__graphic"));
          } else if (window.innerWidth > 768) {
