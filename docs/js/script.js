@@ -20,11 +20,7 @@ window.addEventListener("load", () => {
       function burgerToggle(e) {
          if (e.target.closest(".burger")) {
             if (burger.classList.contains("active")) {
-               burger.classList.remove("active");
-               header.classList.remove("active");
-               headerAction.classList.remove("active");
-               body.classList.remove("lock");
-               actualizeHeight();
+               closeBurger();
             } else {
                burger.classList.add("active");
                header.classList.add("active");
@@ -38,28 +34,29 @@ window.addEventListener("load", () => {
             header.classList.remove("active");
             headerAction.classList.remove("active");
             body.classList.remove("lock");
-            actualizeHeight();
-            window.removeEventListener("scroll", closeBurger);
+            closeBurger();
          }
       }
       function closeBurger() {
-         //Необязательная дополнительная проверка
+         //Обязательная дополнительная проверка
          if (burger.classList.contains("active")) {
             burger.classList.remove("active");
-            menu.classList.remove("active");
             header.classList.remove("active");
             headerAction.classList.remove("active");
             body.classList.remove("lock");
+            setTimeout(() => {
+               qs(".header__action-wrapper").style.height = null;
+            }, 1000);
             window.removeEventListener("scroll", closeBurger);
          }
       }
-      //  Изменение высоты выезжающего меню после открытия бургера
-      const headerActionWrapper = qs(".header__action-wrapper");
-      const headerActionBody = qs(".header__action-body");
-      const wrapperHeight = headerActionWrapper.scrollHeight;
-      const bodyHeight = headerActionBody.scrollHeight;
-      const total = wrapperHeight + bodyHeight;
+
       function actualizeHeight(e) {
+         const headerActionWrapper = qs(".header__action-wrapper");
+         const headerActionBody = qs(".header__action-body");
+         const wrapperHeight = headerActionWrapper.scrollHeight;
+         const bodyHeight = headerActionBody.scrollHeight;
+         const total = wrapperHeight + bodyHeight;
          if (headerAction.classList.contains("active")) {
             if (total >= window.innerHeight) {
                headerActionWrapper.style.height = "100%";
