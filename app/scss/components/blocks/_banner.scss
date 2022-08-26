@@ -70,18 +70,18 @@
          height: percent(399, 213);
          border-radius: 50%;
          border: 48px solid transparent;
-         // background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) border-box;
-         // mask: radial-gradient(farthest-side at bottom left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
-         //       top right/50% 50%,
-         //    radial-gradient(farthest-side at top right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
-         //       bottom left / 50% 50%,
-         //    radial-gradient(farthest-side at top left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
-         //       bottom right/50% 50%,
-         //    radial-gradient(farthest-side at bottom right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
-         //       top left / 50% 50%,
-         //    linear-gradient(#fff, #fff) top / 100% 48px, linear-gradient(#fff, #fff) bottom/100% 48px,
-         //    linear-gradient(#fff, #fff) left / 48px 100%, linear-gradient(#fff, #fff) right / 48px 100%;
-         // mask-repeat: no-repeat;
+         background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) border-box;
+         mask: radial-gradient(farthest-side at bottom left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
+               top right/50% 50%,
+            radial-gradient(farthest-side at top right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
+               bottom left / 50% 50%,
+            radial-gradient(farthest-side at top left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
+               bottom right/50% 50%,
+            radial-gradient(farthest-side at bottom right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%)
+               top left / 50% 50%,
+            linear-gradient(#fff, #fff) top / 100% 48px, linear-gradient(#fff, #fff) bottom/100% 48px,
+            linear-gradient(#fff, #fff) left / 48px 100%, linear-gradient(#fff, #fff) right / 48px 100%;
+         mask-repeat: no-repeat;
          @media (min-width: 500px) {
             height: percent(532, 296.59);
          }
@@ -156,26 +156,26 @@
          }
          @media (min-width: 1400px) {
             border: 64px solid transparent;
-            // background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) border-box;
-            // mask: radial-gradient(
-            //          farthest-side at bottom left,
-            //          transparent calc(100% - 64px),
-            //          #fff calc(100% - 64px) 100%
-            //       )
-            //       top right/50% 50%,
-            //    radial-gradient(farthest-side at top right, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%)
-            //       bottom left / 50% 50%,
-            //    radial-gradient(farthest-side at top left, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%)
-            //       bottom right/50% 50%,
-            //    radial-gradient(
-            //          farthest-side at bottom right,
-            //          transparent calc(100% - 64px),
-            //          #fff calc(100% - 64px) 100%
-            //       )
-            //       top left / 50% 50%,
-            //    linear-gradient(#fff, #fff) top / 100% 64px, linear-gradient(#fff, #fff) bottom/100% 64px,
-            //    linear-gradient(#fff, #fff) left / 64px 100%, linear-gradient(#fff, #fff) right / 64px 100%;
-            // mask-repeat: no-repeat;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) border-box;
+            mask: radial-gradient(
+                     farthest-side at bottom left,
+                     transparent calc(100% - 64px),
+                     #fff calc(100% - 64px) 100%
+                  )
+                  top right/50% 50%,
+               radial-gradient(farthest-side at top right, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%)
+                  bottom left / 50% 50%,
+               radial-gradient(farthest-side at top left, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%)
+                  bottom right/50% 50%,
+               radial-gradient(
+                     farthest-side at bottom right,
+                     transparent calc(100% - 64px),
+                     #fff calc(100% - 64px) 100%
+                  )
+                  top left / 50% 50%,
+               linear-gradient(#fff, #fff) top / 100% 64px, linear-gradient(#fff, #fff) bottom/100% 64px,
+               linear-gradient(#fff, #fff) left / 64px 100%, linear-gradient(#fff, #fff) right / 64px 100%;
+            mask-repeat: no-repeat;
          }
       }
       .banner {
