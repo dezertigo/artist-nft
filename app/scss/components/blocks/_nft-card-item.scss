@@ -30,7 +30,7 @@
       }
       @media (min-width: 769px) {
          order: 1;
-         transform: translate(-4px, 0);
+         transform: translate(-4px, -2px);
          margin-bottom: 14px;
          align-self: flex-start;
       }
@@ -108,10 +108,12 @@
    }
    .btn {
       border-radius: rem(8);
-
       min-height: 40px;
       max-height: 40px;
       min-width: 96px;
+      @media (min-width: 769px) {
+         border-radius: 12px;
+      }
       a {
          @include fl(14, 20);
          transform: translate(-1px, 0px);

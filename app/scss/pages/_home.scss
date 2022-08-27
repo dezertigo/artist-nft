@@ -245,6 +245,36 @@ body.home {
    // ===================================================================================
    .biography {
       overflow: hidden;
+      position: relative;
+      &__decor {
+         :nth-child(1) {
+            display: none;
+            @media (min-width: 769px) {
+               display: block;
+               position: absolute;
+               pointer-events: none;
+               z-index: 1;
+               @include fl(62);
+               top: percent(249, 711.5);
+               left: percent(77, 1440);
+            }
+         }
+         :nth-child(2) {
+            display: none;
+            @media (min-width: 769px) {
+               display: block;
+               position: absolute;
+               pointer-events: none;
+               z-index: 1;
+               width: 25px;
+               height: 25px;
+               border: 1px solid rgba(252, 255, 255, 0.4);
+               border-radius: 50%;
+               top: percent(419, 711.5);
+               left: percent(102, 1440);
+            }
+         }
+      }
       &__container {
          padding-top: 62px;
          padding-right: percent(13, 375);
@@ -367,6 +397,19 @@ body.home {
             &:hover {
                transform: translate(0, -32px);
             }
+         }
+      }
+   }
+   // ===================================================================================
+   // Form === Form === Form === Form === Form === Form === Form ==== Form ==== Form ====
+   // ===================================================================================
+   .contact-form {
+      &__container {
+         padding-top: 39px;
+         padding-bottom: 34px;
+         @media (min-width: 769px) {
+            padding-top: percent(81, 1440);
+            padding-bottom: percent(91, 1440);
          }
       }
    }

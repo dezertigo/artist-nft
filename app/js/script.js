@@ -142,6 +142,7 @@ window.addEventListener("load", () => {
          slidesPerView: 1.27025,
          slideToClickedSlide: true,
          loop: true,
+         initialSlide: 0,
          breakpoints: {
             460: {
                slidesPerView: 1.6,

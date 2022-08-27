@@ -208,6 +208,7 @@ button {
   border: none;
   background-color: transparent;
   padding: 0;
+  font-family: inherit;
 }
 
 @font-face {
@@ -1478,7 +1479,7 @@ body.nfts .cards__container .btn a {
 
   .nft-card-item__label {
     order: 1;
-    transform: translate(-4px, 0);
+    transform: translate(-4px, -2px);
     margin-bottom: 14px;
     align-self: flex-start;
   }
@@ -1512,6 +1513,10 @@ body.nfts .cards__container .btn a {
     width: 100%;
     height: 1px;
     background: rgba(252, 255, 255, 0.05);
+  }
+
+  .nft-card-item .btn {
+    border-radius: 12px;
   }
 
   .nft-card-item .btn {

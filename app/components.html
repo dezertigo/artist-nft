@@ -11,6 +11,9 @@
 	<div class="wrapper">
 		@@include("./components/structure/_header.html")
 		<main>
+			<!-- Contact form -->
+			@@include('./components/blocks/_contact-form.html')
+
 			<!-- Подключение инпутов -->
 			<div class="example-form">
 				@@include('./components/blocks/_input.html', {
@@ -25,6 +28,7 @@
 				'type': 'text',
 				'placeholder': 'Your mail',
 				})
+				<!-- textarea -->
 				@@include('./components/blocks/_textarea.html', {
 				'label': 'Your question',
 				'for': 'question',
@@ -44,7 +48,6 @@
 			</div>
 			<!-- Confirm input -->
 			@@include('./components/blocks/_confirm.html')
-
 
 			<!-- Подключение кнопок -->
 			<div class="btns-just-test">

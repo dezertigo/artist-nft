@@ -207,6 +207,7 @@ button {
   border: none;
   background-color: transparent;
   padding: 0;
+  font-family: inherit;
 }
 
 @font-face {
@@ -1515,6 +1516,27 @@ h6 {
   opacity: 1;
 }
 
+.contact-form__top {
+  margin-bottom: 15px;
+}
+
+.contact-form__body {
+  max-width: 410px;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 15px;
+}
+
+.contact-form__body .btn {
+  transform: translate(-1px, -1px);
+  width: 100%;
+  height: 64px;
+  font-weight: 700;
+  font-size: 1.125em;
+  line-height: 1.4722222222;
+  border-radius: 16px;
+}
+
 body.home .hero {
   position: relative;
   overflow: hidden;
@@ -1643,6 +1665,15 @@ body.home .hero__image svg.second {
 
 body.home .biography {
   overflow: hidden;
+  position: relative;
+}
+
+body.home .biography__decor :nth-child(1) {
+  display: none;
+}
+
+body.home .biography__decor :nth-child(2) {
+  display: none;
 }
 
 body.home .biography__container {
@@ -1688,6 +1719,11 @@ body.home .biography__subtext {
 
 body.home .premium__container {
   padding-top: 31px;
+}
+
+body.home .contact-form__container {
+  padding-top: 39px;
+  padding-bottom: 34px;
 }
 
 @media (min-width: 468px) {
@@ -1736,6 +1772,14 @@ body.home .premium__container {
 
   .banner__graphic .banner-circle {
     height: 179.3721973094%;
+  }
+}
+
+@media (min-width: 568px) {
+  .contact-form__top {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 36px;
   }
 }
 
@@ -1892,7 +1936,7 @@ body.home .premium__container {
 
   .nft-card-item__label {
     order: 1;
-    transform: translate(-4px, 0);
+    transform: translate(-4px, -2px);
     margin-bottom: 14px;
     align-self: flex-start;
   }
@@ -1926,6 +1970,10 @@ body.home .premium__container {
     width: 100%;
     height: 1px;
     background: rgba(252, 255, 255, 0.05);
+  }
+
+  .nft-card-item .btn {
+    border-radius: 12px;
   }
 
   .nft-card-item .btn {
@@ -2061,6 +2109,30 @@ body.home .premium__container {
     height: 59.3162393162%;
   }
 
+  body.home .biography__decor :nth-child(1) {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    font-size: 3.875em;
+    line-height: 1;
+    top: 34.9964862966%;
+    left: 5.3472222222%;
+  }
+
+  body.home .biography__decor :nth-child(2) {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgba(252, 255, 255, 0.4);
+    border-radius: 50%;
+    top: 58.8896697119%;
+    left: 7.0833333333%;
+  }
+
   body.home .biography__container {
     padding-top: 103px;
     display: flex;
@@ -2103,6 +2175,11 @@ body.home .premium__container {
 
   body.home .slider .swiper-slide:hover {
     transform: translate(0, -32px);
+  }
+
+  body.home .contact-form__container {
+    padding-top: 5.625%;
+    padding-bottom: 6.3194444444%;
   }
 }
 
@@ -2188,6 +2265,10 @@ body.home .premium__container {
   .banner_regular .crown {
     font-size: 1.625em;
     line-height: 1;
+  }
+
+  .contact-form__body .btn {
+    margin-bottom: 3px;
   }
 
   body.home .hero__content .hello-h1__title {
@@ -2616,6 +2697,12 @@ body.home .premium__container {
   body.home .slider {
     padding-top: 25px;
     padding-left: 4%;
+  }
+}
+
+@media (max-width: 568px) {
+  .contact-form__top h2 {
+    max-width: 302px;
   }
 }
 
