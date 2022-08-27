@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/auction.min.css',
+'title': 'Auction',
+})
+
+<body class="auction">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+					@@include('./components/blocks/_bread-crumbs.html', {
+					'first': 'Main page',
+					'second': 'Auction',
+					'link1': '#',
+					})
+					<div class="hero__body">
+						@@include('./components/blocks/_paint-block.html', {
+						'modify': 'blue'
+						})
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html')
+</body>
+
+</html>

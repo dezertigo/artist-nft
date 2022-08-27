@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/product-1.min.css',
+'title': 'Name of Product',
+})
+
+<body class="product-1">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+					@@include('./components/blocks/_bread-crumbs.html', {
+					'first': 'Main page',
+					'second': 'NFT',
+					'link1': 'nfts.html',
+					'third': 'Name of product',
+					})
+					<div class="hero__body">
+						@@include('./components/blocks/_paint-block.html', {
+						'modify': 'blue'
+						})
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html')
+</body>
+
+</html>

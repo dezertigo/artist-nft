@@ -471,15 +471,15 @@ body.lock {
   overflow: hidden;
 }
 
-body.lock:before {
-  display: none;
-}
-
 body {
   font-family: "ProximaNova";
   font-size: 1em;
   font-weight: 400;
   background-color: #1d1f21;
+}
+
+body:before {
+  display: none;
 }
 
 [class*=__container] {
@@ -897,78 +897,6 @@ h6 {
 .footer .social-icons {
   margin-left: auto;
   transform: translate(-6px, 0);
-}
-
-.pop-up {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.9);
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-}
-
-.pop-up.active {
-  z-index: 100;
-  opacity: 1;
-  pointer-events: all;
-}
-
-.pop-up__wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 200px;
-}
-
-.pop-up__body {
-  overflow: auto;
-  max-height: 100%;
-  background-color: rgba(233, 233, 233, 0.33);
-  padding: 50px;
-}
-
-.pop-up__body p {
-  font-size: 1.5em;
-  line-height: 1.3333333333;
-  color: #fff;
-}
-
-.spoiler {
-  background-color: rgb(0, 0, 0);
-  color: #fff;
-}
-
-.spoiler__preview {
-  cursor: pointer;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.spoiler__icon {
-  transition: all 0.3s ease;
-}
-
-.spoiler__wrapper {
-  height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
-.spoiler__body {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.spoiler.opened .spoiler__icon {
-  transform: rotate(180deg);
 }
 
 .btns-just-test {

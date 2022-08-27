@@ -471,15 +471,15 @@ body.lock {
   overflow: hidden;
 }
 
-body.lock:before {
-  display: none;
-}
-
 body {
   font-family: "ProximaNova";
   font-size: 1em;
   font-weight: 400;
   background-color: #1d1f21;
+}
+
+body:before {
+  display: none;
 }
 
 [class*=__container] {

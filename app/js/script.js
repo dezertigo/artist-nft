@@ -171,4 +171,15 @@ window.addEventListener("load", () => {
          },
       });
    }
+
+   // ! nfts.html
+   if (qs("body.nfts")) {
+      body.addEventListener("click", relocate);
+
+      function relocate(e) {
+         if (e.target.closest(".nft-card-item .btn")) {
+            document.location.href = "product-1.html";
+         }
+      }
+   }
 });

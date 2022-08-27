@@ -17,14 +17,9 @@
 
 // Подключение стилей компонентов
 @import "./components/base/btn";
-@import "./components/blocks/stroke-text";
-@import "./components/blocks/social-icons";
-@import "./components/blocks/hello-h1";
-@import "./components/blocks/hello-h2";
-@import "./components/blocks/double-block";
-@import "./components/blocks/banner";
-@import "./components/blocks/nft-card-item";
 @import "./components/blocks/paint-block";
+@import "./components/blocks/social-icons";
+@import "./components/blocks/bread-crumbs";
 
 //Подключение стилей конкретной страницы
-@import "./pages/home";
+@import "./pages/auction";

@@ -1,0 +1,37 @@
+.bread-crumbs {
+   color: #c8d2dc;
+   display: flex;
+   align-items: center;
+   column-gap: 9.5px;
+   padding-top: 27px;
+   padding-bottom: 27px;
+   @media (min-width: 769px) {
+      padding-bottom: 19px;
+   }
+   li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:nth-child(odd) {
+         cursor: pointer;
+      }
+      &:nth-child(even),
+      &:last-child {
+         pointer-events: none;
+      }
+   }
+   a {
+      font-family: $ff2;
+      display: inline-block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      @include fl(14, 19);
+      transition: all 0.3s ease;
+      &:hover {
+         color: #eef2f5;
+      }
+   }
+   i {
+      @include fl(7);
+   }
+}
