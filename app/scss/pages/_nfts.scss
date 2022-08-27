@@ -81,11 +81,21 @@ body.nfts {
             padding-top: 0;
             padding-left: percent(11, 163);
             padding-right: percent(11, 163);
+            transition: all 0.3s ease;
+            &:hover {
+               img {
+                  transform: scale(1.1);
+               }
+            }
 
             .paint-block {
                margin-left: percent(-11, 141);
                margin-right: percent(-11, 141);
                padding-bottom: percent(163, 141);
+               overflow: hidden;
+               img {
+                  transition: all 0.3s ease;
+               }
                @media (max-width: 768px) {
                   border-radius: 7.73123px;
                }

@@ -1370,12 +1370,22 @@ body.nfts .cards__container .nft-card-item {
   padding-top: 0;
   padding-left: 6.7484662577%;
   padding-right: 6.7484662577%;
+  transition: all 0.3s ease;
+}
+
+body.nfts .cards__container .nft-card-item:hover img {
+  transform: scale(1.1);
 }
 
 body.nfts .cards__container .nft-card-item .paint-block {
   margin-left: -7.8014184397%;
   margin-right: -7.8014184397%;
   padding-bottom: 115.6028368794%;
+  overflow: hidden;
+}
+
+body.nfts .cards__container .nft-card-item .paint-block img {
+  transition: all 0.3s ease;
 }
 
 body.nfts .cards__container h6 {
