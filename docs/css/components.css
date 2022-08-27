@@ -1521,6 +1521,72 @@ h6 {
   column-gap: 16px;
 }
 
+.confirm {
+  display: flex;
+  align-items: center;
+  color: #c8d2dc;
+  font-size: 0.875em;
+  line-height: 1.5;
+  height: 20px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.confirm:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #525960;
+  border-radius: 7px;
+  background: transparent;
+}
+
+.confirm input[type=checkbox] {
+  width: 0;
+  height: 0;
+}
+
+.confirm a {
+  display: inline-block;
+  margin-left: 4.5px;
+  margin-right: 4.5px;
+  font-weight: 600;
+  color: #86a8ff;
+  position: relative;
+}
+
+.confirm a:after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #86a8ff;
+}
+
+.confirm svg {
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  width: 18px;
+  height: 13.5px;
+  opacity: 0;
+  transition: all 0.15s ease;
+}
+
+.confirm svg path {
+  stroke: #9aa1a7;
+}
+
+.confirm svg.active {
+  opacity: 1;
+}
+
 .example-form {
   max-width: 410px;
   margin: 0 auto;

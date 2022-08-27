@@ -182,4 +182,12 @@ window.addEventListener("load", () => {
          }
       }
    }
+
+   // ! confirm button
+   if (qs(".confirm")) {
+      qs(".confirm").addEventListener("click", (e) => {
+         e.preventDefault();
+         qs(".confirm svg").classList.toggle("active");
+      });
+   }
 });

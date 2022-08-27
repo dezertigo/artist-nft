@@ -26,8 +26,12 @@
 @import "./components/blocks/nft-card-item";
 @import "./components/blocks/paint-block";
 @import "./components/blocks/inputs";
+@import "./components/blocks/confirm";
 
 //Подключение стилей конкретной страницы
+body.components {
+   // background-color: rgb(181, 181, 181);
+}
 .example-form {
    max-width: 410px;
    margin: 0 auto;
