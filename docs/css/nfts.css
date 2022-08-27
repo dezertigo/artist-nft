@@ -211,6 +211,10 @@ button {
   font-family: inherit;
 }
 
+button:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: "Manrope";
   font-display: swap;

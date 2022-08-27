@@ -403,13 +403,48 @@ body.home {
    // ===================================================================================
    // Form === Form === Form === Form === Form === Form === Form ==== Form ==== Form ====
    // ===================================================================================
-   .contact-form {
-      &__container {
-         padding-top: 39px;
-         padding-bottom: 34px;
-         @media (min-width: 769px) {
-            padding-top: percent(81, 1440);
-            padding-bottom: percent(91, 1440);
+   .form {
+      position: relative;
+      overflow: hidden;
+      .backgroung {
+         &__image {
+            &_1 {
+               @media (min-width: 568px) {
+                  top: percent(327, 881.06);
+                  left: percent(-125, 1440);
+               }
+            }
+            &_2 {
+               @media (min-width: 568px) {
+                  top: percent(227, 881.06);
+                  left: percent(165, 1440);
+               }
+            }
+            &_3 {
+               @media (min-width: 568px) {
+                  top: percent(635, 881.06);
+                  left: percent(237, 1440);
+               }
+            }
+            &_4 {
+               @media (min-width: 568px) {
+                  top: percent(192, 881.06);
+                  left: percent(1156, 1440);
+               }
+            }
+         }
+      }
+
+      .contact-form {
+         position: relative;
+         z-index: 1;
+         &__container {
+            padding-top: 39px;
+            padding-bottom: 34px;
+            @media (min-width: 769px) {
+               padding-top: percent(81, 1440);
+               padding-bottom: percent(91, 1440);
+            }
          }
       }
    }
