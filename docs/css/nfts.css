@@ -2,6 +2,7 @@
 
 /*Шрифты*/
 
+.pagination__pages h5.current,
 .burger.active .burger__wrapper span,
 .burger.active .burger__wrapper:before,
 .burger.active .burger__wrapper:after,
@@ -1243,6 +1244,107 @@ h6 {
   background-color: #7e51ff;
 }
 
+.pagination {
+  padding-top: 30px;
+  padding-bottom: 55px;
+}
+
+.pagination__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+}
+
+.pagination i {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6875em;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #525960;
+  border-radius: 0.625rem;
+  background-color: #212426;
+  transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pagination i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0);
+  background: #fff;
+  opacity: 0;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
+}
+
+.pagination i:hover {
+  transform: scale(1.2);
+}
+
+.pagination i:hover::after {
+  opacity: 0.1;
+}
+
+.pagination__pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 9px;
+  column-gap: 9px;
+}
+
+.pagination__pages h5 {
+  cursor: pointer;
+  border-radius: 0.625rem;
+  height: 40px;
+  width: 40px;
+  background-color: #212426;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0 !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pagination__pages h5:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0);
+  background: #fff;
+  opacity: 0;
+  border-radius: 0.625rem;
+  transition: all 0.3s ease;
+}
+
+.pagination__pages h5:hover:not(h5.current) {
+  transform: scale(1.2);
+}
+
+.pagination__pages h5:hover:not(h5.current):after {
+  opacity: 0.1;
+}
+
+.pagination__pages h5.current {
+  cursor: default;
+  color: #1d1f21;
+}
+
 body.nfts .hero {
   padding-top: 26px;
   text-align: center;
@@ -1321,6 +1423,11 @@ body.nfts .cards__container .btn a {
     line-height: 1.5384615385;
   }
 
+  .pagination__container {
+    max-width: 482px;
+    margin: 0 auto;
+  }
+
   body.nfts .hero .content-text {
     max-width: 415px;
     margin: 0 auto;
@@ -1336,6 +1443,13 @@ body.nfts .cards__container .btn a {
   .stroke-text {
     font-size: 3.375em;
     line-height: 1;
+  }
+}
+
+@media (min-width: 506px) {
+  .pagination__container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -1465,6 +1579,21 @@ body.nfts .cards__container .btn a {
 
   .paint-block {
     padding-bottom: 114.7540983607%;
+  }
+
+  .pagination__container {
+    padding-top: 23px;
+    padding-bottom: 9px;
+  }
+
+  .pagination i {
+    width: 48px;
+    height: 48px;
+  }
+
+  .pagination__pages h5 {
+    width: 48px;
+    height: 48px;
   }
 
   body.nfts .hero {
@@ -1997,6 +2126,28 @@ body.nfts .cards__container .btn a {
     min-width: 100%;
     min-height: 34px;
     max-height: 34px;
+  }
+}
+
+@media (max-width: 374px) {
+  .pagination__container {
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .pagination i {
+    width: 35px;
+    height: 35px;
+  }
+
+  .pagination__pages {
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+  }
+
+  .pagination__pages h5 {
+    width: 35px;
+    height: 35px;
   }
 }
 
