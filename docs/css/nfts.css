@@ -178,24 +178,28 @@ a {
   font-family: inherit;
 }
 
-input {
+input,
+textarea {
   color: inherit;
   font-family: inherit;
 }
 
-input::-moz-placeholder {
-  color: inherit;
-  font-size: 1em;
-  font-family: inherit;
-}
-
-input::placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   color: inherit;
   font-size: 1em;
   font-family: inherit;
 }
 
-input:focus {
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
   outline: none;
 }
 

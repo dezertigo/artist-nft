@@ -177,24 +177,28 @@ a {
   font-family: inherit;
 }
 
-input {
+input,
+textarea {
   color: inherit;
   font-family: inherit;
 }
 
-input::-moz-placeholder {
-  color: inherit;
-  font-size: 1em;
-  font-family: inherit;
-}
-
-input::placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   color: inherit;
   font-size: 1em;
   font-family: inherit;
 }
 
-input:focus {
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -1461,6 +1465,67 @@ h6 {
 
 .paint-block_purple {
   background-color: #7e51ff;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  width: 100%;
+}
+
+.input label {
+  font-size: 0.875em;
+  line-height: 1.5;
+  color: #c8d2dc;
+  letter-spacing: -0.02em;
+}
+
+.input input,
+.input textarea {
+  border-radius: 9px;
+  background-color: #212426;
+  width: 100%;
+  padding-top: 21px;
+  padding-bottom: 22px;
+  padding-left: 31px;
+  padding-right: 31px;
+  font-size: 1em;
+  line-height: 1.3125;
+  color: #c8d2dc;
+}
+
+.input input::-moz-placeholder,
+.input textarea::-moz-placeholder {
+  font-size: 1em;
+  line-height: 1.3125;
+  opacity: 0.6;
+}
+
+.input input::placeholder,
+.input textarea::placeholder {
+  font-size: 1em;
+  line-height: 1.3125;
+  opacity: 0.6;
+}
+
+.input textarea {
+  height: 182px;
+}
+
+.input-columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+}
+
+.example-form {
+  max-width: 410px;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 15px;
 }
 
 @media (min-width: 468px) {

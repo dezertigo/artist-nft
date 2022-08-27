@@ -25,7 +25,12 @@
 @import "./components/blocks/banner";
 @import "./components/blocks/nft-card-item";
 @import "./components/blocks/paint-block";
+@import "./components/blocks/inputs";
 
 //Подключение стилей конкретной страницы
-// ! Переменовать текущий файл и файл подлючающий стили страницы ниже(renameMe) в нужное имя (имеется ввиду файл который нужно создать в папке app/scss/pages), после чего удалить эту строку
-@import "./pages/components";
+.example-form {
+   max-width: 410px;
+   margin: 0 auto;
+   display: grid;
+   row-gap: 15px;
+}

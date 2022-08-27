@@ -1,0 +1,37 @@
+.input {
+   display: flex;
+   flex-direction: column;
+   row-gap: 7px;
+   width: 100%;
+   label {
+      @include fl(14, 21);
+      color: #c8d2dc;
+
+      letter-spacing: -0.02em;
+   }
+   input,
+   textarea {
+      border-radius: 9px;
+      background-color: #212426;
+      width: 100%;
+      padding-top: 21px;
+      padding-bottom: 22px;
+      padding-left: 31px;
+      padding-right: 31px;
+      @include fl(16, 21);
+      color: #c8d2dc;
+      &::placeholder {
+         @include fl(16, 21);
+         opacity: 0.6;
+      }
+   }
+   textarea {
+      height: 182px;
+   }
+   &-columns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 16px;
+   }
+}

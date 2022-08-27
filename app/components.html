@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 @@include("./components/structure/_head.html", {
 "lang":"en",
-"css": "./css/home.min.css",
+"css": "./css/components.min.css",
 "title": "Components",
 "swiper": "y",
 })
@@ -11,6 +11,38 @@
 	<div class="wrapper">
 		@@include("./components/structure/_header.html")
 		<main>
+			<!-- Подключение инпутов -->
+			<div class="example-form">
+				@@include('./components/blocks/_input.html', {
+				'label': 'Name',
+				'for': 'name',
+				'type': 'text',
+				'placeholder': 'Your name',
+				})
+				@@include('./components/blocks/_input.html', {
+				'label': 'Mail',
+				'for': 'mail',
+				'type': 'text',
+				'placeholder': 'Your mail',
+				})
+				@@include('./components/blocks/_textarea.html', {
+				'label': 'Your question',
+				'for': 'question',
+				'placeholder': 'Your question',
+				})
+				<!-- Подключение инпутов в 2 колонки -->
+				@@include('./components/blocks/_input.html', {
+				'label': 'Date',
+				'for': 'date',
+				'type': 'text',
+				'placeholder': '01/01',
+				'label2': 'CVV',
+				'for2': 'cvv',
+				'type2': 'text',
+				'placeholder2': '000',
+				})
+			</div>
+
 			<!-- Подключение кнопок -->
 			<div class="btns-just-test">
 				<!-- С иконкой короны -->

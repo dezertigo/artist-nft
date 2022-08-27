@@ -137,7 +137,8 @@ a {
    text-decoration: none;
    font-family: inherit;
 }
-input {
+input,
+textarea {
    color: inherit;
    font-family: inherit;
    &::placeholder {
