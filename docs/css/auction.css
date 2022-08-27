@@ -1031,6 +1031,7 @@ h6 {
 .paint-block {
   position: relative;
   padding-bottom: 100%;
+  overflow: hidden;
 }
 
 .paint-block img {
@@ -1151,7 +1152,7 @@ h6 {
   line-height: 1;
 }
 
-body.auction .hero__container .paint-block {
+body.auction .hero__body .paint-block {
   border-radius: 7.69517px;
 }
 
@@ -1241,6 +1242,18 @@ body.auction .hero__container .paint-block {
 
   .bread-crumbs {
     padding-bottom: 19px;
+  }
+
+  body.auction .hero__body {
+    display: flex;
+    -moz-column-gap: 32px;
+    column-gap: 32px;
+  }
+
+  body.auction .hero__body .paint-block {
+    border-radius: 12px;
+    flex: 0 0 51.3849092646%;
+    padding-bottom: 51.3849092646%;
   }
 }
 
@@ -1483,6 +1496,10 @@ body.auction .hero__container .paint-block {
   h1 {
     font-size: 4em;
     line-height: 1.015625;
+  }
+
+  body.auction .hero__container {
+    padding-right: 15.8333333333%;
   }
 }
 

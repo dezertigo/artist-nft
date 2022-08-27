@@ -1,6 +1,7 @@
 .paint-block {
    position: relative;
    padding-bottom: 100%;
+   overflow: hidden;
    @media (max-width: 768px) {
       border-radius: rem(12);
    }

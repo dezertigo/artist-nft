@@ -1,8 +1,22 @@
 body.product-1 {
    .hero {
       &__container {
+         @media (min-width: 1400px) {
+            padding-right: percent(228, 1440);
+         }
+      }
+      &__body {
+         @media (min-width: 769px) {
+            display: flex;
+            column-gap: 32px;
+         }
          .paint-block {
             border-radius: 7.69517px;
+            @media (min-width: 769px) {
+               border-radius: 12px;
+               flex: 0 0 percent(538, 1047);
+               padding-bottom: percent(538, 1047);
+            }
          }
       }
    }
