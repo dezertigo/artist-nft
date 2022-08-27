@@ -1,0 +1,56 @@
+body.nfts {
+   .hero {
+      padding-top: 26px;
+      text-align: center;
+      color: #fcffff;
+      @media (min-width: 769px) {
+         position: relative;
+         overflow: hidden;
+         padding-top: 48px;
+      }
+      &__decor {
+         display: none;
+         @media (min-width: 769px) {
+            display: block;
+
+            & > * {
+               position: absolute;
+               pointer-events: none;
+            }
+            & > {
+               :nth-child(1) {
+                  top: percent(94, 250);
+                  left: percent(-38, 1440);
+               }
+               :nth-child(2) {
+                  top: percent(94, 250);
+                  left: percent(1105, 1440);
+                  letter-spacing: -0.009em;
+               }
+               :nth-child(3) {
+                  @include fl(62);
+                  top: percent(49, 250);
+                  left: percent(390, 1440);
+               }
+               :nth-child(4) {
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(252, 255, 255, 0.4);
+                  top: percent(194, 250);
+                  left: percent(1063, 1440);
+               }
+            }
+         }
+      }
+      h1 {
+         margin-bottom: 16px;
+      }
+      .content-text {
+         @media (min-width: 468px) {
+            max-width: 415px;
+            margin: 0 auto;
+         }
+      }
+   }
+}

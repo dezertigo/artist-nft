@@ -354,9 +354,20 @@ body.home {
    // Slider === Slider === Slider === Slider === Slider === Slider === Slider === Slider
    // ===================================================================================
    .slider {
-      padding-top: 25px;
       @media (max-width: 768px) {
+         padding-top: 25px;
          padding-left: percent(15, 375);
+      }
+      @media (min-width: 769px) {
+         padding-top: 11px;
+         margin-top: rem(-32);
+         .swiper-slide {
+            transition: all 0.3s ease;
+            padding-top: 32px;
+            &:hover {
+               transform: translate(0, -32px);
+            }
+         }
       }
    }
 }

@@ -166,7 +166,7 @@ window.addEventListener("load", () => {
                slidesPerView: 3.8683,
                spaceBetween: 30,
                centeredSlides: true,
-               initialSlide: 2,
+               initialSlide: 1,
             },
          },
       });

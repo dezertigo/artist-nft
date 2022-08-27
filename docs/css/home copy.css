@@ -1638,11 +1638,6 @@ body.home .premium__container {
 }
 
 @media (min-width: 468px) {
-  h2 {
-    font-size: 1.75em;
-    line-height: 1.2857142857;
-  }
-
   .content-text {
     font-size: 1em;
     line-height: 1.5625;
@@ -1664,11 +1659,6 @@ body.home .premium__container {
 }
 
 @media (min-width: 500px) {
-  h1 {
-    font-size: 2.5em;
-    line-height: 1.125;
-  }
-
   .stroke-text {
     font-size: 3.375em;
     line-height: 1;
@@ -1687,11 +1677,6 @@ body.home .premium__container {
 }
 
 @media (min-width: 700px) {
-  h1 {
-    font-size: 2.8125em;
-    line-height: 1.1111111111;
-  }
-
   .stroke-text {
     font-size: 3.875em;
     line-height: 1;
@@ -1699,35 +1684,6 @@ body.home .premium__container {
 }
 
 @media (min-width: 760px) {
-  h2 {
-    font-size: 1.875em;
-    line-height: 1.3;
-  }
-
-  h3 {
-    font-size: 1.1875em;
-    line-height: 1.4736842105;
-  }
-
-  h4 {
-    font-size: 1.5em;
-    line-height: 1.3958333333;
-  }
-
-  h5 {
-    font-size: 1.1875em;
-    line-height: 1.4736842105;
-  }
-
-  h6 {
-    font-size: 1em;
-  }
-
-  .content-text-small {
-    font-size: 0.8125em;
-    line-height: 1.5384615385;
-  }
-
   .subtext {
     font-size: 1em;
     line-height: 1.75;
@@ -2111,16 +2067,6 @@ body.home .premium__container {
 }
 
 @media (min-width: 1000px) {
-  h1 {
-    font-size: 3.125em;
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: 2.0625em;
-    line-height: 1.3333333333;
-  }
-
   .btn i.crown {
     font-size: 1.1875em;
     line-height: 1;
@@ -2235,8 +2181,8 @@ body.home .premium__container {
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 3.75em;
-    line-height: 1;
+    font-size: 4em;
+    line-height: 1.015625;
   }
 
   h2 {
@@ -2407,11 +2353,6 @@ body.home .premium__container {
 }
 
 @media (min-width: 1400px) {
-  h1 {
-    font-size: 4em;
-    line-height: 1.015625;
-  }
-
   .stroke-text {
     font-size: 5em;
     line-height: 1;

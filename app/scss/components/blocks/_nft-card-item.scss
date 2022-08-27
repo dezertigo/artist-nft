@@ -1,6 +1,5 @@
 .nft-card-item {
    background-color: #212426;
-   background-color: grey;
    border-radius: rem(12);
    // width: percent(280, 361);
    padding: percent(13, 280);
@@ -35,6 +34,7 @@
          order: 1;
          transform: translate(-4px, 0);
          margin-bottom: 14px;
+         align-self: flex-start;
       }
    }
 

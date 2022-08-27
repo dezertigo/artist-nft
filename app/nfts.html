@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/nfts.min.css',
+'title': 'Nfts',
+})
+
+<body class="nfts">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__decor">
+					@@include('./components/blocks/_stroke-text.html', {
+					'text': 'make art'
+					})
+					@@include('./components/blocks/_stroke-text.html', {
+					'text': 'not war'
+					})
+					<i class="star-decor"></i>
+					<div class="hero__circle"></div>
+				</div>
+				<div class="hero__container">
+					@@loop('./components/blocks/_hello-h1.html', './json/nfts/hello-h1.json')
+				</div>
+			</section>
+			<section class="cards">
+				<div class="cards__container">
+					@@loop('./components/blocks/_nft-card-item.html', './json/nfts/nft-cards.json')
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html')
+</body>
+
+</html>
