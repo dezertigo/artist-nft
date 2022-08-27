@@ -355,6 +355,8 @@ body.home {
    // ===================================================================================
    .slider {
       padding-top: 25px;
-      padding-left: percent(14, 375);
+      @media (max-width: 768px) {
+         padding-left: percent(15, 375);
+      }
    }
 }

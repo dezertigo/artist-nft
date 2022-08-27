@@ -137,27 +137,10 @@ window.addEventListener("load", () => {
       });
 
       // swiperCards
-      const swiperNft = new Swiper(".nft __swiper", {
-         spaceBetween: 22,
-         slidesPerView: 2.47,
+      const swiperNft = new Swiper(".slider__swiper", {
+         spaceBetween: 16,
+         slidesPerView: 1.27025,
          slideToClickedSlide: true,
-         breakpoints: {
-            460: {
-               slidesPerView: 2.75,
-               spaceBetween: 28,
-            },
-            769: {
-               slidesPerView: 2,
-            },
-            1000: {
-               slidesPerView: 2.5,
-               spaceBetween: 35,
-            },
-            1200: {
-               slidesPerView: 3,
-               spaceBetween: 9,
-            },
-         },
       });
    }
 });

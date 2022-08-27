@@ -1,8 +1,12 @@
 .paint-block {
    position: relative;
    padding-bottom: 100%;
-   border-radius: rem(12);
-
+   @media (max-width: 768px) {
+      border-radius: rem(12);
+   }
+   @media (min-width: 769px) {
+      padding-bottom: percent(350, 305);
+   }
    img {
       position: absolute;
       top: 0;
@@ -13,6 +17,18 @@
       // height: percent(241.43, 253);
       object-fit: cover;
       object-position: 1px 71%;
+   }
+   .paint-circle {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: percent(253, 253);
+      &_big {
+         height: percent(196, 253);
+      }
+      &_small {
+         height: percent(142, 253);
+      }
    }
    &_green {
       background-color: #c5ff98;
