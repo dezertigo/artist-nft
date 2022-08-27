@@ -141,6 +141,34 @@ window.addEventListener("load", () => {
          spaceBetween: 16,
          slidesPerView: 1.27025,
          slideToClickedSlide: true,
+         loop: true,
+         breakpoints: {
+            460: {
+               slidesPerView: 1.6,
+            },
+            560: {
+               slidesPerView: 1.9,
+            },
+            660: {
+               slidesPerView: 2.3,
+            },
+            769: {
+               slidesPerView: 2.7,
+               spaceBetween: 23,
+            },
+            900: {
+               slidesPerView: 3.2,
+            },
+            1000: {
+               slidesPerView: 3.4,
+            },
+            1200: {
+               slidesPerView: 3.8683,
+               spaceBetween: 30,
+               centeredSlides: true,
+               initialSlide: 2,
+            },
+         },
       });
    }
 });
