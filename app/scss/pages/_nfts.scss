@@ -1,4 +1,7 @@
 body.nfts {
+   // ===================================================================================
+   // Hero ==== Hero ==== Hero ==== Hero === Hero ==== Hero ==== Hero ==== Hero ==== Hero
+   // ===================================================================================
    .hero {
       padding-top: 26px;
       text-align: center;
@@ -50,6 +53,120 @@ body.nfts {
          @media (min-width: 468px) {
             max-width: 415px;
             margin: 0 auto;
+         }
+      }
+   }
+   // ===================================================================================
+   // Cards ==== Cards ==== Cards ==== Cards ===== Cards ==== Cards ==== Cards ==== Cards
+   // ===================================================================================
+   .cards {
+      &__container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
+         gap: 19px;
+         padding-top: 22px;
+         @media (max-width: 768px) {
+            > :first-child,
+            > :last-child {
+               display: none;
+            }
+         }
+         @media (min-width: 769px) {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 30px;
+            row-gap: 25px;
+            padding-top: 50px;
+         }
+         .nft-card-item {
+            padding-top: 0;
+            padding-left: percent(11, 163);
+            padding-right: percent(11, 163);
+
+            .paint-block {
+               margin-left: percent(-11, 141);
+               margin-right: percent(-11, 141);
+               padding-bottom: percent(163, 141);
+               @media (max-width: 768px) {
+                  border-radius: 7.73123px;
+               }
+            }
+         }
+         h6 {
+            @include fl(12, 14);
+            letter-spacing: 0.1em;
+            margin-top: 11px;
+            margin-bottom: 2px;
+            @media (min-width: 769px) {
+               @include fl(15, 20);
+               margin-bottom: 0;
+               margin-top: 0;
+               padding-top: 17px;
+               padding-bottom: 18px;
+            }
+            @media (min-width: 1200px) {
+               @include fl(18, 26.5);
+            }
+         }
+         h5 {
+            @include fl(13, 16);
+            @media (min-width: 769px) {
+               @include fl(17, 22);
+            }
+            @media (min-width: 1200px) {
+               @include fl(20, 30);
+            }
+         }
+         p {
+            @include fl(10, 15.5);
+            margin-bottom: 8px;
+            @media (min-width: 769px) {
+               @include fl(12, 18);
+               margin-bottom: 18px;
+            }
+            @media (min-width: 1200px) {
+               @include fl(14, 21);
+            }
+         }
+         h4 {
+            @media (max-width: 768px) {
+               @include fl(14, 24);
+               margin-bottom: 7px;
+            }
+            @media (min-width: 769px) {
+               @include fl(18, 28);
+            }
+            @media (min-width: 1000px) {
+               @include fl(22, 30);
+            }
+            @media (min-width: 1200px) {
+               @include fl(26, 33.5);
+            }
+         }
+         .btn {
+            @media (max-width: 768px) {
+               min-width: 100%;
+               min-height: 34px;
+               max-height: 34px;
+            }
+            @media (min-width: 769px) {
+               transform: translate(3px, 0px);
+               border-radius: 12px;
+               min-width: 100px;
+               max-width: 100px;
+            }
+            @media (min-width: 1000px) {
+               min-width: 116px;
+               max-width: 116px;
+            }
+            a {
+               @include fl(12, 20);
+               @media (min-width: 769px) {
+                  @include fz(13);
+               }
+               @media (min-width: 1200px) {
+                  @include fz(14);
+               }
+            }
          }
       }
    }

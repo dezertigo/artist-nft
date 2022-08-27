@@ -1257,6 +1257,49 @@ body.nfts .hero h1 {
   margin-bottom: 16px;
 }
 
+body.nfts .cards__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
+  gap: 19px;
+  padding-top: 22px;
+}
+
+body.nfts .cards__container .nft-card-item {
+  padding-top: 0;
+  padding-left: 6.7484662577%;
+  padding-right: 6.7484662577%;
+}
+
+body.nfts .cards__container .nft-card-item .paint-block {
+  margin-left: -7.8014184397%;
+  margin-right: -7.8014184397%;
+  padding-bottom: 115.6028368794%;
+}
+
+body.nfts .cards__container h6 {
+  font-size: 0.75em;
+  line-height: 1.1666666667;
+  letter-spacing: 0.1em;
+  margin-top: 11px;
+  margin-bottom: 2px;
+}
+
+body.nfts .cards__container h5 {
+  font-size: 0.8125em;
+  line-height: 1.2307692308;
+}
+
+body.nfts .cards__container p {
+  font-size: 0.625em;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+body.nfts .cards__container .btn a {
+  font-size: 0.75em;
+  line-height: 1.6666666667;
+}
+
 @media (min-width: 468px) {
   h2 {
     font-size: 1.75em;
@@ -1465,6 +1508,50 @@ body.nfts .hero h1 {
     top: 77.6%;
     left: 73.8194444444%;
   }
+
+  body.nfts .cards__container {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    row-gap: 25px;
+    padding-top: 50px;
+  }
+
+  body.nfts .cards__container h6 {
+    font-size: 0.9375em;
+    line-height: 1.3333333333;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 17px;
+    padding-bottom: 18px;
+  }
+
+  body.nfts .cards__container h5 {
+    font-size: 1.0625em;
+    line-height: 1.2941176471;
+  }
+
+  body.nfts .cards__container p {
+    font-size: 0.75em;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  body.nfts .cards__container h4 {
+    font-size: 1.125em;
+    line-height: 1.5555555556;
+  }
+
+  body.nfts .cards__container .btn {
+    transform: translate(3px, 0px);
+    border-radius: 12px;
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  body.nfts .cards__container .btn a {
+    font-size: 0.8125em;
+  }
 }
 
 @media (min-width: 800px) {
@@ -1537,6 +1624,16 @@ body.nfts .hero h1 {
   .stroke-text {
     font-size: 4.375em;
     line-height: 1;
+  }
+
+  body.nfts .cards__container h4 {
+    font-size: 1.375em;
+    line-height: 1.3636363636;
+  }
+
+  body.nfts .cards__container .btn {
+    min-width: 116px;
+    max-width: 116px;
   }
 }
 
@@ -1701,6 +1798,30 @@ body.nfts .hero h1 {
   .hello-h1__text {
     margin-bottom: 40px;
   }
+
+  body.nfts .cards__container h6 {
+    font-size: 1.125em;
+    line-height: 1.4722222222;
+  }
+
+  body.nfts .cards__container h5 {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+
+  body.nfts .cards__container p {
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  body.nfts .cards__container h4 {
+    font-size: 1.625em;
+    line-height: 1.2884615385;
+  }
+
+  body.nfts .cards__container .btn a {
+    font-size: 0.875em;
+  }
 }
 
 @media (min-width: 1250px) {
@@ -1855,6 +1976,27 @@ body.nfts .hero h1 {
 
   .paint-block {
     border-radius: 0.75rem;
+  }
+
+  body.nfts .cards__container > :first-child,
+  body.nfts .cards__container > :last-child {
+    display: none;
+  }
+
+  body.nfts .cards__container .nft-card-item .paint-block {
+    border-radius: 7.73123px;
+  }
+
+  body.nfts .cards__container h4 {
+    font-size: 0.875em;
+    line-height: 1.7142857143;
+    margin-bottom: 7px;
+  }
+
+  body.nfts .cards__container .btn {
+    min-width: 100%;
+    min-height: 34px;
+    max-height: 34px;
   }
 }
 

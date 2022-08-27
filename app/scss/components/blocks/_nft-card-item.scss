@@ -1,14 +1,12 @@
 .nft-card-item {
    background-color: #212426;
    border-radius: rem(12);
-   // width: percent(280, 361);
    padding: percent(13, 280);
    @media (min-width: 769px) {
       padding-left: 24px;
       padding-right: 21px;
       padding-top: 14px;
       padding-bottom: 17px;
-      // width: percent(350, 1440);
    }
    // .nft-card-item__body
    &__body {
