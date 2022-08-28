@@ -1669,21 +1669,6 @@ body.home main {
   position: relative;
 }
 
-body.home .blur_1 {
-  top: 187px;
-  left: -14px;
-}
-
-body.home .blur_2 {
-  top: 790px;
-  left: 15px;
-}
-
-body.home .blur_3 {
-  top: 2123px;
-  left: 33px;
-}
-
 body.home .hero {
   position: relative;
   overflow: hidden;
@@ -2231,21 +2216,6 @@ body.home .form .contact-form__container {
 
   .blur_3-1 svg:last-child ellipse {
     fill: #86a8ff;
-  }
-
-  body.home .blur_3-1 {
-    top: 4.0011682243%;
-    left: -470px;
-  }
-
-  body.home .blur_3-2 {
-    top: 22.0502336449%;
-    left: -40px;
-  }
-
-  body.home .blur_3-3 {
-    top: 56.7172897196%;
-    left: 340px;
   }
 
   body.home .hero__decor :nth-child(1) {
