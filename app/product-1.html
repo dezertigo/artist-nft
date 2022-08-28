@@ -22,6 +22,22 @@
 						'modify': 'blue'
 						})
 						<div class="hero__content">
+							@@loop('./components/blocks/_hello-h2.html', './json/product-1/hello-h2.json')
+							<div class="hero__card">
+								<div class="hero__line">
+									<h4 class="hero__price">$100 322</h4>
+									@@include("./components/base/_btn.html", {
+									"text": "Buy now",
+									"modify": "big grad-bg",
+									"icon": "usd"
+									})
+								</div>
+								<p class="hero__text">You can purchase Art or NFT using popular system of
+									payment. We accepting PayPal, Visa/Mastercard.
+									Any crypto currency</p>
+
+							</div>
+
 						</div>
 					</div>
 				</div>
