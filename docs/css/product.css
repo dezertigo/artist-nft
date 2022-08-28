@@ -1375,6 +1375,7 @@ body.product .product {
   position: relative;
   padding-top: 62px;
   color: #fff;
+  overflow-x: hidden;
 }
 
 body.product .product__decor > * {
