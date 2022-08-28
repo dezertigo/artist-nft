@@ -1,4 +1,36 @@
 body.home {
+   main {
+      overflow: hidden;
+      position: relative;
+   }
+   .blur {
+      &_1 {
+         top: 187px;
+         left: -14px;
+      }
+      &_2 {
+         top: 790px;
+         left: 15px;
+      }
+      &_3 {
+         top: 2123px;
+         left: 33px;
+         @media (min-width: 769px) {
+            &-1 {
+               top: percent(137, 3424);
+               left: -470px;
+            }
+            &-2 {
+               top: percent(755, 3424);
+               left: -40px;
+            }
+            &-3 {
+               top: percent(1942, 3424);
+               left: 340px;
+            }
+         }
+      }
+   }
    // ===================================================================================
    // Hero ==== Hero ==== Hero ==== Hero === Hero ==== Hero ==== Hero ==== Hero ==== Hero
    // ===================================================================================
@@ -277,14 +309,13 @@ body.home {
       }
       &__container {
          padding-top: 62px;
+         padding-bottom: 31px;
          padding-right: percent(13, 375);
-
          @media (min-width: 769px) {
             padding-top: 103px;
+            padding-bottom: percent(81, 1440);
             display: flex;
             column-gap: 45px;
-         }
-         @media (min-width: 1200px) {
          }
       }
       &__graphic {
@@ -370,10 +401,6 @@ body.home {
    // ===================================================================================
    .premium {
       &__container {
-         padding-top: 31px;
-         @media (min-width: 769px) {
-            padding-top: percent(81, 1440);
-         }
          @media (min-width: 1250px) {
             padding-left: percent(150, 1440);
             padding-right: percent(150, 1440);
@@ -409,12 +436,20 @@ body.home {
       .backgroung {
          &__image {
             &_1 {
+               display: block;
+               top: 21px;
+               left: percent(288, 375);
+
                @media (min-width: 568px) {
                   top: percent(327, 881.06);
                   left: percent(-125, 1440);
                }
             }
             &_2 {
+               display: block;
+               top: 6px;
+               left: percent(313, 375);
+
                @media (min-width: 568px) {
                   top: percent(227, 881.06);
                   left: percent(165, 1440);

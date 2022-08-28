@@ -1613,7 +1613,40 @@ h6 {
   border-radius: 16px;
 }
 
-.backgroung {
+.backgroung__image {
+  position: absolute;
+}
+
+.backgroung__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.backgroung__image_1 {
+  width: 9.6%;
+  padding-bottom: 9.6%;
+}
+
+.backgroung__image_1 img {
+  filter: brightness(0.9) hue-rotate(202deg);
+}
+
+.backgroung__image_2 {
+  width: 25.1706666667%;
+  padding-bottom: 25.1706666667%;
+}
+
+.backgroung__image_2 img {
+  filter: brightness(0.7) blur(4px) hue-rotate(158deg);
+}
+
+.backgroung__image_3,
+.backgroung__image_4 {
   display: none;
 }
 
@@ -1683,34 +1716,34 @@ body.components .example-form {
 }
 
 @media (min-width: 568px) {
-  .backgroung {
+  .backgroung__image_1 {
+    width: 23.6111111111%;
+    padding-bottom: 23.6111111111%;
+    transform: rotate(75deg);
+  }
+
+  .backgroung__image_2 {
+    width: 11.7909722222%;
+    padding-bottom: 11.7909722222%;
+    transform: rotate(-3.92deg);
+  }
+
+  .backgroung__image_3 {
     display: block;
-  }
-
-  .backgroung__image {
-    position: absolute;
-  }
-
-  .backgroung__image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  .backgroung__image_1 img {
-    filter: brightness(0.9) hue-rotate(202deg);
-  }
-
-  .backgroung__image_2 img {
-    filter: brightness(0.7) blur(4px) hue-rotate(158deg);
+    width: 8.2916666667%;
+    padding-bottom: 8.2916666667%;
+    transform: rotate(59.59deg);
   }
 
   .backgroung__image_3 img {
     filter: brightness(0.7) hue-rotate(158deg);
+  }
+
+  .backgroung__image_4 {
+    display: block;
+    width: 31.8055555556%;
+    padding-bottom: 31.8055555556%;
+    transform: rotate(-20.2deg);
   }
 
   .backgroung__image_4 img {
@@ -1735,32 +1768,6 @@ body.components .example-form {
   body.components .parent-block .backgroung__image_4 {
     top: 27.0781034045%;
     left: 80.2777777778%;
-  }
-}
-
-@media (min-width: 568px) and (min-width: 568px) {
-  .backgroung__image_1 {
-    width: 23.6111111111%;
-    padding-bottom: 23.6111111111%;
-    transform: rotate(75deg);
-  }
-
-  .backgroung__image_2 {
-    width: 11.7909722222%;
-    padding-bottom: 11.7909722222%;
-    transform: rotate(-3.92deg);
-  }
-
-  .backgroung__image_3 {
-    width: 8.2916666667%;
-    padding-bottom: 8.2916666667%;
-    transform: rotate(59.59deg);
-  }
-
-  .backgroung__image_4 {
-    width: 31.8055555556%;
-    padding-bottom: 31.8055555556%;
-    transform: rotate(-20.2deg);
   }
 }
 
