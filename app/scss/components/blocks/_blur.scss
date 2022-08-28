@@ -1,0 +1,133 @@
+.blur {
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: -1;
+   svg {
+      position: absolute;
+   }
+   &_1 {
+      width: 480px;
+      padding-bottom: 444px;
+      filter: blur(80px);
+      opacity: 0.7;
+      svg {
+         &:nth-child(1) {
+            top: 0;
+            left: 0;
+            z-index: 0;
+         }
+         &:nth-child(2) {
+            bottom: 0;
+            left: 115px;
+            z-index: 1;
+         }
+         &:nth-child(3) {
+            right: 2px;
+            bottom: 4px;
+            z-index: 2;
+         }
+      }
+      @media (min-width: 769px) {
+         display: none;
+      }
+   }
+   &_2 {
+      width: 450px;
+      padding-bottom: 422px;
+      filter: blur(75px);
+      opacity: 0.7;
+      svg {
+         &:nth-child(1) {
+            top: 23px;
+            left: 8px;
+            z-index: 2;
+         }
+         &:nth-child(2) {
+            top: 0;
+            left: 52px;
+            z-index: 1;
+         }
+         &:nth-child(3) {
+            right: 0px;
+            bottom: 0px;
+            z-index: 0;
+         }
+      }
+      @media (min-width: 769px) {
+         display: none;
+      }
+   }
+   &_3 {
+      width: 446px;
+      padding-bottom: 411px;
+      filter: blur(125px);
+      opacity: 0.7;
+      svg {
+         &:nth-child(1) {
+            top: -280px;
+            left: -312px;
+            z-index: 2;
+         }
+         &:nth-child(2) {
+            top: -290px;
+            left: -213px;
+            z-index: 1;
+         }
+         &:nth-child(3) {
+            right: 0px;
+            bottom: 0px;
+            z-index: 0;
+         }
+      }
+      &-2,
+      &-3 {
+         @media (max-width: 768px) {
+            display: none;
+         }
+      }
+      @media (min-width: 769px) {
+         width: 758px;
+         padding-bottom: 699px;
+         svg {
+            &:nth-child(1) {
+               top: 6px;
+               left: 0;
+               z-index: 2;
+            }
+            &:nth-child(2) {
+               top: 0;
+               left: 98px;
+               z-index: 1;
+            }
+         }
+         &-1 {
+            svg {
+               &:last-child {
+                  ellipse {
+                     fill: #86a8ff;
+                  }
+               }
+            }
+         }
+      }
+      @media (min-width: 1600px) {
+         width: percent(758, 2500);
+         padding-bottom: percent(699, 2500);
+         svg {
+            &:nth-child(1) {
+               width: percent(372, 758);
+               height: percent(433, 699);
+            }
+            &:nth-child(2) {
+               width: percent(480, 758);
+               height: percent(654, 699);
+            }
+            &:nth-child(3) {
+               width: percent(507, 758);
+               height: percent(653, 699);
+            }
+         }
+      }
+   }
+}

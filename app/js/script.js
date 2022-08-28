@@ -20,11 +20,7 @@ window.addEventListener("load", () => {
       function burgerToggle(e) {
          if (e.target.closest(".burger")) {
             if (burger.classList.contains("active")) {
-               burger.classList.remove("active");
-               header.classList.remove("active");
-               headerAction.classList.remove("active");
-               body.classList.remove("lock");
-               actualizeHeight();
+               closeBurger();
             } else {
                burger.classList.add("active");
                header.classList.add("active");
@@ -38,22 +34,23 @@ window.addEventListener("load", () => {
             header.classList.remove("active");
             headerAction.classList.remove("active");
             body.classList.remove("lock");
-            actualizeHeight();
-            window.removeEventListener("scroll", closeBurger);
+            closeBurger();
          }
       }
       function closeBurger() {
-         //Необязательная дополнительная проверка
+         //Обязательная дополнительная проверка
          if (burger.classList.contains("active")) {
             burger.classList.remove("active");
-            menu.classList.remove("active");
             header.classList.remove("active");
             headerAction.classList.remove("active");
             body.classList.remove("lock");
+            setTimeout(() => {
+               qs(".header__action-wrapper").style.height = null;
+            }, 1000);
             window.removeEventListener("scroll", closeBurger);
          }
       }
-      //  Изменение высоты выезжающего меню после открытия бургера
+
       function actualizeHeight(e) {
          const headerActionWrapper = qs(".header__action-wrapper");
          const headerActionBody = qs(".header__action-body");
@@ -66,10 +63,6 @@ window.addEventListener("load", () => {
             } else {
                headerActionWrapper.style.height = wrapperHeight + bodyHeight + "px";
             }
-         } else {
-            setTimeout(() => {
-               headerActionWrapper.style.height = null;
-            }, 500);
          }
       }
    }
@@ -112,8 +105,6 @@ window.addEventListener("load", () => {
       window.addEventListener("resize", moveBlock);
       moveBlock();
       function moveBlock(e) {
-         console.log(window.innerWidth);
-
          if (window.innerWidth <= 768) {
             qs(".hello-h2__title").after(qs(".biography__graphic"));
          } else if (window.innerWidth > 768) {
@@ -121,8 +112,8 @@ window.addEventListener("load", () => {
          }
       }
 
-      // slider
-      const swiper = new Swiper(".swiper", {
+      // swiperBiography
+      const swiperBiography = new Swiper(".biography__swiper", {
          spaceBetween: 22,
          slidesPerView: 2.47,
          slideToClickedSlide: true,
@@ -143,6 +134,61 @@ window.addEventListener("load", () => {
                spaceBetween: 9,
             },
          },
+      });
+
+      // swiperCards
+      const swiperNft = new Swiper(".slider__swiper", {
+         spaceBetween: 16,
+         slidesPerView: 1.27025,
+         slideToClickedSlide: true,
+         loop: true,
+         initialSlide: 0,
+         breakpoints: {
+            460: {
+               slidesPerView: 1.6,
+            },
+            560: {
+               slidesPerView: 1.9,
+            },
+            660: {
+               slidesPerView: 2.3,
+            },
+            769: {
+               slidesPerView: 2.7,
+               spaceBetween: 23,
+            },
+            900: {
+               slidesPerView: 3.2,
+            },
+            1000: {
+               slidesPerView: 3.4,
+            },
+            1200: {
+               slidesPerView: 3.8683,
+               spaceBetween: 30,
+               centeredSlides: true,
+               initialSlide: 1,
+            },
+         },
+      });
+   }
+
+   // ! nfts.html
+   if (qs("body.nfts")) {
+      body.addEventListener("click", relocate);
+
+      function relocate(e) {
+         if (e.target.closest(".nft-card-item .btn")) {
+            document.location.href = "product-1.html";
+         }
+      }
+   }
+
+   // ! confirm button
+   if (qs(".confirm")) {
+      qs(".confirm").addEventListener("click", (e) => {
+         e.preventDefault();
+         qs(".confirm svg").classList.toggle("active");
       });
    }
 });

@@ -1,0 +1,18 @@
+@@if (!context.label2) {
+<div class="input">
+	<label for="input-@@for">@@label</label>
+	<input type="@@type" id="input-@@for" placeholder="@@placeholder">
+</div>
+}
+@@if (context.label2) {
+<div class="input-columns">
+	<div class="input">
+		<label for="input-@@for">@@label</label>
+		<input type="@@type" id="input-@@for" placeholder="@@placeholder">
+	</div>
+	<div class="input">
+		<label for="input-@@for2">@@label2</label>
+		<input type="@@type2" id="input-@@for2" placeholder="@@placeholder2">
+	</div>
+</div>
+}

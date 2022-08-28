@@ -9,7 +9,7 @@
 	
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
 	
-	<link rel="stylesheet" href="./css/home.min.css">
+	<link rel="stylesheet" href="./css/components.min.css">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 	<title>Components</title>
 </head>
@@ -29,28 +29,36 @@
 
 						<ul class="header__menu menu">
 							<li class="menu__item">
-								<a href="components.html">Main page</a>
+								<a href="components.html">Main</a>
 							</li>
 							<li class="menu__item">
-
-								<a href="catalog.html"><svg width="10" height="13" viewBox="0 0 10 13"
-										fill="none" xmlns="http://www.w3.org/2000/svg">
+								<a href="nfts.html">
+									<svg width="10" height="13" viewBox="0 0 10 13" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
 										<path
 											d="M5.00001 0.666656C3.39176 0.666656 2.08334 1.97507 2.08334 3.58332V4.74999H1.50001C0.856593 4.74999 0.333344 5.27324 0.333344 5.91666V11.1667C0.333344 11.8101 0.856593 12.3333 1.50001 12.3333H8.50001C9.14343 12.3333 9.66668 11.8101 9.66668 11.1667V5.91666C9.66668 5.27324 9.14343 4.74999 8.50001 4.74999H7.91668V3.58332C7.91668 1.97507 6.60826 0.666656 5.00001 0.666656ZM3.25001 3.58332C3.25001 2.61849 4.03518 1.83332 5.00001 1.83332C5.96484 1.83332 6.75001 2.61849 6.75001 3.58332V4.74999H3.25001V3.58332ZM8.50118 11.1667H5.58334V9.83782C5.93043 9.63541 6.16668 9.26324 6.16668 8.83332C6.16668 8.18991 5.64343 7.66666 5.00001 7.66666C4.35659 7.66666 3.83334 8.18991 3.83334 8.83332C3.83334 9.26266 4.06959 9.63541 4.41668 9.83782V11.1667H1.50001V5.91666H8.50001L8.50118 11.1667Z"
 											fill="#C8D2DC" />
-									</svg>NFT</a>
+									</svg>
+									<span>NFT</span>
+								</a>
 							</li>
 							<li class="menu__item">
-								<a href="catalog.html">Pictures</a>
+								<a href="catalog.html">Cat</a>
 							</li>
 							<li class="menu__item">
-								<a href="#">Auction</a>
+								<a href="product.html">Pic</a>
 							</li>
 							<li class="menu__item">
-								<a href="#">Pricing</a>
+								<a href="product-1.html">Prod-1</a>
 							</li>
 							<li class="menu__item">
-								<a href="#">Contacts</a>
+								<a href="auction.html">Auc</a>
+							</li>
+							<li class="menu__item">
+								<a href="pricing.html">Pricing</a>
+							</li>
+							<li class="menu__item">
+								<a href="contacts.html">Contacts</a>
 							</li>
 							<li class="menu__item">
 								<a href="#">Blog</a>
@@ -95,6 +103,130 @@
 	</div>
 </header>
 		<main>
+			<div class="parent-block">
+				<!-- Backround diamonds & cube -->
+				<div class="backgroung">
+	<div class='backgroung__image backgroung__image_1'>
+		<picture>
+			<source type='image/webp' srcset='img/bg/bg_diamond.webp'>
+			<img src='img/bg/bg_diamond.png' alt='background diamong image'>
+		</picture>
+	</div>
+	<div class='backgroung__image backgroung__image_2'>
+		<picture>
+			<source type='image/webp' srcset='img/bg/bg_diamond.webp'>
+			<img src='img/bg/bg_diamond.png' alt='background diamong image'>
+		</picture>
+	</div>
+	<div class='backgroung__image backgroung__image_3'>
+		<picture>
+			<source type='image/webp' srcset='img/bg/bg_diamond.webp'>
+			<img src='img/bg/bg_diamond.png' alt='background diamong image'>
+		</picture>
+	</div>
+	<div class='backgroung__image backgroung__image_4'>
+		<picture>
+			<source type='image/webp' srcset='img/bg/bg_cube.webp'>
+			<img src='img/bg/bg_cube.png' alt='background cube image'>
+		</picture>
+	</div>
+</div>
+
+				<!-- Contact form -->
+				<section class="contact-form">
+	<div class="contact-form__container">
+		<div class="contact-form__top">
+			<div class="hello-h2">
+	<h6 class="hello-h2__label">CONTACT ME</h6>
+	<h2 class="hello-h2__title">Want to apply your work or an question appeared?</h2>
+	
+
+</div>
+		</div>
+		<form action="#" class="contact-form__body" name="form-1">
+			
+<div class="input">
+	<label for="input-name">Name</label>
+	<input type="text" id="input-name" placeholder="Your name">
+</div>
+
+
+			
+<div class="input">
+	<label for="input-mail">Mail</label>
+	<input type="text" id="input-mail" placeholder="Your mail">
+</div>
+
+
+			<div class="input">
+	<label for="textarea-question">Your question</label>
+	<textarea id="textarea-question" placeholder="Your question"></textarea>
+</div>
+			<button class="btn grad-bg" type="submit" form="form-1" value="Submit">Send
+				message</button>
+			<div class="confirm">
+	<input type="checkbox" name="confirm" id="confirm">
+	<label for="confirm">I agree with <a href="#">Privacy Policy</a> and <a href="#">Terms of
+			use</a></label>
+	<svg class="" width="12" height="9" viewBox="0 0 12 9" fill="none"
+		xmlns="http://www.w3.org/2000/svg">
+		<path d="M1.5 4L4.5 7L10.5 1" stroke="white" stroke-width="2" />
+	</svg>
+
+</div>
+		</form>
+	</div>
+</section>
+			</div>
+
+			<!-- Подключение инпутов -->
+			<div class="example-form">
+				
+<div class="input">
+	<label for="input-name">Name</label>
+	<input type="text" id="input-name" placeholder="Your name">
+</div>
+
+
+				
+<div class="input">
+	<label for="input-mail">Mail</label>
+	<input type="text" id="input-mail" placeholder="Your mail">
+</div>
+
+
+				<!-- textarea -->
+				<div class="input">
+	<label for="textarea-question">Your question</label>
+	<textarea id="textarea-question" placeholder="Your question"></textarea>
+</div>
+				<!-- Подключение инпутов в 2 колонки -->
+				
+
+<div class="input-columns">
+	<div class="input">
+		<label for="input-date">Date</label>
+		<input type="text" id="input-date" placeholder="01/01">
+	</div>
+	<div class="input">
+		<label for="input-cvv">CVV</label>
+		<input type="text" id="input-cvv" placeholder="000">
+	</div>
+</div>
+
+			</div>
+			<!-- Confirm input -->
+			<div class="confirm">
+	<input type="checkbox" name="confirm" id="confirm">
+	<label for="confirm">I agree with <a href="#">Privacy Policy</a> and <a href="#">Terms of
+			use</a></label>
+	<svg class="" width="12" height="9" viewBox="0 0 12 9" fill="none"
+		xmlns="http://www.w3.org/2000/svg">
+		<path d="M1.5 4L4.5 7L10.5 1" stroke="white" stroke-width="2" />
+	</svg>
+
+</div>
+
 			<!-- Подключение кнопок -->
 			<div class="btns-just-test">
 				<!-- С иконкой короны -->
@@ -181,11 +313,12 @@
 	
 	<p class="hello-h2__text content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</br> Turpis egestes maecenas pharetra convallis posuere morbi leo urna molestie at. Diam in arcu curcus euismod quis viverra nibh cras. In ante metus dictum at tempor commodo ullamcorper. Ultrices eros in curcus turpis massa.</p>
 	
+	
 
 </div>
 
 			<!-- ! Double-block (нужно указать в стилях только отзывчивую ширину блоку) -->
-			<div style="max-width: 561px;" class="div">
+			<div style="max-width: 250px;" class="div">
 				<div class="double-block double-block_square">
 	<div class='double-block__image'>
 		<picture>

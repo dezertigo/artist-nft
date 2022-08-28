@@ -1,25 +1,47 @@
 h1 {
    font-weight: 700;
    @include fl(36, 40);
+   @media (min-width: 500px) {
+      @include fl(40, 45);
+   }
+   @media (min-width: 700px) {
+      @include fl(45, 50);
+   }
+   @media (min-width: 1000px) {
+      @include fl(50, 55);
+   }
    @media (min-width: 1200px) {
+      @include fl(60, 60);
+   }
+   @media (min-width: 1400px) {
       @include fl(64, 65);
    }
 }
 h2 {
    font-weight: 700;
    @include fl(26, 34);
+   @media (min-width: 468px) {
+      @include fl(28, 36);
+   }
+   @media (min-width: 760px) {
+      @include fl(30, 39);
+   }
+   @media (min-width: 1000px) {
+      @include fl(33, 44);
+   }
    @media (min-width: 1200px) {
       @include fl(36, 49.5);
    }
    &.mobile {
       @include fl(26, 34);
-      @media (min-width: 1200px) {
-      }
    }
 }
 h3 {
    font-weight: 700;
    @include fl(18, 26);
+   @media (min-width: 760px) {
+      @include fl(19, 28);
+   }
    @media (min-width: 1200px) {
       @include fl(20, 30);
    }
@@ -27,8 +49,23 @@ h3 {
 h4 {
    font-weight: 700;
    @include fl(22, 33.5);
+   @media (min-width: 760px) {
+      @include fl(24, 33.5);
+   }
    @media (min-width: 1200px) {
-      @include fz(26);
+      @include fl(26, 33.5);
+   }
+}
+// title/title-mobile
+h5 {
+   font-weight: 700;
+   @include fl(18, 26);
+   color: #fcffff;
+   @media (min-width: 760px) {
+      @include fl(19, 28);
+   }
+   @media (min-width: 1200px) {
+      @include fl(20, 30);
    }
 }
 // .caption
@@ -42,6 +79,9 @@ h6 {
    letter-spacing: 0.1em;
    font-weight: 700;
    @include fl(14, 26.5);
+   @media (min-width: 760px) {
+      @include fz(16);
+   }
    @media (min-width: 1200px) {
       @include fz(18);
    }
@@ -59,6 +99,9 @@ h6 {
 // .body-s
 .content-text-small {
    @include fl(12, 20);
+   @media (min-width: 760px) {
+      @include fl(13, 20);
+   }
    @media (min-width: 1200px) {
       @include fl(14, 21);
    }

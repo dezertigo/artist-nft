@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/product-1.min.css',
+'title': 'Name of Product',
+})
+
+<body class="product-1">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+					@@include('./components/blocks/_bread-crumbs.html', {
+					'first': 'Main page',
+					'second': 'NFT',
+					'link1': 'nfts.html',
+					'third': 'Name of product',
+					})
+					<div class="hero__body">
+						@@include('./components/blocks/_paint-block.html', {
+						'modify': 'blue'
+						})
+						<div class="hero__content">
+							@@loop('./components/blocks/_hello-h2.html', './json/product-1/hello-h2.json')
+							<div class="hero__card">
+								<div class="hero__line">
+									<h4 class="hero__price">$100 322</h4>
+									@@include("./components/base/_btn.html", {
+									"text": "Buy now",
+									"modify": "big grad-bg",
+									"icon": "usd"
+									})
+								</div>
+								<p class="hero__text">You can purchase Art or NFT using popular system of
+									payment. We accepting PayPal, Visa/Mastercard.
+									Any crypto currency</p>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html')
+</body>
+
+</html>

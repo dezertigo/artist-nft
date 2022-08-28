@@ -12,8 +12,8 @@
 @import "./components/structure/footer";
 
 // Подключение стилей базовых компонентов
-@import "./components/base/pop-up";
-@import "./components/base/spoiler";
+// @import "./components/base/pop-up";
+// @import "./components/base/spoiler";
 
 // Подключение стилей компонентов
 @import "./components/base/btn";
@@ -23,6 +23,13 @@
 @import "./components/blocks/hello-h2";
 @import "./components/blocks/double-block";
 @import "./components/blocks/banner";
+@import "./components/blocks/paint-block";
+@import "./components/blocks/nft-card-item";
+@import "./components/blocks/inputs";
+@import "./components/blocks/confirm";
+@import "./components/blocks/contact-form";
+@import "./components/blocks/background";
+// @import "./components/blocks/blur";
 
 //Подключение стилей конкретной страницы
 @import "./pages/home";

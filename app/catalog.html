@@ -4,17 +4,18 @@
 'css': './css/catalog.min.css',
 'title': 'catalog',
 })
+
 <body class="catalog">
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="gallery">
 				@@include('./components/blocks/_stroke-text.html', {
-					'text': 'make art',
-					})
+				'text': 'make art',
+				})
 				@@include('./components/blocks/_stroke-text.html', {
-					'text': 'not war',
-					})
+				'text': 'not war',
+				})
 				<i class="star-decor"></i>
 				<div class="gallery__container">
 					<h1 class="gallery__title">
@@ -24,7 +25,8 @@
 						Indulgence announcing uncommonly met she continuing two unpleasing terminated
 					</p>
 					<div class="gallery__inner">
-						@@loop('./components/blocks/_catalog__card-item.html', './json/catalog/catalog__card-item.json')
+						@@loop('./components/blocks/_catalog__card-item.html',
+						'./json/catalog/catalog__card-item.json')
 					</div>
 				</div>
 			</section>
