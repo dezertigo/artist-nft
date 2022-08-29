@@ -10,6 +10,7 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="hero">
+
 				<div class="hero__container">
 					@@include('./components/blocks/_bread-crumbs.html', {
 					'first': 'Main page',
@@ -21,6 +22,49 @@
 						'modify': 'blue'
 						})
 						<div class="hero__content">
+							@@include('./components/blocks/_hello-h2.html', {
+							'label': 'auction',
+							'title': 'Title of picture or NFT',
+							})
+							<div class="hero__columns">
+								<div class="hero__column hero__column_1">
+									<p class="hero__text content-text">36 × 27 in <span>91.4 × 68.6 cm</spa>
+									</p>
+								</div>
+								<div class="hero__column hero__column_2">
+									<p class="hero__text content-text">Estimated value</p>
+									<p class="hero__subprice">$6,000</p>
+								</div>
+								<div class="hero__column hero__column_3">
+									<p class="hero__text content-text">This work is part of a <span>limited
+											edition set.</spa>
+									</p>
+								</div>
+							</div>
+							<div class="hero__card">
+								<div class="hero__card-body">
+									<h6 class="hero__label">highest price</h6>
+									<h4 class="hero__price">$100 322</h4>
+									<div class="hero__sub-body">
+										@@include('./components/blocks/_input.html', {
+										'label': 'Place your bid',
+										'for': 'bid',
+										'type': 'text',
+										'placeholder': '$100 322',
+										})
+										@@include("./components/base/_btn.html", {
+										"text": "Place bid",
+										"modify": "big grad-bg",
+										})
+									</div>
+									<p class="hero__time">28d 17h 26m 31s</p>
+									<p class="hero__when">Live март 5, 8:00pm</p>
+									<p class="hero__card-text">You can purchase Art or NFT using popular
+										system of
+										payment. We accepting PayPal, Visa/Mastercard.
+										Any crypto currency</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

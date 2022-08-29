@@ -1815,6 +1815,7 @@ body.product-1-unlocked .form .contact-form h2 {
     display: flex;
     -moz-column-gap: 32px;
     column-gap: 32px;
+    align-items: flex-start;
   }
 
   body.product-1-unlocked .hero__body .paint-block {
@@ -1957,6 +1958,12 @@ body.product-1-unlocked .form .contact-form h2 {
 
   .footer .social-icons {
     transform: translate(-6px, 4px);
+  }
+}
+
+@media (min-width: 950px) {
+  body.product-1-unlocked .hero__body {
+    align-items: stretch;
   }
 }
 
