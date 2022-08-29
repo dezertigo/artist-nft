@@ -193,12 +193,17 @@ window.addEventListener("load", () => {
    }
 
    // ! product-1.html
-   if (qs("body.product-1")) {
-      body.addEventListener("click", playVideo);
+   if (qs("body.product-1") || qs("body.product-1-unlocked")) {
+      body.addEventListener("click", clickVideo);
 
-      function playVideo(e) {
+      function clickVideo(e) {
          if (e.target.closest(".process__video svg") || e.target.closest(".process__poster")) {
             console.log("work");
+            qs("video").style.zIndex = "5";
+            qs("video").setAttribute("controls", "true");
+            qs("video").play();
+         } else if (e.target.closest(".process .btn")) {
+            document.location.href = "product-1-unlocked.html";
          }
       }
    }
