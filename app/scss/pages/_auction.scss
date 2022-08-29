@@ -322,16 +322,56 @@ body.auction {
       &__container {
          padding-top: 20px;
          padding-bottom: 30px;
+         @media (min-width: 769px) {
+            display: flex;
+            column-gap: 30px;
+            align-items: flex-start;
+            padding-top: 92px;
+         }
+         @media (min-width: 1250px) {
+            padding-right: percent(150, 1440);
+            column-gap: 50px;
+         }
       }
       .swiper {
          height: 993px;
          margin-bottom: 39px;
+         @media (min-width: 769px) {
+            flex: 1 1 auto;
+         }
       }
       .banner {
          border-radius: 12px;
+         @media (min-width: 769px) {
+            flex: 0 0 345px;
+         }
+         i {
+            @media (min-width: 769px) {
+               margin-bottom: 7.5px;
+            }
+         }
+         h2 {
+            @media (min-width: 769px) {
+               @include fl(26, 34);
+               margin-bottom: 5px;
+            }
+            @media (min-width: 1200px) {
+               @include fl(26, 34);
+            }
+         }
+         &__text {
+            @media (min-width: 769px) {
+               letter-spacing: -0.03em;
+               margin-bottom: 20px;
+            }
+         }
          &__graphic {
             margin-top: -4px;
             padding-bottom: percent(173, 345);
+            @media (min-width: 769px) {
+               width: percent(318, 345);
+               padding-bottom: percent(318, 345);
+            }
          }
          &__image {
             &_1 {
@@ -341,6 +381,12 @@ body.auction {
                left: percent(-40, 345);
                transform: rotate(23.14deg);
                filter: blur(3px) saturate(210%) hue-rotate(360deg);
+               @media (min-width: 769px) {
+                  width: percent(146.88, 345);
+                  padding-bottom: percent(95.25, 345);
+                  top: 201px;
+                  left: -71px;
+               }
             }
             &_2 {
                width: percent(91, 345);
@@ -349,6 +395,12 @@ body.auction {
                left: percent(288, 345);
                transform: rotate(-44.21deg);
                filter: blur(7px);
+               @media (min-width: 769px) {
+                  width: percent(133.9, 345);
+                  padding-bottom: percent(93.52, 345);
+                  top: 237px;
+                  left: 233px;
+               }
             }
             &_main {
                width: percent(173, 345);
@@ -356,6 +408,9 @@ body.auction {
                top: 0;
                left: 50%;
                transform: translate(-50%, 0);
+               @media (min-width: 769px) {
+                  width: 100%;
+               }
                img {
                   object-fit: contain;
                   object-position: 0 0;

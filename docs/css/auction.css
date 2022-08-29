@@ -1770,6 +1770,60 @@ body.auction .about .banner__image_main img {
     margin-top: -6px;
     margin-bottom: 13px;
   }
+
+  body.auction .about__container {
+    display: flex;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    align-items: flex-start;
+    padding-top: 92px;
+  }
+
+  body.auction .about .swiper {
+    flex: 1 1 auto;
+  }
+
+  body.auction .about .banner {
+    flex: 0 0 345px;
+  }
+
+  body.auction .about .banner i {
+    margin-bottom: 7.5px;
+  }
+
+  body.auction .about .banner h2 {
+    font-size: 1.625em;
+    line-height: 1.3076923077;
+    margin-bottom: 5px;
+  }
+
+  body.auction .about .banner__text {
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+
+  body.auction .about .banner__graphic {
+    width: 92.1739130435%;
+    padding-bottom: 92.1739130435%;
+  }
+
+  body.auction .about .banner__image_1 {
+    width: 42.5739130435%;
+    padding-bottom: 27.6086956522%;
+    top: 201px;
+    left: -71px;
+  }
+
+  body.auction .about .banner__image_2 {
+    width: 38.8115942029%;
+    padding-bottom: 27.1072463768%;
+    top: 237px;
+    left: 233px;
+  }
+
+  body.auction .about .banner__image_main {
+    width: 100%;
+  }
 }
 
 @media (min-width: 800px) {
@@ -2117,6 +2171,11 @@ body.auction .about .banner__image_main img {
     font-size: 1em;
     line-height: 1;
   }
+
+  body.auction .about .banner h2 {
+    font-size: 1.625em;
+    line-height: 1.3076923077;
+  }
 }
 
 @media (min-width: 1250px) {
@@ -2133,6 +2192,12 @@ body.auction .about .banner__image_main img {
   .header__body {
     -moz-column-gap: 34px;
     column-gap: 34px;
+  }
+
+  body.auction .about__container {
+    padding-right: 10.4166666667%;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
   }
 }
 
