@@ -191,4 +191,15 @@ window.addEventListener("load", () => {
          qs(".confirm svg").classList.toggle("active");
       });
    }
+
+   // ! product-1.html
+   if (qs("body.product-1")) {
+      body.addEventListener("click", playVideo);
+
+      function playVideo(e) {
+         if (e.target.closest(".process__video svg") || e.target.closest(".process__poster")) {
+            console.log("work");
+         }
+      }
+   }
 });
