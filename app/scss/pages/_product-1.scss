@@ -54,8 +54,6 @@ body.product-1 {
             }
          }
       }
-      &__content {
-      }
       &__card {
          background: #212426;
          border-radius: 12px;
@@ -140,6 +138,53 @@ body.product-1 {
    // Process === Process === Process ==== Process ==== Process ==== Process ==== Process
    // ===================================================================================
    .process {
+      // 	&__locked {
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0;
+      //     width: 100%;
+      //     height: 100%;
+      //     display: flex;
+      //     flex-direction: column;
+      //     align-items: center;
+      //     justify-content: center;
+      //     border: 1px solid #525960;
+      //     border-radius: 12px;
+      //     .btn.small {
+      //      max-width: 134px;
+      //      width: 100%;
+      //      transform: translate(6px, -4px);
+      //      a {
+      //          z-index: 0;
+      //      }
+      //     }
+      //  }
+      //  &__locked-caption {
+      //    text-transform: lowercase;
+      //    @media (min-width: 1200px) {
+      //       transform: translateX(2px);
+      //    }
+      //  }
+      //  &__locked-text {
+      //      display: flex;
+      //      justify-content: space-between;
+      //      align-items: center;
+      //      margin-bottom: 20px;
+      //      transform: translate(1px, -3px);
+      //     i {
+      //      font-size: 33px;
+      //     }
+      //  }
+      //  &__locked-title {
+      //     max-width: 285px;
+      //     width: 100%;
+      //     text-align: right;
+      //     margin-left: 16px;
+      //     transform: translateX(6px);
+      //     i {
+      //        left: 33px;
+      //     }
+      //  }
       &__container {
          padding-top: 20px;
          @media (min-width: 769px) {
