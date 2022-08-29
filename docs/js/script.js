@@ -203,7 +203,7 @@ window.addEventListener("load", () => {
             qs("video").setAttribute("controls", "true");
             qs("video").play();
             qs(".process__poster").style.opacity = "0";
-         } else if (e.target.closest(".process .btn")) {
+         } else if (e.target.closest(".process .btn") || e.target.closest("body.product-1 .hero__line .btn")) {
             document.location.href = "product-1-unlocked.html";
          }
       }

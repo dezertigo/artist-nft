@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/admin-client.min.css',
+'title': 'Profile',
+'swiper': 'y',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="admin-client">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'yes',
+	})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>
