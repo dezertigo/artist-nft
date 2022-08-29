@@ -1,4 +1,7 @@
 body.auction {
+   // ===================================================================================
+   // Hero === Hero === Hero === Hero == Hero == Hero === Hero === Hero === Hero === Hero
+   // ===================================================================================
    .hero {
       &__body {
          @media (min-width: 769px) {
@@ -309,6 +312,59 @@ body.auction {
          margin: 0 auto;
          @media (max-width: 768px) {
             padding: 0px 18px;
+         }
+      }
+   }
+   // ===================================================================================
+   // About === About === About === About === About === About == About === About == About
+   // ===================================================================================
+   .about {
+      &__container {
+         padding-top: 20px;
+         padding-bottom: 30px;
+      }
+      .swiper {
+         height: 993px;
+         margin-bottom: 39px;
+      }
+      .banner {
+         border-radius: 12px;
+         &__graphic {
+            margin-top: -4px;
+            padding-bottom: percent(173, 345);
+         }
+         &__image {
+            &_1 {
+               width: percent(99.82, 345);
+               padding-bottom: percent(64.73, 345);
+               top: 30px;
+               left: percent(-40, 345);
+               transform: rotate(23.14deg);
+               filter: blur(3px) saturate(210%) hue-rotate(360deg);
+            }
+            &_2 {
+               width: percent(91, 345);
+               padding-bottom: percent(63.56, 345);
+               top: 53px;
+               left: percent(288, 345);
+               transform: rotate(-44.21deg);
+               filter: blur(7px);
+            }
+            &_main {
+               width: percent(173, 345);
+               padding-bottom: 100%;
+               top: 0;
+               left: 50%;
+               transform: translate(-50%, 0);
+               img {
+                  object-fit: contain;
+                  object-position: 0 0;
+                  transform: translate(-5px, -6px);
+                  filter: drop-shadow(0px 22px 29px rgba(0, 0, 0, 0.25));
+               }
+            }
+         }
+         &__image_main {
          }
       }
    }

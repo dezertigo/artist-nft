@@ -10,7 +10,6 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="hero">
-
 				<div class="hero__container">
 					@@include('./components/blocks/_bread-crumbs.html', {
 					'first': 'Main page',
@@ -67,6 +66,18 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="about__container">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+
+							</div>
+						</div>
+					</div>
+					@@loop('./components/blocks/_banner.html', './json/auction/banner.json')
 				</div>
 			</section>
 		</main>

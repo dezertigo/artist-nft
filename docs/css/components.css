@@ -1383,19 +1383,6 @@ h6 {
   object-fit: contain;
 }
 
-.banner_social .banner__image_main {
-  width: 60%;
-  padding-bottom: 43.1884057971%;
-  top: 2px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.banner_social .banner__image_main img {
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
 .nft-card-item {
   background-color: #212426;
   border-radius: 0.75rem;
