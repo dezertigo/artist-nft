@@ -1270,9 +1270,16 @@ h6 {
 
 .banner__circle {
   position: absolute;
+}
+
+.banner__circle_mobile {
   left: -7.8260869565%;
   width: 115.652173913%;
   height: 230.6358381503%;
+}
+
+.banner__circle_desktop {
+  display: none;
 }
 
 .banner__image {
@@ -1342,8 +1349,7 @@ h6 {
   max-width: 135px;
 }
 
-.banner_regular .banner__circle {
-  top: -10px;
+.banner_regular .banner__circle_mobile {
   top: -4.6948356808%;
 }
 
@@ -1677,6 +1683,18 @@ body.auction .about .banner__image_main img {
     padding-bottom: 39.1228070175%;
   }
 
+  .banner_regular .banner__circle_mobile {
+    display: none;
+  }
+
+  .banner_regular .banner__circle_desktop {
+    display: block;
+    left: 37.1841155235%;
+    top: -4.7085201794%;
+    width: 92.4187725632%;
+    height: 114.798206278%;
+  }
+
   .banner_regular .banner__image_1 {
     top: -3.8116591928%;
     left: 22.5631768953%;
@@ -1784,6 +1802,13 @@ body.auction .about .banner__image_main img {
   body.auction .about .banner__graphic {
     width: 92.1739130435%;
     padding-bottom: 92.1739130435%;
+  }
+
+  body.auction .about .banner__circle {
+    width: 125.4716981132%;
+    height: 125.4716981132%;
+    top: 45.5974842767%;
+    left: -12.893081761%;
   }
 
   body.auction .about .banner__image_1 {

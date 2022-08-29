@@ -56,9 +56,14 @@
    }
    &__circle {
       position: absolute;
-      left: calc((100% - percent(399, 345)) / 2);
-      width: percent(399, 345);
-      height: percent(399, 173);
+      &_mobile {
+         left: calc((100% - percent(399, 345)) / 2);
+         width: percent(399, 345);
+         height: percent(399, 173);
+      }
+      &_desktop {
+         display: none;
+      }
    }
    &__image {
       position: absolute;
@@ -153,8 +158,21 @@
             }
          }
          &__circle {
-            top: -10px;
-            top: percent(-10, 213);
+            &_mobile {
+               top: percent(-10, 213);
+               @media (min-width: 769px) {
+                  display: none;
+               }
+            }
+            &_desktop {
+               @media (min-width: 769px) {
+                  display: block;
+                  left: percent(206, 554);
+                  top: percent(-21, 446);
+                  width: percent(512, 554);
+                  height: percent(512, 446);
+               }
+            }
          }
          &__image {
             &_1 {

@@ -371,6 +371,12 @@ body.auction {
          }
          &__circle {
             top: 30px;
+            @media (min-width: 769px) {
+               width: percent(399, 318);
+               height: percent(399, 318);
+               top: percent(145, 318);
+               left: percent(-41, 318);
+            }
          }
          &__image {
             &_1 {
