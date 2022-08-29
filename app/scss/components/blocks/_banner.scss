@@ -1,6 +1,11 @@
 .banner {
    &:hover {
       .banner {
+         // &__circle {
+         //    transform: translate(90%, -74%) scale(1.5);
+         //    top: -150%;
+         //    left: -130%;
+         // }
          &__image_1 {
             filter: blur(0px) saturate(210%) hue-rotate(360deg);
          }
@@ -56,6 +61,7 @@
    }
    &__circle {
       position: absolute;
+      transition: all 1.5s ease;
       &_mobile {
          left: calc((100% - percent(399, 345)) / 2);
          width: percent(399, 345);

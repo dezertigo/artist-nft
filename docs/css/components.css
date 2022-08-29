@@ -1281,6 +1281,7 @@ h6 {
 
 .banner__circle {
   position: absolute;
+  transition: all 1.5s ease;
 }
 
 .banner__circle_mobile {
