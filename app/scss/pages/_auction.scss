@@ -369,6 +369,9 @@ body.auction {
                padding-bottom: percent(318, 345);
             }
          }
+         &__circle {
+            top: 30px;
+         }
          &__image {
             &_1 {
                width: percent(99.82, 345);
