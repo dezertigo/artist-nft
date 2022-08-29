@@ -1230,13 +1230,6 @@ h6 {
   overflow: hidden;
 }
 
-.banner:hover .banner-circle {
-  width: 100vmax;
-  height: 100vmax;
-  top: -200%;
-  left: -100%;
-}
-
 .banner:hover .banner__image_1 {
   filter: blur(0px) saturate(210%) hue-rotate(360deg);
 }
@@ -1275,21 +1268,19 @@ h6 {
   position: relative;
 }
 
-.banner__graphic .banner-circle {
-  transition: all 1.5s ease;
+.banner__circle {
   position: absolute;
-  z-index: 0;
-  top: 38px;
+  transition: all 1.5s ease;
+}
+
+.banner__circle_mobile {
   left: -7.8260869565%;
   width: 115.652173913%;
-  height: 187.323943662%;
-  border-radius: 50%;
-  border: 48px solid transparent;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) border-box;
-  -webkit-mask: radial-gradient(farthest-side at bottom left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) top right/50% 50%, radial-gradient(farthest-side at top right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) bottom left/50% 50%, radial-gradient(farthest-side at top left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) bottom right/50% 50%, radial-gradient(farthest-side at bottom right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) top left/50% 50%, linear-gradient(#fff, #fff) top/100% 48px, linear-gradient(#fff, #fff) bottom/100% 48px, linear-gradient(#fff, #fff) left/48px 100%, linear-gradient(#fff, #fff) right/48px 100%;
-  mask: radial-gradient(farthest-side at bottom left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) top right/50% 50%, radial-gradient(farthest-side at top right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) bottom left/50% 50%, radial-gradient(farthest-side at top left, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) bottom right/50% 50%, radial-gradient(farthest-side at bottom right, transparent calc(100% - 48px), #fff calc(100% - 48px) 100%) top left/50% 50%, linear-gradient(#fff, #fff) top/100% 48px, linear-gradient(#fff, #fff) bottom/100% 48px, linear-gradient(#fff, #fff) left/48px 100%, linear-gradient(#fff, #fff) right/48px 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  height: 230.6358381503%;
+}
+
+.banner__circle_desktop {
+  display: none;
 }
 
 .banner__image {
@@ -1357,6 +1348,10 @@ h6 {
 
 .banner_regular .btn {
   max-width: 135px;
+}
+
+.banner_regular .banner__circle_mobile {
+  top: -4.6948356808%;
 }
 
 .banner_regular .banner__image_main {
@@ -1487,6 +1482,10 @@ body.auction .about .banner__graphic {
   padding-bottom: 50.1449275362%;
 }
 
+body.auction .about .banner__circle {
+  top: 30px;
+}
+
 body.auction .about .banner__image_1 {
   width: 28.9333333333%;
   padding-bottom: 18.7623188406%;
@@ -1555,10 +1554,6 @@ body.auction .about .banner__image_main img {
     height: 296.59px;
     width: 460px;
     margin: 0 auto;
-  }
-
-  .banner__graphic .banner-circle {
-    height: 179.3721973094%;
   }
 
   body.auction .hero__sub-body {
@@ -1676,15 +1671,6 @@ body.auction .about .banner__image_main img {
     line-height: 1;
   }
 
-  .banner_regular .banner-circle {
-    height: 114.798206278%;
-    width: 92.4187725632%;
-    top: -20px;
-    left: 207px;
-    top: -4.4843049327%;
-    left: 37.3646209386%;
-  }
-
   .banner_regular .banner__content {
     flex: 0 0 48.5964912281%;
     padding-right: 0;
@@ -1696,6 +1682,18 @@ body.auction .about .banner__image_main img {
     height: auto;
     margin: 0;
     padding-bottom: 39.1228070175%;
+  }
+
+  .banner_regular .banner__circle_mobile {
+    display: none;
+  }
+
+  .banner_regular .banner__circle_desktop {
+    display: block;
+    left: 37.1841155235%;
+    top: -4.7085201794%;
+    width: 92.4187725632%;
+    height: 114.798206278%;
   }
 
   .banner_regular .banner__image_1 {
@@ -1805,6 +1803,13 @@ body.auction .about .banner__image_main img {
   body.auction .about .banner__graphic {
     width: 92.1739130435%;
     padding-bottom: 92.1739130435%;
+  }
+
+  body.auction .about .banner__circle {
+    width: 125.4716981132%;
+    height: 125.4716981132%;
+    top: 45.5974842767%;
+    left: -12.893081761%;
   }
 
   body.auction .about .banner__image_1 {
@@ -2205,15 +2210,6 @@ body.auction .about .banner__image_main img {
   h1 {
     font-size: 4em;
     line-height: 1.015625;
-  }
-
-  .banner_regular .banner-circle {
-    border: 64px solid transparent;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) border-box;
-    -webkit-mask: radial-gradient(farthest-side at bottom left, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) top right/50% 50%, radial-gradient(farthest-side at top right, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) bottom left/50% 50%, radial-gradient(farthest-side at top left, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) bottom right/50% 50%, radial-gradient(farthest-side at bottom right, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) top left/50% 50%, linear-gradient(#fff, #fff) top/100% 64px, linear-gradient(#fff, #fff) bottom/100% 64px, linear-gradient(#fff, #fff) left/64px 100%, linear-gradient(#fff, #fff) right/64px 100%;
-    mask: radial-gradient(farthest-side at bottom left, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) top right/50% 50%, radial-gradient(farthest-side at top right, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) bottom left/50% 50%, radial-gradient(farthest-side at top left, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) bottom right/50% 50%, radial-gradient(farthest-side at bottom right, transparent calc(100% - 64px), #fff calc(100% - 64px) 100%) top left/50% 50%, linear-gradient(#fff, #fff) top/100% 64px, linear-gradient(#fff, #fff) bottom/100% 64px, linear-gradient(#fff, #fff) left/64px 100%, linear-gradient(#fff, #fff) right/64px 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
   }
 }
 
