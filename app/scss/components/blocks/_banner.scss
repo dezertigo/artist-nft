@@ -56,7 +56,7 @@
    }
    &__circle {
       position: absolute;
-      left: calc((399px - 345px) / -2);
+      left: calc((100% - percent(399, 345)) / 2);
       width: percent(399, 345);
       height: percent(399, 173);
    }
