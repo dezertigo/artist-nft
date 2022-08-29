@@ -12,8 +12,23 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="hero">
+				<div class='hero__background'>
+					<picture>
+						<source type='image/webp' srcset='@img/bg/card-bg.webp'>
+						<img src='@img/bg/card-bg.jpg' alt='background image'>
+					</picture>
+				</div>
 				<div class="hero__container">
-
+					<h2 class="hero__title">Forum</h2>
+					<div class="hero__subtitle">
+						<i class="star"></i>
+						<h3>Popular questions</h3>
+					</div>
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							@@loop('./components/blocks/_forum-card.html', './json/forum/forum-card.json')
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>

@@ -208,4 +208,40 @@ window.addEventListener("load", () => {
          }
       }
    }
+
+   // ! forum.html
+   if (qs("body.forum")) {
+      // swiperCards
+      const swiper = new Swiper(".swiper", {
+         spaceBetween: 14,
+         slidesPerView: 1.181,
+         slideToClickedSlide: true,
+         loop: true,
+         breakpoints: {
+            460: {
+               slidesPerView: 1.4,
+            },
+            560: {
+               slidesPerView: 1.7,
+            },
+            660: {
+               slidesPerView: 1.9,
+            },
+            769: {
+               slidesPerView: 2.2,
+               spaceBetween: 20,
+            },
+            900: {
+               slidesPerView: 2.6,
+            },
+            1000: {
+               slidesPerView: 2.8,
+            },
+            1200: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+            },
+         },
+      });
+   }
 });

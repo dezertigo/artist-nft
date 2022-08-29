@@ -18,6 +18,9 @@
 // Подключение стилей компонентов
 @import "./components/base/btn";
 @import "./components/blocks/inputs";
+@import "./components/blocks/social-icons";
+@import "./components/blocks/forum-card";
+@import "./components/blocks/forum-comment";
 
 //Подключение стилей конкретной страницы
 @import "./pages/forum";

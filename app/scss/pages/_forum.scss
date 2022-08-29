@@ -1,0 +1,83 @@
+body.forum {
+   .hero {
+      position: relative;
+      overflow: hidden;
+      @media (max-width: 769px) {
+         margin-top: 8px;
+      }
+      &__background {
+         height: 317px;
+         width: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: -1;
+         overflow: hidden;
+         &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translate(0, 0);
+            background: linear-gradient(0deg, rgba(42, 32, 161, 0.57), rgba(42, 32, 161, 0.57));
+            filter: brightness(0.9);
+         }
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            @media (min-width: 769px) {
+               width: 100%;
+               height: 100%;
+            }
+         }
+      }
+      &__container {
+         padding-top: 35px;
+         @media (min-width: 769px) {
+            padding-top: 45px;
+         }
+         @media (min-width: 1200px) {
+            padding-top: 52px;
+         }
+      }
+      &__title {
+         color: #ffffff;
+         margin-bottom: 3px;
+         padding-left: 2px;
+         @media (min-width: 1000px) {
+            margin-bottom: 5px;
+         }
+      }
+      &__subtitle {
+         display: flex;
+         align-items: center;
+         padding-left: 3px;
+         margin-bottom: 25px;
+         @media (min-width: 1200px) {
+            margin-bottom: 23px;
+         }
+         i {
+            margin-right: 7px;
+            @include fl(16);
+            color: #ffffff;
+            @media (min-width: 760px) {
+               @include fl(18);
+            }
+            @media (min-width: 1000px) {
+               @include fl(21);
+            }
+            @media (min-width: 1200px) {
+               @include fl(23.28);
+               margin-right: 12px;
+            }
+         }
+         h3 {
+            color: #ffffff;
+         }
+      }
+   }
+}
