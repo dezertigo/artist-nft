@@ -251,17 +251,4 @@
          }
       }
    }
-   &_social {
-      // display: inline-block;
-      .banner__image_main {
-         width: percent(207, 345);
-         padding-bottom: percent(149, 345);
-         top: 2px;
-         left: 50%;
-         transform: translate(-50%, 0);
-         img {
-            object-fit: contain;
-         }
-      }
-   }
 }

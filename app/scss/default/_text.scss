@@ -106,6 +106,19 @@ h6 {
       @include fl(14, 21);
    }
 }
+// .body-mobile
+.content-text-mobile {
+   @include fl(12, 20);
+   @media (min-width: 468px) {
+      @include fl(13, 21);
+   }
+   @media (min-width: 760px) {
+      @include fl(14, 22);
+   }
+   @media (min-width: 1000px) {
+      @include fl(15, 24);
+   }
+}
 // .14 bold
 .label {
    font-family: $ff2;

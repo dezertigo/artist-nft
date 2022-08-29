@@ -1,4 +1,7 @@
 body.product-1 {
+   // ===================================================================================
+   // Hero === Hero === Hero === Hero == Hero == Hero === Hero === Hero === Hero === Hero
+   // ===================================================================================
    .hero {
       &__container {
          @media (min-width: 1400px) {
@@ -9,14 +12,355 @@ body.product-1 {
          @media (min-width: 769px) {
             display: flex;
             column-gap: 32px;
+            align-items: flex-start;
+         }
+         @media (min-width: 950px) {
+            align-items: stretch;
          }
          .paint-block {
             border-radius: 7.69517px;
+            @media (max-width: 768px) {
+               margin-bottom: 21px;
+            }
             @media (min-width: 769px) {
                border-radius: 12px;
                flex: 0 0 percent(538, 1047);
                padding-bottom: percent(538, 1047);
             }
+         }
+         .hello-h2 {
+            h2,
+            p {
+               color: #fcffff;
+            }
+            h2 {
+               margin-bottom: 2px;
+            }
+            p {
+               &:not(:last-child) {
+                  margin-bottom: 24px;
+               }
+               &:last-child {
+                  margin-bottom: 24px;
+               }
+            }
+            @media (min-width: 769px) {
+               padding-top: 4px;
+               h2 {
+                  margin-top: -1px;
+                  margin-bottom: 0px;
+               }
+               p {
+                  &:not(:last-child) {
+                     margin-bottom: 29px;
+                  }
+               }
+            }
+         }
+      }
+      &__card {
+         background: #212426;
+         border-radius: 12px;
+         overflow: hidden;
+         padding-top: 16px;
+         padding-bottom: 16px;
+         padding-left: 18px;
+         padding-right: 12px;
+         @media (min-width: 769px) {
+            padding-left: 18px;
+            padding-right: 19px;
+            padding-top: 16px;
+            padding-bottom: 27px;
+         }
+      }
+      &__line {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding-bottom: 18px;
+         @media (min-width: 769px) {
+            padding-bottom: 16px;
+            flex-wrap: wrap;
+            row-gap: 15px;
+         }
+         h4 {
+            color: #fcffff;
+            @media (max-width: 768px) {
+               transform: translate(0, 6px);
+            }
+            @media (min-width: 1000px) {
+               padding-left: 14px;
+            }
+         }
+         .btn {
+            min-width: 160px;
+            border-radius: 16px;
+            i {
+               margin-right: 10px;
+               @include fl(13.5);
+            }
+            a {
+               transform: translate(0, 0);
+            }
+            @media (min-width: 769px) {
+               transform: translate(3px, 0);
+
+               i {
+                  margin-right: 11px;
+                  @include fl(18);
+               }
+            }
+            @media (min-width: 1000px) {
+               min-width: 209px;
+            }
+         }
+      }
+      &__text {
+         padding-top: 19px;
+         padding-right: 46px;
+         color: #c8d2dc;
+         @include fl(12, 20);
+         @media (min-width: 769px) {
+            @include fl(15, 24);
+            padding-right: 23px;
+            padding-top: 23px;
+         }
+         position: relative;
+         &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            @extend %grad-bg;
+            opacity: 0.1;
+         }
+      }
+   }
+   // ===================================================================================
+   // Process === Process === Process ==== Process ==== Process ==== Process ==== Process
+   // ===================================================================================
+   .process {
+      &__locked {
+         z-index: 4;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         border-radius: 12px;
+         .btn.small {
+            max-width: 134px;
+            width: 100%;
+            transform: translate(3px, 3px);
+            @media (min-width: 1000px) {
+               transform: translate(1px, 11px);
+            }
+            a {
+               transform: translate(-3px, -1px);
+               @media (min-width: 1000px) {
+                  transform: translate(2px, -1px);
+               }
+            }
+            i {
+               transform: translate(-3px, -1px);
+               @media (min-width: 769px) {
+                  transform: translate(4px, -1px);
+               }
+            }
+         }
+      }
+      &__locked-caption {
+         text-transform: lowercase;
+         margin-bottom: 2px;
+         transform: translate(1px, 1px);
+         @media (min-width: 1000px) {
+            transform: translate(1px, 2px);
+         }
+      }
+      &__locked-text {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         column-gap: 12px;
+         margin-bottom: 12px;
+         i {
+            @include fl(20);
+            margin-left: -3px;
+            transform: translate(0, -1px);
+            @media (min-width: 769px) {
+               float: 27px;
+            }
+            @media (min-width: 1200px) {
+               @include fl(33.33);
+               transform: translate(0, 1px);
+            }
+         }
+      }
+      &__locked-title {
+         max-width: 285px;
+         width: 100%;
+         text-align: right;
+         transform: translateX(7px);
+         color: #fcffff;
+         @media (min-width: 769px) {
+            transform: translate(9px, 2px);
+         }
+      }
+      &__container {
+         padding-top: 20px;
+         @media (min-width: 769px) {
+            padding-top: 32px;
+         }
+         @media (min-width: 1200px) {
+            padding-top: 44px;
+         }
+         @media (min-width: 1400px) {
+            padding-right: percent(230, 1440);
+         }
+      }
+
+      // .process__head
+      &__head {
+         display: flex;
+         align-items: center;
+         i {
+            @include fl(11);
+
+            margin-right: 14px;
+            @extend %grad-text;
+            @media (max-width: 768px) {
+               transform: translate(1px, 0);
+            }
+            @media (min-width: 769px) {
+               @include fl(16);
+               padding-left: 1px;
+               transform: translate(1px, 1px);
+            }
+         }
+         margin-bottom: 20px;
+      }
+
+      // .process__video
+      &__video {
+         position: relative;
+         max-width: 100%;
+         padding-bottom: percent(194, 345);
+         border-radius: 12px;
+         // overflow: hidden;
+         @media (min-width: 769px) {
+            padding-bottom: percent(590, 1045);
+         }
+         &:after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            transform: translate(0, 0);
+            background: rgba(33, 36, 38, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 12px;
+            z-index: 3;
+            box-sizing: border-box;
+            @media (min-width: 1200px) {
+               background: rgba(33, 36, 38, 0.8);
+               backdrop-filter: blur(8px);
+            }
+         }
+      }
+      &__poster {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         padding-bottom: percent(194, 345);
+         z-index: 1;
+         @media (min-width: 769px) {
+            padding-bottom: percent(590, 1045);
+         }
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+         }
+      }
+   }
+   // ===================================================================================
+   // Form === Form === Form === Form === Form === Form === Form ==== Form ==== Form ====
+   // ===================================================================================
+   .form {
+      position: relative;
+      overflow: hidden;
+      .backgroung {
+         &__image {
+            &_1 {
+               display: block;
+               top: 21px;
+               left: percent(288, 375);
+
+               @media (min-width: 568px) {
+                  top: percent(327, 881.06);
+                  left: percent(-125, 1440);
+               }
+            }
+            &_2 {
+               display: block;
+               top: 15px;
+               left: percent(313, 375);
+
+               @media (min-width: 568px) {
+                  top: percent(227, 881.06);
+                  left: percent(165, 1440);
+               }
+            }
+            &_3 {
+               @media (min-width: 568px) {
+                  top: percent(635, 881.06);
+                  left: percent(237, 1440);
+               }
+            }
+            &_4 {
+               @media (min-width: 568px) {
+                  top: percent(192, 881.06);
+                  left: percent(1156, 1440);
+               }
+            }
+         }
+      }
+
+      .contact-form {
+         position: relative;
+         z-index: 1;
+         &__container {
+            padding-top: 45px;
+            padding-bottom: 34px;
+            @media (min-width: 769px) {
+               padding-top: percent(84, 1440);
+               padding-bottom: percent(93, 1440);
+            }
+         }
+         h2 {
+            color: #fcffff;
+         }
+         h6 {
+            @media (min-width: 769px) {
+               margin-bottom: -3px;
+            }
+         }
+         @media (min-width: 769px) {
+            transform: translate(2px, 0);
          }
       }
    }

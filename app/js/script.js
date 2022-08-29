@@ -191,4 +191,21 @@ window.addEventListener("load", () => {
          qs(".confirm svg").classList.toggle("active");
       });
    }
+
+   // ! product-1.html
+   if (qs("body.product-1") || qs("body.product-1-unlocked")) {
+      body.addEventListener("click", clickVideo);
+
+      function clickVideo(e) {
+         if (e.target.closest(".process__video svg") || e.target.closest(".process__poster")) {
+            console.log("work");
+            qs("video").style.zIndex = "5";
+            qs("video").setAttribute("controls", "true");
+            qs("video").play();
+            qs(".process__poster").style.opacity = "0";
+         } else if (e.target.closest(".process .btn")) {
+            document.location.href = "product-1-unlocked.html";
+         }
+      }
+   }
 });
