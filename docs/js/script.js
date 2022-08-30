@@ -68,16 +68,15 @@ window.addEventListener("load", () => {
    }
 
    // ! Header
-   body.addEventListener("click", relocate);
-
-   function relocate(e) {
-      // if (e.target.closest("a").innerHTML == "Authorization") {
-      //    document.location.href = "authorization.html";
-      // }
+   //Relocate to authorization.html
+   if (qs(".header")) {
+      qs(".btn.authorization").addEventListener("click", () => {
+         document.location.href = "authorization.html";
+      });
    }
 
    // ! Spoiler.html
-   if (qa(".spoiler")) {
+   if (qs(".spoiler")) {
       // ? Если нужно открыть только первый спойлер на странице. Можно прогнать циклом для остальных
       if (qs(".spoiler").classList.contains("opened")) {
          let spoilerWrapper = qa(".spoiler__wrapper")[0];
@@ -266,6 +265,34 @@ window.addEventListener("load", () => {
             firstLine.append(firstTitle);
             secondLine.append(secondTitle);
             thirdLine.append(thirdTitle);
+         }
+      }
+   }
+
+   // ! forum.html
+   if (qs("body.authorization")) {
+      body.addEventListener("click", changeLayout);
+
+      function changeLayout(e) {
+         if (e.target.getAttribute("data-location") == "Log in") {
+            body.className = "authorization log-in";
+            qa(".hero__button")[0].classList.add("active");
+            qa(".hero__button")[1].classList.remove("active");
+            qa(".hero__link")[0].classList.add("active");
+            qa(".hero__link")[1].classList.remove("active");
+         } else if (e.target.getAttribute("data-location") == "Sign up") {
+            body.className = "authorization sign-up";
+            qa(".hero__button")[1].classList.add("active");
+            qa(".hero__button")[0].classList.remove("active");
+            qa(".hero__link")[1].classList.add("active");
+            qa(".hero__link")[0].classList.remove("active");
+         } else if (e.target.closest(".hero__radio")) {
+            qa(".hero__radio").forEach((el) => {
+               el.classList.remove("active");
+            });
+            e.target.closest(".hero__radio").classList.add("active");
+         } else if (e.target.closest(".hero__btn")) {
+            document.location.href = qs(".hero__radio.active").getAttribute("data-url");
          }
       }
    }
