@@ -214,7 +214,7 @@ window.addEventListener("load", () => {
       // swiperCards
       const swiper = new Swiper(".swiper", {
          spaceBetween: 14,
-         slidesPerView: 1.181,
+         slidesPerView: 1.23,
          slideToClickedSlide: true,
          loop: true,
          breakpoints: {
