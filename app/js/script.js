@@ -237,7 +237,7 @@ window.addEventListener("load", () => {
             1000: {
                slidesPerView: 2.8,
             },
-            1200: {
+            1150: {
                slidesPerView: 3,
                spaceBetween: 30,
             },

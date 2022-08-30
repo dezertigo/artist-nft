@@ -108,8 +108,11 @@
       }
    }
    &__back-btn {
+      cursor: pointer;
       display: flex;
       align-items: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
       i {
          @include fl(16.67);
          margin-right: 11.5px;

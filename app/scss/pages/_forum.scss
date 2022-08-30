@@ -40,7 +40,7 @@ body.forum {
       }
       &__container {
          padding-top: 35px;
-         @media (max-width: 768px) {
+         @media (max-width: 1149px) {
             padding-right: 0;
          }
          @media (min-width: 769px) {
@@ -93,7 +93,7 @@ body.forum {
       // .comments__container
       &__container {
          padding-top: 16px;
-         @media (min-width: 769px) {
+         @media (min-width: 900px) {
             padding-top: 30px;
             display: flex;
             align-items: flex-start;
@@ -108,7 +108,7 @@ body.forum {
 
       // .comments__cards
       &__cards {
-         @media (min-width: 769px) {
+         @media (min-width: 900px) {
             order: 2;
             min-width: 365px;
             max-width: 365px;
@@ -128,7 +128,7 @@ body.forum {
             a {
                letter-spacing: 0.04em;
                transform: translate(4px, -1px);
-               @media (min-width: 769px) {
+               @media (min-width: 900px) {
                   letter-spacing: -0.057em;
                   transform: translate(1px, -1px);
                }
@@ -140,10 +140,10 @@ body.forum {
          }
       }
       &__body {
-         @media (max-width: 768px) {
+         @media (max-width: 899px) {
             padding-top: 16px;
          }
-         @media (min-width: 769px) {
+         @media (min-width: 900px) {
             order: 1;
             flex: 1 1 auto;
          }
@@ -157,7 +157,7 @@ body.forum {
          padding-bottom: 17px;
          padding-left: 19px;
          padding-right: 18px;
-         @media (min-width: 769px) {
+         @media (min-width: 900px) {
             padding-top: 16px;
             padding-bottom: 24px;
             padding-left: 29px;
@@ -168,7 +168,7 @@ body.forum {
       // .comments__label
       &__label {
          margin-bottom: -8px;
-         @media (min-width: 769px) {
+         @media (min-width: 900px) {
             margin-bottom: -3px;
          }
       }
@@ -177,15 +177,15 @@ body.forum {
       &__title {
          margin-bottom: 12px;
          color: #fcffff;
-         @media (min-width: 769px) {
+         @media (min-width: 900px) {
             margin-bottom: 15px;
          }
       }
       &__statistics {
-         @media (max-width: 768px) {
+         @media (max-width: 899px) {
             display: none;
          }
-         @media (min-width: 769px) {
+         @media (min-width: 900px) {
             margin-top: 18px;
             background-color: #212426;
             border-radius: 12px;
