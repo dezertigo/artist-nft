@@ -7,6 +7,9 @@ body.product {
         @media (min-width: 1200px) {
             padding-top: 0;
         }
+        &__hero {
+            position: relative;
+        }
         &__decor {
             & > * {
                 position: absolute;
@@ -25,23 +28,23 @@ body.product {
                 }
             }
             :nth-child(2) {
-                top: 11px;
+                top: -51px;
                 left: percent(81, 375);
                 @media (min-width: 800px) {
-                    top: percent(441, 4100);
+                    top: percent(381, 428);
                 }
                 @media (min-width:952px) {
-                    top: percent(570, 3100);
+                    top: percent(470, 520);
                     left: percent(376, 1440);
                 }
                 @media (min-width:1180px) {
-                    top: percent(610, 3304);
+                    top: percent(610, 683.88);
                     letter-spacing: -0.27px;
                 }
             }
             :nth-child(3) {
                 font-size: 41px;
-                top: 368px;
+                top: 306px;
                 @media (min-width: 1180px) {
                     top: 381px;
                     left: percent(641,1440);
@@ -52,7 +55,7 @@ body.product {
             }
             :nth-child(4) {
                 font-size: 48px;
-                top: 361px;
+                top: 299px;
                 right: percent(37, 375);
                 @media (min-width:1180px) {
                     top: 245px;
