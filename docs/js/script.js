@@ -296,4 +296,74 @@ window.addEventListener("load", () => {
          }
       }
    }
+
+   // ! admin.html
+   if (qs("body.admin")) {
+      // ! Burger
+      const adminBurger = qs(".admin-burger"),
+         adminHeader = qs(".admin-header"),
+         asideAction = document.querySelector(".aside__action");
+      if (adminBurger) {
+         body.addEventListener("click", burgerToggle);
+         function burgerToggle(e) {
+            if (e.target.closest(".admin-burger")) {
+               if (adminBurger.classList.contains("active")) {
+                  closeBurger();
+               } else {
+                  adminBurger.classList.add("active");
+                  adminHeader.classList.add("active");
+                  asideAction.classList.add("active");
+                  body.classList.add("lock");
+                  actualizeHeight();
+                  window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
+               }
+            } else if (!e.target.closest(".admin-burger") && !e.target.closest(".aside__action-wrapper")) {
+               adminBurger.classList.remove("active");
+               adminHeader.classList.remove("active");
+               asideAction.classList.remove("active");
+               body.classList.remove("lock");
+               closeBurger();
+            }
+         }
+         function closeBurger() {
+            //Обязательная дополнительная проверка
+            if (adminBurger.classList.contains("active")) {
+               adminBurger.classList.remove("active");
+               adminHeader.classList.remove("active");
+               asideAction.classList.remove("active");
+               body.classList.remove("lock");
+               setTimeout(() => {
+                  qs(".aside__action-wrapper").style.height = null;
+               }, 1000);
+               window.removeEventListener("scroll", closeBurger);
+            }
+         }
+
+         function actualizeHeight(e) {
+            const asideActionWrapper = qs(".aside__action-wrapper");
+            const asideActionBody = qs(".aside__action-body");
+            const wrapperHeight = asideActionWrapper.scrollHeight;
+            const bodyHeight = asideActionBody.scrollHeight;
+            const total = wrapperHeight + bodyHeight;
+            if (asideAction.classList.contains("active")) {
+               if (total >= window.innerHeight) {
+                  asideActionWrapper.style.height = "100%";
+               } else {
+                  asideActionWrapper.style.height = wrapperHeight + bodyHeight + "px";
+               }
+            }
+         }
+      }
+
+      body.addEventListener("click", changeLayout);
+
+      function changeLayout(e) {
+         if (e.target.closest(".menu__item")) {
+            qa(".menu__item").forEach((el) => {
+               el.classList.remove("active");
+            });
+            e.target.closest(".menu__item").classList.add("active");
+         }
+      }
+   }
 });

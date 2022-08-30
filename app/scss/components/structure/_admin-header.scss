@@ -1,0 +1,112 @@
+.admin-header {
+   position: relative;
+   z-index: 12;
+   background-color: #1d1f21;
+   &__cntr {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 50px;
+      padding-left: percent(23, 375);
+      padding-right: percent(15, 375);
+      @media (min-width: 1250px) {
+         padding-left: percent(34, 1280);
+         padding-right: percent(28, 1280);
+      }
+   }
+
+   &__logo {
+      transform: translate(0, 1px);
+      transition: all 0.3s ease;
+      &:hover {
+         transform: scale(1.1);
+      }
+   }
+   &__logout {
+      display: none;
+      @media (min-width: 769px) {
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         column-gap: 11px;
+         p {
+            color: #c8d2dc;
+            font-family: $ff2;
+            @include fl(14, 19);
+         }
+      }
+   }
+   .admin-burger {
+      position: relative;
+      z-index: 12;
+      min-height: 32px; // Высота блока для удобства нажатия на иконку
+      width: 32px; // Ширина блока для удобства нажатия на иконку
+      // left: -4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border-radius: 9px;
+      background: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+      &:hover {
+         transform: scale(1.2);
+      }
+      @media (min-width: 1050px) {
+         display: none;
+      }
+
+      &__wrapper {
+         width: 16px; // todo Макетная ширина бургера
+         height: 12px; // todo Макетная высота бургера
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         span,
+         &:before,
+         &:after {
+            height: 2px;
+            transition: all 0.3s ease;
+            transform: translate(0, 0);
+            position: relative;
+            left: 0;
+            border-radius: 1px;
+            margin-left: auto;
+            @extend %grad-bg;
+         }
+         &:before {
+            content: "";
+            width: 50%;
+            top: 0;
+            transform: translate(0, -50%);
+         }
+         &:after {
+            content: "";
+            width: 75%;
+            top: 100%;
+            transform: translate(0, -250%);
+         }
+         span {
+            top: 50%;
+            transform: translate(0, -150%);
+            width: 100%;
+            transition: all 0.3s ease;
+         }
+      }
+      &.active {
+         // Opening burger animation
+         .admin-burger__wrapper {
+            &:before {
+               width: 30%;
+            }
+            &:after {
+               width: 100%;
+            }
+            span {
+               width: 65%;
+            }
+         }
+      }
+   }
+}
