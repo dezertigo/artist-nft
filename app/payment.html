@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- ! Изменить все "payment" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/payment.min.css',
+'title': 'payment',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="payment">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="payment">
+				<div class="payment__container">
+					
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>
