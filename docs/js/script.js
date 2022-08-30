@@ -243,5 +243,30 @@ window.addEventListener("load", () => {
             },
          },
       });
+
+      //Move comment title
+      window.addEventListener("resize", moveTitle);
+
+      moveTitle();
+      function moveTitle(e) {
+         const firstTop = qs(".comments__items > :nth-child(1) .forum-comment__top");
+         const secondTop = qs(".comments__items > :nth-child(2) .forum-comment__top");
+         const thirdTop = qs(".comments__items > :nth-child(3) .forum-comment__top");
+         const firstLine = qs(".comments__items > :nth-child(1) .forum-comment__text-line-left");
+         const secondLine = qs(".comments__items > :nth-child(2) .forum-comment__text-line-left");
+         const thirdLine = qs(".comments__items > :nth-child(3) .forum-comment__text-line-left");
+         const firstTitle = qs(".comments__items > :nth-child(1) .forum-comment__title");
+         const secondTitle = qs(".comments__items > :nth-child(2) .forum-comment__title");
+         const thirdTitle = qs(".comments__items > :nth-child(3) .forum-comment__title");
+         if (window.innerWidth <= 768) {
+            firstTop.append(firstTitle);
+            secondTop.append(secondTitle);
+            thirdTop.append(thirdTitle);
+         } else {
+            firstLine.append(firstTitle);
+            secondLine.append(secondTitle);
+            thirdLine.append(thirdTitle);
+         }
+      }
    }
 });

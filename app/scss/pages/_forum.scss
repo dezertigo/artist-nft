@@ -97,11 +97,12 @@ body.forum {
             padding-top: 30px;
             display: flex;
             align-items: flex-start;
-            column-gap: 30px;
+            column-gap: 20px;
          }
          @media (min-width: 1200px) {
             padding-top: 56px;
             padding-right: percent(150, 1440);
+            column-gap: 30px;
          }
       }
 
@@ -109,9 +110,8 @@ body.forum {
       &__cards {
          @media (min-width: 769px) {
             order: 2;
-         }
-         @media (min-width: 1000px) {
-            width: 365px;
+            min-width: 365px;
+            max-width: 365px;
          }
          input,
          textarea {
@@ -250,6 +250,7 @@ body.forum {
          padding-bottom: 8px;
          padding-right: 9px;
          padding-left: 23px;
+         margin-bottom: 16px;
          i {
             @include fl(18.71);
          }
@@ -284,6 +285,14 @@ body.forum {
                   transform: translate(-2px, 0);
                }
             }
+         }
+      }
+      &__items {
+         display: grid;
+         row-gap: 16px;
+         margin-bottom: 48px;
+         @media (min-width: 1000px) {
+            margin-bottom: 39px;
          }
       }
    }
