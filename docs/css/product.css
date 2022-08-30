@@ -1583,7 +1583,7 @@ body.product .product {
   position: relative;
   padding-top: 62px;
   color: #fff;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body.product .product__decor > * {
@@ -1647,10 +1647,8 @@ body.product .product__gallery {
 }
 
 body.product .product__form {
-  margin-bottom: 24px;
-  margin-top: 59px;
+  padding: 59px 0 24px;
   position: relative;
-  overflow: hidden;
 }
 
 body.product .product__form .backgroung__image_1 {
@@ -1663,6 +1661,10 @@ body.product .product__form .backgroung__image_2 {
   display: block;
   top: -30px;
   left: 83.4666666667%;
+}
+
+body.product .product .contact-form__body {
+  transform: translateY(1px);
 }
 
 body.product .product .contact-form__body .select {
@@ -1964,22 +1966,22 @@ body.product .product .radio__input:checked + .radio__label {
 
   body.product .product__form .backgroung__image_1 {
     display: block;
-    top: 37.1143849454%;
+    top: 35.5064027939%;
     left: -8.6805555556%;
   }
 
   body.product .product__form .backgroung__image_2 {
-    top: 25.7644201303%;
+    top: 23.8649592549%;
     left: 11.4583333333%;
   }
 
   body.product .product__form .backgroung__image_3 {
-    top: 72.0722765759%;
+    top: 71.5948777648%;
     left: 16.4583333333%;
   }
 
   body.product .product__form .backgroung__image_4 {
-    top: 21.791932445%;
+    top: 19.7904540163%;
     left: 80.2777777778%;
   }
 }
@@ -2039,6 +2041,19 @@ body.product .product .radio__input:checked + .radio__label {
   .subtext {
     font-size: 1em;
     line-height: 1.75;
+  }
+}
+
+@media (min-width: 768px) {
+  body.product .product__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+  }
+
+  body.product .product__graphic {
+    max-width: 561px;
+    width: 100%;
   }
 }
 
@@ -2105,8 +2120,25 @@ body.product .product .radio__input:checked + .radio__label {
     transform: translate(-6px, 4px);
   }
 
+  body.product .product__decor :nth-child(1) {
+    display: block;
+    top: 11px;
+    left: -7.1527777778%;
+  }
+
+  body.product .product__decor :nth-child(2) {
+    top: 10.756097561%;
+  }
+
   body.product .product__gallery .none {
     display: block;
+  }
+}
+
+@media (min-width: 952px) {
+  body.product .product__decor :nth-child(2) {
+    top: 18.3870967742%;
+    left: 26.1111111111%;
   }
 }
 
@@ -2220,6 +2252,43 @@ body.product .product .radio__input:checked + .radio__label {
 
   .burger {
     display: none;
+  }
+}
+
+@media (min-width: 1180px) {
+  body.product .product__decor :nth-child(2) {
+    top: 18.4624697337%;
+    letter-spacing: -0.27px;
+  }
+
+  body.product .product__decor :nth-child(3) {
+    top: 381px;
+    left: 44.5138888889%;
+    font-size: 62px;
+    transform: rotate(11.82deg);
+  }
+
+  body.product .product__decor :nth-child(4) {
+    top: 245px;
+    font-size: 45px;
+    transform: rotate(-16.11deg);
+    right: 7.7083333333%;
+  }
+
+  body.product .product__circle {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    opacity: 0.4;
+    border-radius: 100%;
+    left: 44.0277777778%;
+    top: 476px;
+    border: 1px solid #fff;
+  }
+
+  body.product .product__graphic {
+    margin-bottom: 71px;
   }
 }
 
@@ -2345,10 +2414,133 @@ body.product .product .radio__input:checked + .radio__label {
     transform: translateY(-4px);
   }
 
+  body.product .product {
+    padding-top: 0;
+  }
+
+  body.product .product__decor :nth-child(1) {
+    top: 87px;
+    letter-spacing: -0.6px;
+  }
+
+  body.product .product__content {
+    max-width: 40.990990991%;
+    margin-right: 30px;
+  }
+
+  body.product .product__content .hello-h1 {
+    transform: translate(3px, 32px);
+  }
+
+  body.product .product__content .hello-h1__title {
+    max-width: 100%;
+  }
+
+  body.product .product__content .hello-h1__text {
+    max-width: 59.5604395604%;
+  }
+
+  body.product .product__content .btn {
+    max-width: 210px;
+  }
+
+  body.product .product__graphic {
+    max-width: 624px;
+    width: 100%;
+    transform: translateX(13px);
+    margin-bottom: 72px;
+    margin-top: 53px;
+  }
+
   body.product .product__gallery {
     -moz-column-gap: 29px;
     column-gap: 29px;
     row-gap: 23px;
+  }
+
+  body.product .product__form {
+    padding: 59px 0 39px;
+  }
+
+  body.product .product .contact-form__top {
+    margin-bottom: 29px;
+  }
+
+  body.product .product .contact-form .hello-h2__label {
+    transform: translate(2px, 0px);
+  }
+
+  body.product .product .contact-form .hello-h2__title {
+    transform: translate(2px, -2px);
+  }
+
+  body.product .product .contact-form__body .select:nth-of-type(2) {
+    order: 3;
+    transform: translateY(-8px);
+  }
+
+  body.product .product .contact-form__body .select:nth-of-type(2) select {
+    transform: translateX(2px);
+  }
+
+  body.product .product .contact-form__body .radio {
+    order: 2;
+  }
+
+  body.product .product .contact-form__body .input,
+  body.product .product .contact-form__body .btn,
+  body.product .product .contact-form__body .confirm {
+    order: 3;
+  }
+
+  body.product .product .contact-form__body .input {
+    transform: translate(1px, 1px);
+  }
+
+  body.product .product .contact-form__body .btn {
+    color: #1D1F21;
+    transform: translate(0px, 0px);
+  }
+
+  body.product .product .contact-form__body .confirm {
+    transform: translate(1px, 2px);
+  }
+
+  body.product .product .select::after,
+  body.product .product .radio::after {
+    right: 25px;
+  }
+
+  body.product .product .radio {
+    transform: translate(2px, 12px);
+  }
+
+  body.product .product .radio__body {
+    height: 62px;
+  }
+
+  body.product .product .radio__body :nth-of-type(12) {
+    top: unset;
+    left: unset;
+    right: 114px;
+  }
+
+  body.product .product .radio__body :nth-of-type(13) {
+    top: unset;
+    left: unset;
+    right: 90px;
+  }
+
+  body.product .product .radio__body :nth-of-type(14) {
+    top: unset;
+    left: unset;
+    right: 66px;
+  }
+
+  body.product .product .radio__body :nth-of-type(15) {
+    top: unset;
+    left: unset;
+    right: 42px;
   }
 }
 
@@ -2378,6 +2570,12 @@ body.product .product .radio__input:checked + .radio__label {
   .stroke-text {
     font-size: 5em;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  body.product .product__inner {
+    justify-content: space-between;
   }
 }
 
