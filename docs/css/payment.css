@@ -1889,6 +1889,28 @@ body.payment .popup.active {
 
   body.payment .payment__desc {
     max-width: 31.5315315315%;
+    margin-top: 20px;
+    padding-left: 21px;
+  }
+
+  body.payment .payment__price span {
+    transform: translateY(2px);
+  }
+
+  body.payment .payment__bid {
+    transform: translate(-2px, 0px);
+  }
+
+  body.payment .payment__details:nth-of-type(2) {
+    transform: translateX(-3px);
+  }
+
+  body.payment .payment__text {
+    max-width: 98.125%;
+  }
+
+  body.payment .payment__text--position {
+    transform: translate(0px, -2px);
   }
 
   body.payment .hello-h2__title {
@@ -1922,9 +1944,27 @@ body.payment .popup.active {
     line-height: 1.75;
   }
 
+  body.payment .tabs__content :nth-of-type(1) .input-columns :nth-of-type(2) {
+    transform: translate(-3px, 4px);
+  }
+
   body.payment .tabs__content {
     max-width: 77.037037037%;
     width: 100%;
+    transform: translate(1px, -2px);
+  }
+
+  body.payment .tabs__content .confirm {
+    transform: translate(-1px, 1px);
+  }
+
+  body.payment .tabs__confirm {
+    max-width: 408px;
+  }
+
+  body.payment .tabs__confirm a {
+    transform: translateX(-1px);
+    letter-spacing: -0.06em;
   }
 }
 
