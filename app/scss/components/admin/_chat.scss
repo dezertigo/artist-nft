@@ -1,16 +1,20 @@
-// .fix-chat {
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    right: 0;
-//    bottom: 0;
-// }
 .chat {
    // .chat__title
-   padding-top: 17px;
-   padding-bottom: 28px;
-   padding-left: percent(15, 375);
-   padding-right: percent(15, 375);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+   @media (max-width: 999px) {
+      padding-top: 17px;
+      padding-bottom: 28px;
+      padding-right: percent(15, 375);
+      padding-left: percent(15, 375);
+   }
+   @media (min-width: 1000px) {
+      padding-top: 25px;
+      padding-bottom: 30px;
+      padding-left: 24px;
+   }
    // overflow: auto;
    // max-height: 100%;
    &__title {
@@ -27,18 +31,24 @@
          @include fl(20, 30);
          font-weight: 700;
       }
+      @media (min-width: 1000px) {
+         display: none;
+      }
    }
 
    // .chat__preview
    &__preview {
       display: flex;
-      column-gap: 12px;
-      padding: 13px 15px;
-      background-color: #2c2f33;
-      border-radius: 12px;
-      display: flex;
       align-items: center;
-      column-gap: 22px;
+      @media (max-width: 999px) {
+         padding: 13px 15px;
+         border-radius: 12px;
+         background-color: #2c2f33;
+         column-gap: 22px;
+      }
+      @media (min-width: 1000px) {
+         column-gap: 13px;
+      }
    }
 
    // .chat__photo
@@ -46,6 +56,10 @@
       width: 52px;
       height: 52px;
       position: relative;
+      @media (min-width: 1000px) {
+         width: 36px;
+         height: 36px;
+      }
       img {
          position: absolute;
          top: 0;
@@ -56,20 +70,29 @@
          object-position: center;
          border-radius: 50%;
       }
-      position: relative;
-      &:after {
-         content: "";
-         position: absolute;
-         top: 75%;
-         left: 67%;
-         width: 10px;
-         height: 10px;
-         background: #47cd7d;
-         border: 1.6px solid #1d1f21;
-         border-radius: 50%;
+      @media (max-width: 999px) {
+         position: relative;
+         &:after {
+            content: "";
+            position: absolute;
+            top: 75%;
+            left: 67%;
+            width: 10px;
+            height: 10px;
+            background: #47cd7d;
+            border: 1.6px solid #1d1f21;
+            border-radius: 50%;
+         }
       }
    }
 
+   &__preview-text {
+      @media (min-width: 1000px) {
+         display: flex;
+         align-items: center;
+         column-gap: 24px;
+      }
+   }
    // .chat__name
    &__name {
       color: #c8d2dc;
@@ -83,6 +106,21 @@
       color: #c8d2dc;
       opacity: 0.6;
       @include fl(10, 15);
+      @media (min-width: 1000px) {
+         @include fl(12, 15);
+
+         opacity: 1;
+         position: relative;
+         &:before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #47cd7d;
+            margin-right: 6px;
+         }
+      }
    }
 
    // .chat__body
@@ -91,17 +129,16 @@
       display: grid;
       row-gap: 6px;
       margin-bottom: 48px;
+      @media (min-width: 1000px) {
+         margin-bottom: 41px;
+      }
    }
 
    // .chat__image-wrapper
    &__image-wrapper {
       padding: 12px;
-      padding: percent(12, 345);
-      width: percent(248, 345);
-      // height: 280px;
-      height: percent(248, 345);
-      height: 100%;
-
+      width: 248px;
+      height: 248px;
       margin-left: auto;
       border-radius: 8px 8px 0px 8px;
       background-color: #2c2f33;
@@ -132,13 +169,15 @@
       display: flex;
       align-items: flex-end;
       column-gap: 10px;
-      max-width: 328px;
       p {
          color: #fcffff;
          padding: 12px 24px;
-         opacity: 0.6;
          font-size: 14px;
          line-height: 18px;
+         max-width: 299px;
+         @media (min-width: 1000px) {
+            max-width: 402px;
+         }
       }
       &:after {
          content: "10 min ago";
@@ -161,6 +200,7 @@
          p {
             border-radius: 8px 8px 0px 8px;
             background-color: #2c2f33;
+            opacity: 0.7;
          }
       }
 
@@ -174,6 +214,10 @@
             background-color: #3626ea;
             border-radius: 8px 8px 8px 0px;
          }
+         @media (min-width: 1000px) {
+            margin-bottom: 21px;
+            transform: translate(-2px, 0);
+         }
       }
    }
 
@@ -181,9 +225,15 @@
    &__separator {
       padding-top: 23px;
       padding-bottom: 17px;
-      width: percent(375, 345);
-      margin-left: percent(-15, 375);
       text-align: center;
+      @media (max-width: 999px) {
+         margin-left: percent(-15, 375);
+         width: percent(375, 345);
+      }
+      @media (min-width: 1000px) {
+         padding-bottom: 15px;
+         padding-top: 35px;
+      }
       p {
          transform: translate(-2px, 0);
          padding-top: 4px;
@@ -212,10 +262,10 @@
 
    // .chat__avatar
    &__avatar {
-      width: percent(20, 345);
-      flex: 0 0 percent(20, 345);
+      width: 20px;
+      flex: 0 0 20px;
       position: relative;
-      padding-bottom: percent(20, 345);
+      padding-bottom: 20px;
       border-radius: 50%;
       overflow: hidden;
 
@@ -238,6 +288,9 @@
       border-radius: 9px;
       overflow: hidden;
       background-color: #2c2f33;
+      @media (min-width: 1000px) {
+         padding-right: 25px;
+      }
       input {
          padding-top: 17px;
          padding-bottom: 18px;
@@ -250,9 +303,21 @@
          background-color: transparent;
          flex: 1 1 auto;
          opacity: 0.6;
+         @media (min-width: 1000px) {
+            padding-top: 21px;
+            padding-bottom: 22px;
+            padding-left: 32px;
+            padding-right: 32px;
+            @include fl(16, 21);
+            min-height: 64px;
+         }
       }
       svg {
          transform: translate(0, 1px);
+         @media (min-width: 1000px) {
+            width: 21px;
+            height: 21px;
+         }
       }
    }
 }
