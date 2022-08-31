@@ -3,6 +3,7 @@
 'lang':'en',
 'css': './css/admin-client.min.css',
 'title': 'Profile',
+'swiper': 'y'
 })
 
 <body class="admin admin-client">
@@ -13,14 +14,22 @@
 			'm': 'Messages',
 			'o': 'Orders',
 			})
-			<section class="hero">
-				<div class="hero__container">
-
+			<section class="messages active">
+				<div class="messages__cntr">
+					<div class="messages__preview">
+						@@include('./components/admin/_chat-list-preview.html')
+						@@include('./components/admin/_chat-list-items.html')
+					</div>
+					<div class="messages__chat">
+						@@include('./components/admin/_chat.html')
+					</div>
 				</div>
 			</section>
 		</main>
 	</div>
-	@@include('./components/structure/_scripts.html')
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'y'
+	})
 </body>
 
 </html>

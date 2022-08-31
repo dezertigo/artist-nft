@@ -1185,41 +1185,41 @@ body.admin .menu__item_messages p {
   transform: translate(0, 1px);
 }
 
-body.admin-owner {
+body.admin {
   background-color: #1d1f21;
 }
 
-body.admin-owner main {
+body.admin main {
   display: flex;
   flex-direction: column;
 }
 
-body.admin-owner section {
+body.admin section {
   display: none;
 }
 
-body.admin-owner section:before {
+body.admin section:before {
   display: none;
 }
 
-body.admin-owner section.active {
+body.admin section.active {
   display: block;
   flex: 1 1 auto;
   background-color: #1d1f21;
   position: relative;
 }
 
-body.admin-owner .messages {
+body.admin .messages {
   position: relative;
   overflow: hidden;
 }
 
-body.admin-owner .messages__cntr {
+body.admin .messages__cntr {
   padding-left: 4%;
   padding-right: 4%;
 }
 
-body.admin-owner .messages__preview {
+body.admin .messages__preview {
   position: relative;
   z-index: 0;
 }
@@ -1422,29 +1422,29 @@ body.admin-owner .messages__preview {
     height: 21px;
   }
 
-  body.admin-owner main {
+  body.admin main {
     flex-direction: row;
   }
 
-  body.admin-owner section.active {
+  body.admin section.active {
     background-color: #212426;
   }
 
-  body.admin-owner .messages__cntr {
+  body.admin .messages__cntr {
     display: flex;
     padding-left: 29px;
     padding-right: 32px;
     height: 100%;
   }
 
-  body.admin-owner .messages__preview {
+  body.admin .messages__preview {
     flex: 0 0 317px;
     padding-top: 32px;
     padding-right: 29px;
     position: relative;
   }
 
-  body.admin-owner .messages__preview:after {
+  body.admin .messages__preview:after {
     content: "";
     position: absolute;
     top: 0;
@@ -1455,7 +1455,7 @@ body.admin-owner .messages__preview {
     background: rgba(82, 89, 96, 0.3);
   }
 
-  body.admin-owner .messages__chat {
+  body.admin .messages__chat {
     flex: 1 1 auto;
   }
 }
@@ -1562,7 +1562,7 @@ body.admin-owner .messages__preview {
     transform: translate(-2px, 0);
   }
 
-  body.admin-owner section.active {
+  body.admin section.active {
     border-radius: 32px 0px 0px 0px;
   }
 }
@@ -1777,7 +1777,7 @@ body.admin-owner .messages__preview {
     width: 108.6956521739%;
   }
 
-  body.admin-owner .messages__chat {
+  body.admin .messages__chat {
     background-color: #1d1f21;
     position: absolute;
     z-index: 1;
@@ -1787,7 +1787,7 @@ body.admin-owner .messages__preview {
     width: 100%;
   }
 
-  body.admin-owner .messages__chat.visible {
+  body.admin .messages__chat.visible {
     transition: left 0.8s ease;
     left: 0;
   }
