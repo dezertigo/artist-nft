@@ -17,6 +17,11 @@
 
 // Подключение стилей компонентов
 @import "./components/base/btn";
+@import "./components/blocks/social-icons";
+@import "./components/blocks/hello-h2";
+@import "./components/blocks/inputs";
+@import "./components/blocks/confirm";
+@import "./components/blocks/contact-form";
 
 //Подключение стилей конкретной страницы
 @import "./pages/payment";
