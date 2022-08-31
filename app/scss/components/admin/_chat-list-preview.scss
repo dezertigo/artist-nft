@@ -68,6 +68,10 @@
       @include fl(12, 15);
       color: #c8d2dc;
       white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 85px;
+      color: #fcffff;
+      overflow: hidden;
    }
 
    // .chat-list-preview__time
