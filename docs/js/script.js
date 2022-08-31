@@ -391,15 +391,6 @@ window.addEventListener("load", () => {
             660: {
                slidesPerView: 7,
             },
-            760: {
-               slidesPerView: 8,
-            },
-            860: {
-               slidesPerView: 9,
-            },
-            960: {
-               slidesPerView: 10,
-            },
          },
       });
    }

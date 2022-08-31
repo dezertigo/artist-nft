@@ -1,7 +1,8 @@
 body.admin-owner {
-   @media (min-width: 769px) {
-      background-color: #1d1f21;
-   }
+   background-color: #1d1f21;
+   // @media (min-width: 769px) {
+   //    background-color: #1d1f21;
+   // }
    main {
       display: flex;
       flex-direction: column;
@@ -21,6 +22,8 @@ body.admin-owner {
          position: relative;
          @media (min-width: 769px) {
             background-color: #212426;
+         }
+         @media (min-width: 1000px) {
             border-radius: 32px 0px 0px 0px;
          }
       }
