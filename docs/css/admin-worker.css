@@ -995,6 +995,10 @@ body.admin-owner .messages__chat.visible {
     transform: translate(-2px, 0);
   }
 
+  body.admin-owner {
+    background-color: #1d1f21;
+  }
+
   body.admin-owner main {
     flex-direction: row;
   }

@@ -1,4 +1,7 @@
 body.admin-owner {
+   @media (min-width: 1000px) {
+      background-color: #1d1f21;
+   }
    main {
       display: flex;
       flex-direction: column;
@@ -40,11 +43,11 @@ body.admin-owner {
          top: 0;
          left: 100%;
          transition: left 0.8s ease;
-         // height: 100%;
          width: 100%;
          &.visible {
             transition: left 0.8s ease;
             left: 0;
+            // overflow: auto;
          }
       }
    }
