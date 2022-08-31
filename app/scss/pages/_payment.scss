@@ -294,12 +294,40 @@ body.payment {
     }
     .popup {
         display: none;
+        max-width: 100%;
+        padding: 23px 28px 15px 18px;
+        background: #1D1F21;
+        border-radius: 12px;
+        color: #fcffff;
+        @media (min-width:1200px) {
+            max-width: percent(500, 1110);
+            padding: 45px 29px 45px 33px;
+        }
         &.active {
             display: block;
         }
         &__body {}
-        &__title {}
-        &__subtitle {}
-        &__form {}
+        &__title {
+            @include fl(26, 34);
+            @media (min-width: 1200px) {
+                @include fl(36, 50);
+            }
+        }
+        &__subtitle {
+            @include fl(16, 28);
+            margin-bottom: 25px;
+        }
+        &__form {
+            .input + .input {
+                margin-top: 7px;
+            }
+            .btn {
+                margin-top: 30px;
+                max-width: 100%;
+            }
+            @media (min-width:1200px) {
+                max-width: percent(410, 438);
+            }
+        }
     }
 }

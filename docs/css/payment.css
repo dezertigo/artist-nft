@@ -1534,10 +1534,35 @@ body.payment .tabs__copy i {
 
 body.payment .popup {
   display: none;
+  max-width: 100%;
+  padding: 23px 28px 15px 18px;
+  background: #1D1F21;
+  border-radius: 12px;
+  color: #fcffff;
 }
 
 body.payment .popup.active {
   display: block;
+}
+
+body.payment .popup__title {
+  font-size: 1.625em;
+  line-height: 1.3076923077;
+}
+
+body.payment .popup__subtitle {
+  font-size: 1em;
+  line-height: 1.75;
+  margin-bottom: 25px;
+}
+
+body.payment .popup__form .input + .input {
+  margin-top: 7px;
+}
+
+body.payment .popup__form .btn {
+  margin-top: 30px;
+  max-width: 100%;
 }
 
 @media (min-width: 431px) {
@@ -1965,6 +1990,20 @@ body.payment .popup.active {
   body.payment .tabs__confirm a {
     transform: translateX(-1px);
     letter-spacing: -0.06em;
+  }
+
+  body.payment .popup {
+    max-width: 45.045045045%;
+    padding: 45px 29px 45px 33px;
+  }
+
+  body.payment .popup__title {
+    font-size: 2.25em;
+    line-height: 1.3888888889;
+  }
+
+  body.payment .popup__form {
+    max-width: 93.6073059361%;
   }
 }
 
