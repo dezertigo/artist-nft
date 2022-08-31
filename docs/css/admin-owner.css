@@ -1763,6 +1763,12 @@ body.admin-owner .messages__preview {
   }
 }
 
+@media (max-width: 768px) {
+  .chat__message_hidden {
+    display: none;
+  }
+}
+
 @media (max-width: 559px) {
   .chat-list-preview__slider {
     margin-right: -4%;
