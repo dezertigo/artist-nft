@@ -768,6 +768,10 @@ body.admin .menu__item_messages p {
   transform: translate(-3px, 0);
 }
 
+body.admin-owner {
+  background-color: #1d1f21;
+}
+
 body.admin-owner main {
   display: flex;
   flex-direction: column;
@@ -881,19 +885,41 @@ body.admin-owner .messages__preview {
 }
 
 @media (min-width: 769px) {
-  .admin-header__logout {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 11px;
-    column-gap: 11px;
+  body.admin-owner main {
+    flex-direction: row;
   }
 
-  .admin-header__logout p {
-    color: #c8d2dc;
-    font-family: "Manrope";
-    font-size: 0.875em;
-    line-height: 1.3571428571;
+  body.admin-owner section.active {
+    background-color: #212426;
+  }
+
+  body.admin-owner .messages__cntr {
+    display: flex;
+    padding-left: 29px;
+    padding-right: 32px;
+    height: 100%;
+  }
+
+  body.admin-owner .messages__preview {
+    flex: 0 0 317px;
+    padding-top: 32px;
+    padding-right: 29px;
+    position: relative;
+  }
+
+  body.admin-owner .messages__preview:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 1px;
+    height: 100%;
+    transform: translate(-100%, 0);
+    background: rgba(82, 89, 96, 0.3);
+  }
+
+  body.admin-owner .messages__chat {
+    flex: 1 1 auto;
   }
 }
 
@@ -911,6 +937,21 @@ body.admin-owner .messages__preview {
   .content-text-mobile {
     font-size: 0.9375em;
     line-height: 1.6;
+  }
+
+  .admin-header__logout {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 11px;
+    column-gap: 11px;
+  }
+
+  .admin-header__logout p {
+    color: #c8d2dc;
+    font-family: "Manrope";
+    font-size: 0.875em;
+    line-height: 1.3571428571;
   }
 
   .admin-header .admin-burger {
@@ -984,46 +1025,8 @@ body.admin-owner .messages__preview {
     transform: translate(-2px, 0);
   }
 
-  body.admin-owner {
-    background-color: #1d1f21;
-  }
-
-  body.admin-owner main {
-    flex-direction: row;
-  }
-
   body.admin-owner section.active {
-    background-color: #212426;
     border-radius: 32px 0px 0px 0px;
-  }
-
-  body.admin-owner .messages__cntr {
-    display: flex;
-    padding-left: 29px;
-    padding-right: 32px;
-    height: 100%;
-  }
-
-  body.admin-owner .messages__preview {
-    flex: 0 0 317px;
-    padding-top: 32px;
-    padding-right: 29px;
-    position: relative;
-  }
-
-  body.admin-owner .messages__preview:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 1px;
-    height: 100%;
-    transform: translate(-100%, 0);
-    background: rgba(82, 89, 96, 0.3);
-  }
-
-  body.admin-owner .messages__chat {
-    flex: 1 1 auto;
   }
 }
 
@@ -1088,10 +1091,6 @@ body.admin-owner .messages__preview {
 }
 
 @media (max-width: 999px) {
-  body.admin .aside {
-    width: 100%;
-  }
-
   body.admin .aside__action {
     position: fixed;
     width: 100vw;
@@ -1193,6 +1192,12 @@ body.admin-owner .messages__preview {
     margin-left: auto;
     border-radius: 50%;
     background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  }
+}
+
+@media (max-width: 768px) {
+  body.admin .aside {
+    width: 100%;
   }
 
   body.admin-owner .messages__chat {

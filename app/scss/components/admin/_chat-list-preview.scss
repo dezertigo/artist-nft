@@ -1,6 +1,6 @@
 .chat-list-preview {
    padding-top: 17px;
-   @media (min-width: 1000px) {
+   @media (min-width: 769px) {
       padding-top: 0;
    }
    // .chat-list-preview__title
@@ -10,7 +10,7 @@
       font-weight: 700;
       color: #fcffff;
       margin-bottom: 10px;
-      @media (min-width: 1000px) {
+      @media (min-width: 769px) {
          @include fl(14, 20);
          margin-bottom: 25px;
       }
@@ -18,7 +18,7 @@
 
    // .chat-list-preview__body
    &__body {
-      @media (min-width: 1000px) {
+      @media (min-width: 769px) {
          display: none;
       }
    }
