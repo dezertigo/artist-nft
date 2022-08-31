@@ -191,4 +191,46 @@ window.addEventListener("load", () => {
          qs(".confirm svg").classList.toggle("active");
       });
    }
+
+
+   // !payment.html
+   if (qs("body.payment")) {
+      const tabBtns = document.querySelectorAll('.tabs__nav-btn');
+      const tabsItems = document.querySelectorAll('.tabs__item');
+      const confirmBtns = document.querySelectorAll('.tabs__confirm');
+      qa('.tabs__nav-btn').forEach(item => {
+         item.addEventListener('click', () => {
+            let tabId = item.getAttribute('data-tab');
+            let currentTab = document.querySelector(tabId);
+
+            tabBtns.forEach((item)=> {
+               item.classList.remove('active');
+            })
+
+            tabsItems.forEach((item)=> {
+               item.classList.remove('active');
+            })
+
+            item.classList.add('active');
+            currentTab.classList.add('active');
+         })
+      });
+
+      let popup = document.querySelector('.popup');
+      let tabs = document.querySelector('.payment__content');
+      let closePopup = document.querySelector('.popup__confirm');
+
+      confirmBtns.forEach(item => {
+         item.addEventListener('click', () => {
+            popup.classList.remove('none');
+            tabs.classList.add('none');
+         });
+         
+         closePopup.addEventListener('click', () => {
+            popup.classList.add('none');
+            tabs.classList.remove('none');
+         })
+      });
+
+   }
 });

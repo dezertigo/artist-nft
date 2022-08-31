@@ -14,6 +14,9 @@ body.payment {
         }
         &__content {
             margin-bottom: 37px;
+            &.none {
+                display: none;
+            }
             @media (min-width: 700px) {
                 flex: 1 1 percent(416, 700);
             }
@@ -293,15 +296,17 @@ body.payment {
         }
     }
     .popup {
-        display: none;
         max-width: 100%;
         padding: 23px 28px 15px 18px;
         background: #1D1F21;
         border-radius: 12px;
         color: #fcffff;
+        &.none {
+            display: none;
+        }
         @media (min-width:1200px) {
             max-width: percent(500, 1110);
-            padding: 45px 29px 45px 33px;
+            padding: 45px 29px 45px 0px;
         }
         &.active {
             display: block;

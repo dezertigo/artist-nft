@@ -1303,6 +1303,10 @@ body.payment .payment__content {
   margin-bottom: 37px;
 }
 
+body.payment .payment__content.none {
+  display: none;
+}
+
 body.payment .payment__desc {
   padding: 20px 12px 6px 19px;
   border-radius: 12px;
@@ -1533,12 +1537,15 @@ body.payment .tabs__copy i {
 }
 
 body.payment .popup {
-  display: none;
   max-width: 100%;
   padding: 23px 28px 15px 18px;
   background: #1D1F21;
   border-radius: 12px;
   color: #fcffff;
+}
+
+body.payment .popup.none {
+  display: none;
 }
 
 body.payment .popup.active {
@@ -1994,7 +2001,7 @@ body.payment .popup__form .btn {
 
   body.payment .popup {
     max-width: 45.045045045%;
-    padding: 45px 29px 45px 33px;
+    padding: 45px 29px 45px 0px;
   }
 
   body.payment .popup__title {

@@ -14,7 +14,7 @@
 			<section class="payment">
 				<div class="payment__container">
 					<div class="payment__inner">
-						<div class="popup">
+						<div class="popup none">
 							<div class="popup__body">
 								<h2 class="popup__title">
 									Payment success. Now tell us where to bring
@@ -71,18 +71,19 @@
 									</h2>
 								</div>
 								<div class="tabs__nav">
-									<button class="tabs__nav-btn active" type="button">
+									<button class="tabs__nav-btn active" type="button" data-tab="#tab_1">
 										Credit card
 									</button>
-									<button class="tabs__nav-btn" type="button">
+									<button class="tabs__nav-btn" type="button" data-tab="#tab_2">
 										PayPal
 									</button>
-									<button class="tabs__nav-btn" type="button">
+									<button class="tabs__nav-btn" type="button"
+									data-tab="#tab_3">
 										Crypto
 									</button>
 								</div>
 								<div class="tabs__content">
-									<div class="tabs__item active">
+									<div class="tabs__item  active" id="tab_1">
 										<form class="form tabs__form">
 											@@include('./components/blocks/_input.html', {
 												'label': 'Card number',
@@ -114,7 +115,7 @@
 										</form>
 									</div>
 
-									<div class="tabs__item">
+									<div class="tabs__item" id="tab_2">
 										<p class="tabs__text">
 											To purchase item by paypal you have to send money to this email. After 5 minute result will sent in your mail
 										</p>
@@ -123,7 +124,7 @@
 											<i class="copy"></i>
 										</div>
 										@@include('./components/blocks/_input.html', {
-											'label': 'Email',
+											'label': 'E-mail',
 											'for': 'email',
 											'type': 'email',
 											'placeholder': 'Your e-mail',
@@ -135,7 +136,7 @@
 										@@include('./components/blocks/_confirm.html')
 									</div>
 								
-									<div class="tabs__item">
+									<div class="tabs__item" id="tab_3">
 										<p class="tabs__text">
 											To purchase item by crypto you have to send money to this wallet. After 5 minute result will sent in your mail
 										</p>
@@ -145,7 +146,7 @@
 										</div>
 										@@include('./components/blocks/_input.html', {
 											'label': 'E-mail',
-											'for': 'mail',
+											'for': 'email',
 											'type': 'email',
 											'placeholder': 'Your e-mail',
 										})
