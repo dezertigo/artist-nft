@@ -8,13 +8,23 @@ body.admin-owner {
    }
    section {
       display: none;
+      &:before {
+         display: none;
+      }
       &.active {
          display: block;
          flex: 1 1 auto;
-         background-color: #212426;
+         background-color: #1d1f21;
          @media (min-width: 1000px) {
+            background-color: #212426;
             border-radius: 32px 0px 0px 0px;
          }
+      }
+   }
+   .messages {
+      &__cntr {
+         padding-left: percent(15, 375);
+         padding-right: percent(15, 375);
       }
    }
 }

@@ -481,7 +481,7 @@ body:before {
 }
 
 body.admin {
-  background-color: none;
+  background-color: transparent;
 }
 
 [class*=__container] {
@@ -777,10 +777,19 @@ body.admin-owner section {
   display: none;
 }
 
+body.admin-owner section:before {
+  display: none;
+}
+
 body.admin-owner section.active {
   display: block;
   flex: 1 1 auto;
-  background-color: #212426;
+  background-color: #1d1f21;
+}
+
+body.admin-owner .messages__cntr {
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 @media (min-width: 468px) {
@@ -965,6 +974,7 @@ body.admin-owner section.active {
   }
 
   body.admin-owner section.active {
+    background-color: #212426;
     border-radius: 32px 0px 0px 0px;
   }
 }

@@ -10,6 +10,8 @@
 // Header / Footer
 @import "./components/structure/admin-header";
 @import "./components/structure/admin-sidebar";
+@import "./components/admin/chat-list-preview";
+@import "./components/admin/chat-list-item";
 
 //Подключение стилей конкретной страницы
 @import "./pages/admin-owner";

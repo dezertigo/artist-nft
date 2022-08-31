@@ -355,6 +355,7 @@ window.addEventListener("load", () => {
          }
       }
 
+      // Табы по айтемам в сайдбаре
       body.addEventListener("click", changeLayout);
 
       function changeLayout(e) {
@@ -365,5 +366,35 @@ window.addEventListener("load", () => {
             e.target.closest(".menu__item").classList.add("active");
          }
       }
+
+      // swiperBiography
+      const swiper = new Swiper(".swiper", {
+         spaceBetween: 28,
+         slidesPerView: 3.5,
+         slideToClickedSlide: true,
+         breakpoints: {
+            375: {
+               slidesPerView: 4.4,
+            },
+            460: {
+               slidesPerView: 5,
+            },
+            560: {
+               slidesPerView: 6,
+            },
+            660: {
+               slidesPerView: 7,
+            },
+            760: {
+               slidesPerView: 8,
+            },
+            860: {
+               slidesPerView: 9,
+            },
+            960: {
+               slidesPerView: 10,
+            },
+         },
+      });
    }
 });

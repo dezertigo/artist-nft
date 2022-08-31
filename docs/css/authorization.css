@@ -480,7 +480,7 @@ body:before {
 }
 
 body.admin {
-  background-color: none;
+  background-color: transparent;
 }
 
 [class*=__container] {

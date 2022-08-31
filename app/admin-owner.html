@@ -3,6 +3,7 @@
 'lang':'en',
 'css': './css/admin-owner.min.css',
 'title': 'Profile',
+'swiper': 'y'
 })
 
 <body class="admin admin-owner">
@@ -16,12 +17,16 @@
 			'w': 'Workers',
 			})
 			<section class="messages active">
-				<div class="messages__container">
+				<div class="messages__cntr">
+					@@include('./components/admin/_chat-list-preview.html')
+					@@include('./components/admin/_chat-list-item.html')
 				</div>
 			</section>
 		</main>
 	</div>
-	@@include('./components/structure/_scripts.html')
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'y'
+	})
 </body>
 
 </html>
