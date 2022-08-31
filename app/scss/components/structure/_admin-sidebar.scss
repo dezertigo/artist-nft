@@ -1,8 +1,18 @@
-body.admin-owner {
+body.admin {
    .aside {
-      width: 100%;
+      @media (max-width: 999px) {
+         width: 100%;
+      }
       // .aside__cnt
       &__cnt {
+      }
+      &__cnt,
+      &__action,
+      &__action-wrapper,
+      &__action-body {
+         @media (min-width: 1000px) {
+            height: 100%;
+         }
       }
 
       // .aside__action
@@ -48,7 +58,6 @@ body.admin-owner {
                @media (min-width: 468px) {
                   width: auto;
                   min-width: 200px;
-                  // align-items: flex-end;
                }
             }
 
@@ -74,14 +83,18 @@ body.admin-owner {
             }
          }
          @media (min-width: 1000px) {
-            flex: 1 1 auto;
             z-index: 12;
             &-body {
                display: flex;
+               flex-direction: column;
                justify-content: space-between;
                position: relative;
                z-index: 12;
-               column-gap: 25px;
+               min-width: 245px;
+               padding-left: 28px;
+               padding-right: 28px;
+               padding-top: 23px;
+               padding-bottom: 22px;
             }
          }
       }
@@ -105,10 +118,11 @@ body.admin-owner {
             font-family: $ff2;
             @include fl(14, 19);
          }
-         @media (max-width: 999px) {
-            display: inline-flex;
-            align-items: center;
-            column-gap: 10px;
+         display: inline-flex;
+         align-items: center;
+         column-gap: 10px;
+         @media (min-width: 1000px) {
+            margin-bottom: 16px;
          }
       }
       &__copy {
@@ -117,7 +131,8 @@ body.admin-owner {
          }
          @media (min-width: 1000px) {
             @include fl(12, 20);
-            padding-top: 12px;
+            padding-top: 13px;
+            color: #c8d2dc;
             position: relative;
             &:before {
                content: "";
@@ -133,10 +148,10 @@ body.admin-owner {
    }
    .menu {
       margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
       @media (max-width: 999px) {
          width: 100%;
-         display: flex;
-         flex-direction: column;
          text-align: right;
          padding-top: 3px;
       }
@@ -144,12 +159,9 @@ body.admin-owner {
          flex: 1 1 auto;
          position: relative;
          z-index: 12;
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         column-gap: 15px;
+         // align-items: center;
          color: #fff;
-         max-width: 508px;
+         padding-left: 8px;
       }
       // .menu__item
       &__item {
@@ -171,15 +183,21 @@ body.admin-owner {
             color: #fcffff;
             white-space: nowrap;
             position: relative;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            @media (max-width: 999px) {
+               padding-top: 15px;
+               padding-bottom: 15px;
+            }
+            @media (min-width: 1000px) {
+               padding-top: 12px;
+               padding-bottom: 12px;
+            }
          }
          &_messages {
-            @media (max-width: 999px) {
-               p {
-                  transform: translate(-3px, 0);
-               }
+            // @media (max-width: 999px) {
+            p {
+               transform: translate(-3px, 0);
             }
+            // }
          }
          &_workers {
             @media (max-width: 999px) {
@@ -187,6 +205,13 @@ body.admin-owner {
                   transform: translate(-3px, 0);
                }
             }
+            @media (min-width: 1000px) {
+               p {
+                  transform: translate(-2px, 0);
+               }
+            }
+         }
+         &_statistics {
          }
          @media (max-width: 999px) {
             &:before {

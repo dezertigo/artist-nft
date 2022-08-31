@@ -10,6 +10,9 @@ body {
    &:before {
       display: none;
    }
+   &.admin {
+      background-color: none;
+   }
 }
 [class*="__container"] {
    padding-left: percent(15, 375);

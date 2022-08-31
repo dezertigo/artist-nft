@@ -8,6 +8,15 @@
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
 }
 
+body.admin .menu__item.active i,
+body.admin .menu__item:hover i {
+  background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -471,6 +480,10 @@ body:before {
   display: none;
 }
 
+body.admin {
+  background-color: none;
+}
+
 [class*=__container] {
   padding-left: 4%;
   padding-right: 4%;
@@ -688,12 +701,86 @@ h6 {
   width: 65%;
 }
 
-body.admin-owner {
-  background-color: #282828;
+body.admin .aside__action {
+  z-index: 10;
+  transition: right 1s ease;
+}
+
+body.admin .aside__logout {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+body.admin .aside__logout svg {
+  width: 18px;
+  height: 18px;
+}
+
+body.admin .aside__logout svg path {
+  stroke: #525960;
+}
+
+body.admin .aside__logout p {
+  color: #c8d2dc;
+  font-family: "Manrope";
+  font-size: 0.875em;
+  line-height: 1.3571428571;
+}
+
+body.admin .menu {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+body.admin .menu__item {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 14px;
+  column-gap: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+body.admin .menu__item i {
+  font-size: 1.125em;
+  line-height: 1;
+}
+
+body.admin .menu__item i:not(.menu__item.active) {
+  color: #525960;
+}
+
+body.admin .menu__item p {
+  font-size: 1em;
+  line-height: 1.3125;
+  color: #fcffff;
+  white-space: nowrap;
+  position: relative;
+}
+
+body.admin .menu__item_messages p {
+  transform: translate(-3px, 0);
 }
 
 body.admin-owner main {
   display: flex;
+  flex-direction: column;
+}
+
+body.admin-owner section {
+  display: none;
+}
+
+body.admin-owner section.active {
+  display: block;
+  flex: 1 1 auto;
+  background-color: #212426;
 }
 
 @media (min-width: 468px) {
@@ -805,6 +892,81 @@ body.admin-owner main {
     font-size: 0.9375em;
     line-height: 1.6;
   }
+
+  body.admin .aside__cnt,
+  body.admin .aside__action,
+  body.admin .aside__action-wrapper,
+  body.admin .aside__action-body {
+    height: 100%;
+  }
+
+  body.admin .aside__action {
+    z-index: 12;
+  }
+
+  body.admin .aside__action {
+    z-index: 12;
+  }
+
+  body.admin .aside__action-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 12;
+    min-width: 245px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 23px;
+    padding-bottom: 22px;
+  }
+
+  body.admin .aside__logout {
+    margin-bottom: 16px;
+  }
+
+  body.admin .aside__copy {
+    font-size: 0.75em;
+    line-height: 1.6666666667;
+    padding-top: 13px;
+    color: #c8d2dc;
+    position: relative;
+  }
+
+  body.admin .aside__copy:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #525960;
+  }
+
+  body.admin .menu {
+    flex: 1 1 auto;
+    position: relative;
+    z-index: 12;
+    color: #fff;
+    padding-left: 8px;
+  }
+
+  body.admin .menu__item p {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  body.admin .menu__item_workers p {
+    transform: translate(-2px, 0);
+  }
+
+  body.admin-owner main {
+    flex-direction: row;
+  }
+
+  body.admin-owner section.active {
+    border-radius: 32px 0px 0px 0px;
+  }
 }
 
 @media (min-width: 1050px) {
@@ -870,5 +1032,127 @@ body.admin-owner main {
   h1 {
     font-size: 4em;
     line-height: 1.015625;
+  }
+}
+
+@media (max-width: 999px) {
+  body.admin .aside {
+    width: 100%;
+  }
+
+  body.admin .aside__action {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+  }
+
+  body.admin .aside__action-wrapper {
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-bottom: 27px;
+    position: absolute;
+    padding-top: 64px;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1f21;
+  }
+
+  body.admin .aside__action-body {
+    overflow: auto;
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #1d1f21;
+    width: 100%;
+  }
+
+  body.admin .aside__action:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-100vw + 100%);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+    transition: opacity 0s ease 0s;
+  }
+
+  body.admin .aside__action.active {
+    right: 0;
+    transition: right 1s ease;
+  }
+
+  body.admin .aside__action.active:before {
+    opacity: 1;
+    transition: opacity 0.5s ease 0.8s;
+  }
+
+  body.admin .aside__copy {
+    display: none;
+  }
+
+  body.admin .menu {
+    width: 100%;
+    text-align: right;
+    padding-top: 3px;
+  }
+
+  body.admin .menu__item p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  body.admin .menu__item_workers p {
+    transform: translate(-3px, 0);
+  }
+
+  body.admin .menu__item:before {
+    background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0.1;
+  }
+
+  body.admin .menu__item:hover:before {
+    opacity: 0.5;
+  }
+
+  body.admin .menu__item.active:after {
+    content: "";
+    position: relative;
+    top: 0;
+    right: 2px;
+    width: 7px;
+    height: 7px;
+    margin-left: auto;
+    border-radius: 50%;
+    background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  }
+}
+
+@media (max-width: 999px) and (min-width: 468px) {
+  body.admin .aside__action-wrapper {
+    border-radius: 0 0 0 16px;
+    align-items: flex-end;
+    width: auto;
+  }
+
+  body.admin .aside__action-body {
+    width: auto;
+    min-width: 200px;
   }
 }

@@ -5,10 +5,14 @@
 'title': 'Profile',
 })
 
-<body class="admin-worker">
+<body class="admin admin-worker">
 	<div class="wrapper">
 		@@include('./components/structure/_admin-header.html')
 		<main>
+			@@include('./components/structure/_admin-sidebar.html', {
+			'm': 'Messages',
+			's': 'Statisctics'
+			})
 			<section class="hero">
 				<div class="hero__container">
 
