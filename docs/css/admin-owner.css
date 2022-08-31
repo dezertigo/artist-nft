@@ -1312,23 +1312,6 @@ body.admin-owner .messages__preview {
     font-size: 0.875em;
     line-height: 1.3571428571;
   }
-}
-
-@media (min-width: 1000px) {
-  h1 {
-    font-size: 3.125em;
-    line-height: 1.1;
-  }
-
-  h2 {
-    font-size: 2.0625em;
-    line-height: 1.3333333333;
-  }
-
-  .content-text-mobile {
-    font-size: 0.9375em;
-    line-height: 1.6;
-  }
 
   .admin-header .admin-burger {
     display: none;
@@ -1543,6 +1526,23 @@ body.admin-owner .messages__preview {
   }
 }
 
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 3.125em;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2.0625em;
+    line-height: 1.3333333333;
+  }
+
+  .content-text-mobile {
+    font-size: 0.9375em;
+    line-height: 1.6;
+  }
+}
+
 @media (min-width: 1200px) {
   h1 {
     font-size: 3.75em;
@@ -1603,7 +1603,7 @@ body.admin-owner .messages__preview {
   }
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   body.admin .aside {
     width: 100%;
   }
@@ -1742,6 +1742,10 @@ body.admin-owner .messages__preview {
     border-radius: 50%;
   }
 
+  .chat__message_hidden {
+    display: none;
+  }
+
   .chat__separator {
     margin-left: -4%;
     width: 108.6956521739%;
@@ -1763,19 +1767,13 @@ body.admin-owner .messages__preview {
   }
 }
 
-@media (max-width: 768px) {
-  .chat__message_hidden {
-    display: none;
-  }
-}
-
 @media (max-width: 559px) {
   .chat-list-preview__slider {
     margin-right: -4%;
   }
 }
 
-@media (max-width: 999px) and (min-width: 468px) {
+@media (max-width: 768px) and (min-width: 468px) {
   body.admin .aside__action-wrapper {
     border-radius: 0 0 0 16px;
     align-items: flex-end;
