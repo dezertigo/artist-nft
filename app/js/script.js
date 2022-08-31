@@ -202,17 +202,18 @@ window.addEventListener("load", () => {
          item.addEventListener('click', () => {
             let tabId = item.getAttribute('data-tab');
             let currentTab = document.querySelector(tabId);
-
-            tabBtns.forEach((item)=> {
-               item.classList.remove('active');
-            })
-
-            tabsItems.forEach((item)=> {
-               item.classList.remove('active');
-            })
-
-            item.classList.add('active');
-            currentTab.classList.add('active');
+            if (!item.classList.contains('active')) {
+               tabBtns.forEach((item)=> {
+                  item.classList.remove('active');
+               })
+      
+               tabsItems.forEach((item)=> {
+                  item.classList.remove('active');
+               })
+      
+               item.classList.add('active');
+               currentTab.classList.add('active');
+            }
          })
       });
 

@@ -1468,6 +1468,10 @@ body.payment .tabs__content :nth-of-type(1) .input-columns {
   transform: translateY(-4px);
 }
 
+body.payment .tabs__content :nth-of-type(1) .confirm {
+  transform: translate(-1px, 1px);
+}
+
 body.payment .tabs__content :nth-of-type(2) .tabs__text,
 body.payment .tabs__content :nth-of-type(3) .tabs__text {
   transform: translateX(3px);
@@ -1980,14 +1984,36 @@ body.payment .popup__form .btn {
     transform: translate(-3px, 4px);
   }
 
+  body.payment .tabs__content :nth-of-type(2) .tabs__text,
+  body.payment .tabs__content :nth-of-type(3) .tabs__text {
+    transform: translate(0px, -2px);
+    max-width: 88%;
+  }
+
+  body.payment .tabs__content :nth-of-type(2) .tabs__copy,
+  body.payment .tabs__content :nth-of-type(3) .tabs__copy {
+    transform: translate(-3px, -2px);
+  }
+
+  body.payment .tabs__content :nth-of-type(2) .input,
+  body.payment .tabs__content :nth-of-type(3) .input {
+    transform: translate(-1px, 6px);
+  }
+
+  body.payment .tabs__content :nth-of-type(2) .btn,
+  body.payment .tabs__content :nth-of-type(3) .btn {
+    transform: translateY(11px);
+  }
+
+  body.payment .tabs__content :nth-of-type(2) .confirm,
+  body.payment .tabs__content :nth-of-type(3) .confirm {
+    transform: translate(-1px, 8px);
+  }
+
   body.payment .tabs__content {
     max-width: 77.037037037%;
     width: 100%;
     transform: translate(1px, -2px);
-  }
-
-  body.payment .tabs__content .confirm {
-    transform: translate(-1px, 1px);
   }
 
   body.payment .tabs__confirm {
