@@ -355,15 +355,21 @@ window.addEventListener("load", () => {
          }
       }
 
-      // Табы по айтемам в сайдбаре
+      // Клик по табу в сайдбаре
       body.addEventListener("click", changeLayout);
 
       function changeLayout(e) {
+         // Клик по табу в сайдбаре
          if (e.target.closest(".menu__item")) {
             qa(".menu__item").forEach((el) => {
                el.classList.remove("active");
             });
             e.target.closest(".menu__item").classList.add("active");
+         } else if (e.target.closest(".chat-list-items__item")) {
+            qs(".messages__chat").classList.add("visible");
+            window.scrollTo(0, 64);
+         } else if (e.target.closest(".chat__title svg")) {
+            qs(".messages__chat").classList.remove("visible");
          }
       }
 

@@ -18,8 +18,13 @@
 			})
 			<section class="messages active">
 				<div class="messages__cntr">
-					@@include('./components/admin/_chat-list-preview.html')
-					@@include('./components/admin/_chat-list-items.html')
+					<div class="messages__preview">
+						@@include('./components/admin/_chat-list-preview.html')
+						@@include('./components/admin/_chat-list-items.html')
+					</div>
+					<div class="messages__chat">
+						@@include('./components/admin/_chat.html')
+					</div>
 				</div>
 			</section>
 		</main>

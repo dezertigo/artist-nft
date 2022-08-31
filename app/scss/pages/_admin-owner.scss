@@ -15,6 +15,7 @@ body.admin-owner {
          display: block;
          flex: 1 1 auto;
          background-color: #1d1f21;
+         position: relative;
          @media (min-width: 1000px) {
             background-color: #212426;
             border-radius: 32px 0px 0px 0px;
@@ -22,9 +23,29 @@ body.admin-owner {
       }
    }
    .messages {
+      position: relative;
+      overflow: hidden;
       &__cntr {
          padding-left: percent(15, 375);
          padding-right: percent(15, 375);
+      }
+      &__preview {
+         position: relative;
+         z-index: 0;
+      }
+      &__chat {
+         background-color: #1d1f21;
+         position: absolute;
+         z-index: 1;
+         top: 0;
+         left: 100%;
+         transition: left 0.8s ease;
+         // height: 100%;
+         width: 100%;
+         &.visible {
+            transition: left 0.8s ease;
+            left: 0;
+         }
       }
    }
 }

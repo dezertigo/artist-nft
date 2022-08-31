@@ -1,11 +1,12 @@
 .chat-list-items {
    padding-top: 14px;
-   padding-bottom: 20px;
+   padding-bottom: 16px;
    row-gap: 8px;
    display: grid;
 
    // .chat-list-items__item
    &__item {
+      cursor: pointer;
       display: flex;
       column-gap: 12px;
       padding: 14px 12px;
