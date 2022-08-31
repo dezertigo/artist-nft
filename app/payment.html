@@ -61,103 +61,13 @@
 							</div>
 						</div>
 						<div class="payment__content">
-							<div class="payment__tabs tabs">
-								<div class="hello-h2">
-									<h6 class="hello-h2__label">
-										PURCHASE
-									</h6>
-									<h2 class="hello-h2__title">
-										Payment for <span>Name of NFT or art</span>
-									</h2>
-								</div>
-								<div class="tabs__nav">
-									<button class="tabs__nav-btn active" type="button" data-tab="#tab_1">
-										Credit card
-									</button>
-									<button class="tabs__nav-btn" type="button" data-tab="#tab_2">
-										PayPal
-									</button>
-									<button class="tabs__nav-btn" type="button"
-									data-tab="#tab_3">
-										Crypto
-									</button>
-								</div>
-								<div class="tabs__content">
-									<div class="tabs__item  active" id="tab_1">
-										<form class="form tabs__form">
-											@@include('./components/blocks/_input.html', {
-												'label': 'Card number',
-												'for': 'card number',
-												'type': 'text',
-												'placeholder': '0000 0000 0000 0000',
-											})
-											@@include('./components/blocks/_input.html', {
-												'label': 'Date',
-												'for': 'date',
-												'type': 'text',
-												'placeholder': '01/01',
-												'label2': 'CCV',
-												'for2': 'ccv',
-												'type2': 'text',
-												'placeholder2': '000',
-											})
-											@@include('./components/blocks/_input.html', {
-												'label': 'Name on card',
-												'for': 'name on card',
-												'type': 'text',
-												'placeholder': 'Ivan Ivanov',
-											})
-											@@include("./components/base/_btn.html", {
-												"text": "Purchase",
-												"modify": "big grad-bg tabs__confirm"
-												})
-											@@include('./components/blocks/_confirm.html')
-										</form>
-									</div>
-
-									<div class="tabs__item" id="tab_2">
-										<p class="tabs__text">
-											To purchase item by paypal you have to send money to this email. After 5 minute result will sent in your mail
-										</p>
-										<div class="tabs__copy">
-											<p>artist-nft@nft.com </p>
-											<i class="copy"></i>
-										</div>
-										@@include('./components/blocks/_input.html', {
-											'label': 'E-mail',
-											'for': 'email',
-											'type': 'email',
-											'placeholder': 'Your e-mail',
-										})
-										@@include("./components/base/_btn.html", {
-											"text": "Check",
-											"modify": "big grad-bg tabs__confirm"
-											})
-										@@include('./components/blocks/_confirm.html')
-									</div>
-								
-									<div class="tabs__item" id="tab_3">
-										<p class="tabs__text">
-											To purchase item by crypto you have to send money to this wallet. After 5 minute result will sent in your mail
-										</p>
-										<div class="tabs__copy">
-											<p>EQBSSl0Xlo3...kkHTmFw5YVYOiWJ. </p>
-											<i class="copy"></i>
-										</div>
-										@@include('./components/blocks/_input.html', {
-											'label': 'E-mail',
-											'for': 'email',
-											'type': 'email',
-											'placeholder': 'Your e-mail',
-										})
-										@@include("./components/base/_btn.html", {
-											"text": "Check",
-											"modify": "big grad-bg tabs__confirm"
-											})
-										@@include('./components/blocks/_confirm.html')
-									</div>
-								</div>
-							</div>
+							@@include('./components/blocks/_tabs.html', {
+								'title': 'true',
+								'btn1': 'Credit card',
+								'btn2': 'PayPal',
+								'btn3': 'Crypto',
+								'class': 'payment__tabs'
+							})
 						</div>
 						<div class="payment__desc">
 							<p class="payment__suptitle">

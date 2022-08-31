@@ -1294,6 +1294,120 @@ h6 {
   border-radius: 16px;
 }
 
+.tabs__nav {
+  padding: 7px 8px;
+  display: flex;
+  justify-content: space-between;
+  background: #212426;
+  border-radius: 12px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.tabs__nav :nth-of-type(1) {
+  transform: translateX(-1px);
+}
+
+.tabs__nav :nth-of-type(2) {
+  transform: translateX(2px);
+}
+
+.tabs__nav :nth-of-type(3) {
+  transform: translateX(3px);
+}
+
+.tabs__nav-btn {
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  border-radius: 12px;
+  max-width: 111px;
+  height: 48px;
+  width: 100%;
+  background: transparent;
+}
+
+.tabs__nav-btn.active {
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  color: #1d1f21;
+  font-weight: 700;
+}
+
+.tabs__content :nth-of-type(1) .input-columns {
+  transform: translateY(-4px);
+}
+
+.tabs__content :nth-of-type(1) .confirm {
+  transform: translate(-1px, 1px);
+}
+
+.tabs__content :nth-of-type(2) .tabs__text,
+.tabs__content :nth-of-type(3) .tabs__text {
+  transform: translateX(3px);
+}
+
+.tabs__content :nth-of-type(2) .input,
+.tabs__content :nth-of-type(3) .input {
+  transform: translateY(4px);
+}
+
+.tabs__content :nth-of-type(2) .btn,
+.tabs__content :nth-of-type(3) .btn {
+  transform: translate(1px, 4px);
+  margin-bottom: 20px;
+}
+
+.tabs__item {
+  display: none;
+}
+
+.tabs__item > * {
+  margin-bottom: 16px;
+}
+
+.tabs__item.active {
+  display: block;
+}
+
+.tabs__form > * {
+  margin-bottom: 16px;
+}
+
+.tabs__confirm {
+  max-width: 100%;
+  height: 64px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.tabs__text {
+  color: #C8D2DC;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 18px;
+}
+
+.tabs__copy {
+  padding: 18px 19px 18px 29px;
+  background: #212426;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FCFFFF;
+}
+
+.tabs__copy p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  transform: translateX(1px);
+}
+
+.tabs__copy i {
+  font-size: 18px;
+  transform: translateX(-2px);
+}
+
 body.payment .payment {
   padding-top: 34px;
   padding-bottom: 48px;
@@ -1424,120 +1538,6 @@ body.payment .hello-h2__title span {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-body.payment .tabs__nav {
-  padding: 7px 8px;
-  display: flex;
-  justify-content: space-between;
-  background: #212426;
-  border-radius: 12px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-body.payment .tabs__nav :nth-of-type(1) {
-  transform: translateX(-1px);
-}
-
-body.payment .tabs__nav :nth-of-type(2) {
-  transform: translateX(2px);
-}
-
-body.payment .tabs__nav :nth-of-type(3) {
-  transform: translateX(3px);
-}
-
-body.payment .tabs__nav-btn {
-  font-size: 0.875em;
-  line-height: 1.4285714286;
-  border-radius: 12px;
-  max-width: 111px;
-  height: 48px;
-  width: 100%;
-  background: transparent;
-}
-
-body.payment .tabs__nav-btn.active {
-  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
-  color: #1d1f21;
-  font-weight: 700;
-}
-
-body.payment .tabs__content :nth-of-type(1) .input-columns {
-  transform: translateY(-4px);
-}
-
-body.payment .tabs__content :nth-of-type(1) .confirm {
-  transform: translate(-1px, 1px);
-}
-
-body.payment .tabs__content :nth-of-type(2) .tabs__text,
-body.payment .tabs__content :nth-of-type(3) .tabs__text {
-  transform: translateX(3px);
-}
-
-body.payment .tabs__content :nth-of-type(2) .input,
-body.payment .tabs__content :nth-of-type(3) .input {
-  transform: translateY(4px);
-}
-
-body.payment .tabs__content :nth-of-type(2) .btn,
-body.payment .tabs__content :nth-of-type(3) .btn {
-  transform: translate(1px, 4px);
-  margin-bottom: 20px;
-}
-
-body.payment .tabs__item {
-  display: none;
-}
-
-body.payment .tabs__item > * {
-  margin-bottom: 16px;
-}
-
-body.payment .tabs__item.active {
-  display: block;
-}
-
-body.payment .tabs__form > * {
-  margin-bottom: 16px;
-}
-
-body.payment .tabs__confirm {
-  max-width: 100%;
-  height: 64px;
-  font-size: 18px;
-  line-height: 26px;
-}
-
-body.payment .tabs__text {
-  color: #C8D2DC;
-  font-size: 14px;
-  line-height: 21px;
-  margin-bottom: 18px;
-}
-
-body.payment .tabs__copy {
-  padding: 18px 19px 18px 29px;
-  background: #212426;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #FCFFFF;
-}
-
-body.payment .tabs__copy p {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  transform: translateX(1px);
-}
-
-body.payment .tabs__copy i {
-  font-size: 18px;
-  transform: translateX(-2px);
 }
 
 body.payment .popup {
@@ -1914,6 +1914,82 @@ body.payment .popup__form .btn {
     margin-top: 16px;
   }
 
+  .tabs__nav :nth-of-type(2) {
+    transform: translateX(-2px);
+  }
+
+  .tabs__nav :nth-of-type(3) {
+    transform: translateX(-1px);
+  }
+
+  .tabs__nav {
+    max-width: 77.037037037%;
+    width: 100%;
+    transform: translate(-5px, -4px);
+    justify-content: flex-start;
+  }
+
+  .tabs__nav-btn.active {
+    font-size: 1.125em;
+    line-height: 1.3333333333;
+  }
+
+  .tabs__nav-btn {
+    max-width: 129px;
+    height: 56px;
+    font-size: 1em;
+    line-height: 1.75;
+  }
+
+  .tabs__content :nth-of-type(1) .input-columns :nth-of-type(2) {
+    transform: translate(-3px, 4px);
+  }
+
+  .tabs__content :nth-of-type(2) .tabs__text,
+  .tabs__content :nth-of-type(3) .tabs__text {
+    transform: translate(0px, -2px);
+    max-width: 88%;
+  }
+
+  .tabs__content :nth-of-type(2) .tabs__copy,
+  .tabs__content :nth-of-type(3) .tabs__copy {
+    transform: translate(-3px, -2px);
+  }
+
+  .tabs__content :nth-of-type(2) .input,
+  .tabs__content :nth-of-type(3) .input {
+    transform: translate(-1px, 6px);
+  }
+
+  .tabs__content :nth-of-type(2) .btn,
+  .tabs__content :nth-of-type(3) .btn {
+    transform: translateY(11px);
+  }
+
+  .tabs__content :nth-of-type(2) .confirm,
+  .tabs__content :nth-of-type(3) .confirm {
+    transform: translate(-1px, 8px);
+  }
+
+  .tabs__content {
+    max-width: 77.037037037%;
+    width: 100%;
+    transform: translate(1px, -2px);
+  }
+
+  .tabs .tabs__confirm {
+    max-width: 408px;
+  }
+
+  .tabs__confirm {
+    max-width: 408px;
+  }
+
+  .tabs__confirm a {
+    transform: translateX(-1px);
+    letter-spacing: -0.06em;
+  }
+
   body.payment .payment {
     padding-top: 31px;
   }
@@ -1951,78 +2027,6 @@ body.payment .popup__form .btn {
 
   body.payment .hello-h2__title {
     transform: translateY(-2px);
-  }
-
-  body.payment .tabs__nav :nth-of-type(2) {
-    transform: translateX(-2px);
-  }
-
-  body.payment .tabs__nav :nth-of-type(3) {
-    transform: translateX(-1px);
-  }
-
-  body.payment .tabs__nav {
-    max-width: 77.037037037%;
-    width: 100%;
-    transform: translate(-5px, -4px);
-    justify-content: flex-start;
-  }
-
-  body.payment .tabs__nav-btn.active {
-    font-size: 1.125em;
-    line-height: 1.3333333333;
-  }
-
-  body.payment .tabs__nav-btn {
-    max-width: 129px;
-    height: 56px;
-    font-size: 1em;
-    line-height: 1.75;
-  }
-
-  body.payment .tabs__content :nth-of-type(1) .input-columns :nth-of-type(2) {
-    transform: translate(-3px, 4px);
-  }
-
-  body.payment .tabs__content :nth-of-type(2) .tabs__text,
-  body.payment .tabs__content :nth-of-type(3) .tabs__text {
-    transform: translate(0px, -2px);
-    max-width: 88%;
-  }
-
-  body.payment .tabs__content :nth-of-type(2) .tabs__copy,
-  body.payment .tabs__content :nth-of-type(3) .tabs__copy {
-    transform: translate(-3px, -2px);
-  }
-
-  body.payment .tabs__content :nth-of-type(2) .input,
-  body.payment .tabs__content :nth-of-type(3) .input {
-    transform: translate(-1px, 6px);
-  }
-
-  body.payment .tabs__content :nth-of-type(2) .btn,
-  body.payment .tabs__content :nth-of-type(3) .btn {
-    transform: translateY(11px);
-  }
-
-  body.payment .tabs__content :nth-of-type(2) .confirm,
-  body.payment .tabs__content :nth-of-type(3) .confirm {
-    transform: translate(-1px, 8px);
-  }
-
-  body.payment .tabs__content {
-    max-width: 77.037037037%;
-    width: 100%;
-    transform: translate(1px, -2px);
-  }
-
-  body.payment .tabs__confirm {
-    max-width: 408px;
-  }
-
-  body.payment .tabs__confirm a {
-    transform: translateX(-1px);
-    letter-spacing: -0.06em;
   }
 
   body.payment .popup {
