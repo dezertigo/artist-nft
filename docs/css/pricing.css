@@ -2220,6 +2220,10 @@ body.pricing .premium-card__price {
     left: 49.7%;
   }
 
+  body.pricing .premium-card__body--first .premium-card__list {
+    transform: translate(-4px, -3px);
+  }
+
   body.pricing .premium-card__body--second .stroke-text {
     left: 53.4%;
     top: 12px;
@@ -2229,8 +2233,16 @@ body.pricing .premium-card__price {
     transform: translate(6px, -6px);
   }
 
+  body.pricing .premium-card__body--second .premium-card__list {
+    transform: translate(-2px, -3px);
+  }
+
   body.pricing .premium-card__body--third .premium-card__heading {
     transform: translate(5px, -4px);
+  }
+
+  body.pricing .premium-card__body--third .premium-card__list {
+    transform: translate(-3px, -3px);
   }
 
   body.pricing .premium-card__image--first {
@@ -2249,6 +2261,10 @@ body.pricing .premium-card__price {
 
   body.pricing .premium-card__heading {
     transform: translate(4px, -3px);
+  }
+
+  body.pricing .premium-card__list {
+    transform: translate(-1px, -3px);
   }
 
   body.pricing .premium-card__footer {
