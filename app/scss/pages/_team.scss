@@ -1,0 +1,54 @@
+body.team {
+    .hero {
+        padding-top: 62px;
+        overflow: hidden;
+        position: relative;
+            .stroke-text {
+                &:nth-of-type(1) {
+                    opacity: 0.8;
+                    left: percent(81,375);
+                    top: 5px;
+                }
+                &:nth-of-type(2) {
+                    display: none;
+                }
+            }
+            .star-decor {
+                position: absolute;
+                &:nth-of-type(1) {
+                    left: percent(0,375);
+                    top: 368px;
+                    font-size: 41px;
+                }
+                &:nth-of-type(2) {
+                    left: percent(302, 375);
+                    top: 361px;
+                    font-size: 48px;
+                }
+            }
+        &__circle {
+
+        }
+        &__inner {
+
+        }
+        &__content {
+
+        }
+        &__graphic {
+
+        }
+    }
+    .star-decor {
+
+    }
+    .benefits {
+        &__inner {
+
+        }
+    }
+    .form {
+
+    }
+      
+}
