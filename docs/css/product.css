@@ -1437,21 +1437,21 @@ h6 {
 }
 
 .backgroung__image_1 {
-  width: 9.6%;
-  padding-bottom: 9.6%;
-}
-
-.backgroung__image_1 img {
-  filter: brightness(0.9) hue-rotate(202deg);
-}
-
-.backgroung__image_2 {
   width: 25.1706666667%;
   padding-bottom: 25.1706666667%;
 }
 
-.backgroung__image_2 img {
+.backgroung__image_1 img {
   filter: brightness(0.7) blur(4px) hue-rotate(158deg);
+}
+
+.backgroung__image_2 {
+  width: 9.6%;
+  padding-bottom: 9.6%;
+}
+
+.backgroung__image_2 img {
+  filter: brightness(0.9) hue-rotate(202deg);
 }
 
 .backgroung__image_3,

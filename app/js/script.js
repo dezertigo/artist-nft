@@ -194,7 +194,7 @@ window.addEventListener("load", () => {
 
 
    // !payment.html
-   if (qs("body.payment") || qs("body.components")) {
+   if (qs("body.payment") || qs("body.components") || qs("body.pricing")) {
       const tabBtns = document.querySelectorAll('.tabs__nav-btn');
       const tabsItems = document.querySelectorAll('.tabs__item');
       const confirmBtns = document.querySelectorAll('.tabs__confirm');
