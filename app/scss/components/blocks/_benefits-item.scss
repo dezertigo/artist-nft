@@ -1,0 +1,25 @@
+.benefits-item {
+    max-width: 255px;
+    width: 100%;
+    background: #212426;
+    border-radius: 12px;
+    color: #FCFFFF;
+    padding: 18px 19px 32px;
+    &__img {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 9px;
+    }
+    &__title {
+        font-weight: 700;
+        @include fl(20, 30);
+    }
+    &__text {
+        @include fl(16, 28);
+    }
+}

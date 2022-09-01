@@ -1982,6 +1982,37 @@ h6 {
   line-height: 1.5454545455;
 }
 
+.benefits-item {
+  max-width: 255px;
+  width: 100%;
+  background: #212426;
+  border-radius: 12px;
+  color: #FCFFFF;
+  padding: 18px 19px 32px;
+}
+
+.benefits-item__img {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9px;
+}
+
+.benefits-item__title {
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
+.benefits-item__text {
+  font-size: 1em;
+  line-height: 1.75;
+}
+
 body.components .parent-block {
   position: relative;
   overflow: hidden;
