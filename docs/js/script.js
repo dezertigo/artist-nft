@@ -365,6 +365,12 @@ window.addEventListener("load", () => {
                el.classList.remove("active");
             });
             e.target.closest(".menu__item").classList.add("active");
+            qa("section").forEach((el) => {
+               el.classList.remove("active");
+               if (el.classList.contains(e.target.closest(".aside__menu li").getAttribute("data-location"))) {
+                  el.classList.add("active");
+               }
+            });
          } else if (e.target.closest(".chat-list-items__item")) {
             qs(".messages__chat").classList.add("visible");
             window.scrollTo(0, 64);
