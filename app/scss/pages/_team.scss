@@ -4,13 +4,14 @@ body.team {
         overflow: hidden;
         position: relative;
             .stroke-text {
+                opacity: 0.8;
                 &:nth-of-type(1) {
-                    opacity: 0.8;
                     left: percent(81,375);
-                    top: 5px;
+                    top: 11px;
                 }
                 &:nth-of-type(2) {
-                    display: none;
+                    top: 527px;
+                    left: percent(-79, 375);
                 }
             }
             .star-decor {
@@ -33,22 +34,96 @@ body.team {
 
         }
         &__content {
-
+            margin-bottom: 80px;
         }
         &__graphic {
-
+            margin-bottom: 60px;
         }
+        .hello-h1 {
+            &__title {
+                max-width: percent(296, 345);
+            }
+            &__text {
+                margin-bottom: 31px;
+            }
+            .btn {
+                max-width: 193px;
+                width: 100%;
+                min-height: 52px;
+                transform: translate(1px, 0px);
+            }
+        }
+        .double-block_square {
+            transform: translate(37px,-3px) rotate(9.5deg);
+            max-width: percent(284, 345);
+        }
+        .double-block__image {
+            transform: translate(-39px,7px) rotate(-10deg);
+            @media (min-width: 1200px) {
+               padding-bottom: percent(570, 445);
+               transform: translate(20px, 6px) rotate(3.86deg);
+            }
+         }
     }
     .star-decor {
 
     }
     .benefits {
-        &__inner {
+        .hello-h2 {
+            margin-bottom: 28px;
+            &__title {
+                max-width: percent(225, 345);
+            }
+            &__text {
 
+            }
+        }
+        &__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            column-gap: 11px;
+            row-gap: 14px;
+            margin-bottom: 30px;
+        }
+        .benefits-item {
+            @media (max-width: 800px) {
+                max-width: 167px;
+                padding: 10px 10px 14px;
+                &__img {
+                    width: 36px;
+                    height: 36px;
+                    margin-bottom: 8px;
+                    svg {
+                        width: 15px !important;
+                        height: 15px !important;
+                    }
+                }
+                &__title {
+                    @include fl(14, 20);
+                }
+                &__text {
+                    @include fl(12, 20);
+                }
+            }
         }
     }
     .form {
-
+        padding-top: 30px;
+        padding-bottom: 34px;
+        position: relative;
+        overflow: hidden;
+        .backgroung {
+            &__image {
+                &_1 {
+                    top: 0px;
+                    right: -32px;
+                }
+                &_2 {
+                    display: none;
+                }
+            }
+        }
     }
       
 }

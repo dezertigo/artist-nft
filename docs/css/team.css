@@ -1444,14 +1444,18 @@ body.team .hero {
   position: relative;
 }
 
-body.team .hero .stroke-text:nth-of-type(1) {
+body.team .hero .stroke-text {
   opacity: 0.8;
+}
+
+body.team .hero .stroke-text:nth-of-type(1) {
   left: 21.6%;
-  top: 5px;
+  top: 11px;
 }
 
 body.team .hero .stroke-text:nth-of-type(2) {
-  display: none;
+  top: 527px;
+  left: -21.0666666667%;
 }
 
 body.team .hero .star-decor {
@@ -1468,6 +1472,72 @@ body.team .hero .star-decor:nth-of-type(2) {
   left: 80.5333333333%;
   top: 361px;
   font-size: 48px;
+}
+
+body.team .hero__content {
+  margin-bottom: 80px;
+}
+
+body.team .hero__graphic {
+  margin-bottom: 60px;
+}
+
+body.team .hero .hello-h1__title {
+  max-width: 85.7971014493%;
+}
+
+body.team .hero .hello-h1__text {
+  margin-bottom: 31px;
+}
+
+body.team .hero .hello-h1 .btn {
+  max-width: 193px;
+  width: 100%;
+  min-height: 52px;
+  transform: translate(1px, 0px);
+}
+
+body.team .hero .double-block_square {
+  transform: translate(37px, -3px) rotate(9.5deg);
+  max-width: 82.3188405797%;
+}
+
+body.team .hero .double-block__image {
+  transform: translate(-39px, 7px) rotate(-10deg);
+}
+
+body.team .benefits .hello-h2 {
+  margin-bottom: 28px;
+}
+
+body.team .benefits .hello-h2__title {
+  max-width: 65.2173913043%;
+}
+
+body.team .benefits__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -moz-column-gap: 11px;
+  column-gap: 11px;
+  row-gap: 14px;
+  margin-bottom: 30px;
+}
+
+body.team .form {
+  padding-top: 30px;
+  padding-bottom: 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+body.team .form .backgroung__image_1 {
+  top: 0px;
+  right: -32px;
+}
+
+body.team .form .backgroung__image_2 {
+  display: none;
 }
 
 @media (min-width: 431px) {
@@ -1873,6 +1943,11 @@ body.team .hero .star-decor:nth-of-type(2) {
     padding-bottom: 128.0898876404%;
     transform: translate(20px, 6px) rotate(3.86deg);
   }
+
+  body.team .hero .double-block__image {
+    padding-bottom: 128.0898876404%;
+    transform: translate(20px, 6px) rotate(3.86deg);
+  }
 }
 
 @media (min-width: 1250px) {
@@ -1998,6 +2073,34 @@ body.team .hero .star-decor:nth-of-type(2) {
     width: 100%;
     height: 1px;
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 800px) {
+  body.team .benefits .benefits-item {
+    max-width: 167px;
+    padding: 10px 10px 14px;
+  }
+
+  body.team .benefits .benefits-item__img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+  }
+
+  body.team .benefits .benefits-item__img svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  body.team .benefits .benefits-item__title {
+    font-size: 0.875em;
+    line-height: 1.4285714286;
+  }
+
+  body.team .benefits .benefits-item__text {
+    font-size: 0.75em;
+    line-height: 1.6666666667;
   }
 }
 
