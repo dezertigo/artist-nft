@@ -538,6 +538,9 @@ div.orders {
 body.admin-owner,
 body.admin-worker {
    .orders {
+      &__heading-status {
+         display: none;
+      }
       &__items {
          row-gap: 8px;
       }

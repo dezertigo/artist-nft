@@ -1258,6 +1258,11 @@ div.orders:before {
   height: 40px;
 }
 
+body.admin-owner .orders__heading-status,
+body.admin-worker .orders__heading-status {
+  display: none;
+}
+
 body.admin-owner .orders__items,
 body.admin-worker .orders__items {
   row-gap: 8px;
