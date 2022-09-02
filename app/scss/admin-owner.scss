@@ -13,8 +13,9 @@
 @import "./components/admin/chat-list-preview";
 @import "./components/admin/chat-list-item";
 @import "./components/admin/chat";
-@import './components/admin/orders';
-
+@import "./components/admin/orders";
+@import "./components/admin/nft-orders";
+@import "./components/blocks/paint-block";
 
 //Подключение стилей конкретной страницы
 @import "./pages/admin-owner";
