@@ -1,17 +1,31 @@
+// .chromeperfectpixel-layer-img {
+//     object-fit: contain !important;
+//  }
 body.team {
     .hero {
         padding-top: 62px;
         overflow: hidden;
         position: relative;
+        @media (min-width:1200px) {
+            padding-top: 99px;
+        }
             .stroke-text {
                 opacity: 0.8;
                 &:nth-of-type(1) {
                     left: percent(81,375);
                     top: 11px;
+                    @media (min-width:1200px) {
+                        top: 48px;
+                        left: percent(-105, 1440);
+                    }
                 }
                 &:nth-of-type(2) {
                     top: 527px;
                     left: percent(-79, 375);
+                    @media (min-width:1200px) {
+                        top: 518px;
+                        left: percent(464, 1440);
+                    }
                 }
             }
             .star-decor {
@@ -20,48 +34,86 @@ body.team {
                     left: percent(0,375);
                     top: 368px;
                     font-size: 41px;
+                    @media (min-width:1200px) {
+                        top: 445px;
+                        left: percent(687,1440);
+                        transform: rotate(11.82deg);
+                        font-size: 62px;
+                    }
                 }
                 &:nth-of-type(2) {
                     left: percent(302, 375);
                     top: 361px;
                     font-size: 48px;
+                    @media (min-width:1200px) {
+                        font-size: 45px;
+                        top: 245px;
+                        left: percent(1294,1440);
+                        transform: rotate(-16.11deg);
+                    }
                 }
             }
         &__circle {
 
         }
         &__inner {
-
+            @media (min-width: 800px) {
+                display: flex;
+                justify-content: space-between;
+            }
         }
         &__content {
             margin-bottom: 80px;
+            @media (min-width:800px) {
+                max-width:percent(541, 1110);
+            }
         }
         &__graphic {
             margin-bottom: 60px;
+            max-width:percent(575, 1110);
+            width: 100%;
         }
         .hello-h1 {
             &__title {
                 max-width: percent(296, 345);
+                @media( min-width: 1200px) {
+                    max-width: percent(495, 540);
+                }
             }
             &__text {
                 margin-bottom: 31px;
+                @media (min-width: 1200px) {
+                    margin-bottom: 40px;
+                }
             }
             .btn {
                 max-width: 193px;
                 width: 100%;
                 min-height: 52px;
                 transform: translate(1px, 0px);
+                @media (min-width:1200px) {
+                    max-width: 209px;
+                    width: 100%;
+                    min-height: 64px;
+                }
             }
         }
         .double-block_square {
             transform: translate(37px,-3px) rotate(9.5deg);
             max-width: percent(284, 345);
+            @media (min-width:1200px) {
+                transform: translate(130px,-11px) rotate(9.5deg);
+                max-width: percent(517,654);
+            }
         }
         .double-block__image {
             transform: translate(-39px,7px) rotate(-10deg);
             @media (min-width: 1200px) {
-               padding-bottom: percent(570, 445);
-               transform: translate(20px, 6px) rotate(3.86deg);
+                transform: translate(-56px,21px) rotate(-10deg);
+               img {
+                height: 95%;
+                width: 99%;
+               }
             }
          }
     }
@@ -69,13 +121,20 @@ body.team {
 
     }
     .benefits {
+        @media (min-width: 1200px) {
+            padding-top: 19px;
+        }
         .hello-h2 {
             margin-bottom: 28px;
+            @media (min-width:1200px) {
+                text-align: center;
+            }
             &__title {
                 max-width: percent(225, 345);
-            }
-            &__text {
-
+                @media (min-width: 1200px) {
+                    margin: 0 auto;
+                    transform: translateY(-4px);
+                }
             }
         }
         &__inner {
@@ -103,7 +162,12 @@ body.team {
                     @include fl(14, 20);
                 }
                 &__text {
-                    @include fl(12, 20);
+                    @include fl(12, 20);  
+                }
+            }
+            @media (min-width: 1200px) {
+                &__text {
+                    transform: translateY(6px);
                 }
             }
         }
@@ -113,14 +177,45 @@ body.team {
         padding-bottom: 34px;
         position: relative;
         overflow: hidden;
+        @media (min-width: 1200px) {
+            padding-top: 35px;
+            padding-bottom: 90px;
+        }
         .backgroung {
             &__image {
                 &_1 {
                     top: 0px;
                     right: -32px;
+                    @media (min-width:1200px) {
+                        top: 280px;
+                        left: percent(-124, 1440);
+                        img {
+                            filter: brightness(0.7) blur(0px) hue-rotate(158deg);
+                        }
+                    }
                 }
                 &_2 {
                     display: none;
+                    @media (min-width:1200px) {
+                        display: block;
+                        top:180px;
+                        left: percent(169, 1440);
+                        img {
+                            filter: brightness(.9) blur(7px) hue-rotate(202deg);
+                        }
+                    }
+                }
+                &_3 {
+                    @media (min-width:1200px) {
+                              top: 588px;   
+                              left: percent(236,1440);           
+                    }
+                }
+                &_4 {
+                    @media (min-width:1200px) {
+                        right: percent(-175, 1440);
+                        top: 143px;
+                    }
                 }
             }
         }
