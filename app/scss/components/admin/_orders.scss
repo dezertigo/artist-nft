@@ -1,4 +1,4 @@
-.orders:not(i.oreders) {
+div.orders {
    position: absolute;
    top: 0;
    left: 0;
@@ -8,6 +8,8 @@
    &:before {
       display: none;
    }
+}
+.orders {
    &__cntr {
       overflow: hidden;
       @media (max-width: 768px) {

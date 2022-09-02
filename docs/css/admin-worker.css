@@ -1521,9 +1521,8 @@ body.admin .messages__preview {
     justify-content: space-between;
     position: relative;
     z-index: 12;
-    min-width: 245px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 23px;
     padding-bottom: 22px;
   }
@@ -1622,6 +1621,14 @@ body.admin .messages__preview {
   .admin-header__cntr {
     padding-left: 2.65625%;
     padding-right: 2.1875%;
+  }
+}
+
+@media (min-width: 1280px) {
+  body.admin .aside__action-body {
+    min-width: 245px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 

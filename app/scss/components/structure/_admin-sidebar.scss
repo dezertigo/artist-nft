@@ -91,11 +91,17 @@ body.admin {
                justify-content: space-between;
                position: relative;
                z-index: 12;
+               padding-left: 15px;
+               padding-right: 15px;
+               padding-top: 23px;
+               padding-bottom: 22px;
+            }
+         }
+         @media (min-width: 1280px) {
+            &-body {
                min-width: 245px;
                padding-left: 28px;
                padding-right: 28px;
-               padding-top: 23px;
-               padding-bottom: 22px;
             }
          }
       }
