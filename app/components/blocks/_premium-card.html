@@ -1,0 +1,55 @@
+<div class="premium-card">
+    <div class="premium-card__body @@if(context.class) {premium-card__body--@@class}">
+        <p class="stroke-text">@@text</p>
+        <div class="premium-card__image @@if(context.class) {premium-card__image--@@class}">
+            <picture>
+                <source type="image/webp" srcset="img/gallery/@@img.webp">
+                <img src="@img/gallery/@@img.jpg" alt="crystal image">
+            </picture>
+        </div>
+        <div class="premium-card__heading">
+            <p class="premium-card__title">
+                @@title
+            </p>
+            <p class="premium-card__subtitle">
+                Purchasing this access you get
+            </p>
+        </div>
+        <ul class="premium-card__list">
+            <li class="premium-card__item">
+                <i class="diamond"></i>
+                <p class="premium-card__text">
+                    To purchase item by crypto you have to send money to this wallet. After 5 minute result will sent in your mail
+                </p>
+            </li>
+            <li class="premium-card__item">
+                <i class="diamond"></i>
+                <p class="premium-card__text">
+                    To purchase item by crypto you have to send money
+                </p>
+            </li>
+            <li class="premium-card__item">
+                <i class="diamond"></i>
+                <p class="premium-card__text">
+                    To purchase item by crypto you have to send money to this wallet. After 5 minute result will sent in your mail
+                </p>
+            </li>
+            <li class="premium-card__item">
+                <i class="diamond"></i>
+                <p class="premium-card__text">
+                    To purchase item by crypto you have to send money
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="premium-card__footer">
+        <div class="premium-card__btn">
+            <button type="button">
+                Purchase
+            </button>
+        </div>
+        <p class="premium-card__price">
+            $200.99
+        </p>
+    </div>
+</div>

@@ -10,17 +10,18 @@
          object-fit: cover;
       }
       &_1 {
-         width: percent(36, 375);
-         padding-bottom: percent(36, 375);
-         img {
-            filter: brightness(0.9) hue-rotate(202deg);
-         }
-      }
-      &_2 {
+         
          width: percent(94.39, 375);
          padding-bottom: percent(94.39, 375);
          img {
             filter: brightness(0.7) blur(4px) hue-rotate(158deg);
+         }
+      }
+      &_2 {
+         width: percent(36, 375);
+         padding-bottom: percent(36, 375);
+         img {
+            filter: brightness(0.9) hue-rotate(202deg);
          }
       }
       &_3,

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- ! Изменить все "payment" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/payment.min.css',
+'title': 'payment',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="payment">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="payment">
+				<div class="payment__container">
+					<div class="payment__inner">
+						<div class="popup none">
+							<div class="popup__body">
+								<h2 class="popup__title">
+									Payment success. Now tell us where to bring
+								</h2>
+								<p class="popup__subtitle">
+									Write correct country, adress, zip code
+								</p>
+								<form class="popup__form">
+									@@include('./components/blocks/_input.html', {
+										'label': 'Country',
+										'for': 'country',
+										'type': 'text',
+										'placeholder': 'Your country',
+									})
+									@@include('./components/blocks/_input.html', {
+										'label': 'City',
+										'for': 'city',
+										'type': 'text',
+										'placeholder': 'Your city',
+									})
+									@@include('./components/blocks/_input.html', {
+										'label': 'Address',
+										'for': 'address',
+										'type': 'text',
+										'placeholder': 'Your address',
+									})
+									@@include('./components/blocks/_input.html', {
+										'label': 'Zip code',
+										'for': 'zip code',
+										'type': 'text',
+										'placeholder': 'Your zip code',
+									})
+									@@include('./components/blocks/_input.html', {
+										'label': 'Mail',
+										'for': 'mail',
+										'type': 'email',
+										'placeholder': 'Your mail',
+									})
+									@@include("./components/base/_btn.html", {
+										"text": "Send",
+										"modify": "big grad-bg popup__confirm"
+									})
+								</form>
+							</div>
+						</div>
+						<div class="payment__content">
+							@@include('./components/blocks/_tabs.html', {
+								'title': 'true',
+								'btn1': 'Credit card',
+								'btn2': 'PayPal',
+								'btn3': 'Crypto',
+								'class': 'payment__tabs'
+							})
+						</div>
+						<div class="payment__desc">
+							<p class="payment__suptitle">
+								Name of NFT or Art placed here
+							</p>
+							<div class="payment__desc-header">
+								<p class="payment__price">
+									<span>price</span>
+									$100 322
+								</p>
+								<span class="payment__bid">
+									BID
+								</span>
+							</div>
+							<p class="payment__info">
+								DETAILED INFO
+							</p>
+							<div class="payment__size">
+								<p  class="payment__details">
+									<span>36 × 27 in</span> 91.4 × 68.6 cm
+								</p>
+								<div class="payment__line"></div>
+								<p class="payment__details">
+									This work is part of a limited edition set.
+								</p>
+							</div>
+							<p class="payment__text payment__text--position">
+								Kindness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing. Nothing colonel my no removed in weather. It dissimilar in up devonshire inhabiting. 
+							</p>
+							<p class="payment__text">
+								If polite he active county in spirit an. Mrs ham intention promotion engrossed assurance defective. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- ! Изменить все "pricing" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/pricing.min.css',
+'title': 'Pricing',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="pricing">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="pricing">
+				
+				<div class="background">
+					<div class='background__image background__image_1'>
+						<picture>
+							<source type="image/webp" srcset="img/bg/bg_diamond.webp">
+							<img src="./img/bg/bg_diamond.png" alt="background diamong image">
+						</picture>
+					</div>
+					<div class='background__image background__image_2'>
+						<picture>
+							<source type="image/webp" srcset="img/bg/bg_diamond.webp">
+							<img src="./img/bg/bg_diamond.png" alt="background diamong image">
+						</picture>
+					</div>
+					<div class='background__image background__image_3'>
+						<picture>
+							<source type="image/webp" srcset="img/bg/premiun_diamond.webp">
+							<img src="./img/bg/premiun_diamond.png" alt="background diamong image">
+						</picture>
+					</div>
+				</div>	
+				<div class="pricing__decor">
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'make art',
+					})
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'not war',
+					})
+					<i class="star-decor"></i>
+					<div class="pricing__circle"></div>
+				</div>
+				<div class="pricing__container">
+					@@loop("./components/blocks/_hello-h1.html", "./json/pricing/hello-h1.json")
+					<div class="pricing__inner">
+						<div class="tabs pricing__tabs">
+							@@include('./components/blocks/_tabs__nav.html', {
+								'btn1': 'One week',
+								'btn2': 'Month',
+								'btn3': 'Year',
+							})
+							<div class="tabs__content">
+								<div class="tabs__item active" id="tab_1">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "1 week",
+        								"img": "06",
+        								"title" : "One week access",
+        								"class" : "first"
+									})
+								</div>
+								<div class="tabs__item" id="tab_2">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "month",
+        								"img": "08",
+        								"title" : "One month access",
+        								"class" : "second"
+									})
+								</div>
+								<div class="tabs__item" id="tab_3">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "year",
+        								"img": "07",
+        								"title" : "One year access",
+        								"class" : "third"
+									})
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>
