@@ -1962,7 +1962,6 @@ body.admin .messages__preview {
   }
 
   .orders__cntr {
-    padding-top: 17px;
     padding-left: 4%;
     padding-right: 4%;
   }
@@ -1975,12 +1974,29 @@ body.admin .messages__preview {
     font-size: 1.25em;
     line-height: 1.5;
     font-weight: 700;
-    margin-bottom: 10px;
+    padding-top: 17px;
+    padding-bottom: 10px;
     color: #fcffff;
+    z-index: 1;
+  }
+
+  .orders__title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #1d1f21;
+    z-index: -1;
   }
 
   .orders__heading {
     display: none;
+  }
+
+  .orders__items {
+    padding-bottom: 17px;
   }
 
   .orders__item {
