@@ -1717,7 +1717,7 @@ body.admin .messages__preview {
   body.admin-owner .orders__cntr,
   body.admin-worker .orders__cntr {
     padding-left: 14px;
-    padding-right: 31px;
+    padding-right: 15px;
   }
 
   body.admin-owner .orders__heading,
@@ -1749,7 +1749,7 @@ body.admin .messages__preview {
   body.admin-worker .orders__item {
     padding-top: 22px;
     padding-left: 24px;
-    padding-right: 32px;
+    padding-right: 30px;
   }
 
   body.admin-owner .orders__type,
@@ -2386,6 +2386,16 @@ body.admin .messages__preview {
     margin-top: 17px;
     width: 103px;
     cursor: pointer;
+  }
+
+  body.admin-owner .orders__item,
+  body.admin-worker .orders__item {
+    padding-bottom: 17px;
+  }
+
+  body.admin-owner .orders__size,
+  body.admin-worker .orders__size {
+    margin-bottom: 14px;
   }
 
   body.admin-owner .orders__status,

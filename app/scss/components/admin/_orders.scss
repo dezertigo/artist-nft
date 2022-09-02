@@ -541,7 +541,8 @@ body.admin-worker {
       .orders {
          &__cntr {
             padding-left: 14px;
-            padding-right: 31px;
+            padding-right: 15px;
+            // padding-right: 0;
          }
          &__heading {
             padding-left: 16px;
@@ -557,11 +558,13 @@ body.admin-worker {
          }
          &__items {
             row-gap: 9px;
+            // padding-right: 32px;
+            // padding-right: 15px;
          }
          &__item {
             padding-top: 22px;
             padding-left: 24px;
-            padding-right: 32px;
+            padding-right: 30px;
          }
          &__type {
             padding-right: 32px;
@@ -602,6 +605,12 @@ body.admin-worker {
       }
    }
    @media (max-width: 768px) {
+      .orders__item {
+         padding-bottom: 17px;
+      }
+      .orders__size {
+         margin-bottom: 14px;
+      }
       .orders__status {
          display: none;
       }
