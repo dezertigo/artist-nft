@@ -491,6 +491,10 @@ body:before {
   display: none;
 }
 
+body.admin {
+  background-color: transparent;
+}
+
 [class*=__container] {
   padding-left: 4%;
   padding-right: 4%;
@@ -584,6 +588,11 @@ h6 {
 }
 
 .content-text-small {
+  font-size: 0.75em;
+  line-height: 1.6666666667;
+}
+
+.content-text-mobile {
   font-size: 0.75em;
   line-height: 1.6666666667;
 }
@@ -1557,6 +1566,11 @@ body.payment .popup__form .btn {
     line-height: 1.5625;
   }
 
+  .content-text-mobile {
+    font-size: 0.8125em;
+    line-height: 1.6153846154;
+  }
+
   .subtext {
     font-size: 0.9375em;
     line-height: 1.7333333333;
@@ -1621,6 +1635,11 @@ body.payment .popup__form .btn {
   .content-text-small {
     font-size: 0.8125em;
     line-height: 1.5384615385;
+  }
+
+  .content-text-mobile {
+    font-size: 0.875em;
+    line-height: 1.5714285714;
   }
 
   .subtext {
@@ -1706,6 +1725,11 @@ body.payment .popup__form .btn {
   h2 {
     font-size: 2.0625em;
     line-height: 1.3333333333;
+  }
+
+  .content-text-mobile {
+    font-size: 0.9375em;
+    line-height: 1.6;
   }
 
   .btn i.crown {
