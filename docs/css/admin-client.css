@@ -1191,17 +1191,127 @@ div.orders {
   left: 0;
   height: 100%;
   overflow: auto;
+  width: 100%;
 }
 
 div.orders:before {
   display: none;
 }
 
-div.orders__title {
+.orders__cntr {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.orders__title {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
+}
+
+.orders__heading {
+  display: none;
+}
+
+.orders__heading-type {
+  display: inline-block;
+}
+
+.orders__heading-color {
+  display: inline-block;
+}
+
+.orders__heading-email {
+  display: inline-block;
+}
+
+.orders__heading-size {
+  display: inline-block;
+}
+
+.orders__heading-comment {
+  display: inline-block;
+}
+
+.orders__heading-address {
+  display: inline-block;
+}
+
+.orders__heading-status {
+  display: inline-block;
+}
+
+.orders__heading-action {
+  display: inline-block;
+}
+
+.orders__item {
+  background-color: #1d1f21;
+  border-radius: 14px;
+}
+
+.orders__type {
+  font-size: 1em;
+  line-height: 1.3125;
+  color: #fcffff;
+  font-weight: 600;
+  padding-right: 39px;
+}
+
+.orders__color {
+  padding-right: 28px;
+}
+
+.orders__color span {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #eb8032;
+}
+
+.orders__email {
+  color: #fcffff;
+  font-size: 0.875em;
+  line-height: 1.5;
+  font-weight: 600;
+  padding-right: 14px;
+}
+
+.orders__size {
+  font-size: 1em;
+  line-height: 1.3125;
+  color: #fcffff;
+  font-weight: 600;
+  padding-right: 24px;
+}
+
+.orders__comment {
+  font-size: 0.75em;
+  line-height: 1.5;
+  position: relative;
+  padding-right: 18px;
+}
+
+.orders__address {
+  font-size: 0.75em;
+  line-height: 1.5;
+  padding-right: 18px;
+}
+
+.orders__status {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.75;
+  color: #c5ff98;
+  padding-right: 9px;
+}
+
+.orders__action {
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.4285714286;
 }
 
 body.admin {
@@ -1444,6 +1554,31 @@ body.admin .messages__preview {
   .chat__textarea svg {
     width: 21px;
     height: 21px;
+  }
+
+  .orders__cntr {
+    padding-left: 6px;
+    padding-right: 10px;
+  }
+
+  .orders__title {
+    display: none;
+  }
+
+  .orders__heading {
+    display: inline-block;
+    color: #fcffff;
+    font-size: 0.875em;
+    line-height: 1.0714285714;
+    padding: 25px;
+    justify-content: space-between;
+  }
+
+  .orders__item {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    align-items: center;
+    padding: 25px;
   }
 
   body.admin main {

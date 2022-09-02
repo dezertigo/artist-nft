@@ -983,6 +983,7 @@ body.sign-up .hero__row {
 }
 
 body.sign-up .hero__radio {
+  cursor: pointer;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;

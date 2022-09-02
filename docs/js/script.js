@@ -379,6 +379,36 @@ window.addEventListener("load", () => {
          }
       }
 
+      // ! admin-owner.html
+      if (qs("body.admin-owner")) {
+         window.addEventListener("resize", changeColumnsWidth);
+
+         changeColumnsWidth();
+         function changeColumnsWidth(e) {
+            if (window.innerWidth > 768) {
+               const items = qs(".orders__item").children;
+               const heading = qs(".orders__heading");
+               const columns = heading.children;
+               const mw = [];
+               //Скидываем ширину колонок шапки что бы джс прочитал акутальную ширину в колонках айтемов
+               heading.style.gridTemplateColumns = "repeat(8, 1px)";
+               for (let i = 0; i < columns.length; i++) {
+                  let item = items[i].getBoundingClientRect().width;
+                  let column = columns[i].getBoundingClientRect().width;
+                  if (item >= column) {
+                     mw.push(item);
+                  } else {
+                     mw.push(column);
+                  }
+               }
+               console.log(mw);
+               heading.style.display = "grid";
+
+               heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px ${mw[4]}px ${mw[5]}px ${mw[6]}px ${mw[7]}px `;
+            }
+         }
+      }
+
       // swiperBiography
       const swiper = new Swiper(".swiper", {
          spaceBetween: 28,
