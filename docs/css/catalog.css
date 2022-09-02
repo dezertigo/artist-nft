@@ -177,24 +177,28 @@ a {
   font-family: inherit;
 }
 
-input {
+input,
+textarea {
   color: inherit;
   font-family: inherit;
 }
 
-input::-moz-placeholder {
-  color: inherit;
-  font-size: 1em;
-  font-family: inherit;
-}
-
-input::placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   color: inherit;
   font-size: 1em;
   font-family: inherit;
 }
 
-input:focus {
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -203,6 +207,11 @@ button {
   border: none;
   background-color: transparent;
   padding: 0;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
 }
 
 @font-face {
@@ -471,15 +480,15 @@ body.lock {
   overflow: hidden;
 }
 
-body.lock:before {
-  display: none;
-}
-
 body {
   font-family: "ProximaNova";
   font-size: 1em;
   font-weight: 400;
   background-color: #1d1f21;
+}
+
+body:before {
+  display: none;
 }
 
 [class*=__container] {
@@ -549,6 +558,13 @@ h4 {
   line-height: 1.5227272727;
 }
 
+h5 {
+  font-weight: 700;
+  font-size: 1.125em;
+  line-height: 1.4444444444;
+  color: #fcffff;
+}
+
 h6 {
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   background-clip: text;
@@ -588,6 +604,19 @@ h6 {
 
 .header {
   position: relative;
+  position: relative;
+}
+
+.header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0);
+  background: #1d1f21;
+  z-index: 11;
 }
 
 .header__body {
@@ -599,7 +628,7 @@ h6 {
 }
 
 .header__logo {
-  z-index: 2;
+  z-index: 12;
   font-size: 35px;
   transition: all 0.3s ease;
   transform: translate(0, 3px);
@@ -610,7 +639,8 @@ h6 {
 }
 
 .header__action {
-  z-index: 2;
+  z-index: 10;
+  transition: right 1s ease;
 }
 
 .header__buttons .btn.big {
@@ -693,7 +723,7 @@ h6 {
 
 .header__premium-btn {
   position: relative;
-  z-index: 2;
+  z-index: 12;
   cursor: pointer;
   padding: 8.5px;
   margin-left: auto;
@@ -748,7 +778,7 @@ h6 {
 
 .burger {
   position: relative;
-  z-index: 2;
+  z-index: 12;
   min-height: 32px;
   width: 32px;
   margin-right: -0.25rem;
@@ -1351,6 +1381,11 @@ body.catalog .gallery__inner {
 }
 
 @media (min-width: 468px) {
+  h2 {
+    font-size: 1.75em;
+    line-height: 1.2857142857;
+  }
+
   .content-text {
     font-size: 1em;
     line-height: 1.5625;
@@ -1363,6 +1398,11 @@ body.catalog .gallery__inner {
 }
 
 @media (min-width: 500px) {
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125;
+  }
+
   .stroke-text {
     font-size: 3.375em;
     line-height: 1;
@@ -1380,6 +1420,11 @@ body.catalog .gallery__inner {
 }
 
 @media (min-width: 700px) {
+  h1 {
+    font-size: 2.8125em;
+    line-height: 1.1111111111;
+  }
+
   .stroke-text {
     font-size: 3.875em;
     line-height: 1;
@@ -1387,6 +1432,35 @@ body.catalog .gallery__inner {
 }
 
 @media (min-width: 760px) {
+  h2 {
+    font-size: 1.875em;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.1875em;
+    line-height: 1.4736842105;
+  }
+
+  h4 {
+    font-size: 1.5em;
+    line-height: 1.3958333333;
+  }
+
+  h5 {
+    font-size: 1.1875em;
+    line-height: 1.4736842105;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  .content-text-small {
+    font-size: 0.8125em;
+    line-height: 1.5384615385;
+  }
+
   .subtext {
     font-size: 1em;
     line-height: 1.75;
@@ -1462,6 +1536,16 @@ body.catalog .gallery__inner {
 }
 
 @media (min-width: 1000px) {
+  h1 {
+    font-size: 3.125em;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2.0625em;
+    line-height: 1.3333333333;
+  }
+
   .btn i.crown {
     font-size: 1.1875em;
     line-height: 1;
@@ -1481,14 +1565,19 @@ body.catalog .gallery__inner {
   }
 
   .header__action {
+    z-index: 12;
+  }
+
+  .header__action {
     flex: 1 1 auto;
+    z-index: 12;
   }
 
   .header__action-body {
     display: flex;
     justify-content: space-between;
     position: relative;
-    z-index: 2;
+    z-index: 12;
     -moz-column-gap: 25px;
     column-gap: 25px;
   }
@@ -1512,7 +1601,7 @@ body.catalog .gallery__inner {
   .menu {
     flex: 1 1 auto;
     position: relative;
-    z-index: 2;
+    z-index: 12;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1553,8 +1642,8 @@ body.catalog .gallery__inner {
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 4em;
-    line-height: 1.015625;
+    font-size: 3.75em;
+    line-height: 1;
   }
 
   h2 {
@@ -1569,6 +1658,12 @@ body.catalog .gallery__inner {
 
   h4 {
     font-size: 1.625em;
+    line-height: 1.2884615385;
+  }
+
+  h5 {
+    font-size: 1.25em;
+    line-height: 1.5;
   }
 
   h6 {
@@ -1682,6 +1777,11 @@ body.catalog .gallery__inner {
 }
 
 @media (min-width: 1400px) {
+  h1 {
+    font-size: 4em;
+    line-height: 1.015625;
+  }
+
   .stroke-text {
     font-size: 5em;
     line-height: 1;
@@ -1696,12 +1796,11 @@ body.catalog .gallery__inner {
 
 @media (max-width: 1049px) {
   .header__action {
-    transition: all 0.5s ease;
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
-    right: -100%;
+    right: -100vw;
   }
 
   .header__action-wrapper {
@@ -1743,15 +1842,17 @@ body.catalog .gallery__inner {
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     z-index: -1;
-    transition: all 0.3s ease 0.3s;
+    transition: opacity 0s ease 0s;
   }
 
   .header__action.active {
     right: 0;
+    transition: right 1s ease;
   }
 
   .header__action.active:before {
     opacity: 1;
+    transition: opacity 0.5s ease 0.8s;
   }
 
   .header__buttons {

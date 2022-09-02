@@ -1,4 +1,36 @@
 body.home {
+   main {
+      overflow: hidden;
+      position: relative;
+   }
+   // .blur {
+   //    &_1 {
+   //       top: 187px;
+   //       left: -14px;
+   //    }
+   //    &_2 {
+   //       top: 790px;
+   //       left: 15px;
+   //    }
+   //    &_3 {
+   //       top: 2123px;
+   //       left: 33px;
+   //       @media (min-width: 769px) {
+   //          &-1 {
+   //             top: percent(137, 3424);
+   //             left: -470px;
+   //          }
+   //          &-2 {
+   //             top: percent(755, 3424);
+   //             left: -40px;
+   //          }
+   //          &-3 {
+   //             top: percent(1942, 3424);
+   //             left: 340px;
+   //          }
+   //       }
+   //    }
+   // }
    // ===================================================================================
    // Hero ==== Hero ==== Hero ==== Hero === Hero ==== Hero ==== Hero ==== Hero ==== Hero
    // ===================================================================================
@@ -245,16 +277,45 @@ body.home {
    // ===================================================================================
    .biography {
       overflow: hidden;
+      position: relative;
+      &__decor {
+         :nth-child(1) {
+            display: none;
+            @media (min-width: 769px) {
+               display: block;
+               position: absolute;
+               pointer-events: none;
+               z-index: 1;
+               @include fl(62);
+               top: percent(249, 711.5);
+               left: percent(77, 1440);
+            }
+         }
+         :nth-child(2) {
+            display: none;
+            @media (min-width: 769px) {
+               display: block;
+               position: absolute;
+               pointer-events: none;
+               z-index: 1;
+               width: 25px;
+               height: 25px;
+               border: 1px solid rgba(252, 255, 255, 0.4);
+               border-radius: 50%;
+               top: percent(419, 711.5);
+               left: percent(102, 1440);
+            }
+         }
+      }
       &__container {
          padding-top: 62px;
+         padding-bottom: 31px;
          padding-right: percent(13, 375);
-
          @media (min-width: 769px) {
             padding-top: 103px;
+            padding-bottom: percent(81, 1440);
             display: flex;
             column-gap: 45px;
-         }
-         @media (min-width: 1200px) {
          }
       }
       &__graphic {
@@ -333,6 +394,93 @@ body.home {
       }
       &__subtext {
          color: #fcffff;
+      }
+   }
+   // ===================================================================================
+   // Premium === Premium ==== Premium ==== Premium ==== Premium === Premium ==== Premium
+   // ===================================================================================
+   .premium {
+      &__container {
+         @media (min-width: 1250px) {
+            padding-left: percent(150, 1440);
+            padding-right: percent(150, 1440);
+         }
+      }
+   }
+   // ===================================================================================
+   // Slider === Slider === Slider === Slider === Slider === Slider === Slider === Slider
+   // ===================================================================================
+   .slider {
+      @media (max-width: 768px) {
+         padding-top: 25px;
+         padding-left: percent(15, 375);
+      }
+      @media (min-width: 769px) {
+         padding-top: 11px;
+         margin-top: rem(-32);
+         .swiper-slide {
+            transition: all 0.3s ease;
+            padding-top: 32px;
+            &:hover {
+               transform: translate(0, -32px);
+            }
+         }
+      }
+   }
+   // ===================================================================================
+   // Form === Form === Form === Form === Form === Form === Form ==== Form ==== Form ====
+   // ===================================================================================
+   .form {
+      position: relative;
+      overflow: hidden;
+      .backgroung {
+         &__image {
+            &_1 {
+               display: block;
+               top: 21px;
+               left: percent(288, 375);
+
+               @media (min-width: 568px) {
+                  top: percent(327, 881.06);
+                  left: percent(-125, 1440);
+               }
+            }
+            &_2 {
+               display: block;
+               top: 6px;
+               left: percent(313, 375);
+
+               @media (min-width: 568px) {
+                  top: percent(227, 881.06);
+                  left: percent(165, 1440);
+               }
+            }
+            &_3 {
+               @media (min-width: 568px) {
+                  top: percent(635, 881.06);
+                  left: percent(237, 1440);
+               }
+            }
+            &_4 {
+               @media (min-width: 568px) {
+                  top: percent(192, 881.06);
+                  left: percent(1156, 1440);
+               }
+            }
+         }
+      }
+
+      .contact-form {
+         position: relative;
+         z-index: 1;
+         &__container {
+            padding-top: 39px;
+            padding-bottom: 34px;
+            @media (min-width: 769px) {
+               padding-top: percent(81, 1440);
+               padding-bottom: percent(91, 1440);
+            }
+         }
       }
    }
 }

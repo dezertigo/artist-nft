@@ -90,6 +90,8 @@
    &__image {
       position: absolute;
       transition: all 0.5s ease;
+      // animation: changeColor 5s ease 0s;
+      animation-iteration-count: infinite;
 
       img {
          position: absolute;
@@ -117,6 +119,17 @@
       }
       // &_main {
       // }
+      @keyframes changeColor {
+         0% {
+            filter: saturate(210%) hue-rotate(360deg);
+         }
+         50% {
+            filter: saturate(110%) hue-rotate(0deg);
+         }
+         100% {
+            filter: saturate(210%) hue-rotate(360deg);
+         }
+      }
    }
    &_regular {
       @media (min-width: 769px) {
@@ -182,8 +195,10 @@
          &__content {
             @media (min-width: 769px) {
                flex: 0 0 percent(554, 1140);
-               padding-left: percent(110, 1140);
                padding-right: 0;
+            }
+            @media (min-width: 1200px) {
+               padding-left: percent(110, 1140);
                padding-top: 90px;
                padding-bottom: 84px;
             }

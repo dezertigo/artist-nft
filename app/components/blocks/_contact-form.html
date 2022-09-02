@@ -1,0 +1,32 @@
+<section class="contact-form">
+	<div class="contact-form__container">
+		<div class="contact-form__top">
+			@@include('_hello-h2.html', {
+			"label" : "CONTACT ME",
+			"title" : "Want to apply your work or an question appeared?"
+			})
+		</div>
+		<form action="#" class="contact-form__body" name="form-1">
+			@@include('./_input.html', {
+			'label': 'Name',
+			'for': 'name',
+			'type': 'text',
+			'placeholder': 'Your name',
+			})
+			@@include('./_input.html', {
+			'label': 'Mail',
+			'for': 'mail',
+			'type': 'text',
+			'placeholder': 'Your mail',
+			})
+			@@include('./_textarea.html', {
+			'label': 'Your question',
+			'for': 'question',
+			'placeholder': 'Your question',
+			})
+			<button class="btn grad-bg" type="submit" form="form-1" value="Submit">Send
+				message</button>
+			@@include('./_confirm.html')
+		</form>
+	</div>
+</section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 @@include("./components/structure/_head.html", {
 "lang":"en",
-"css": "./css/home.min.css",
+"css": "./css/components.min.css",
 "title": "Components",
 "swiper": "y",
 })
@@ -11,6 +11,49 @@
 	<div class="wrapper">
 		@@include("./components/structure/_header.html")
 		<main>
+			<div class="parent-block">
+				<!-- Backround diamonds & cube -->
+				@@include('./components/blocks/_background.html')
+
+				<!-- Contact form -->
+				@@include('./components/blocks/_contact-form.html')
+			</div>
+
+			<!-- Подключение инпутов -->
+			<div class="example-form">
+				@@include('./components/blocks/_input.html', {
+				'label': 'Name',
+				'for': 'name',
+				'type': 'text',
+				'placeholder': 'Your name',
+				})
+				@@include('./components/blocks/_input.html', {
+				'label': 'Mail',
+				'for': 'mail',
+				'type': 'text',
+				'placeholder': 'Your mail',
+				})
+				<!-- textarea -->
+				@@include('./components/blocks/_textarea.html', {
+				'label': 'Your question',
+				'for': 'question',
+				'placeholder': 'Your question',
+				})
+				<!-- Подключение инпутов в 2 колонки -->
+				@@include('./components/blocks/_input.html', {
+				'label': 'Date',
+				'for': 'date',
+				'type': 'text',
+				'placeholder': '01/01',
+				'label2': 'CVV',
+				'for2': 'cvv',
+				'type2': 'text',
+				'placeholder2': '000',
+				})
+			</div>
+			<!-- Confirm input -->
+			@@include('./components/blocks/_confirm.html')
+
 			<!-- Подключение кнопок -->
 			<div class="btns-just-test">
 				<!-- С иконкой короны -->
@@ -63,12 +106,26 @@
 			@@loop("./components/blocks/_hello-h2.html", "./json/main/hello-h2.json")
 
 			<!-- ! Double-block (нужно указать в стилях только отзывчивую ширину блоку) -->
-			<div style="max-width: 561px;" class="div">
+			<div style="max-width: 250px;" class="div">
 				@@include("./components/blocks/_double-block.html", {
 				"modify" : "square",
 				"img": "05",
 				"imgAlt": "product image",
 				})
+			</div>
+
+			<!-- tabs Табы (нужно указать в стилях только отзывчивую ширину блоку) -->
+			<div class="tabs-block" style="max-width: 510px;">
+				@@include('./components/blocks/_tabs.html', {
+					'btn1': 'Credit card',
+					'btn2': 'PayPal',
+					'btn3': 'Crypto',
+				})
+			</div>
+
+			<!-- Подключение премиум карточки (нужно указать в стилях только отзывчивую ширину блоку) --> 
+			<div class="premium-card__block" style="max-width: 1110px; display: flex;">
+			@@loop('./components/blocks/_premium-card.html', './json/pricing/premium-card.json')
 			</div>
 
 			<!-- Подключение баннера -->

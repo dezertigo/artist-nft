@@ -1,8 +1,5 @@
 body.lock {
    overflow: hidden;
-   &:before {
-      display: none;
-   }
 }
 
 body {
@@ -10,6 +7,9 @@ body {
    @include fz(16);
    font-weight: 400;
    background-color: $darkColor;
+   &:before {
+      display: none;
+   }
 }
 [class*="__container"] {
    padding-left: percent(15, 375);

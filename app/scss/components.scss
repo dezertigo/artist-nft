@@ -23,7 +23,54 @@
 @import "./components/blocks/hello-h2";
 @import "./components/blocks/double-block";
 @import "./components/blocks/banner";
+@import "./components/blocks/nft-card-item";
+@import "./components/blocks/paint-block";
+@import "./components/blocks/inputs";
+@import "./components/blocks/confirm";
+@import "./components/blocks/contact-form";
+@import "./components/blocks/background";
+@import "./components/blocks/tabs";
+@import "./components/blocks/tabs__nav";
+@import "./components/blocks/premium-card";
 
 //Подключение стилей конкретной страницы
-// ! Переменовать текущий файл и файл подлючающий стили страницы ниже(renameMe) в нужное имя (имеется ввиду файл который нужно создать в папке app/scss/pages), после чего удалить эту строку
-@import "./pages/components";
+body.components {
+   .parent-block {
+      position: relative;
+      overflow: hidden;
+      .backgroung {
+         &__image {
+            &_1 {
+               @media (min-width: 568px) {
+                  top: percent(327, 709.06);
+                  left: percent(-125, 1440);
+               }
+            }
+            &_2 {
+               @media (min-width: 568px) {
+                  top: percent(227, 709.06);
+                  left: percent(165, 1440);
+               }
+            }
+            &_3 {
+               @media (min-width: 568px) {
+                  top: percent(610, 709.06);
+                  left: percent(237, 1440);
+               }
+            }
+            &_4 {
+               @media (min-width: 568px) {
+                  top: percent(192, 709.06);
+                  left: percent(1156, 1440);
+               }
+            }
+         }
+      }
+   }
+   .example-form {
+      max-width: 410px;
+      margin: 0 auto;
+      display: grid;
+      row-gap: 15px;
+   }
+}

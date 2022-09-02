@@ -1,0 +1,64 @@
+.backgroung {
+   &__image {
+      position: absolute;
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      &_1 {
+         
+         width: percent(94.39, 375);
+         padding-bottom: percent(94.39, 375);
+         img {
+            filter: brightness(0.7) blur(4px) hue-rotate(158deg);
+         }
+      }
+      &_2 {
+         width: percent(36, 375);
+         padding-bottom: percent(36, 375);
+         img {
+            filter: brightness(0.9) hue-rotate(202deg);
+         }
+      }
+      &_3,
+      &_4 {
+         display: none;
+      }
+   }
+   @media (min-width: 568px) {
+      &__image {
+         &_1 {
+            width: percent(340, 1440);
+            padding-bottom: percent(340, 1440);
+            transform: rotate(75deg);
+         }
+         &_2 {
+            width: percent(169.79, 1440);
+            padding-bottom: percent(169.79, 1440);
+            transform: rotate(-3.92deg);
+         }
+         &_3 {
+            display: block;
+            width: percent(119.4, 1440);
+            padding-bottom: percent(119.4, 1440);
+            transform: rotate(59.59deg);
+            img {
+               filter: brightness(0.7) hue-rotate(158deg);
+            }
+         }
+         &_4 {
+            display: block;
+            width: percent(458, 1440);
+            padding-bottom: percent(458, 1440);
+            transform: rotate(-20.2deg);
+            img {
+               filter: blur(4px) hue-rotate(194deg);
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,52 @@
+[
+	{
+		"swiper": "true",
+		"modifyBg": "green",
+		"label": "nft",
+		"title": "Title of picture or NFT",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+		"modifyClass": "modify this class",
+		"price": "$100 322",
+		"buttonText": "Buy now"
+	},
+	{
+		"swiper": "true",
+		"modifyBg": "blue",
+		"label": "nft",
+		"title": "Title of picture or NFT",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+		"modifyClass": "modify this class",
+		"price": "$100 322",
+		"buttonText": "Buy now"
+	},
+	{
+		"swiper": "true",
+		"modifyBg": "purple",
+		"label": "nft",
+		"title": "Title of picture or NFT",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+		"modifyClass": "modify this class",
+		"price": "$100 322",
+		"buttonText": "Buy now"
+	},
+	{
+		"swiper": "true",
+		"modifyBg": "green",
+		"label": "nft",
+		"title": "Title of picture or NFT",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+		"modifyClass": "modify this class",
+		"price": "$100 322",
+		"buttonText": "Buy now"
+	},
+	{
+		"swiper": "true",
+		"modifyBg": "purple",
+		"label": "nft",
+		"title": "Title of picture or NFT",
+		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor",
+		"modifyClass": "modify this class",
+		"price": "$100 322",
+		"buttonText": "Buy now"
+	}
+]

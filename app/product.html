@@ -10,33 +10,109 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="product">
-				<div class="product__decor">
-					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'CUTOM BY YOUR OWN',
-					})
-					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'UNIQUE CLOTHES',
-					})
-					<i class="star-decor"></i>
-					<i class="star-decor"></i>
-					<div class="product__circle"></div>
-				</div>
-				<div class="product__container">
-					<div class="product__inner">
-						<div class="product__content">
-							@@loop('./components/blocks/_hello-h1.html', './json/product/hello-h1.json')
-						</div>
-						<div class="product__graphic">
-							@@include("./components/blocks/_double-block.html", {
-								"modify" : "square",
-								"img": "05",
-								"imgAlt": "product image",
-								})
+				<div class="product__hero">
+					<div class="product__decor">
+						@@include('./components/blocks/_stroke-text.html', {
+							'text': 'CUTOM BY YOUR OWN',
+						})
+						@@include('./components/blocks/_stroke-text.html', {
+							'text': 'UNIQUE CLOTHES',
+						})
+						<i class="star-decor"></i>
+						<i class="star-decor"></i>
+						<div class="product__circle"></div>
+					</div>
+					<div class="product__container">
+						<div class="product__inner">
+							<div class="product__content">
+								@@loop('./components/blocks/_hello-h1.html', './json/product/hello-h1.json')
+							</div>
+							<div class="product__graphic">
+								@@include("./components/blocks/_double-block.html", {
+									"modify" : "square",
+									"img": "05",
+									"imgAlt": "product image",
+									})
+							</div>
 						</div>
 					</div>
+				</div>
+				<div class="product__container">
 					<div class="product__gallery">
 						@@loop('./components/blocks/_catalog__card-item.html', './json/product/card-item.json')
 					</div>
+				</div>
+				<div class="product__form form">
+					@@include('./components/blocks/_background.html')
+					<section class="contact-form">
+						<div class="contact-form__container">
+							<div class="contact-form__top">
+								@@include('./components/blocks/_hello-h2.html', {
+								"label" : "CUSTOM BY YOUR OWN",
+								"title" : "Want to get your own?"
+								})
+							</div>
+							<form action="#" class="contact-form__body" name="form-1">
+								<label class="select">
+									<span>Type of item</span>
+									<select>
+										<option value="1">T-SHIRT</option>
+										<option value="2">SWEATSHIRT</option>
+									</select>
+								</label>
+								<label class="select">
+									<span>Size</span>
+									<select>
+										<option value="1">XL (99-99-99)</option>
+										<option value="2">L (80-80-80)</option>
+									</select>
+								</label>
+								<div class="radio">
+									<span>Color</span>
+									<div class="radio__body">
+										<input class="radio__input" type="radio" name="color" id="radio_1">
+										<label class="radio__label" for="radio_1"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_2">
+										<label class="radio__label" for="radio_2"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_3">
+										<label class="radio__label" for="radio_3"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_4">
+										<label class="radio__label" for="radio_4"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_5">
+										<label class="radio__label" for="radio_5"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_6">
+										<label class="radio__label" for="radio_6"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_7">
+										<label class="radio__label" for="radio_7"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_8">
+										<label class="radio__label" for="radio_8"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_9">
+										<label class="radio__label" for="radio_9"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_10">
+										<label class="radio__label" for="radio_10"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_11">
+										<label class="radio__label" for="radio_11"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_12">
+										<label class="radio__label" for="radio_12"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_13">
+										<label class="radio__label" for="radio_13"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_14">
+										<label class="radio__label" for="radio_14"></label>
+										<input class="radio__input" type="radio" name="color" id="radio_15">
+										<label class="radio__label" for="radio_15"></label>
+									</div>
+								</div>
+								@@include('./components/blocks/_textarea.html', {
+								'label': 'Comment',
+								'for': 'question',
+								'placeholder': 'Comment',
+								})
+								<button class="btn grad-bg" type="submit" form="form-1" value="Submit">Send
+									message</button>
+								@@include('./components/blocks/_confirm.html')
+							</form>
+						</div>
+					</section>
 				</div>
 			</section>
 		</main>

@@ -1,0 +1,23 @@
+@@if (context.swiper) {
+<div class="swiper-slide">
+	}
+	<div class="nft-card-item">
+		<div class="nft-card-item__body">
+			@@include('./_paint-block.html', {
+			'modify': '@@modifyBg'
+			})
+			<h6 class="nft-card-item__label">@@label</h6>
+			<h5 class="nft-card-item__title">@@title</h5>
+			<p class="nft-card-item__text">@@text</p>
+			<div class="nft-card-item__row @@if (context.modifyClass) {nft-card-item__row_modified}">
+				<h4 class="nft-card-item__price">@@price</h4>
+				@@include("../base/_btn.html", {
+				"text": "@@buttonText",
+				"modify": "small grad-bg",
+				})
+			</div>
+		</div>
+	</div>
+	@@if (context.swiper) {
+</div>
+}
