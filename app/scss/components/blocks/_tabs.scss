@@ -1,0 +1,165 @@
+.tabs {
+    // &__nav {
+    //     padding: 7px 8px;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     background: #212426;
+    //     border-radius: 12px;
+    //     color: #fff;
+    //     margin-bottom: 20px;
+    //     :nth-of-type(1) {
+    //         transform: translateX(-1px);
+    //     }
+    //     :nth-of-type(2) {
+    //         transform: translateX(2px);
+    //         @media (min-width:1200px) {
+    //             transform: translateX(-2px);
+    //         }
+    //     }
+    //     :nth-of-type(3) {
+    //         transform: translateX(3px);
+    //         @media (min-width:1200px) {
+    //             transform: translateX(-1px);
+    //         }
+    //     }
+    //     @media (min-width: 1200px) {
+    //         max-width: percent(416, 540);
+    //         width: 100%;
+    //         transform: translate(-5px, -4px);
+    //         justify-content: flex-start;
+    //     }
+    // }
+    // &__nav-btn {
+    //     @include fl(14, 20);
+    //     border-radius: 12px;
+    //     max-width: 111px;
+    //     height: 48px;
+    //     width: 100%;
+    //     background: transparent;
+    //     &.active {
+    //         background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+    //         color: $darkColor;
+    //         font-weight: 700;
+    //         @media (min-width:1200px) {
+    //             @include fl(18, 24)
+    //         }
+    //     }
+    //     @media (min-width: 1200px) {
+    //         max-width: 129px;
+    //         height: 56px;
+    //         @include fl(16, 28)
+    //     }
+    // }
+    &__content {
+        :nth-of-type(1) {
+            .input-columns {
+                transform: translateY(-4px);
+                :nth-of-type(2) {
+                    @media (min-width: 1200px) {
+                        transform: translate(-3px, 4px);
+                    }
+                }
+            }
+            .confirm {
+                transform: translate(-1px, 1px);
+            }
+        }
+        :nth-of-type(2),
+        :nth-of-type(3) {
+            .tabs__text {
+                transform: translateX(3px);
+                @media (min-width:1200px) {
+                    transform: translate(0px, -2px);
+                    max-width: percent(396, 450);
+                }
+            }
+            .tabs__copy {
+                @media (min-width: 1200px) {
+                    transform: translate(-3px,-2px);
+                }
+            }
+            .input {
+                transform: translateY(4px);
+                @media (min-width: 1200px) {
+                    transform: translate(-1px,6px);
+                }
+            }
+            .btn {
+                transform: translate(1px,4px);
+                margin-bottom: 20px;
+                @media (min-width: 1200px) {
+                    transform: translateY(11px);
+                }
+            }
+            .confirm {
+                @media (min-width: 1200px) {
+                    transform: translate(-1px, 8px);
+                }
+            }
+        }
+        @media (min-width: 1200px) {
+            max-width: percent(416, 540);
+            width: 100%;
+            transform: translate(1px, -2px);
+        }
+    }
+    &__item {
+        display: none;
+        > * {
+            margin-bottom: 16px;
+        }
+        &.active {
+            display: block;
+        }
+    }
+    &__form {
+        >* {
+            margin-bottom: 16px;
+        }
+    }
+    .tabs__confirm {
+        @media (min-width:1200px) {
+            max-width: 408px;
+        }
+    }
+    &__confirm {
+        max-width: 100%;
+        height: 64px;
+        font-size: 18px;
+        line-height: 26px;
+        @media (min-width:1200px) {
+            max-width: 408px;
+        }
+        a {
+            @media (min-width: 1200px) {
+                transform: translateX(-1px);
+                letter-spacing: -.06em;
+            }
+        }
+    }
+    &__text {
+        color: #C8D2DC;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 18px;
+    }
+    &__copy {
+        padding: 18px 19px 18px 29px;
+        background: #212426;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #FCFFFF;
+        p {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            transform: translateX(1px);
+        }
+        i {
+            font-size: 18px;
+            transform: translateX(-2px);
+        }
+    }
+}

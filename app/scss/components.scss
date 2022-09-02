@@ -29,6 +29,9 @@
 @import "./components/blocks/confirm";
 @import "./components/blocks/contact-form";
 @import "./components/blocks/background";
+@import "./components/blocks/tabs";
+@import "./components/blocks/tabs__nav";
+@import "./components/blocks/premium-card";
 
 //Подключение стилей конкретной страницы
 body.components {

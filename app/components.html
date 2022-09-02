@@ -114,6 +114,20 @@
 				})
 			</div>
 
+			<!-- tabs Табы (нужно указать в стилях только отзывчивую ширину блоку) -->
+			<div class="tabs-block" style="max-width: 510px;">
+				@@include('./components/blocks/_tabs.html', {
+					'btn1': 'Credit card',
+					'btn2': 'PayPal',
+					'btn3': 'Crypto',
+				})
+			</div>
+
+			<!-- Подключение премиум карточки (нужно указать в стилях только отзывчивую ширину блоку) --> 
+			<div class="premium-card__block" style="max-width: 1110px; display: flex;">
+			@@loop('./components/blocks/_premium-card.html', './json/pricing/premium-card.json')
+			</div>
+
 			<!-- Подключение баннера -->
 			@@loop('./components/blocks/_banner.html', './json/auction/banner.json')
 
