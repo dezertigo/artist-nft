@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/admin-owner.min.css',
+'title': 'Profile',
+'swiper': 'y'
+})
+
+<body class="admin admin-owner">
+	<div class="wrapper">
+		@@include('./components/structure/_admin-header.html')
+		<main>
+			@@include('./components/structure/_admin-sidebar.html', {
+			'm': 'Messages',
+			'o': 'Orders',
+			'n': 'NFT Orders',
+			'w': 'Workers',
+			})
+			<section class="messages ">
+				<div class="messages__cntr">
+					<div class="messages__preview">
+						@@include('./components/admin/_chat-list-preview.html')
+						@@include('./components/admin/_chat-list-items.html')
+					</div>
+					<div class="messages__chat">
+						@@include('./components/admin/_chat.html')
+					</div>
+				</div>
+			</section>
+			<section class="orders active">
+				@@include('./components/admin/_orders.html')
+			</section>
+			<section class="nft">nft</section>
+			<section class="workers">workers</section>
+			<section class="statistics">statistics</section>
+		</main>
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'y'
+	})
+</body>
+
+</html>

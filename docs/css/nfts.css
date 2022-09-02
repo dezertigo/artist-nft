@@ -492,6 +492,10 @@ body:before {
   display: none;
 }
 
+body.admin {
+  background-color: transparent;
+}
+
 [class*=__container] {
   padding-left: 4%;
   padding-right: 4%;

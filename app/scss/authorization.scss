@@ -1,0 +1,15 @@
+// Подлкючение базовых стилей
+@import "./default/variables";
+@import "./default/null";
+@import "./default/mixins";
+@import "./default/function";
+@import "./default/fonts";
+@import "./default/global";
+@import "./default/text";
+
+// Подключение стилей компонентов
+@import "./components/base/btn";
+@import "./components/blocks/inputs";
+
+//Подключение стилей конкретной страницы
+@import "./pages/authorization";

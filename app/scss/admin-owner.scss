@@ -1,0 +1,20 @@
+// Подлкючение базовых стилей
+@import "./default/variables";
+@import "./default/null";
+@import "./default/mixins";
+@import "./default/function";
+@import "./default/fonts";
+@import "./default/global";
+@import "./default/text";
+
+// Компоненты стилей
+@import "./components/structure/admin-header";
+@import "./components/structure/admin-sidebar";
+@import "./components/admin/chat-list-preview";
+@import "./components/admin/chat-list-item";
+@import "./components/admin/chat";
+@import './components/admin/orders';
+
+
+//Подключение стилей конкретной страницы
+@import "./pages/admin-owner";

@@ -68,16 +68,15 @@ window.addEventListener("load", () => {
    }
 
    // ! Header
-   body.addEventListener("click", relocate);
-
-   function relocate(e) {
-      // if (e.target.closest("a").innerHTML == "Authorization") {
-      //    document.location.href = "authorization.html";
-      // }
+   //Relocate to authorization.html
+   if (qs(".header")) {
+      qs(".btn.authorization").addEventListener("click", () => {
+         document.location.href = "authorization.html";
+      });
    }
 
    // ! Spoiler.html
-   if (qa(".spoiler")) {
+   if (qs(".spoiler")) {
       // ? Если нужно открыть только первый спойлер на странице. Можно прогнать циклом для остальных
       if (qs(".spoiler").classList.contains("opened")) {
          let spoilerWrapper = qa(".spoiler__wrapper")[0];
@@ -203,9 +202,202 @@ window.addEventListener("load", () => {
             qs("video").setAttribute("controls", "true");
             qs("video").play();
             qs(".process__poster").style.opacity = "0";
-         } else if (e.target.closest(".process .btn")) {
+         } else if (e.target.closest(".process .btn") || e.target.closest("body.product-1 .hero__line .btn")) {
             document.location.href = "product-1-unlocked.html";
          }
       }
+   }
+
+   // ! forum.html
+   if (qs("body.forum")) {
+      // swiperCards
+      const swiper = new Swiper(".swiper", {
+         spaceBetween: 14,
+         slidesPerView: 1.23,
+         slideToClickedSlide: true,
+         loop: true,
+         breakpoints: {
+            460: {
+               slidesPerView: 1.4,
+            },
+            560: {
+               slidesPerView: 1.7,
+            },
+            660: {
+               slidesPerView: 1.9,
+            },
+            769: {
+               slidesPerView: 2.2,
+               spaceBetween: 20,
+            },
+            900: {
+               slidesPerView: 2.6,
+            },
+            1000: {
+               slidesPerView: 2.8,
+            },
+            1150: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+            },
+         },
+      });
+
+      //Move comment title
+      window.addEventListener("resize", moveTitle);
+
+      moveTitle();
+      function moveTitle(e) {
+         const firstTop = qs(".comments__items > :nth-child(1) .forum-comment__top");
+         const secondTop = qs(".comments__items > :nth-child(2) .forum-comment__top");
+         const thirdTop = qs(".comments__items > :nth-child(3) .forum-comment__top");
+         const firstLine = qs(".comments__items > :nth-child(1) .forum-comment__text-line-left");
+         const secondLine = qs(".comments__items > :nth-child(2) .forum-comment__text-line-left");
+         const thirdLine = qs(".comments__items > :nth-child(3) .forum-comment__text-line-left");
+         const firstTitle = qs(".comments__items > :nth-child(1) .forum-comment__title");
+         const secondTitle = qs(".comments__items > :nth-child(2) .forum-comment__title");
+         const thirdTitle = qs(".comments__items > :nth-child(3) .forum-comment__title");
+         if (window.innerWidth <= 768) {
+            firstTop.append(firstTitle);
+            secondTop.append(secondTitle);
+            thirdTop.append(thirdTitle);
+         } else {
+            firstLine.append(firstTitle);
+            secondLine.append(secondTitle);
+            thirdLine.append(thirdTitle);
+         }
+      }
+   }
+
+   // ! forum.html
+   if (qs("body.authorization")) {
+      body.addEventListener("click", changeLayout);
+
+      function changeLayout(e) {
+         if (e.target.getAttribute("data-location") == "Log in") {
+            body.className = "authorization log-in";
+            qa(".hero__button")[0].classList.add("active");
+            qa(".hero__button")[1].classList.remove("active");
+            qa(".hero__link")[0].classList.add("active");
+            qa(".hero__link")[1].classList.remove("active");
+         } else if (e.target.getAttribute("data-location") == "Sign up") {
+            body.className = "authorization sign-up";
+            qa(".hero__button")[1].classList.add("active");
+            qa(".hero__button")[0].classList.remove("active");
+            qa(".hero__link")[1].classList.add("active");
+            qa(".hero__link")[0].classList.remove("active");
+         } else if (e.target.closest(".hero__radio")) {
+            qa(".hero__radio").forEach((el) => {
+               el.classList.remove("active");
+            });
+            e.target.closest(".hero__radio").classList.add("active");
+         } else if (e.target.closest(".hero__btn")) {
+            document.location.href = qs(".hero__radio.active").getAttribute("data-url");
+         }
+      }
+   }
+
+   // ! admin.html
+   if (qs("body.admin")) {
+      // ! Burger
+      const adminBurger = qs(".admin-burger"),
+         adminHeader = qs(".admin-header"),
+         asideAction = document.querySelector(".aside__action");
+      if (adminBurger) {
+         body.addEventListener("click", burgerToggle);
+         function burgerToggle(e) {
+            if (e.target.closest(".admin-burger")) {
+               if (adminBurger.classList.contains("active")) {
+                  closeBurger();
+               } else {
+                  adminBurger.classList.add("active");
+                  adminHeader.classList.add("active");
+                  asideAction.classList.add("active");
+                  body.classList.add("lock");
+                  actualizeHeight();
+                  window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
+               }
+            } else if (!e.target.closest(".admin-burger") && !e.target.closest(".aside__action-wrapper")) {
+               adminBurger.classList.remove("active");
+               adminHeader.classList.remove("active");
+               asideAction.classList.remove("active");
+               body.classList.remove("lock");
+               closeBurger();
+            }
+         }
+         function closeBurger() {
+            //Обязательная дополнительная проверка
+            if (adminBurger.classList.contains("active")) {
+               adminBurger.classList.remove("active");
+               adminHeader.classList.remove("active");
+               asideAction.classList.remove("active");
+               body.classList.remove("lock");
+               setTimeout(() => {
+                  qs(".aside__action-wrapper").style.height = null;
+               }, 1000);
+               window.removeEventListener("scroll", closeBurger);
+            }
+         }
+
+         function actualizeHeight(e) {
+            const asideActionWrapper = qs(".aside__action-wrapper");
+            const asideActionBody = qs(".aside__action-body");
+            const wrapperHeight = asideActionWrapper.scrollHeight;
+            const bodyHeight = asideActionBody.scrollHeight;
+            const total = wrapperHeight + bodyHeight;
+            if (asideAction.classList.contains("active")) {
+               if (total >= window.innerHeight) {
+                  asideActionWrapper.style.height = "100%";
+               } else {
+                  asideActionWrapper.style.height = wrapperHeight + bodyHeight + "px";
+               }
+            }
+         }
+      }
+
+      // Клик по табу в сайдбаре
+      body.addEventListener("click", changeLayout);
+
+      function changeLayout(e) {
+         // Клик по табу в сайдбаре
+         if (e.target.closest(".menu__item")) {
+            qa(".menu__item").forEach((el) => {
+               el.classList.remove("active");
+            });
+            e.target.closest(".menu__item").classList.add("active");
+            qa("section").forEach((el) => {
+               el.classList.remove("active");
+               if (el.classList.contains(e.target.closest(".aside__menu li").getAttribute("data-location"))) {
+                  el.classList.add("active");
+               }
+            });
+         } else if (e.target.closest(".chat-list-items__item")) {
+            qs(".messages__chat").classList.add("visible");
+            window.scrollTo(0, 64);
+         } else if (e.target.closest(".chat__title svg")) {
+            qs(".messages__chat").classList.remove("visible");
+         }
+      }
+
+      // swiperBiography
+      const swiper = new Swiper(".swiper", {
+         spaceBetween: 28,
+         slidesPerView: 3.5,
+         slideToClickedSlide: true,
+         breakpoints: {
+            375: {
+               slidesPerView: 4.4,
+            },
+            460: {
+               slidesPerView: 5,
+            },
+            560: {
+               slidesPerView: 6,
+            },
+            660: {
+               slidesPerView: 7,
+            },
+         },
+      });
    }
 });

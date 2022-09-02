@@ -1,0 +1,15 @@
+<div class="chat-list-preview">
+	<h3 class="chat-list-preview__title">My chat list </h3>
+	<div class="chat-list-preview__body">
+		<div class="chat-list-preview__slider swiper">
+			<div class="swiper-wrapper">
+				@@loop('./_chat-list-preview-item.html',
+				'./json/admin/chat-list-preview.json')
+			</div>
+		</div>
+		<div class="chat-list-preview__search">
+			<i class="search"></i>
+			<input type="text" placeholder="Search">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+<aside class="aside">
+	<div class="aside__cnt">
+		<div class="aside__action">
+			<div class="aside__action-wrapper">
+				<div class="aside__action-body">
+					<ul class="aside__menu menu">
+						@@if(context.m) {
+						<li data-location="messages" class="menu__item menu__item_messages active">
+							<i class="messages"></i>
+							<p>@@m</p>
+						</li>
+						}
+						@@if(context.o) {
+						<li data-location="orders" class="menu__item menu__item_orders">
+							<i class="orders"></i>
+							<p>@@o</p>
+						</li>
+						}
+						@@if(context.n) {
+						<li data-location="nft" class="menu__item menu__item_nft">
+							<i class="nft"></i>
+							<p>@@n</p>
+						</li>
+						}
+						@@if(context.w) {
+						<li data-location="workers" class="menu__item menu__item_workers">
+							<i class="workers"></i>
+							<p>@@w</p>
+						</li>
+						}
+						@@if(context.s) {
+						<li data-location="statistics" class="menu__item menu__item_statistics">
+							<i class="star"></i>
+							<p>@@s</p>
+						</li>
+						}
+					</ul>
+					<div class="aside__bottom">
+						<div class="aside__logout">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M7 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H7"
+									stroke="#C8D2DC" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path d="M14 15L19 10L14 5" stroke="#C8D2DC" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M19 10H7" stroke="#C8D2DC" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<p>Log out</p>
+						</div>
+						<p class="aside__copy">All rights reserved © 2022</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</aside>
