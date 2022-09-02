@@ -1522,6 +1522,10 @@ body.admin .messages__preview {
     line-height: 1.0714285714;
     padding: 25px;
     justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
   }
 
   .orders__heading-type {

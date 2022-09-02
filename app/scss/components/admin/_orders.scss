@@ -1,4 +1,4 @@
-div.orders {
+.orders:not(i.oreders) {
    position: absolute;
    top: 0;
    left: 0;
@@ -8,8 +8,6 @@ div.orders {
    &:before {
       display: none;
    }
-}
-.orders {
    &__cntr {
       overflow: hidden;
       @media (max-width: 768px) {
@@ -57,6 +55,9 @@ div.orders {
          @include fl(14, 15);
          padding: 25px;
          justify-content: space-between;
+         position: sticky;
+         top: 0;
+         left: 0;
       }
       @media (min-width: 769px) {
          // .orders__heading-type
