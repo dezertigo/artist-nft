@@ -1185,7 +1185,7 @@ body.admin .menu__item_messages p {
   transform: translate(0, 1px);
 }
 
-.orders {
+div.orders {
   position: absolute;
   top: 0;
   left: 0;
@@ -1193,11 +1193,11 @@ body.admin .menu__item_messages p {
   overflow: auto;
 }
 
-.orders:before {
+div.orders:before {
   display: none;
 }
 
-.orders__title {
+div.orders__title {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
