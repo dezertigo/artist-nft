@@ -1258,21 +1258,6 @@ div.orders:before {
   height: 40px;
 }
 
-body.admin-owner .orders__heading-status,
-body.admin-worker .orders__heading-status {
-  display: none;
-}
-
-body.admin-owner .orders__items,
-body.admin-worker .orders__items {
-  row-gap: 8px;
-}
-
-body.admin-owner .orders__status,
-body.admin-worker .orders__status {
-  display: none;
-}
-
 body.admin {
   background-color: #1d1f21;
 }
@@ -1727,6 +1712,96 @@ body.admin .messages__preview {
   .orders__action {
     min-width: 103px;
     cursor: pointer;
+  }
+
+  body.admin-owner .orders__cntr,
+  body.admin-worker .orders__cntr {
+    padding-left: 14px;
+    padding-right: 31px;
+  }
+
+  body.admin-owner .orders__heading,
+  body.admin-worker .orders__heading {
+    padding-left: 16px;
+  }
+
+  body.admin-owner .orders__heading-color,
+  body.admin-worker .orders__heading-color {
+    transform: translate(5px, 0);
+  }
+
+  body.admin-owner .orders__heading-email,
+  body.admin-worker .orders__heading-email {
+    transform: translate(2px, 0);
+  }
+
+  body.admin-owner .orders__heading-status,
+  body.admin-worker .orders__heading-status {
+    display: none;
+  }
+
+  body.admin-owner .orders__items,
+  body.admin-worker .orders__items {
+    row-gap: 9px;
+  }
+
+  body.admin-owner .orders__item,
+  body.admin-worker .orders__item {
+    padding-top: 22px;
+    padding-left: 24px;
+    padding-right: 32px;
+  }
+
+  body.admin-owner .orders__type,
+  body.admin-worker .orders__type {
+    padding-right: 32px;
+    margin-right: 0;
+  }
+
+  body.admin-owner .orders__color,
+  body.admin-worker .orders__color {
+    padding-right: 40px;
+    margin-right: 0;
+  }
+
+  body.admin-owner .orders__email,
+  body.admin-worker .orders__email {
+    padding-right: 28px;
+    margin-right: 0;
+  }
+
+  body.admin-owner .orders__size,
+  body.admin-worker .orders__size {
+    padding-right: 29px;
+    margin-right: 0;
+  }
+
+  body.admin-owner .orders__comment,
+  body.admin-worker .orders__comment {
+    padding-right: 20px;
+    margin-right: 0;
+  }
+
+  body.admin-owner .orders__address,
+  body.admin-worker .orders__address {
+    padding-right: 13px;
+    transform: translate(-4px, 0);
+    margin-right: 0;
+  }
+
+  body.admin-owner .orders__address p:last-of-type,
+  body.admin-worker .orders__address p:last-of-type {
+    max-width: 143px;
+  }
+
+  body.admin-owner .orders__status,
+  body.admin-worker .orders__status {
+    display: none;
+  }
+
+  body.admin-owner .orders__action,
+  body.admin-worker .orders__action {
+    min-width: 116px;
   }
 
   body.admin main {
@@ -2313,9 +2388,9 @@ body.admin .messages__preview {
     cursor: pointer;
   }
 
-  body.admin-owner .orders__size,
-  body.admin-worker .orders__size {
-    margin-bottom: 14px;
+  body.admin-owner .orders__status,
+  body.admin-worker .orders__status {
+    display: none;
   }
 
   body.admin .messages__chat {

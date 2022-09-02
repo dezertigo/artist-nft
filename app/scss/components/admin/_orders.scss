@@ -537,19 +537,72 @@ div.orders {
 }
 body.admin-owner,
 body.admin-worker {
-   .orders {
-      &__heading-status {
-         display: none;
-      }
-      &__items {
-         row-gap: 8px;
-      }
-      &__size {
-         @media (max-width: 768px) {
-            margin-bottom: 14px;
+   @media (min-width: 769px) {
+      .orders {
+         &__cntr {
+            padding-left: 14px;
+            padding-right: 31px;
+         }
+         &__heading {
+            padding-left: 16px;
+            &-color {
+               transform: translate(5px, 0);
+            }
+            &-email {
+               transform: translate(2px, 0);
+            }
+         }
+         &__heading-status {
+            display: none;
+         }
+         &__items {
+            row-gap: 9px;
+         }
+         &__item {
+            padding-top: 22px;
+            padding-left: 24px;
+            padding-right: 32px;
+         }
+         &__type {
+            padding-right: 32px;
+            margin-right: 0;
+         }
+         &__color {
+            padding-right: 40px;
+            margin-right: 0;
+         }
+         &__email {
+            padding-right: 28px;
+            margin-right: 0;
+         }
+         &__size {
+            padding-right: 29px;
+            margin-right: 0;
+         }
+         &__comment {
+            padding-right: 20px;
+            margin-right: 0;
+         }
+         &__address {
+            padding-right: 13px;
+            transform: translate(-4px, 0);
+            margin-right: 0;
+            p {
+               &:last-of-type {
+                  max-width: 143px;
+               }
+            }
+         }
+         &__status {
+            display: none;
+         }
+         &__action {
+            min-width: 116px;
          }
       }
-      &__status {
+   }
+   @media (max-width: 768px) {
+      .orders__status {
          display: none;
       }
    }
