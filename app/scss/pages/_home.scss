@@ -3,34 +3,34 @@ body.home {
       overflow: hidden;
       position: relative;
    }
-   // .blur {
-   //    &_1 {
-   //       top: 187px;
-   //       left: -14px;
-   //    }
-   //    &_2 {
-   //       top: 790px;
-   //       left: 15px;
-   //    }
-   //    &_3 {
-   //       top: 2123px;
-   //       left: 33px;
-   //       @media (min-width: 769px) {
-   //          &-1 {
-   //             top: percent(137, 3424);
-   //             left: -470px;
-   //          }
-   //          &-2 {
-   //             top: percent(755, 3424);
-   //             left: -40px;
-   //          }
-   //          &-3 {
-   //             top: percent(1942, 3424);
-   //             left: 340px;
-   //          }
-   //       }
-   //    }
-   // }
+   .blur {
+      &_1 {
+         top: 187px;
+         left: -14px;
+      }
+      &_2 {
+         top: 790px;
+         left: 15px;
+      }
+      &_3 {
+         top: 2123px;
+         left: 33px;
+         @media (min-width: 769px) {
+            &-1 {
+               top: percent(137, 3424);
+               left: -470px;
+            }
+            &-2 {
+               top: percent(755, 3424);
+               left: -40px;
+            }
+            &-3 {
+               top: percent(1942, 3424);
+               left: 340px;
+            }
+         }
+      }
+   }
    // ===================================================================================
    // Hero ==== Hero ==== Hero ==== Hero === Hero ==== Hero ==== Hero ==== Hero ==== Hero
    // ===================================================================================
