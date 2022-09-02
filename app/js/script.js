@@ -367,7 +367,11 @@ window.addEventListener("load", () => {
             e.target.closest(".menu__item").classList.add("active");
             if (e.target.closest(".menu__item").getAttribute("data-location") == "orders") {
                setTimeout(() => {
-                  changeColumnsWidth();
+                  changeOrdersColumnsWidth();
+               }, 50);
+            } else if (e.target.closest(".menu__item").getAttribute("data-location") == "nft") {
+               setTimeout(() => {
+                  changeNftColumnsWidth();
                }, 50);
             }
             qa("section").forEach((el) => {
@@ -385,10 +389,10 @@ window.addEventListener("load", () => {
       }
 
       // Изменения ширины колонок заголовков таблицы
-      window.addEventListener("resize", changeColumnsWidth);
+      window.addEventListener("resize", changeOrdersColumnsWidth);
 
-      changeColumnsWidth();
-      function changeColumnsWidth(e) {
+      changeOrdersColumnsWidth();
+      function changeOrdersColumnsWidth(e) {
          console.log("woprk");
 
          if (window.innerWidth > 768) {
@@ -412,6 +416,33 @@ window.addEventListener("load", () => {
             heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px ${mw[4]}px ${mw[5]}px ${mw[6]}px ${mw[7]}px `;
          }
       }
+      // if (qs("body.admin-owner")) {
+      window.addEventListener("resize", changeNftColumnsWidth);
+
+      changeNftColumnsWidth();
+      function changeNftColumnsWidth(e) {
+         if (window.innerWidth > 768) {
+            const items = qs(".nft-orders__item").children;
+            const heading = qs(".nft-orders__heading");
+            const columns = heading.children;
+            const mw = [];
+            //Скидываем ширину колонок шапки что бы джс прочитал акутальную ширину в колонках айтемов
+            heading.style.gridTemplateColumns = "repeat(5, 1px)";
+            for (let i = 0; i < columns.length; i++) {
+               let item = items[i].getBoundingClientRect().width;
+               let column = columns[i].getBoundingClientRect().width;
+               if (item >= column) {
+                  mw.push(item);
+               } else {
+                  mw.push(column);
+               }
+            }
+            console.log(mw);
+            heading.style.display = "grid";
+            heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px ${mw[4]}px`;
+         }
+      }
+      // }
 
       // swiperBiography
       const swiper = new Swiper(".swiper", {
