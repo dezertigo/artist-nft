@@ -2061,6 +2061,10 @@ body.team .form .backgroung__image_2 {
     right: -12.1527777778%;
     top: 143px;
   }
+
+  body.team .form .hello-h2__title {
+    transform: translateY(-1px);
+  }
 }
 
 @media (min-width: 1250px) {
