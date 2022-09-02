@@ -1185,8 +1185,32 @@ body.admin .menu__item_messages p {
   transform: translate(0, 1px);
 }
 
+.orders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+.orders:before {
+  display: none;
+}
+
+.orders__title {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
 body.admin {
   background-color: #1d1f21;
+}
+
+body.admin .wrapper {
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 body.admin main {

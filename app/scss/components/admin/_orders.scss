@@ -1,0 +1,16 @@
+.orders {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   overflow: auto;
+   &:before {
+      display: none;
+   }
+   // .orders__title
+   &__title {
+      position: sticky;
+      top: 0;
+      left: 0;
+   }
+}

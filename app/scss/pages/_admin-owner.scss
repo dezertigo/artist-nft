@@ -1,8 +1,14 @@
 body.admin {
    background-color: #1d1f21;
+   // max-height: 100vh;
+   // overflow: hidden;
    // @media (min-width: 769px) {
    //    background-color: #1d1f21;
    // }
+   .wrapper {
+      max-height: 100vh;
+      overflow: hidden;
+   }
    main {
       display: flex;
       flex-direction: column;
