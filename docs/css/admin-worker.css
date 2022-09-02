@@ -2,6 +2,7 @@
 
 /*Шрифты*/
 
+.orders__action,
 .admin-header .admin-burger__wrapper span,
 .admin-header .admin-burger__wrapper:before,
 .admin-header .admin-burger__wrapper:after {
@@ -1185,6 +1186,88 @@ body.admin .menu__item_messages p {
   transform: translate(0, 1px);
 }
 
+div.orders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+div.orders:before {
+  display: none;
+}
+
+.orders__cntr {
+  overflow: hidden;
+  position: relative;
+}
+
+.orders__items {
+  display: grid;
+  row-gap: 10px;
+}
+
+.orders__item {
+  display: grid;
+  border-radius: 14px;
+}
+
+.orders__type {
+  font-size: 1em;
+  line-height: 1.3125;
+  color: #fcffff;
+  font-weight: 600;
+}
+
+.orders__color span {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #eb8032;
+}
+
+.orders__email {
+  color: #fcffff;
+  font-size: 0.875em;
+  line-height: 1.5;
+}
+
+.orders__size {
+  color: #fcffff;
+  font-weight: 600;
+}
+
+.orders__status p:last-child {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.75;
+  color: #c5ff98;
+}
+
+.orders__action {
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+body.admin-owner .orders__items,
+body.admin-worker .orders__items {
+  row-gap: 8px;
+}
+
+body.admin-owner .orders__status,
+body.admin-worker .orders__status {
+  display: none;
+}
+
 body.admin {
   background-color: #1d1f21;
 }
@@ -1227,6 +1310,14 @@ body.admin .messages__cntr {
 body.admin .messages__preview {
   position: relative;
   z-index: 0;
+}
+
+@media (min-width: 400px) {
+  .orders__items {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
 }
 
 @media (min-width: 468px) {
@@ -1425,6 +1516,212 @@ body.admin .messages__preview {
   .chat__textarea svg {
     width: 21px;
     height: 21px;
+  }
+
+  .orders__cntr {
+    padding-left: 6px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .orders__title {
+    display: none;
+  }
+
+  .orders__heading {
+    color: #fcffff;
+    font-size: 0.875em;
+    line-height: 1.0714285714;
+    padding-top: 28px;
+    padding-bottom: 23px;
+    padding-left: 23px;
+    padding-right: 23px;
+    justify-content: space-between;
+  }
+
+  .orders__heading-type {
+    display: inline-block;
+  }
+
+  .orders__heading-color {
+    display: inline-block;
+  }
+
+  .orders__heading-email {
+    display: inline-block;
+  }
+
+  .orders__heading-size {
+    display: inline-block;
+  }
+
+  .orders__heading-comment {
+    display: inline-block;
+  }
+
+  .orders__heading-address {
+    display: inline-block;
+    transform: translate(-9px, 0);
+  }
+
+  .orders__heading-status {
+    display: inline-block;
+    transform: translate(-9px, 0);
+  }
+
+  .orders__heading-action {
+    display: inline-block;
+    transform: translate(-3px, 0);
+  }
+
+  .orders__items {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    overflow: auto;
+    max-width: 100%;
+    padding-bottom: 23px;
+  }
+
+  .orders__item {
+    background-color: #1d1f21;
+    grid-template-columns: repeat(8, auto);
+    align-items: center;
+    padding: 25px;
+    padding-top: 21px;
+    padding-bottom: 27px;
+    padding-left: 22px;
+    padding-right: 28px;
+  }
+
+  .orders__type {
+    padding-right: 36px;
+    margin-right: 3px;
+    white-space: nowrap;
+  }
+
+  .orders__color {
+    padding-right: 18px;
+    margin-right: 10px;
+  }
+
+  .orders__email {
+    font-weight: 600;
+    padding-right: 14px;
+  }
+
+  .orders__size {
+    white-space: nowrap;
+    padding-right: 24px;
+    font-size: 1em;
+    line-height: 1.3125;
+  }
+
+  .orders__size p:first-child {
+    display: none;
+  }
+
+  .orders__comment {
+    padding-right: 18px;
+    font-size: 0.75em;
+    line-height: 1.5;
+  }
+
+  .orders__comment p:first-child {
+    display: none;
+  }
+
+  .orders__comment p:last-of-type {
+    order: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    max-width: 143px;
+    color: #fcffff;
+  }
+
+  .orders__comment button {
+    order: 2;
+    cursor: pointer;
+    display: block;
+    color: #86a8ff;
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    transform: translate(0, 2px);
+  }
+
+  .orders__comment button:after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #86a8ff;
+  }
+
+  .orders__address {
+    font-size: 0.75em;
+    line-height: 1.5;
+    padding-right: 18px;
+  }
+
+  .orders__address p:first-child {
+    display: none;
+  }
+
+  .orders__address p:last-of-type {
+    order: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    max-width: 99px;
+    color: #fcffff;
+  }
+
+  .orders__address button {
+    order: 2;
+    cursor: pointer;
+    display: block;
+    color: #86a8ff;
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    transform: translate(0, 2px);
+  }
+
+  .orders__address button:after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #86a8ff;
+  }
+
+  .orders__status {
+    margin-right: 9px;
+    width: 103px;
+    height: 40px;
+    background-color: rgba(197, 255, 152, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .orders__status p:first-child {
+    display: none;
+  }
+
+  .orders__action {
+    min-width: 103px;
+    cursor: pointer;
   }
 
   body.admin main {
@@ -1789,6 +2086,233 @@ body.admin .messages__preview {
     width: 108.6956521739%;
   }
 
+  .orders__cntr {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .orders__title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-size: 1.25em;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    color: #fcffff;
+    z-index: 1;
+  }
+
+  .orders__title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #1d1f21;
+    z-index: -1;
+  }
+
+  .orders__heading {
+    display: none;
+  }
+
+  .orders__items {
+    padding-bottom: 17px;
+  }
+
+  .orders__item {
+    background: #2c2f33;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 19px;
+    padding-left: 18px;
+    grid-template-columns: 32px repeat(6, 1fr) 32px;
+    align-items: center;
+  }
+
+  .orders__type {
+    grid-column: 2/9;
+    grid-row: 1/2;
+    padding-left: 14px;
+  }
+
+  .orders__color {
+    grid-column: 1/2;
+    grid-row: span 2;
+  }
+
+  .orders__email {
+    grid-column: 2/9;
+    grid-row: 2/3;
+    padding-left: 14px;
+  }
+
+  .orders__size {
+    grid-column: span 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .orders__size p:first-child {
+    font-size: 0.875em;
+    line-height: 1.0714285714;
+    font-weight: 300;
+    transform: translate(0, -1px);
+  }
+
+  .orders__size p:last-child {
+    font-weight: 600;
+    font-size: 0.875em;
+    line-height: 1.5;
+    padding-top: 13px;
+    padding-bottom: 15px;
+  }
+
+  .orders__size:after,
+  .orders__size:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+  }
+
+  .orders__size:after {
+    top: 0;
+  }
+
+  .orders__size:before {
+    bottom: 0;
+  }
+
+  .orders__comment {
+    grid-column: span 8;
+    grid-row: 5/6;
+  }
+
+  .orders__comment p {
+    color: #fcffff;
+  }
+
+  .orders__comment p:first-child {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 7px;
+  }
+
+  .orders__comment p:last-of-type {
+    font-size: 0.875em;
+    line-height: 1.2857142857;
+  }
+
+  .orders__comment button {
+    display: none;
+  }
+
+  .orders__address {
+    grid-column: span 8;
+    grid-row: 6/7;
+    position: relative;
+    padding-top: 9px;
+    margin-top: 6px;
+  }
+
+  .orders__address:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+  }
+
+  .orders__address p {
+    color: #fcffff;
+  }
+
+  .orders__address p:first-child {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 7px;
+  }
+
+  .orders__address p:last-of-type {
+    font-size: 0.875em;
+    line-height: 1.2857142857;
+  }
+
+  .orders__address button {
+    display: none;
+  }
+
+  .orders__status {
+    grid-column: span 8;
+    grid-row: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 9px;
+    margin-bottom: 7px;
+    position: relative;
+  }
+
+  .orders__status p:first-child {
+    font-size: 0.875em;
+    line-height: 1.0714285714;
+    color: #fcffff;
+  }
+
+  .orders__status p:last-child {
+    position: relative;
+    transform: translate(3px, 0);
+  }
+
+  .orders__status p:last-child:before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #c5ff98;
+    margin-right: 8px;
+    border-radius: 50%;
+    transform: translate(0, -2px);
+  }
+
+  .orders__status:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+  }
+
+  .orders__action {
+    grid-row: 7/8;
+    margin-top: 17px;
+    width: 103px;
+    cursor: pointer;
+  }
+
+  body.admin-owner .orders__size,
+  body.admin-worker .orders__size {
+    margin-bottom: 14px;
+  }
+
   body.admin .messages__chat {
     background-color: #1d1f21;
     position: absolute;
@@ -1808,6 +2332,64 @@ body.admin .messages__preview {
 @media (max-width: 559px) {
   .chat-list-preview__slider {
     margin-right: -4%;
+  }
+}
+
+@media (max-width: 450px) {
+  .orders__comment {
+    grid-column: 5/9;
+    grid-row: 5/6;
+    padding-left: 13px;
+  }
+
+  .orders__address {
+    grid-column: 1/5;
+    grid-row: 5/6;
+    padding-right: 13px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .orders__address::before {
+    display: none;
+  }
+
+  .orders__action {
+    grid-column: span 8;
+    grid-row: 6/7;
+  }
+}
+
+@media (max-width: 400px) {
+  .orders__action {
+    width: 100%;
+  }
+}
+
+@media (max-width: 374px) {
+  .orders__comment {
+    grid-column: span 8;
+    margin: 0;
+    padding-left: 0;
+    grid-row: 5/6;
+  }
+
+  .orders__address {
+    grid-column: span 8;
+    padding-right: 0;
+    grid-row: 6/7;
+    position: relative;
+    padding-top: 9px;
+    margin-left: 0;
+    margin-top: 6px;
+  }
+
+  .orders__address:before {
+    display: block;
+  }
+
+  .orders__action {
+    grid-row: 7/8;
   }
 }
 

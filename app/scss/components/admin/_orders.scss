@@ -62,9 +62,6 @@ div.orders {
          padding-left: 23px;
          padding-right: 23px;
          justify-content: space-between;
-         position: sticky;
-         top: 0;
-         left: 0;
       }
       @media (min-width: 769px) {
          // .orders__heading-type
@@ -127,6 +124,7 @@ div.orders {
          column-gap: 0;
          overflow: auto;
          max-width: 100%;
+         padding-bottom: 23px;
       }
    }
    &__item {
@@ -528,11 +526,28 @@ div.orders {
          grid-row: 7/8;
          margin-top: 17px;
          width: 103px;
+         cursor: pointer;
       }
 
       @media (min-width: 769px) {
          min-width: 103px;
          cursor: pointer;
+      }
+   }
+}
+body.admin-owner,
+body.admin-worker {
+   .orders {
+      &__items {
+         row-gap: 8px;
+      }
+      &__size {
+         @media (max-width: 768px) {
+            margin-bottom: 14px;
+         }
+      }
+      &__status {
+         display: none;
       }
    }
 }

@@ -1258,6 +1258,16 @@ div.orders:before {
   height: 40px;
 }
 
+body.admin-owner .orders__items,
+body.admin-worker .orders__items {
+  row-gap: 8px;
+}
+
+body.admin-owner .orders__status,
+body.admin-worker .orders__status {
+  display: none;
+}
+
 body.admin {
   background-color: #1d1f21;
 }
@@ -1527,10 +1537,6 @@ body.admin .messages__preview {
     padding-left: 23px;
     padding-right: 23px;
     justify-content: space-between;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
   }
 
   .orders__heading-type {
@@ -1574,6 +1580,7 @@ body.admin .messages__preview {
     column-gap: 0;
     overflow: auto;
     max-width: 100%;
+    padding-bottom: 23px;
   }
 
   .orders__item {
@@ -2298,6 +2305,12 @@ body.admin .messages__preview {
     grid-row: 7/8;
     margin-top: 17px;
     width: 103px;
+    cursor: pointer;
+  }
+
+  body.admin-owner .orders__size,
+  body.admin-worker .orders__size {
+    margin-bottom: 14px;
   }
 
   body.admin .messages__chat {

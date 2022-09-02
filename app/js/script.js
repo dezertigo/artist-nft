@@ -380,7 +380,7 @@ window.addEventListener("load", () => {
       }
 
       // ! admin-owner.html
-      if (qs("body.admin-owner")) {
+      if (qs("body.admin")) {
          window.addEventListener("resize", changeColumnsWidth);
 
          changeColumnsWidth();
@@ -403,8 +403,9 @@ window.addEventListener("load", () => {
                }
                console.log(mw);
                heading.style.display = "grid";
-
-               heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px ${mw[4]}px ${mw[5]}px ${mw[6]}px ${mw[7]}px `;
+               setTimeout(() => {
+                  heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px ${mw[4]}px ${mw[5]}px ${mw[6]}px ${mw[7]}px `;
+               }, 1000);
             }
          }
       }
