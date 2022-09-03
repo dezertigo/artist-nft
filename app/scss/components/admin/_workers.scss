@@ -58,18 +58,21 @@ body.admin-owner {
          @media (min-width: 769px) {
             color: #fcffff;
             @include fl(14, 15);
-            padding-top: 27px;
+            padding-top: 28px;
             padding-bottom: 20px;
-            padding-left: 16px;
+            padding-left: 6px;
             padding-right: 16px;
             justify-content: space-between;
             white-space: nowrap;
             justify-content: start;
             column-gap: 10px;
-            transform: translate(10px, 0);
+            transform: translate(17px, 0);
          }
          @media (min-width: 769px) {
             // .orders__heading-type
+            &-name {
+               transform: translate(-7px, 0);
+            }
             &-name,
             &-mail,
             &-comment,
@@ -116,9 +119,9 @@ body.admin-owner {
             background-color: #1d1f21;
             grid-template-columns: repeat(4, auto);
             align-items: center;
-            padding-top: 20px;
-            padding-bottom: 18px;
-            padding-left: 25px;
+            padding-top: 17px;
+            padding-bottom: 11px;
+            padding-left: 23px;
             padding-right: 33px;
             justify-content: start;
             column-gap: 10px;
@@ -132,6 +135,9 @@ body.admin-owner {
             @include fl(16, 21);
             color: #fcffff;
          }
+         @media (min-width: 769px) {
+            padding-right: 57px;
+         }
       }
 
       // .workers__mail
@@ -140,6 +146,9 @@ body.admin-owner {
             font-weight: 600;
             @include fl(14, 21);
             color: #fcffff;
+         }
+         @media (min-width: 769px) {
+            padding-right: 66px;
          }
       }
 
@@ -150,6 +159,7 @@ body.admin-owner {
             color: #fcffff;
          }
          button {
+            cursor: pointer;
             @include fl(12, 18);
             color: #86a8ff;
             position: relative;
@@ -177,6 +187,19 @@ body.admin-owner {
                width: 100%;
                height: 1px;
                background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+            }
+         }
+         @media (min-width: 769px) {
+            max-width: 433px;
+            padding-right: 27px;
+            p {
+               max-height: 39px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               display: -webkit-box;
+               -webkit-line-clamp: 2;
+               -webkit-box-orient: vertical;
+               margin-bottom: 2px;
             }
          }
       }

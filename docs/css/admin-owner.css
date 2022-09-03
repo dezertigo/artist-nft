@@ -1470,6 +1470,7 @@ body.admin-owner .workers__comment p {
 }
 
 body.admin-owner .workers__comment button {
+  cursor: pointer;
   font-size: 0.75em;
   line-height: 1.5;
   color: #86a8ff;
@@ -2212,16 +2213,20 @@ body.admin .messages__preview {
     color: #fcffff;
     font-size: 0.875em;
     line-height: 1.0714285714;
-    padding-top: 27px;
+    padding-top: 28px;
     padding-bottom: 20px;
-    padding-left: 16px;
+    padding-left: 6px;
     padding-right: 16px;
     justify-content: space-between;
     white-space: nowrap;
     justify-content: start;
     -moz-column-gap: 10px;
     column-gap: 10px;
-    transform: translate(10px, 0);
+    transform: translate(17px, 0);
+  }
+
+  body.admin-owner .workers__heading-name {
+    transform: translate(-7px, 0);
   }
 
   body.admin-owner .workers__heading-name,
@@ -2247,13 +2252,36 @@ body.admin .messages__preview {
     background-color: #1d1f21;
     grid-template-columns: repeat(4, auto);
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 18px;
-    padding-left: 25px;
+    padding-top: 17px;
+    padding-bottom: 11px;
+    padding-left: 23px;
     padding-right: 33px;
     justify-content: start;
     -moz-column-gap: 10px;
     column-gap: 10px;
+  }
+
+  body.admin-owner .workers__name {
+    padding-right: 57px;
+  }
+
+  body.admin-owner .workers__mail {
+    padding-right: 66px;
+  }
+
+  body.admin-owner .workers__comment {
+    max-width: 433px;
+    padding-right: 27px;
+  }
+
+  body.admin-owner .workers__comment p {
+    max-height: 39px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 2px;
   }
 
   body.admin main {

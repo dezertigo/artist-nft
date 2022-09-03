@@ -197,7 +197,6 @@ window.addEventListener("load", () => {
 
       function clickVideo(e) {
          if (e.target.closest(".process__video svg") || e.target.closest(".process__poster")) {
-            console.log("work");
             qs("video").style.zIndex = "5";
             qs("video").setAttribute("controls", "true");
             qs("video").play();
@@ -373,6 +372,10 @@ window.addEventListener("load", () => {
                setTimeout(() => {
                   changeNftColumnsWidth();
                }, 50);
+            } else if (e.target.closest(".menu__item").getAttribute("data-location") == "workers") {
+               setTimeout(() => {
+                  changeWorkersColumnsWidth();
+               }, 50);
             }
             qa("section").forEach((el) => {
                el.classList.remove("active");
@@ -393,8 +396,6 @@ window.addEventListener("load", () => {
 
       changeOrdersColumnsWidth();
       function changeOrdersColumnsWidth(e) {
-         console.log("woprk");
-
          if (window.innerWidth > 768) {
             const items = qs(".orders__item").children;
             const heading = qs(".orders__heading");
@@ -411,12 +412,10 @@ window.addEventListener("load", () => {
                   mw.push(column);
                }
             }
-            console.log(mw);
             heading.style.display = "grid";
             heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px ${mw[4]}px ${mw[5]}px ${mw[6]}px ${mw[7]}px `;
          }
       }
-      // if (qs("body.admin-owner")) {
       window.addEventListener("resize", changeNftColumnsWidth);
 
       changeNftColumnsWidth();
@@ -437,12 +436,35 @@ window.addEventListener("load", () => {
                   mw.push(column);
                }
             }
-            console.log(mw);
             heading.style.display = "grid";
             heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px ${mw[4]}px`;
          }
       }
-      // }
+
+      window.addEventListener("resize", changeWorkersColumnsWidth);
+
+      changeWorkersColumnsWidth();
+      function changeWorkersColumnsWidth(e) {
+         if (window.innerWidth > 768) {
+            const items = qs(".workers__item").children;
+            const heading = qs(".workers__heading");
+            const columns = heading.children;
+            const mw = [];
+            //Скидываем ширину колонок шапки что бы джс прочитал акутальную ширину в колонках айтемов
+            heading.style.gridTemplateColumns = "repeat(4, 1px)";
+            for (let i = 0; i < columns.length; i++) {
+               let item = items[i].getBoundingClientRect().width;
+               let column = columns[i].getBoundingClientRect().width;
+               if (item >= column) {
+                  mw.push(item);
+               } else {
+                  mw.push(column);
+               }
+            }
+            heading.style.display = "grid";
+            heading.style.gridTemplateColumns = `${mw[0]}px ${mw[1]}px ${mw[2]}px ${mw[3]}px`;
+         }
+      }
 
       // swiperBiography
       const swiper = new Swiper(".swiper", {

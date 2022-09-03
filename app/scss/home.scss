@@ -11,10 +11,6 @@
 @import "./components/structure/header";
 @import "./components/structure/footer";
 
-// Подключение стилей базовых компонентов
-// @import "./components/base/pop-up";
-// @import "./components/base/spoiler";
-
 // Подключение стилей компонентов
 @import "./components/base/btn";
 @import "./components/blocks/stroke-text";
@@ -29,7 +25,7 @@
 @import "./components/blocks/confirm";
 @import "./components/blocks/contact-form";
 @import "./components/blocks/background";
-@import "./components/blocks/blur";
+// @import "./components/blocks/blur";
 
 //Подключение стилей конкретной страницы
 @import "./pages/home";
