@@ -9,7 +9,7 @@
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
 }
 
-.nft-orders__crypto-content .copy,
+body.admin-owner .nft-orders__crypto-content .copy,
 body.admin .menu__item.active i,
 body.admin .menu__item:hover i {
   background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
@@ -1259,7 +1259,7 @@ div.orders:before {
   height: 40px;
 }
 
-div.nft-orders {
+body.admin-owner div.nft-orders {
   position: absolute;
   top: 0;
   left: 0;
@@ -1268,56 +1268,56 @@ div.nft-orders {
   width: 100%;
 }
 
-div.nft-orders:before {
+body.admin-owner div.nft-orders:before {
   display: none;
 }
 
-.nft-orders__cntr {
+body.admin-owner .nft-orders__cntr {
   overflow: hidden;
   position: relative;
 }
 
-.nft-orders__items {
+body.admin-owner .nft-orders__items {
   display: grid;
-  row-gap: 10px;
 }
 
-.nft-orders__item {
+body.admin-owner .nft-orders__item {
   display: grid;
   border-radius: 14px;
+  white-space: nowrap;
 }
 
-.nft-orders__name {
+body.admin-owner .nft-orders__name {
   display: inline-flex;
   align-items: center;
 }
 
-.nft-orders__picture {
+body.admin-owner .nft-orders__picture {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   overflow: hidden;
 }
 
-.nft-orders__picture img {
+body.admin-owner .nft-orders__picture img {
   -o-object-position: 0px 52% !important;
   object-position: 0px 52% !important;
 }
 
-.nft-orders__name-content p:first-child {
+body.admin-owner .nft-orders__name-content p:first-child {
   color: #fcffff;
   font-size: 1em;
   line-height: 1.3125;
   font-weight: 600;
 }
 
-.nft-orders__name-content p:last-child {
+body.admin-owner .nft-orders__name-content p:last-child {
   font-size: 0.875em;
   line-height: 1.6071428571;
   color: #c8d2dc;
 }
 
-.nft-orders__crypto-content {
+body.admin-owner .nft-orders__crypto-content {
   display: flex;
   align-items: center;
   background-color: #212426;
@@ -1326,7 +1326,7 @@ div.nft-orders:before {
   min-width: 148px;
 }
 
-.nft-orders__crypto-content p {
+body.admin-owner .nft-orders__crypto-content p {
   color: #fcffff;
   text-overflow: clip;
   max-width: 105px;
@@ -1337,12 +1337,13 @@ div.nft-orders:before {
   line-height: 1;
 }
 
-.nft-orders__crypto-content .copy {
+body.admin-owner .nft-orders__crypto-content .copy {
   font-size: 0.7225em;
   line-height: 1;
+  cursor: pointer;
 }
 
-.nft-orders__status {
+body.admin-owner .nft-orders__status p {
   font-weight: 700;
   font-size: 1em;
   line-height: 1.75;
@@ -1356,19 +1357,19 @@ div.nft-orders:before {
   cursor: pointer;
 }
 
-.nft-orders__price {
+body.admin-owner .nft-orders__price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nft-orders__price p:first-child {
+body.admin-owner .nft-orders__price p:first-child {
   font-size: 0.875em;
   line-height: 1.0714285714;
   color: #fcffff;
 }
 
-.nft-orders__price p:last-child {
+body.admin-owner .nft-orders__price p:last-child {
   font-size: 1em;
   line-height: 1.75;
   font-weight: 700;
@@ -1471,7 +1472,7 @@ body.admin .messages__preview {
     column-gap: 10px;
   }
 
-  .nft-orders__items {
+  body.admin-owner .nft-orders__items {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     -moz-column-gap: 10px;
     column-gap: 10px;
@@ -1972,45 +1973,57 @@ body.admin .messages__preview {
     min-width: 116px;
   }
 
-  .nft-orders__cntr {
+  body.admin-owner .nft-orders__cntr {
     padding-left: 14px;
-    padding-right: 30px;
+    padding-right: 13px;
     position: relative;
   }
 
-  .nft-orders__title {
+  body.admin-owner .nft-orders__title {
     display: none;
   }
 
-  .nft-orders__heading {
+  body.admin-owner .nft-orders__heading {
     color: #fcffff;
     font-size: 0.875em;
     line-height: 1.0714285714;
-    padding-top: 28px;
-    padding-bottom: 19px;
+    padding-top: 27px;
+    padding-bottom: 20px;
     padding-left: 16px;
     padding-right: 16px;
     justify-content: space-between;
+    white-space: nowrap;
+    justify-content: start;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    transform: translate(10px, 0);
   }
 
-  .nft-orders__heading-name,
-  .nft-orders__heading-crypto,
-  .nft-orders__heading-status,
-  .nft-orders__heading-price,
-  .nft-orders__heading-date {
+  body.admin-owner .nft-orders__heading-name {
+    transform: translate(-10px, 0);
+  }
+
+  body.admin-owner .nft-orders__heading-name,
+  body.admin-owner .nft-orders__heading-crypto,
+  body.admin-owner .nft-orders__heading-status,
+  body.admin-owner .nft-orders__heading-price,
+  body.admin-owner .nft-orders__heading-date {
     display: inline-block;
   }
 
-  .nft-orders__items {
+  body.admin-owner .nft-orders__items {
     grid-template-columns: 1fr;
     -moz-column-gap: 0;
     column-gap: 0;
     overflow: auto;
     max-width: 100%;
     padding-bottom: 23px;
+    display: inline-grid;
+    width: auto;
+    row-gap: 10px;
   }
 
-  .nft-orders__item {
+  body.admin-owner .nft-orders__item {
     background-color: #1d1f21;
     grid-template-columns: repeat(5, auto);
     align-items: center;
@@ -2018,26 +2031,31 @@ body.admin .messages__preview {
     padding-bottom: 18px;
     padding-left: 25px;
     padding-right: 33px;
+    justify-content: start;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
   }
 
-  .nft-orders__picture img {
+  body.admin-owner .nft-orders__name {
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    padding-right: 36px;
+  }
+
+  body.admin-owner .nft-orders__picture img {
     -o-object-position: 0px 110% !important;
     object-position: 0px 110% !important;
   }
 
-  .nft-orders__picture {
-    margin-right: 20px;
-  }
-
-  .nft-orders__name-content p:last-child {
+  body.admin-owner .nft-orders__name-content p:last-child {
     display: none;
   }
 
-  .nft-orders__crypto > p {
+  body.admin-owner .nft-orders__crypto > p {
     display: none;
   }
 
-  .nft-orders__crypto-content {
+  body.admin-owner .nft-orders__crypto-content {
     min-width: 310px;
     max-width: 310px;
     padding-top: 18px;
@@ -2049,36 +2067,39 @@ body.admin .messages__preview {
     column-gap: 27px;
   }
 
-  .nft-orders__crypto-content p {
+  body.admin-owner .nft-orders__crypto-content p {
     max-width: 232px;
     font-size: 0.875em;
     line-height: 1;
   }
 
-  .nft-orders__crypto-content .copy {
+  body.admin-owner .nft-orders__crypto-content .copy {
     font-size: 0.9375em;
     line-height: 1;
   }
 
-  .nft-orders__crypto {
+  body.admin-owner .nft-orders__crypto {
     transform: translate(0, 3px);
-    margin-left: 9px;
+    padding-right: 18px;
   }
 
-  .nft-orders__status {
+  body.admin-owner .nft-orders__status p {
     width: 103px;
-    margin-left: -11px;
   }
 
-  .nft-orders__price p:first-child {
+  body.admin-owner .nft-orders__status {
+    padding-right: 45px;
+  }
+
+  body.admin-owner .nft-orders__price p:first-child {
     display: none;
   }
 
-  .nft-orders__price {
-    margin-left: 16px;
+  body.admin-owner .nft-orders__price {
+    padding-right: 66px;
   }
 
-  .nft-orders__date {
+  body.admin-owner .nft-orders__date {
     font-size: 1em;
     line-height: 1.75;
     color: #c8d2dc;
@@ -2688,12 +2709,12 @@ body.admin .messages__preview {
     display: none;
   }
 
-  .nft-orders__cntr {
+  body.admin-owner .nft-orders__cntr {
     padding-left: 4%;
     padding-right: 4%;
   }
 
-  .nft-orders__title {
+  body.admin-owner .nft-orders__title {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -2707,7 +2728,7 @@ body.admin .messages__preview {
     z-index: 1;
   }
 
-  .nft-orders__title:before {
+  body.admin-owner .nft-orders__title:before {
     content: "";
     position: absolute;
     top: 0;
@@ -2718,15 +2739,16 @@ body.admin .messages__preview {
     z-index: -1;
   }
 
-  .nft-orders__heading {
+  body.admin-owner .nft-orders__heading {
     display: none;
   }
 
-  .nft-orders__items {
+  body.admin-owner .nft-orders__items {
+    row-gap: 12px;
     padding-bottom: 17px;
   }
 
-  .nft-orders__item {
+  body.admin-owner .nft-orders__item {
     background: #2c2f33;
     padding-top: 18px;
     padding-bottom: 17px;
@@ -2735,28 +2757,28 @@ body.admin .messages__preview {
     grid-template-columns: 1fr;
   }
 
-  .nft-orders__picture {
+  body.admin-owner .nft-orders__picture {
     margin-right: 14px;
     transform: translate(0, -2px);
   }
 
-  .nft-orders__crypto {
+  body.admin-owner .nft-orders__crypto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 11px;
     padding-bottom: 11px;
     margin-top: 15px;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
   }
 
-  .nft-orders__crypto > p {
+  body.admin-owner .nft-orders__crypto > p {
     font-size: 0.875em;
     line-height: 1.0714285714;
     color: #fcffff;
   }
 
-  .nft-orders__crypto-content {
+  body.admin-owner .nft-orders__crypto-content {
     padding-bottom: 13px;
     padding-left: 11px;
     padding-right: 13px;
@@ -2765,16 +2787,16 @@ body.admin .messages__preview {
     column-gap: 20px;
   }
 
-  .nft-orders__crypto-content {
+  body.admin-owner .nft-orders__crypto-content {
     margin-right: 5px;
   }
 
-  .nft-orders__crypto {
+  body.admin-owner .nft-orders__crypto {
     position: relative;
   }
 
-  .nft-orders__crypto:after,
-  .nft-orders__crypto:before {
+  body.admin-owner .nft-orders__crypto:after,
+  body.admin-owner .nft-orders__crypto:before {
     content: "";
     position: absolute;
     left: 0;
@@ -2783,21 +2805,24 @@ body.admin .messages__preview {
     background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
   }
 
-  .nft-orders__crypto:after {
+  body.admin-owner .nft-orders__crypto:after {
     top: 0;
   }
 
-  .nft-orders__crypto:before {
+  body.admin-owner .nft-orders__crypto:before {
     bottom: 0;
   }
 
-  .nft-orders__status {
-    margin-top: 15px;
-    width: 103px;
+  body.admin-owner .nft-orders__status {
     grid-row: 4/5;
   }
 
-  .nft-orders__date {
+  body.admin-owner .nft-orders__status p {
+    margin-top: 15px;
+    width: 103px;
+  }
+
+  body.admin-owner .nft-orders__date {
     display: none;
   }
 
@@ -2857,7 +2882,7 @@ body.admin .messages__preview {
     width: 100%;
   }
 
-  .nft-orders__status {
+  body.admin-owner .nft-orders__status p {
     width: 100%;
   }
 }

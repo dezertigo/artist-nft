@@ -65,11 +65,7 @@ function clean() {
 function html() {
    return (
       gulp
-         .src([
-            paths.html.app,
-            "!" + paths.html.new,
-            "!" + paths.html.components,
-         ])
+         .src([paths.html.app, "!" + paths.html.new, "!" + paths.html.components])
          // return gulp.src([paths.html.app, '!' + paths.html.new,])
          .pipe(fileInclude())
          .pipe(replace(/@img\//g, "img/"))
@@ -79,9 +75,7 @@ function html() {
 }
 
 function htmlComponents() {
-   return gulp
-      .src([paths.html.app, "!" + paths.html.new, paths.html.components])
-      .pipe(browsersync.stream());
+   return gulp.src([paths.html.app, "!" + paths.html.new, paths.html.components]).pipe(browsersync.stream());
 }
 
 // Обработка scss
@@ -204,8 +198,8 @@ function watcher() {
    gulp.watch(paths.html.components, htmlComponents);
    gulp.watch(paths.scss.app, scss);
    gulp.watch(paths.js.app, js);
-   gulp.watch(paths.images.app.img, img);
-   gulp.watch(paths.images.app.svg, img);
+   // gulp.watch(paths.images.app.img, img);
+   // gulp.watch(paths.images.app.svg, img);
 }
 
 exports.clean = clean;
@@ -220,10 +214,4 @@ exports.watcher = watcher;
 // exports.default = gulp.series(clean, html, gulp.parallel(scss, js, img), watcher) //Что бы не ждать конвертацию шрифтов
 
 exports.default = gulp.series(html, gulp.parallel(scss, js), watcher);
-exports.build = gulp.series(
-   clean,
-   html,
-   fonts,
-   gulp.parallel(scss, js, img),
-   watcher
-);
+exports.build = gulp.series(clean, html, fonts, gulp.parallel(scss, js, img), watcher);

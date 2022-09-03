@@ -1,321 +1,347 @@
-div.nft-orders {
-   position: absolute;
-   top: 0;
-   left: 0;
-   height: 100%;
-   overflow: auto;
-   width: 100%;
-   &:before {
-      display: none;
-   }
-}
-.nft-orders {
-   &__cntr {
-      overflow: hidden;
-      position: relative;
-      @media (max-width: 768px) {
-         padding-left: percent(15, 375);
-         padding-right: percent(15, 375);
+body.admin-owner {
+   div.nft-orders {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: auto;
+      width: 100%;
+      &:before {
+         display: none;
       }
-      @media (min-width: 769px) {
-         padding-left: 14px;
-         padding-right: 30px;
+   }
+   .nft-orders {
+      &__cntr {
+         overflow: hidden;
          position: relative;
+         @media (max-width: 768px) {
+            padding-left: percent(15, 375);
+            padding-right: percent(15, 375);
+         }
+         @media (min-width: 769px) {
+            padding-left: 14px;
+            padding-right: 13px;
+            position: relative;
+         }
       }
-   }
-   // .orders__title
-   &__title {
-      @media (max-width: 768px) {
-         position: sticky;
-         top: 0;
-         left: 0;
-         @include fl(20, 30);
-         font-weight: 700;
-         padding-top: 17px;
-         padding-bottom: 10px;
-         color: #fcffff;
-         z-index: 1;
-         &:before {
-            content: "";
-            position: absolute;
+      // .orders__title
+      &__title {
+         @media (max-width: 768px) {
+            position: sticky;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100%;
-            background: #1d1f21;
-            z-index: -1;
-         }
-      }
-      @media (min-width: 769px) {
-         display: none;
-      }
-   }
-   &__heading {
-      @media (max-width: 768px) {
-         display: none;
-      }
-      @media (min-width: 769px) {
-         color: #fcffff;
-         @include fl(14, 15);
-         padding-top: 28px;
-         padding-bottom: 19px;
-         padding-left: 16px;
-         padding-right: 16px;
-         justify-content: space-between;
-      }
-      @media (min-width: 769px) {
-         // .orders__heading-type
-         &-name,
-         &-crypto,
-         &-status,
-         &-price,
-         &-date {
-            display: inline-block;
-         }
-      }
-   }
-
-   &__items {
-      display: grid;
-      row-gap: 10px;
-      @media (max-width: 768px) {
-         padding-bottom: 17px;
-      }
-      @media (min-width: 400px) {
-         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-         column-gap: 10px;
-      }
-      @media (min-width: 769px) {
-         grid-template-columns: 1fr;
-         column-gap: 0;
-         overflow: auto;
-         max-width: 100%;
-         padding-bottom: 23px;
-      }
-   }
-   &__item {
-      display: grid;
-      border-radius: 14px;
-      @media (max-width: 768px) {
-         background: #2c2f33;
-         padding-top: 18px;
-         padding-bottom: 17px;
-         padding-right: 19px;
-         padding-left: 18px;
-         grid-template-columns: 1fr;
-      }
-      @media (min-width: 769px) {
-         background-color: #1d1f21;
-         grid-template-columns: repeat(5, auto);
-         align-items: center;
-         padding-top: 20px;
-         padding-bottom: 18px;
-         padding-left: 25px;
-         // padding-right: 5px;
-         padding-right: 33px;
-      }
-   }
-
-   // .nft-orders__name
-   &__name {
-      display: inline-flex;
-      align-items: center;
-   }
-
-   // .nft-orders__picture
-   &__picture {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      overflow: hidden;
-      img {
-         object-position: 0px 52% !important;
-         @media (min-width: 769px) {
-            object-position: 0px 110% !important;
-         }
-      }
-      @media (max-width: 768px) {
-         margin-right: 14px;
-         transform: translate(0, -2px);
-      }
-      @media (min-width: 769px) {
-         margin-right: 20px;
-      }
-   }
-
-   // .nft-orders__name-content
-   &__name-content {
-      p {
-         &:first-child {
+            @include fl(20, 30);
+            font-weight: 700;
+            padding-top: 17px;
+            padding-bottom: 10px;
             color: #fcffff;
-            @include fl(16, 21);
-            font-weight: 600;
-         }
-         &:last-child {
-            @include fl(14, 22.5);
-            color: #c8d2dc;
-            @media (min-width: 769px) {
-               display: none;
+            z-index: 1;
+            &:before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100vw;
+               height: 100%;
+               background: #1d1f21;
+               z-index: -1;
             }
-         }
-      }
-   }
-
-   // .nft-orders__crypto
-   &__crypto {
-      @media (max-width: 768px) {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding-top: 11px;
-         padding-bottom: 11px;
-         margin-top: 15px;
-         margin-bottom: 12px;
-      }
-      > p {
-         @media (max-width: 768px) {
-            @include fl(14, 15);
-            color: #fcffff;
          }
          @media (min-width: 769px) {
             display: none;
          }
       }
-      &-content {
+      &__heading {
          @media (max-width: 768px) {
-            padding-bottom: 13px;
-            padding-left: 11px;
-            padding-right: 13px;
-            border-radius: 8px;
-            column-gap: 20px;
-         }
-         display: flex;
-         align-items: center;
-         background-color: #212426;
-         padding-top: 12px;
-
-         max-width: percent(148, 308);
-         min-width: 148px;
-         @media (max-width: 768px) {
-            margin-right: 5px;
-         }
-         p {
-            color: #fcffff;
-            text-overflow: clip;
-            max-width: 105px;
-            overflow: hidden;
-            white-space: nowrap;
-            font-weight: 700;
-            @include fl(12);
-         }
-         .copy {
-            @extend %grad-text;
-            @include fl(11.56);
+            display: none;
          }
          @media (min-width: 769px) {
-            min-width: 310px;
-            max-width: 310px;
+            color: #fcffff;
+            @include fl(14, 15);
+            padding-top: 27px;
+            padding-bottom: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
+            justify-content: space-between;
+            white-space: nowrap;
+            justify-content: start;
+            column-gap: 10px;
+            transform: translate(10px, 0);
+         }
+         @media (min-width: 769px) {
+            // .orders__heading-type
+            &-name {
+               transform: translate(-10px, 0);
+            }
+            &-name,
+            &-crypto,
+            &-status,
+            &-price,
+            &-date {
+               display: inline-block;
+            }
+         }
+      }
+
+      &__items {
+         display: grid;
+         @media (max-width: 768px) {
+            row-gap: 12px;
+            padding-bottom: 17px;
+         }
+         @media (min-width: 400px) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 10px;
+         }
+         @media (min-width: 769px) {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            overflow: auto;
+            max-width: 100%;
+            padding-bottom: 23px;
+            display: inline-grid;
+            width: auto;
+            row-gap: 10px;
+         }
+      }
+      &__item {
+         display: grid;
+         border-radius: 14px;
+         white-space: nowrap;
+         @media (max-width: 768px) {
+            background: #2c2f33;
             padding-top: 18px;
             padding-bottom: 17px;
-            padding-left: 18px;
             padding-right: 19px;
-            border-radius: 13px;
-            column-gap: 27px;
-            p {
-               max-width: 232px;
-               @include fl(14);
+            padding-left: 18px;
+            grid-template-columns: 1fr;
+         }
+         @media (min-width: 769px) {
+            background-color: #1d1f21;
+            grid-template-columns: repeat(5, auto);
+            // grid-template-columns: repeat(auto-fit, minmax(50px, 350px));
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 18px;
+            padding-left: 25px;
+            // padding-right: 5px;
+            padding-right: 33px;
+            justify-content: start;
+            column-gap: 10px;
+         }
+      }
+
+      // .nft-orders__name
+      &__name {
+         display: inline-flex;
+         align-items: center;
+         @media (min-width: 769px) {
+            column-gap: 20px;
+            padding-right: 36px;
+         }
+      }
+
+      // .nft-orders__picture
+      &__picture {
+         width: 32px;
+         height: 32px;
+         border-radius: 50%;
+         overflow: hidden;
+         img {
+            object-position: 0px 52% !important;
+            @media (min-width: 769px) {
+               object-position: 0px 110% !important;
             }
-            .copy {
-               @include fl(15);
+         }
+         @media (max-width: 768px) {
+            margin-right: 14px;
+            transform: translate(0, -2px);
+         }
+      }
+
+      // .nft-orders__name-content
+      &__name-content {
+         p {
+            &:first-child {
+               color: #fcffff;
+               @include fl(16, 21);
+               font-weight: 600;
+            }
+            &:last-child {
+               @include fl(14, 22.5);
+               color: #c8d2dc;
+               @media (min-width: 769px) {
+                  display: none;
+               }
             }
          }
       }
 
-      @media (max-width: 768px) {
-         position: relative;
-         &:after,
-         &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+      // .nft-orders__crypto
+      &__crypto {
+         @media (max-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            margin-top: 15px;
+            margin-bottom: 11px;
          }
-         &:after {
-            top: 0;
-         }
-         &:before {
-            bottom: 0;
-         }
-      }
-      @media (min-width: 769px) {
-         transform: translate(0, 3px); // ! Для пиксель перфетка. лучше убрать что бы отцентровать
-         margin-left: 9px;
-      }
-   }
-
-   // .orders__status
-   &__status {
-      font-weight: 700;
-      @include fl(16, 28);
-      color: #c5ff98;
-      background: rgba(197, 255, 152, 0.1);
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40px;
-      cursor: pointer;
-
-      @media (max-width: 400px) {
-         width: 100%;
-      }
-      @media (max-width: 768px) {
-         margin-top: 15px;
-         width: 103px;
-         grid-row: 4/5;
-      }
-
-      @media (min-width: 769px) {
-         width: 103px;
-         margin-left: -11px;
-      }
-   }
-
-   // .nft-orders__price
-   &__price {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      p {
-         &:first-child {
-            @include fl(14, 15);
-            color: #fcffff;
+         > p {
+            @media (max-width: 768px) {
+               @include fl(14, 15);
+               color: #fcffff;
+            }
             @media (min-width: 769px) {
                display: none;
             }
          }
-         &:last-child {
-            @include fl(16, 28);
-            font-weight: 700;
-            color: #fcffff;
+         &-content {
+            @media (max-width: 768px) {
+               padding-bottom: 13px;
+               padding-left: 11px;
+               padding-right: 13px;
+               border-radius: 8px;
+               column-gap: 20px;
+            }
+            display: flex;
+            align-items: center;
+            background-color: #212426;
+            padding-top: 12px;
+
+            max-width: percent(148, 308);
+            min-width: 148px;
+            @media (max-width: 768px) {
+               margin-right: 5px;
+            }
+            p {
+               color: #fcffff;
+               text-overflow: clip;
+               max-width: 105px;
+               overflow: hidden;
+               white-space: nowrap;
+               font-weight: 700;
+               @include fl(12);
+            }
+            .copy {
+               @extend %grad-text;
+               @include fl(11.56);
+               cursor: pointer;
+            }
+            @media (min-width: 769px) {
+               min-width: 310px;
+               max-width: 310px;
+               padding-top: 18px;
+               padding-bottom: 17px;
+               padding-left: 18px;
+               padding-right: 19px;
+               border-radius: 13px;
+               column-gap: 27px;
+               p {
+                  max-width: 232px;
+                  @include fl(14);
+               }
+               .copy {
+                  @include fl(15);
+               }
+            }
+         }
+
+         @media (max-width: 768px) {
+            position: relative;
+            &:after,
+            &:before {
+               content: "";
+               position: absolute;
+               left: 0;
+               width: 100%;
+               height: 1px;
+               background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+            }
+            &:after {
+               top: 0;
+            }
+            &:before {
+               bottom: 0;
+            }
+         }
+         @media (min-width: 769px) {
+            transform: translate(0, 3px); // ! Для пиксель перфетка. лучше убрать что бы отцентровать
+            // margin-left: 9px;
+            padding-right: 18px;
          }
       }
-      @media (min-width: 769px) {
-         margin-left: 16px;
-      }
-   }
 
-   // .nft-orders__date
-   &__date {
-      @media (max-width: 768px) {
-         display: none;
+      // .orders__status
+      &__status {
+         @media (max-width: 768px) {
+            grid-row: 4/5;
+         }
+         p {
+            font-weight: 700;
+            @include fl(16, 28);
+            color: #c5ff98;
+            background: rgba(197, 255, 152, 0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            cursor: pointer;
+
+            @media (max-width: 400px) {
+               width: 100%;
+            }
+            @media (max-width: 768px) {
+               margin-top: 15px;
+               width: 103px;
+            }
+
+            @media (min-width: 769px) {
+               width: 103px;
+            }
+         }
+         @media (min-width: 769px) {
+            padding-right: 45px;
+         }
       }
-      @media (min-width: 769px) {
-         @include fl(16, 28);
-         color: #c8d2dc;
-         margin-left: auto;
+
+      // .nft-orders__price
+      &__price {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         p {
+            &:first-child {
+               @include fl(14, 15);
+               color: #fcffff;
+               @media (min-width: 769px) {
+                  display: none;
+               }
+            }
+            &:last-child {
+               @include fl(16, 28);
+               font-weight: 700;
+               color: #fcffff;
+            }
+         }
+         @media (min-width: 769px) {
+            // margin-left: 16px;
+            padding-right: 66px;
+         }
+      }
+
+      // .nft-orders__date
+      &__date {
+         @media (max-width: 768px) {
+            display: none;
+         }
+         @media (min-width: 769px) {
+            @include fl(16, 28);
+            color: #c8d2dc;
+            margin-left: auto;
+         }
       }
    }
 }
