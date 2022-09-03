@@ -76,6 +76,9 @@ window.addEventListener("load", () => {
       qs(".premium-acess").addEventListener("click", () => {
          document.location.href = "payment.html";
       });
+      qs(".header__premium-btn").addEventListener("click", () => {
+         document.location.href = "payment.html";
+      });
       body.addEventListener("click", relocate);
 
       function relocate(e) {
