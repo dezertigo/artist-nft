@@ -1,0 +1,24 @@
+.blur {
+   svg {
+      position: absolute;
+      z-index: -1;
+      &:nth-child(1) {
+         @media (min-width: 769px) {
+            width: 1245px;
+            height: 1199px;
+         }
+      }
+      &:nth-child(2) {
+         @media (min-width: 769px) {
+            @media (min-width: 769px) {
+               width: 1245px;
+               height: 1199px;
+            }
+         }
+      }
+      &:nth-child(3) {
+         @media (min-width: 769px) {
+         }
+      }
+   }
+}
