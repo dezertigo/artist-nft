@@ -771,6 +771,14 @@ body.admin .menu__item_messages p {
   transform: translate(-3px, 0);
 }
 
+body.admin .menu__item:hover svg path {
+  stroke: url(#paint0_linear_1165_691);
+}
+
+body.admin .menu__item.active svg path {
+  stroke: url(#paint0_linear_1165_691);
+}
+
 .chat-list-preview {
   padding-top: 17px;
 }
@@ -1668,6 +1676,7 @@ body.admin .messages__preview {
   .chat-list-items__item {
     padding-right: 19px;
     position: relative;
+    background-color: #1d1f21;
     transition: all 0.3s ease;
     z-index: 1;
   }
@@ -2662,7 +2671,7 @@ body.admin .messages__preview {
   .chat__preview {
     padding: 13px 15px;
     border-radius: 12px;
-    background-color: #2c2f33;
+    background-color: #212426;
     -moz-column-gap: 22px;
     column-gap: 22px;
   }
@@ -3091,8 +3100,8 @@ body.admin .messages__preview {
 
   body.admin-owner .workers__item {
     background: #2c2f33;
-    padding-top: 18px;
-    padding-bottom: 17px;
+    padding-top: 19px;
+    padding-bottom: 16px;
     padding-right: 19px;
     padding-left: 18px;
     grid-template-columns: 1fr;

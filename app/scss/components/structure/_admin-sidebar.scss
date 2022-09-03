@@ -238,6 +238,11 @@ body.admin {
             i {
                @extend %grad-text;
             }
+            svg {
+               path {
+                  stroke: url(#paint0_linear_1165_691);
+               }
+            }
             @media (max-width: 999px) {
                &:before {
                   opacity: 0.5;
@@ -247,6 +252,11 @@ body.admin {
          &.active {
             i {
                @extend %grad-text;
+            }
+            svg {
+               path {
+                  stroke: url(#paint0_linear_1165_691);
+               }
             }
             @media (max-width: 999px) {
                &:after {
