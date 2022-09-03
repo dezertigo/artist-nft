@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/authorization.min.css',
+'title': 'Error 404',
+})
+
+<body class="authorization log-in">
+	<div class="wrapper">
+		<main>
+			<section class="hero">
+				<div class="hero__decor">
+					<i class="star-decor"></i>
+					<div class="decor-circle"></div>
+				</div>
+
+				<div class="hero__container">
+					<a class="hero__logo" href="index.html">
+						<img src="@img/logo.svg" alt="logo">
+					</a>
+					<h2 class="hero__title">Authorization</h2>
+					<div class="hero__tabs">
+						<div data-location="Log in" class="hero__button active"><span
+								data-location="Log in">Log
+								in</span></div>
+						<div data-location="Sign up" class="hero__button "><span
+								data-location="Sign up">Sign up</span>
+						</div>
+					</div>
+					<p class="hero__text">Select your role</p>
+					<div class="hero__row">
+						<div class="hero__radio active" data-url="admin-worker.html">
+							<span></span>
+							<p>Customer</p>
+						</div>
+						<div class="hero__radio" data-url="admin-owner.html">
+							<span></span>
+							<p>Admin</p>
+						</div>
+						<div class="hero__radio" data-url="admin-client.html">
+							<span></span>
+							<p>Artist</p>
+						</div>
+					</div>
+					<form class="hero__form" action="#" name="form-2">
+						@@include('./components/blocks/_input.html', {
+						'label': 'E-mail',
+						'for': 'email',
+						'type': 'text',
+						'placeholder': 'Your e-mail',
+						})
+						@@include('./components/blocks/_input.html', {
+						'label': 'Password',
+						'for': 'password',
+						'type': 'password',
+						'placeholder': 'Your password',
+						})
+						<button class="hero__btn" type="submit" form="form-2" value="Submit">
+							<span>Send message</span>
+						</button>
+						<div class="hero__link active">
+							Don’t have account yet?<span data-location="Sign up">Sign up</span>
+						</div>
+						<div class="hero__link ">
+							Already have accoun?<span data-location="Log in">Log in</span>
+						</div>
+
+
+					</form>
+				</div>
+			</section>
+		</main>
+	</div>
+	@@include('./components/structure/_scripts.html')
+</body>
+
+</html>

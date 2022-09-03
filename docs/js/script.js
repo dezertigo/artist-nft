@@ -73,6 +73,9 @@ window.addEventListener("load", () => {
       qs(".btn.authorization").addEventListener("click", () => {
          document.location.href = "authorization.html";
       });
+      qs(".premium-acess").addEventListener("click", () => {
+         document.location.href = "payment.html";
+      });
    }
 
    // ! Spoiler.html
