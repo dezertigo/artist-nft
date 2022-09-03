@@ -89,6 +89,7 @@
             padding-left: 4px;
             @media (min-width: 468px) {
                width: auto;
+               min-width: 150px;
             }
          }
 
@@ -430,6 +431,71 @@
          }
          span {
             width: 65%;
+         }
+      }
+   }
+}
+body.nfts,
+body.product-1-unlocked {
+   .header {
+      &__container {
+         @media (min-width: 1250px) {
+            padding-right: percent(165, 1440);
+         }
+      }
+      &__logo {
+         transform: translate(0, 0px);
+      }
+      .menu {
+         max-width: 513px;
+         &__item_nft {
+            svg {
+               display: none;
+            }
+
+            a {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               position: relative;
+               &:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 50px;
+                  height: 35px;
+                  background: #000
+                     linear-gradient(94.78deg, rgba(104, 201, 255, 0.25) 9.27%, rgba(209, 181, 255, 0.25) 84.06%);
+                  border-radius: 8px;
+                  transform: translate(1px, 1px);
+
+                  @media (min-width: 1050px) {
+                     transform: translate(-12px, -4px);
+                  }
+               }
+            }
+            span {
+               @extend %grad-text;
+               position: relative;
+               z-index: 1;
+               @media (max-width: 1050px) {
+                  transform: translate(11px, -2px);
+               }
+            }
+         }
+      }
+      &__buttons {
+         column-gap: 12px;
+         .authorization {
+            display: none;
+         }
+         .premium-acess {
+            background: #000
+               linear-gradient(94.78deg, rgba(104, 201, 255, 0.25) 9.27%, rgba(209, 181, 255, 0.25) 84.06%);
+            a {
+               @extend %grad-text;
+            }
          }
       }
    }
