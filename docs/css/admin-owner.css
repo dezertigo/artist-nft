@@ -1784,42 +1784,18 @@ body.admin .messages__preview {
     padding-bottom: 23px;
     padding-left: 23px;
     padding-right: 23px;
-    justify-content: space-between;
+    justify-content: start;
   }
 
-  .orders__heading-type {
-    display: inline-block;
-  }
-
-  .orders__heading-color {
-    display: inline-block;
-  }
-
-  .orders__heading-email {
-    display: inline-block;
-  }
-
-  .orders__heading-size {
-    display: inline-block;
-  }
-
-  .orders__heading-comment {
-    display: inline-block;
-  }
-
-  .orders__heading-address {
-    display: inline-block;
-    transform: translate(-9px, 0);
-  }
-
-  .orders__heading-status {
-    display: inline-block;
-    transform: translate(-9px, 0);
-  }
-
+  .orders__heading-type,
+  .orders__heading-color,
+  .orders__heading-email,
+  .orders__heading-size,
+  .orders__heading-comment,
+  .orders__heading-address,
+  .orders__heading-status,
   .orders__heading-action {
     display: inline-block;
-    transform: translate(-3px, 0);
   }
 
   .orders__items {
@@ -1829,12 +1805,14 @@ body.admin .messages__preview {
     overflow: auto;
     max-width: 100%;
     padding-bottom: 23px;
+    display: inline-grid;
   }
 
   .orders__item {
     background-color: #1d1f21;
     grid-template-columns: repeat(8, auto);
     align-items: center;
+    justify-content: start;
     padding: 25px;
     padding-top: 21px;
     padding-bottom: 27px;
@@ -1843,24 +1821,15 @@ body.admin .messages__preview {
   }
 
   .orders__type {
-    padding-right: 36px;
-    margin-right: 3px;
     white-space: nowrap;
-  }
-
-  .orders__color {
-    padding-right: 18px;
-    margin-right: 10px;
   }
 
   .orders__email {
     font-weight: 600;
-    padding-right: 14px;
   }
 
   .orders__size {
     white-space: nowrap;
-    padding-right: 24px;
     font-size: 1em;
     line-height: 1.3125;
   }
@@ -1870,7 +1839,6 @@ body.admin .messages__preview {
   }
 
   .orders__comment {
-    padding-right: 18px;
     font-size: 0.75em;
     line-height: 1.5;
   }
@@ -1913,7 +1881,6 @@ body.admin .messages__preview {
   .orders__address {
     font-size: 0.75em;
     line-height: 1.5;
-    padding-right: 18px;
   }
 
   .orders__address p:first-child {
@@ -1952,7 +1919,6 @@ body.admin .messages__preview {
   }
 
   .orders__status {
-    margin-right: 9px;
     width: 103px;
     height: 40px;
     background-color: rgba(197, 255, 152, 0.1);
@@ -1972,6 +1938,50 @@ body.admin .messages__preview {
     cursor: pointer;
   }
 
+  body.admin-client .orders__heading-email {
+    transform: translate(-6px, 0);
+  }
+
+  body.admin-client .orders__heading-address {
+    transform: translate(-3px, 0);
+  }
+
+  body.admin-client .orders__heading-status {
+    transform: translate(1px, 0);
+  }
+
+  body.admin-client .orders__heading-action {
+    transform: translate(9px, 0);
+  }
+
+  body.admin-client .orders__type {
+    padding-right: 39px;
+  }
+
+  body.admin-client .orders__color {
+    padding-right: 28px;
+  }
+
+  body.admin-client .orders__email {
+    padding-right: 14px;
+  }
+
+  body.admin-client .orders__size {
+    padding-right: 25px;
+  }
+
+  body.admin-client .orders__comment {
+    padding-right: 18px;
+  }
+
+  body.admin-client .orders__address {
+    padding-right: 18px;
+  }
+
+  body.admin-client .orders__status {
+    margin-right: 9px;
+  }
+
   body.admin-owner .orders__cntr,
   body.admin-worker .orders__cntr {
     padding-left: 14px;
@@ -1981,16 +1991,27 @@ body.admin .messages__preview {
   body.admin-owner .orders__heading,
   body.admin-worker .orders__heading {
     padding-left: 16px;
+    transform: translate(10px, 0);
+  }
+
+  body.admin-owner .orders__heading-type,
+  body.admin-worker .orders__heading-type {
+    transform: translate(-10px, 0);
   }
 
   body.admin-owner .orders__heading-color,
   body.admin-worker .orders__heading-color {
-    transform: translate(5px, 0);
+    transform: translate(-3px, 0);
   }
 
   body.admin-owner .orders__heading-email,
   body.admin-worker .orders__heading-email {
-    transform: translate(2px, 0);
+    transform: translate(-3px, 0);
+  }
+
+  body.admin-owner .orders__heading-size,
+  body.admin-worker .orders__heading-size {
+    transform: translate(-1px, 0);
   }
 
   body.admin-owner .orders__heading-status,
@@ -2012,39 +2033,32 @@ body.admin .messages__preview {
 
   body.admin-owner .orders__type,
   body.admin-worker .orders__type {
-    padding-right: 32px;
-    margin-right: 0;
+    padding-right: 34px;
   }
 
   body.admin-owner .orders__color,
   body.admin-worker .orders__color {
     padding-right: 40px;
-    margin-right: 0;
   }
 
   body.admin-owner .orders__email,
   body.admin-worker .orders__email {
     padding-right: 28px;
-    margin-right: 0;
   }
 
   body.admin-owner .orders__size,
   body.admin-worker .orders__size {
-    padding-right: 29px;
-    margin-right: 0;
+    padding-right: 28px;
   }
 
   body.admin-owner .orders__comment,
   body.admin-worker .orders__comment {
-    padding-right: 20px;
-    margin-right: 0;
+    padding-right: 16px;
   }
 
   body.admin-owner .orders__address,
   body.admin-worker .orders__address {
-    padding-right: 13px;
-    transform: translate(-4px, 0);
-    margin-right: 0;
+    padding-right: 17px;
   }
 
   body.admin-owner .orders__address p:last-of-type,

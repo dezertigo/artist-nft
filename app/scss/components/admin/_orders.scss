@@ -61,50 +61,19 @@ div.orders {
          padding-bottom: 23px;
          padding-left: 23px;
          padding-right: 23px;
-         justify-content: space-between;
+         justify-content: start;
       }
       @media (min-width: 769px) {
          // .orders__heading-type
-         &-type {
-            display: inline-block;
-         }
-
-         // .orders__heading-color
-         &-color {
-            display: inline-block;
-         }
-
-         // .orders__heading-email
-         &-email {
-            display: inline-block;
-         }
-
-         // .orders__heading-size
-         &-size {
-            display: inline-block;
-         }
-
-         // .orders__heading-comment
-         &-comment {
-            display: inline-block;
-         }
-
-         // .orders__heading-address
-         &-address {
-            display: inline-block;
-            transform: translate(-9px, 0);
-         }
-
-         // .orders__heading-status
-         &-status {
-            display: inline-block;
-            transform: translate(-9px, 0);
-         }
-
-         // .orders__heading-action
+         &-type,
+         &-color,
+         &-email,
+         &-size,
+         &-comment,
+         &-address,
+         &-status,
          &-action {
             display: inline-block;
-            transform: translate(-3px, 0);
          }
       }
    }
@@ -125,6 +94,7 @@ div.orders {
          overflow: auto;
          max-width: 100%;
          padding-bottom: 23px;
+         display: inline-grid;
       }
    }
    &__item {
@@ -143,6 +113,7 @@ div.orders {
          background-color: #1d1f21;
          grid-template-columns: repeat(8, auto);
          align-items: center;
+         justify-content: start;
          padding: 25px;
          padding-top: 21px;
          padding-bottom: 27px;
@@ -162,8 +133,8 @@ div.orders {
          padding-left: 14px;
       }
       @media (min-width: 769px) {
-         padding-right: 36px;
-         margin-right: 3px;
+         // padding-right: 36px;
+         // margin-right: 3px;
          white-space: nowrap;
       }
    }
@@ -182,8 +153,8 @@ div.orders {
          grid-row: span 2;
       }
       @media (min-width: 769px) {
-         padding-right: 18px;
-         margin-right: 10px;
+         // padding-right: 18px;
+         // margin-right: 10px;
       }
    }
 
@@ -198,7 +169,7 @@ div.orders {
       }
       @media (min-width: 769px) {
          font-weight: 600;
-         padding-right: 14px;
+         // padding-right: 14px;
       }
    }
 
@@ -252,7 +223,7 @@ div.orders {
                display: none;
             }
          }
-         padding-right: 24px;
+         // padding-right: 24px;
          @include fl(16, 21);
       }
    }
@@ -293,7 +264,7 @@ div.orders {
       }
 
       @media (min-width: 769px) {
-         padding-right: 18px;
+         // padding-right: 18px;
          @include fl(12, 18);
          p {
             &:first-child {
@@ -398,7 +369,7 @@ div.orders {
 
       @media (min-width: 769px) {
          @include fl(12, 18);
-         padding-right: 18px;
+         // padding-right: 18px;
          p {
             &:first-child {
                display: none;
@@ -485,7 +456,7 @@ div.orders {
       }
       @media (min-width: 769px) {
          // padding-right: 9px;
-         margin-right: 9px;
+         // margin-right: 9px;
          width: 103px;
          height: 40px;
          background-color: rgba(197, 255, 152, 0.1);
@@ -535,6 +506,51 @@ div.orders {
       }
    }
 }
+body.admin-client {
+   @media (min-width: 769px) {
+      .orders {
+         &__heading {
+            &-email {
+               transform: translate(-6px, 0);
+            }
+
+            &-address {
+               transform: translate(-3px, 0);
+            }
+            &-status {
+               transform: translate(1px, 0);
+            }
+            &-action {
+               transform: translate(9px, 0);
+            }
+         }
+         &__type {
+            padding-right: 39px;
+         }
+         &__color {
+            padding-right: 28px;
+         }
+         &__email {
+            padding-right: 14px;
+         }
+         &__size {
+            padding-right: 25px;
+         }
+         &__comment {
+            padding-right: 18px;
+         }
+         &__address {
+            padding-right: 18px;
+         }
+         &__status {
+            // padding-right: 9px;
+            margin-right: 9px;
+         }
+         &__action {
+         }
+      }
+   }
+}
 body.admin-owner,
 body.admin-worker {
    @media (min-width: 769px) {
@@ -542,15 +558,21 @@ body.admin-worker {
          &__cntr {
             padding-left: 14px;
             padding-right: 15px;
-            // padding-right: 0;
          }
          &__heading {
             padding-left: 16px;
+            transform: translate(10px, 0);
+            &-type {
+               transform: translate(-10px, 0);
+            }
             &-color {
-               transform: translate(5px, 0);
+               transform: translate(-3px, 0);
             }
             &-email {
-               transform: translate(2px, 0);
+               transform: translate(-3px, 0);
+            }
+            &-size {
+               transform: translate(-1px, 0);
             }
          }
          &__heading-status {
@@ -558,8 +580,6 @@ body.admin-worker {
          }
          &__items {
             row-gap: 9px;
-            // padding-right: 32px;
-            // padding-right: 15px;
          }
          &__item {
             padding-top: 22px;
@@ -567,29 +587,22 @@ body.admin-worker {
             padding-right: 30px;
          }
          &__type {
-            padding-right: 32px;
-            margin-right: 0;
+            padding-right: 34px;
          }
          &__color {
             padding-right: 40px;
-            margin-right: 0;
          }
          &__email {
             padding-right: 28px;
-            margin-right: 0;
          }
          &__size {
-            padding-right: 29px;
-            margin-right: 0;
+            padding-right: 28px;
          }
          &__comment {
-            padding-right: 20px;
-            margin-right: 0;
+            padding-right: 16px;
          }
          &__address {
-            padding-right: 13px;
-            transform: translate(-4px, 0);
-            margin-right: 0;
+            padding-right: 17px;
             p {
                &:last-of-type {
                   max-width: 143px;
