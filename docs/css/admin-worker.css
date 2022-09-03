@@ -3,6 +3,7 @@
 /*Шрифты*/
 
 .orders__action,
+.statistics__button,
 .admin-header .admin-burger__wrapper span,
 .admin-header .admin-burger__wrapper:before,
 .admin-header .admin-burger__wrapper:after {
@@ -1195,6 +1196,117 @@ body.admin .menu__item.active svg path {
   transform: translate(0, 1px);
 }
 
+.statistics__cntr {
+  padding-top: 17px;
+  padding-bottom: 15px;
+}
+
+.statistics__statistics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(167px, 1fr));
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 15px;
+}
+
+.statistics__stats {
+  padding-top: 15px;
+  padding-bottom: 13px;
+  padding-right: 25px;
+  text-align: center;
+  background-color: #212426;
+  border-radius: 12px;
+}
+
+.statistics__stats_1 {
+  padding-left: 26px;
+}
+
+.statistics__stats_2 {
+  padding-left: 25px;
+}
+
+.statistics__subtitle {
+  font-size: 1em;
+  line-height: 1.65625;
+  font-weight: 700;
+  color: #fcffff;
+}
+
+.statistics__subtext {
+  font-size: 0.75em;
+  line-height: 1.75;
+  color: #c8d2dc;
+  margin-top: -4px;
+}
+
+.statistics__graphic {
+  border-radius: 12px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 23px;
+  display: grid;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.statistics__title {
+  font-size: 1.625em;
+  line-height: 1.3076923077;
+  font-weight: 700;
+  color: #fcffff;
+  margin-bottom: -2px;
+}
+
+.statistics__text {
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: #c8d2dc;
+}
+
+.statistics__button {
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 116px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.statistics__image {
+  position: absolute;
+  top: 6px;
+  right: -8px;
+  height: 180px;
+  width: 180px;
+}
+
+.statistics__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+body.admin-worker .orders__title {
+  display: none !important;
+}
+
+body.admin-worker .orders__heading {
+  display: none !important;
+}
+
 div.orders {
   position: absolute;
   top: 0;
@@ -1345,6 +1457,15 @@ body.admin .messages__preview {
   h1 {
     font-size: 2.5em;
     line-height: 1.125;
+  }
+}
+
+@media (min-width: 550px) {
+  .statistics__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -moz-column-gap: 10px;
+    column-gap: 10px;
   }
 }
 
@@ -1535,6 +1656,42 @@ body.admin .messages__preview {
   .chat__textarea svg {
     width: 21px;
     height: 21px;
+  }
+
+  .statistics__label {
+    display: none;
+  }
+
+  .statistics__stats {
+    background-color: #1d1f21;
+  }
+
+  .statistics__graphic {
+    background-color: #1d1f21;
+    padding-top: 19px;
+    padding-left: 30px;
+    align-items: start;
+    max-height: 137px;
+  }
+
+  .statistics__text {
+    margin-bottom: 5px;
+  }
+
+  .statistics__image {
+    width: 146px;
+    height: 146px;
+    top: 15px;
+    right: -16px;
+  }
+
+  body.admin-worker .orders__cntr {
+    padding-left: 23px !important;
+    padding-right: 7px !important;
+  }
+
+  body.admin-worker .orders__items {
+    row-gap: 17px !important;
   }
 
   .orders__cntr {
@@ -1986,6 +2143,43 @@ body.admin .messages__preview {
     transform: translate(-2px, 0);
   }
 
+  .statistics__cntr {
+    padding-right: 37px;
+    padding-top: 33px;
+    padding-bottom: 4px;
+  }
+
+  .statistics__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .statistics__statistics {
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    grid-column: span 2;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .statistics__stats {
+    text-align: left;
+    padding-top: 32px;
+    padding-bottom: 34px;
+    padding-left: 30px;
+  }
+
+  .statistics__subtitle {
+    font-size: 2.25em;
+    line-height: 1.375;
+    margin-bottom: 3px;
+  }
+
+  .statistics__subtext {
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
   body.admin section.active {
     border-radius: 32px 0px 0px 0px;
   }
@@ -2219,6 +2413,18 @@ body.admin .messages__preview {
   .chat__separator {
     margin-left: -4%;
     width: 108.6956521739%;
+  }
+
+  .statistics__label {
+    font-size: 1.25em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #fcffff;
+    margin-bottom: 8px;
+  }
+
+  .statistics__graphic {
+    background: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
   }
 
   .orders__cntr {

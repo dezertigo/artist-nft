@@ -1,0 +1,198 @@
+.statistics {
+   &__cntr {
+      // max-width: 345px;
+      padding-top: 17px;
+      padding-bottom: 15px;
+      @media (min-width: 1000px) {
+         padding-right: 37px;
+         padding-top: 33px;
+         padding-bottom: 4px;
+      }
+   }
+   &__label {
+      @media (max-width: 768px) {
+         @include fl(20, 30);
+         font-weight: 700;
+         color: #fcffff;
+         margin-bottom: 8px;
+      }
+      @media (min-width: 769px) {
+         display: none;
+      }
+   }
+   &__wrapper {
+      @media (min-width: 550px) {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         column-gap: 10px;
+      }
+      @media (min-width: 1000px) {
+         grid-template-columns: repeat(3, 1fr);
+         column-gap: 30px;
+      }
+   }
+   &__statistics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(167px, 1fr));
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 15px;
+      @media (min-width: 1000px) {
+         column-gap: 30px;
+         grid-column: span 2;
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+   // .statistics__stats
+   &__stats {
+      padding-top: 15px;
+      padding-bottom: 13px;
+      padding-right: 25px;
+      text-align: center;
+      background-color: #212426;
+      border-radius: 12px;
+      @media (min-width: 769px) {
+         background-color: #1d1f21;
+      }
+      @media (min-width: 1000px) {
+         text-align: left;
+         padding-top: 32px;
+         padding-bottom: 34px;
+         padding-left: 30px;
+      }
+      &_1 {
+         padding-left: 26px;
+      }
+      &_2 {
+         padding-left: 25px;
+      }
+   }
+
+   // .statistics__subtitle
+
+   &__subtitle {
+      @include fl(16, 26.5);
+      font-weight: 700;
+      color: #fcffff;
+      @media (min-width: 1000px) {
+         @include fl(36, 49.5);
+         margin-bottom: 3px;
+      }
+   }
+
+   // .statistics__subtext
+
+   &__subtext {
+      @include fl(12, 21);
+      color: #c8d2dc;
+      margin-top: -4px;
+      @media (min-width: 1000px) {
+         @include fl(14, 21);
+      }
+   }
+
+   // .statistics__graphic
+
+   &__graphic {
+      @media (max-width: 768px) {
+         background: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+      }
+      border-radius: 12px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      padding-left: 23px;
+      display: grid;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+      @media (min-width: 769px) {
+         background-color: #1d1f21;
+         padding-top: 19px;
+         padding-left: 30px;
+         align-items: start;
+         max-height: 137px;
+      }
+   }
+
+   // .statistics__content
+
+   &__content {
+   }
+
+   // .statistics__title
+
+   &__title {
+      @include fl(26, 34);
+      font-weight: 700;
+      color: #fcffff;
+      margin-bottom: -2px;
+   }
+
+   // .statistics__text
+
+   &__text {
+      @include fl(14, 21);
+      margin-bottom: 12px;
+      color: #c8d2dc;
+      @media (min-width: 769px) {
+         margin-bottom: 5px;
+      }
+   }
+
+   // .statistics__button
+
+   &__button {
+      @include fl(14, 20);
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 116px;
+      height: 40px;
+      @extend %grad-bg;
+      border-radius: 8px;
+      cursor: pointer;
+   }
+
+   // .statistics__image
+
+   &__image {
+      position: absolute;
+      top: 6px;
+      right: -8px;
+      height: 180px;
+      width: 180px;
+      @media (min-width: 769px) {
+         width: 146px;
+         height: 146px;
+         top: 15px;
+         right: -16px;
+      }
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+}
+body.admin-worker {
+   @media (min-width: 769px) {
+      .orders__cntr {
+         padding-left: 23px !important;
+         padding-right: 7px !important;
+      }
+      .orders__items {
+         row-gap: 17px !important;
+      }
+   }
+   .orders__title {
+      display: none !important;
+   }
+   .orders__heading {
+      display: none !important;
+   }
+}
