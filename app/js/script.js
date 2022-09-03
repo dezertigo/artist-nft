@@ -29,13 +29,15 @@ window.addEventListener("load", () => {
                actualizeHeight();
                window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
             }
+         } else if (e.target.closest(".spoiler__preview")) {
+            actualizeHeight();
          } else if (!e.target.closest(".burger") && !e.target.closest(".header__action-wrapper")) {
             burger.classList.remove("active");
             header.classList.remove("active");
             headerAction.classList.remove("active");
             body.classList.remove("lock");
             closeBurger();
-         }
+         } 
       }
       function closeBurger() {
          //Обязательная дополнительная проверка

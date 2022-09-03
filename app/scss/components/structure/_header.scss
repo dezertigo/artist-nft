@@ -255,6 +255,10 @@
       flex-direction: column;
       row-gap: 20px;
       text-align: right;
+      a {
+         width: 100%;
+         text-align: left;
+      }
    }
    @media (min-width: 1050px) {
       flex: 1 1 auto;

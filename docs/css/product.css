@@ -2770,6 +2770,11 @@ body.product .product .radio__input:checked + .radio__label {
     text-align: right;
   }
 
+  .menu a {
+    width: 100%;
+    text-align: left;
+  }
+
   .menu li {
     padding-top: 5px;
     padding-bottom: 5px;
