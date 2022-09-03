@@ -68,6 +68,27 @@
          border: 2.66667px solid #1d1f21;
          border-radius: 50%;
       }
+      @media (max-width: 768px) {
+         &.premium {
+            i {
+               @include fl(10);
+               background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+               border-radius: 7px;
+               padding: 4px;
+               position: absolute;
+               bottom: -2px;
+               left: -1px;
+               z-index: 1;
+            }
+         }
+      }
+      @media (min-width: 769px) {
+         &.premium {
+            i {
+               display: none;
+            }
+         }
+      }
    }
 
    // .chat-list-preview__name

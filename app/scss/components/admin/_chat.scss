@@ -325,6 +325,7 @@
          }
       }
       svg {
+         cursor: pointer;
          transform: translate(0, 1px);
          @media (min-width: 769px) {
             width: 21px;

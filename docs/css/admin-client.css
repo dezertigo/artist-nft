@@ -1183,6 +1183,7 @@ body.admin .menu__item_messages p {
 }
 
 .chat__textarea svg {
+  cursor: pointer;
   transform: translate(0, 1px);
 }
 
@@ -1402,6 +1403,10 @@ body.admin .messages__preview {
     display: none;
   }
 
+  .chat-list-preview__photo.premium i {
+    display: none;
+  }
+
   .chat-list-items__item {
     padding-right: 19px;
     position: relative;
@@ -1425,6 +1430,21 @@ body.admin .messages__preview {
 
   .chat-list-items__item:hover:after {
     opacity: 1;
+  }
+
+  .chat-list-items__photo.premium:after {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .chat-list-items__photo.premium:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border-radius: 50%;
+    background: linear-gradient(94.78deg, rgb(104, 202, 255) 9.27%, rgb(209, 181, 255) 84.06%);
   }
 
   .chat {
@@ -2138,6 +2158,18 @@ body.admin .messages__preview {
 @media (max-width: 768px) {
   body.admin .aside {
     width: 100%;
+  }
+
+  .chat-list-preview__photo.premium i {
+    font-size: 0.625em;
+    line-height: 1;
+    background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+    border-radius: 7px;
+    padding: 4px;
+    position: absolute;
+    bottom: -2px;
+    left: -1px;
+    z-index: 1;
   }
 
   .chat {

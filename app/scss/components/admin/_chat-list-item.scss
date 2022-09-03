@@ -65,6 +65,23 @@
          border: 1.6px solid #1d1f21;
          border-radius: 50%;
       }
+      @media (min-width: 769px) {
+         &.premium {
+            &:after {
+               border-color: rgba(255, 255, 255, 0.2);
+            }
+            &:before {
+               content: "";
+               position: absolute;
+               top: -3px;
+               left: -3px;
+               width: calc(100% + 6px);
+               height: calc(100% + 6px);
+               border-radius: 50%;
+               background: linear-gradient(94.78deg, rgb(104, 202, 255) 9.27%, rgba(209, 181, 255, 1) 84.06%);
+            }
+         }
+      }
    }
 
    // .chat-list-items__content
