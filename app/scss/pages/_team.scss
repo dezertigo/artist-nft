@@ -1,6 +1,6 @@
-// .chromeperfectpixel-layer-img {
-//     object-fit: contain !important;
-//  }
+.chromeperfectpixel-layer-img {
+    object-fit: contain !important;
+ }
 body.team {
     .hero {
         padding-top: 62px;
@@ -22,6 +22,10 @@ body.team {
                 &:nth-of-type(2) {
                     top: 527px;
                     left: percent(-79, 375);
+                    @media (min-width: 568px) {
+                        top: 418px;
+                        left: percent(30, 800);
+                    }
                     @media (min-width:1200px) {
                         top: 518px;
                         left: percent(464, 1440);
@@ -54,12 +58,29 @@ body.team {
                 }
             }
         &__circle {
-
+            position: absolute;
+            opacity: 0.4;
+            border: 1px solid #FCFFFF;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            display: block;
+            left: percent(105,375);
+            top: 398px;
+            @media (min-width:1200px) {
+                top: 487px;
+                left: percent(630,1440);
+            }
+            
         }
         &__inner {
             @media (min-width: 800px) {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+            }
+            @media (min-width:1200px) {
+                align-items: start;
             }
         }
         &__content {
@@ -70,8 +91,15 @@ body.team {
         }
         &__graphic {
             margin-bottom: 60px;
-            max-width:percent(575, 1110);
-            width: 100%;
+            @media (min-width:800px ) {
+                max-width: 50%;
+                width: 100%;
+                
+            }
+            @media (min-width:1200px) {
+                max-width:percent(575, 1110);
+                width: 100%;
+            }
         }
         .hello-h1 {
             &__title {
@@ -139,8 +167,11 @@ body.team {
             flex-wrap: wrap;
             justify-content: space-between;
             column-gap: 11px;
-            row-gap: 14px;
+            row-gap: 15px;
             margin-bottom: 30px;
+            @media (min-width:1200px) {
+                row-gap: 14px;
+            }
         }
         .benefits-item {
             @media (max-width: 800px) {
@@ -183,6 +214,11 @@ body.team {
                 &_1 {
                     top: 0px;
                     right: -32px;
+                    @media (min-width:568px) {
+                        top: 0;
+                        right: -32px;
+                        transform: rotate(0deg);
+                    }
                     @media (min-width:1200px) {
                         top: 280px;
                         left: percent(-124, 1440);
@@ -203,12 +239,21 @@ body.team {
                     }
                 }
                 &_3 {
+                    @media (min-width:568px) {
+                        top: 255px;
+                        left: percent(15, 800);
+                    }
                     @media (min-width:1200px) {
-                              top: 588px;   
-                              left: percent(236,1440);           
+                        top: 588px;   
+                        left: percent(236,1440);           
                     }
                 }
                 &_4 {
+                    @media (min-width:568px) {
+                        top: 250px;
+                        right: percent(-80, 800);
+                        z-index: -1;
+                    }
                     @media (min-width:1200px) {
                         right: percent(-175, 1440);
                         top: 143px;
