@@ -68,7 +68,7 @@ window.addEventListener("load", () => {
    }
 
    // ! Header
-   //Relocate to authorization.html
+   //Relocate to some pages
    if (qs(".header")) {
       qs(".btn.authorization").addEventListener("click", () => {
          document.location.href = "authorization.html";

@@ -3,31 +3,57 @@ body.home {
       overflow: hidden;
       position: relative;
    }
-   .blur {
-      &_1 {
-         top: 187px;
-         left: -14px;
-      }
-      &_2 {
-         top: 790px;
-         left: 15px;
-      }
-      &_3 {
-         top: 2123px;
-         left: 33px;
-         @media (min-width: 769px) {
-            &-1 {
-               top: percent(137, 3424);
-               left: -470px;
+   // .blur {
+   //    &_1 {
+   //       top: 187px;
+   //       left: -14px;
+   //    }
+   //    &_2 {
+   //       top: 790px;
+   //       left: 15px;
+   //    }
+   //    &_3 {
+   //       top: 2123px;
+   //       left: 33px;
+   //       @media (min-width: 769px) {
+   //          &-1 {
+   //             top: percent(137, 3424);
+   //             left: -470px;
+   //          }
+   //          &-2 {
+   //             top: percent(755, 3424);
+   //             left: -40px;
+   //          }
+   //          &-3 {
+   //             top: percent(1942, 3424);
+   //             left: 340px;
+   //          }
+   //       }
+   //    }
+   // }
+   .blur-img {
+      &__image {
+         position: absolute;
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+         }
+         &_1 {
+            top: 1px;
+            left: -230px;
+            width: calc(480px * 1.6);
+            width: calc(480px * 2);
+            padding-bottom: calc(percent(444, 375) * 1.6);
+            padding-bottom: calc(percent(444, 375) * 2);
+            @media (min-width: 769px) {
             }
-            &-2 {
-               top: percent(755, 3424);
-               left: -40px;
-            }
-            &-3 {
-               top: percent(1942, 3424);
-               left: 340px;
-            }
+         }
+         &_2 {
+         }
+         &_3 {
          }
       }
    }
