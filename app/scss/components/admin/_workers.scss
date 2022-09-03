@@ -1,0 +1,204 @@
+body.admin-owner {
+   div.workers {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: auto;
+      width: 100%;
+      &:before {
+         display: none;
+      }
+   }
+   .workers {
+      &__cntr {
+         overflow: hidden;
+         position: relative;
+         @media (max-width: 768px) {
+            padding-left: percent(15, 375);
+            padding-right: percent(15, 375);
+         }
+         @media (min-width: 769px) {
+            padding-left: 14px;
+            padding-right: 13px;
+            position: relative;
+         }
+      }
+      // .orders__title
+      &__title {
+         @media (max-width: 768px) {
+            position: sticky;
+            top: 0;
+            left: 0;
+            @include fl(20, 30);
+            font-weight: 700;
+            padding-top: 17px;
+            padding-bottom: 10px;
+            color: #fcffff;
+            z-index: 1;
+            &:before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100vw;
+               height: 100%;
+               background: #1d1f21;
+               z-index: -1;
+            }
+         }
+         @media (min-width: 769px) {
+            display: none;
+         }
+      }
+      &__heading {
+         @media (max-width: 768px) {
+            display: none;
+         }
+         @media (min-width: 769px) {
+            color: #fcffff;
+            @include fl(14, 15);
+            padding-top: 27px;
+            padding-bottom: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
+            justify-content: space-between;
+            white-space: nowrap;
+            justify-content: start;
+            column-gap: 10px;
+            transform: translate(10px, 0);
+         }
+         @media (min-width: 769px) {
+            // .orders__heading-type
+            &-name,
+            &-mail,
+            &-comment,
+            &-plan {
+               display: inline-block;
+            }
+         }
+      }
+
+      &__items {
+         display: grid;
+         @media (max-width: 768px) {
+            row-gap: 10px;
+            padding-bottom: 17px;
+         }
+         @media (min-width: 400px) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 10px;
+         }
+         @media (min-width: 769px) {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            overflow: auto;
+            max-width: 100%;
+            padding-bottom: 23px;
+            display: inline-grid;
+            width: auto;
+            row-gap: 10px;
+         }
+      }
+      &__item {
+         display: grid;
+         border-radius: 14px;
+         // white-space: nowrap;
+         @media (max-width: 768px) {
+            background: #2c2f33;
+            padding-top: 18px;
+            padding-bottom: 17px;
+            padding-right: 19px;
+            padding-left: 18px;
+            grid-template-columns: 1fr;
+         }
+         @media (min-width: 769px) {
+            background-color: #1d1f21;
+            grid-template-columns: repeat(4, auto);
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 18px;
+            padding-left: 25px;
+            padding-right: 33px;
+            justify-content: start;
+            column-gap: 10px;
+         }
+      }
+
+      // .workers__name
+      &__name {
+         p {
+            font-weight: 600;
+            @include fl(16, 21);
+            color: #fcffff;
+         }
+      }
+
+      // .workers__mail
+      &__mail {
+         p {
+            font-weight: 600;
+            @include fl(14, 21);
+            color: #fcffff;
+         }
+      }
+
+      // .workers__comment
+      &__comment {
+         p {
+            @include fl(14, 21);
+            color: #fcffff;
+         }
+         button {
+            @include fl(12, 18);
+            color: #86a8ff;
+            position: relative;
+            &:after {
+               content: "";
+               position: absolute;
+               bottom: 2px;
+               left: 0;
+               width: 100%;
+               height: 1px;
+               background: #86a8ff;
+            }
+         }
+         @media (max-width: 768px) {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            position: relative;
+            &:before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 1px;
+               background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+            }
+         }
+      }
+
+      // .workers__plan
+      &__plan {
+         cursor: pointer;
+         @extend %grad-bg;
+         color: #1d1f21;
+         font-weight: 700;
+         @include fl(14, 20);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 40px;
+         border-radius: 8px;
+         @media (max-width: 400px) {
+            width: 100%;
+         }
+         @media (min-width: 400px) {
+            width: 116px;
+         }
+      }
+   }
+}

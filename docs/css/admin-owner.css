@@ -2,6 +2,7 @@
 
 /*Шрифты*/
 
+body.admin-owner .workers__plan,
 .orders__action,
 .admin-header .admin-burger__wrapper span,
 .admin-header .admin-burger__wrapper:before,
@@ -1421,6 +1422,83 @@ body.admin-owner .nft-orders__price p:last-child {
   background-color: #7e51ff;
 }
 
+body.admin-owner div.workers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+body.admin-owner div.workers:before {
+  display: none;
+}
+
+body.admin-owner .workers__cntr {
+  overflow: hidden;
+  position: relative;
+}
+
+body.admin-owner .workers__items {
+  display: grid;
+}
+
+body.admin-owner .workers__item {
+  display: grid;
+  border-radius: 14px;
+}
+
+body.admin-owner .workers__name p {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.3125;
+  color: #fcffff;
+}
+
+body.admin-owner .workers__mail p {
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1.5;
+  color: #fcffff;
+}
+
+body.admin-owner .workers__comment p {
+  font-size: 0.875em;
+  line-height: 1.5;
+  color: #fcffff;
+}
+
+body.admin-owner .workers__comment button {
+  font-size: 0.75em;
+  line-height: 1.5;
+  color: #86a8ff;
+  position: relative;
+}
+
+body.admin-owner .workers__comment button:after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #86a8ff;
+}
+
+body.admin-owner .workers__plan {
+  cursor: pointer;
+  color: #1d1f21;
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 8px;
+}
+
 body.admin {
   background-color: #1d1f21;
 }
@@ -1476,6 +1554,16 @@ body.admin .messages__preview {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     -moz-column-gap: 10px;
     column-gap: 10px;
+  }
+
+  body.admin-owner .workers__items {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+
+  body.admin-owner .workers__plan {
+    width: 116px;
   }
 }
 
@@ -2108,6 +2196,64 @@ body.admin .messages__preview {
 
   .paint-block {
     padding-bottom: 114.7540983607%;
+  }
+
+  body.admin-owner .workers__cntr {
+    padding-left: 14px;
+    padding-right: 13px;
+    position: relative;
+  }
+
+  body.admin-owner .workers__title {
+    display: none;
+  }
+
+  body.admin-owner .workers__heading {
+    color: #fcffff;
+    font-size: 0.875em;
+    line-height: 1.0714285714;
+    padding-top: 27px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: space-between;
+    white-space: nowrap;
+    justify-content: start;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    transform: translate(10px, 0);
+  }
+
+  body.admin-owner .workers__heading-name,
+  body.admin-owner .workers__heading-mail,
+  body.admin-owner .workers__heading-comment,
+  body.admin-owner .workers__heading-plan {
+    display: inline-block;
+  }
+
+  body.admin-owner .workers__items {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    overflow: auto;
+    max-width: 100%;
+    padding-bottom: 23px;
+    display: inline-grid;
+    width: auto;
+    row-gap: 10px;
+  }
+
+  body.admin-owner .workers__item {
+    background-color: #1d1f21;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    padding-left: 25px;
+    padding-right: 33px;
+    justify-content: start;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
   }
 
   body.admin main {
@@ -2830,6 +2976,72 @@ body.admin .messages__preview {
     border-radius: 0.75rem;
   }
 
+  body.admin-owner .workers__cntr {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  body.admin-owner .workers__title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-size: 1.25em;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    color: #fcffff;
+    z-index: 1;
+  }
+
+  body.admin-owner .workers__title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #1d1f21;
+    z-index: -1;
+  }
+
+  body.admin-owner .workers__heading {
+    display: none;
+  }
+
+  body.admin-owner .workers__items {
+    row-gap: 10px;
+    padding-bottom: 17px;
+  }
+
+  body.admin-owner .workers__item {
+    background: #2c2f33;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    padding-right: 19px;
+    padding-left: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  body.admin-owner .workers__comment {
+    padding-top: 16px;
+    padding-bottom: 8px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  body.admin-owner .workers__comment:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(94.78deg, rgba(104, 202, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+  }
+
   body.admin .messages__chat {
     background-color: #1d1f21;
     position: absolute;
@@ -2883,6 +3095,10 @@ body.admin .messages__preview {
   }
 
   body.admin-owner .nft-orders__status p {
+    width: 100%;
+  }
+
+  body.admin-owner .workers__plan {
     width: 100%;
   }
 }
