@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- ! Изменить все "team" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/team.min.css',
+'title': 'Team',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="team">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+					@@include('./components/blocks/_stroke-text.html',{
+						'text' : 'BECOME A PART'
+					})
+					@@include('./components/blocks/_stroke-text.html',{
+						'text' : 'OF OUR TEAM'
+					})
+					<i class="star-decor"></i>
+					<i class="star-decor"></i>
+					<div class="hero__circle"></div>
+				<div class="hero__container">
+					<div class="hero__inner">
+						<div class="hero__content">
+							@@loop('./components/blocks/_hello-h1.html', './json/team/hello-h1.json')
+						</div>
+						<div class="hero__graphic">
+							@@include("./components/blocks/_double-block.html", {
+								"modify" : "square",
+								"img": "09",
+								"imgAlt": "product image",
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="benefits">
+				<div class="benefits__container">
+					@@loop("./components/blocks/_hello-h2.html", "./json/team/hello-h2.json")
+					<div class="benefits__inner">
+						@@loop('./components/blocks/_benefits-item.html', './json/team/benefits-item.json')
+					</div>
+				</div>
+			</section>
+			<section class="form">
+				@@include('./components/blocks/_background.html')
+				@@include('./components/blocks/_contact-form.html')
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>

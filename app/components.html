@@ -123,6 +123,11 @@
 				})
 			</div>
 
+			<!-- Подключение benefits карточки (нужно указать в стилях только отзывчивую ширину блоку) --> 
+			<div class="benefits-block" style="max-width:1110px; display: flex; gap: 20px;">
+				@@loop('./components/blocks/_benefits-item.html', './json/team/benefits-item.json')
+			</div>
+
 			<!-- Подключение премиум карточки (нужно указать в стилях только отзывчивую ширину блоку) --> 
 			<div class="premium-card__block" style="max-width: 1110px; display: flex;">
 			@@loop('./components/blocks/_premium-card.html', './json/pricing/premium-card.json')

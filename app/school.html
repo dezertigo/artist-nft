@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/school.min.css',
+'title': 'School',
+})
+<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет стили на страницу -->
+
+<body class="school">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__decor">
+						@@include('./components/blocks/_stroke-text.html', {
+							'text': 'CUTOM BY YOUR OWN'
+						})
+						@@include('./components/blocks/_stroke-text.html', {
+							'text': 'UNIQUE CLOTHES'
+						})
+						<i class="star-decor"></i>
+						<i class="star-decor"></i>
+					</div>
+					<div class="hero__inner">
+						<div class="hero__content">
+							@@loop('./components/blocks/_hello-h1.html', './json/school/hello-h1.json')
+						</div>
+						<div class="hero__graphic">
+							@@include('./components/blocks/_double-block.html', {
+								"modify" : "square",
+								"img": "10",
+								"imgAlt": "product image"
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="benefits">
+				<div class="benefits__container">
+					@@loop('./components/blocks/_hello-h2.html', './json/school/hello-h2.json')
+					@@loop('./components/blocks/_benefits-item.html', './json/school/benefits-item.json')
+				</div>
+			</section>
+			<section class="fees">
+				<div class="background">
+					<div class='background__image background__image_1'>
+						<picture>
+							<source type="image/webp" srcset="img/bg/bg_diamond.webp">
+							<img src="./img/bg/bg_diamond.png" alt="background diamong image">
+						</picture>
+					</div>
+					<div class='background__image background__image_2'>
+						<picture>
+							<source type="image/webp" srcset="img/bg/bg_diamond.webp">
+							<img src="./img/bg/bg_diamond.png" alt="background diamong image">
+						</picture>
+					</div>
+					<div class='background__image background__image_3'>
+						<picture>
+							<source type="image/webp" srcset="img/bg/premiun_diamond.webp">
+							<img src="./img/bg/premiun_diamond.png" alt="background diamong image">
+						</picture>
+					</div>
+				</div>
+				<div class="fees__decor">
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'make art'
+					})
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'not war'
+					})
+					<i class="star-decor"></i>
+					<div class="fees__circle"></div>
+				</div>
+				<div class="fees__container">
+					<div class="hello-h2">
+						<h2 class="hello-h2__title">
+							Artist School Fees
+						</h2>
+						<p class="hello-h2__text content-text">
+							Indulgence announcing uncommonly met she continuing two unpleasing terminated
+						</p>
+					</div>
+					<div class="fees__inner">
+						@@loop('./components/blocks/_premium-card.html', './json/school/premium-card.json')
+					</div>
+				</div>
+			</section>
+			<section class="reg-form">
+				@@include('./components/blocks/_background.html')
+				<div class="reg-form__container">
+					<h2 class="reg-form__title">
+						Register to be a designer
+					</h2>
+					<p class="reg-form__suptitile">
+						<span>5/10</span> already tooken!
+					</p>
+					<form class="form">
+						@@include('./components/blocks/_input.html')
+						@@include('./components/blocks/_input.html')
+						@@include('./components/blocks/_textarea.html')
+						<div class="radio__body">
+							<label class="form__label" for="plan_1"></label>
+							<input class="form__input" name="plan" type="radio" id="plan_1">
+							<label class="form__label" for="plan_2"></label>
+							<input class="form__input" name="plan" type="radio" id="plan_2">
+							<label class="form__label" for="plan_3"></label>
+							<input class="form__input" name="plan" type="radio" id="plan_3">
+						</div>
+						<button class="btn grad-bg" type="submit" form="form-1" value="Submit">
+							Sign up
+						</button>
+						@@include('./components/blocks/_confirm.html')
+					</form>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {})
+	<!-- todo При указанном значении 'y' или 'yes' у ключа 'swiper' - добавляет скрипт на страницу -->
+</body>
+
+</html>
