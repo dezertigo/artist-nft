@@ -307,22 +307,28 @@ body.product-1 {
          &__image {
             &_1 {
                display: block;
-               top: 21px;
-               left: percent(288, 375);
+               top: 10px;
+               left: percent(313, 375);
 
                @media (min-width: 568px) {
                   top: percent(327, 881.06);
                   left: percent(-125, 1440);
+                  img {
+                     filter: brightness(0.9) hue-rotate(202deg);
+                  }
                }
             }
             &_2 {
                display: block;
-               top: 15px;
-               left: percent(313, 375);
+               top: 19px;
+               left: percent(288, 375);
 
                @media (min-width: 568px) {
                   top: percent(227, 881.06);
                   left: percent(165, 1440);
+                  img {
+                     filter: brightness(0.7) blur(4px) hue-rotate(158deg);
+                  }
                }
             }
             &_3 {
