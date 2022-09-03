@@ -1631,6 +1631,12 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: none;
 }
 
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .blur svg {
   position: absolute;
   z-index: -1;
