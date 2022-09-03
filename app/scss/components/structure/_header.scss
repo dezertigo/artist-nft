@@ -460,10 +460,10 @@ body.product-1-unlocked {
             }
 
             a {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               position: relative;
+               // display: flex;
+               // justify-content: flex-start;
+               // align-items: center;
+               // position: relative;
                &:after {
                   content: "";
                   position: absolute;
@@ -487,6 +487,7 @@ body.product-1-unlocked {
                z-index: 1;
                @media (max-width: 1050px) {
                   transform: translate(11px, -2px);
+                  display: inline-block;
                }
             }
          }

@@ -875,14 +875,6 @@ body.product-1-unlocked .header .menu__item_nft svg {
   display: none;
 }
 
-body.nfts .header .menu__item_nft a,
-body.product-1-unlocked .header .menu__item_nft a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 body.nfts .header .menu__item_nft a:after,
 body.product-1-unlocked .header .menu__item_nft a:after {
   content: "";
@@ -2257,6 +2249,7 @@ body.team .form .backgroung__image_2 {
   body.nfts .header .menu__item_nft span,
   body.product-1-unlocked .header .menu__item_nft span {
     transform: translate(11px, -2px);
+    display: inline-block;
   }
 }
 
