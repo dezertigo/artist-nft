@@ -1,0 +1,20 @@
+[
+    {
+        "text" : "1 week",
+        "img": "06",
+        "title" : "One week access",
+        "class" : "first"
+    },
+    {
+        "text" : "month",
+        "img": "08",
+        "title" : "One month access",
+        "class" : "second"
+    },
+    {
+        "text" : "Individual",
+        "img": "07",
+        "title" : "individual lesson",
+        "class" : "third"
+    }
+]

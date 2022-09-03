@@ -1,0 +1,46 @@
+body.school {
+    .hero {
+        &__decor {}
+        &__inner {}
+        &__content {}
+        &__graphic {}
+      }
+      .benefits {
+       
+      }
+      .fees {
+        &__decor {}
+        &__circle {}
+      
+        &__inner {}
+      }
+      .background {
+        &__image {
+         &_1 {}
+         &_2 {}
+         &_3 {}
+        }
+      }
+      .hello-h2 {
+        &__title {}
+        &__text {}
+      }
+      .content-text {
+      }
+      .reg-form {
+        &__title {}
+        &__suptitile {}
+      }
+      .form {
+        &__label {}
+        &__input {}
+      }
+      .radio {
+        &__body {}
+      }
+      .btn {
+      }
+      .grad-bg {
+      }
+      
+}
