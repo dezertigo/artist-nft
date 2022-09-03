@@ -2702,6 +2702,7 @@ body.product .product .radio__input:checked + .radio__label {
   }
 
   .header__action-wrapper {
+    transition: all 0.3s ease;
     padding-right: 4%;
     padding-left: 4%;
     position: absolute;

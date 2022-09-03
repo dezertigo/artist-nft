@@ -59,6 +59,8 @@
          top: 0;
          right: -100vw;
          &-wrapper {
+            transition: all 0.3s ease;
+
             padding-right: percent(15, 375);
             padding-left: percent(15, 375);
             position: absolute;

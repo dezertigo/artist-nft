@@ -2293,6 +2293,7 @@ body.product-1-unlocked .form .contact-form h2 {
   }
 
   .header__action-wrapper {
+    transition: all 0.3s ease;
     padding-right: 4%;
     padding-left: 4%;
     position: absolute;
