@@ -1775,7 +1775,7 @@ body.school main .blur-img {
 body.school .hero {
   position: relative;
   overflow: hidden;
-  padding-top: 49px;
+  padding-top: 66px;
   padding-bottom: 119px;
 }
 
@@ -1789,14 +1789,14 @@ body.school .hero__decor .stroke-text:nth-of-type(2) {
   left: 6.9333333333%;
 }
 
-body.school .hero__decor :nth-of-type(3) {
+body.school .hero__decor .star-decor:nth-of-type(1) {
   font-size: 62px;
   top: 518px;
   transform: rotate(12deg);
   position: absolute;
 }
 
-body.school .hero__decor :nth-of-type(4) {
+body.school .hero__decor .star-decor:nth-of-type(2) {
   font-size: 45px;
   position: absolute;
   top: 308px;
@@ -1828,7 +1828,7 @@ body.school .benefits__inner {
 body.school .benefits .benefits-item {
   max-width: 167px;
   padding: 10px 10px 14px;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 body.school .benefits .benefits-item__img {
@@ -1855,25 +1855,25 @@ body.school .benefits .benefits-item__text {
 
 body.school .fees {
   overflow: hidden;
-  padding-top: 110px;
+  padding-top: 107px;
   position: relative;
 }
 
 body.school .fees__decor :nth-of-type(1) {
-  top: 216px;
+  top: 213px;
   left: -4.5333333333%;
   z-index: 10;
 }
 
 body.school .fees__decor :nth-of-type(2) {
-  top: 47px;
+  top: 44px;
   left: 39.4666666667%;
 }
 
 body.school .fees__decor .star-decor {
   position: absolute;
   font-size: 62px;
-  top: 35px;
+  top: 32px;
   left: 20px;
 }
 
@@ -1902,8 +1902,68 @@ body.school .fees__inner .tabs__nav {
   margin-bottom: 14px;
 }
 
+body.school .fees__inner .tabs__item {
+  display: none;
+}
+
+body.school .fees__inner .tabs__item.active {
+  display: block;
+}
+
+body.school .fees__inner .premium-card__image {
+  max-width: 100%;
+  padding-bottom: 48.712%;
+  top: 83px;
+  left: -98px;
+}
+
+body.school .fees__inner .premium-card__image--second {
+  top: 75px;
+  left: -93px;
+}
+
+body.school .fees__inner .premium-card__image--third {
+  top: 71px;
+}
+
+body.school .fees__inner .premium-card__body--second .stroke-text {
+  transform: translateX(-51%);
+}
+
+body.school .fees__inner .premium-card__body--second .premium-card__heading {
+  transform: translate(8px, 0px);
+}
+
+body.school .fees__inner .premium-card__body--second .premium-card__list {
+  transform: translate(-2px, -3px);
+}
+
+body.school .fees__inner .premium-card__body--third .stroke-text {
+  text-transform: capitalize;
+  transform: translate(0px, -3px);
+  left: -6px;
+}
+
+body.school .fees__inner .premium-card__body--third .premium-card__heading {
+  transform: translate(11px, 29px);
+}
+
+body.school .fees__inner .premium-card__body--third .premium-card__btn {
+  transform: translateX(-2px);
+}
+
 body.school .fees__inner .premium-card__heading {
   margin-bottom: 50px;
+  margin-top: -29px;
+}
+
+body.school .fees__inner .premium-card__list {
+  transform: translate(1px, -3px);
+}
+
+body.school .fees__inner .premium-card__footer {
+  transform: translateY(-3px);
+  padding: 14px 28px 18px 24px;
 }
 
 body.school .background__image {
@@ -1973,7 +2033,113 @@ body.school .hello-h2__title {
 }
 
 body.school .reg-form {
+  position: relative;
   overflow: hidden;
+  padding-top: 95px;
+  padding-bottom: 31px;
+}
+
+body.school .reg-form .backgroung__image_1 {
+  width: 45.3333333333%;
+  right: -12%;
+  top: 30px;
+}
+
+body.school .reg-form .backgroung__image_2 {
+  width: 25.6%;
+  padding-bottom: 25.6%;
+  filter: blur(0px);
+  transform: rotate(54deg);
+  left: -36px;
+  top: -11px;
+}
+
+body.school .reg-form__title {
+  color: #fcffff;
+  margin-bottom: 8px;
+}
+
+body.school .reg-form__suptitile {
+  font-size: 1em;
+  line-height: 1.75;
+  padding: 5px 22px;
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  border-radius: 12px;
+  max-width: 191px;
+  margin-bottom: 21px;
+}
+
+body.school .reg-form__suptitile span {
+  font-weight: 800;
+}
+
+body.school .form .input {
+  margin-bottom: 8px;
+}
+
+body.school .form textarea {
+  height: 120px;
+}
+
+body.school .form__label {
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  border-radius: 9px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125em;
+  line-height: 1.4444444444;
+}
+
+body.school .form__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+body.school .form__input:checked + .form__label {
+  color: #1D1F21;
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  -webkit-text-fill-color: unset;
+}
+
+body.school .form .btn {
+  width: 100%;
+  min-height: 56px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 1.125em;
+  line-height: 1.4444444444;
+}
+
+body.school .radio__body {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+body.school .radio__btn {
+  background: #212426;
+  max-width: 109px;
+  min-height: 50px;
+  width: 100%;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.school .radio__label {
+  color: #C8D2DC;
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 6px;
 }
 
 @media (min-width: 431px) {
@@ -2511,6 +2677,20 @@ body.school .reg-form {
     line-height: 1.75;
   }
 
+  body.school .hero__inner {
+    display: flex;
+  }
+
+  body.school .hero__content {
+    max-width: 38.9189189189%;
+    width: 100%;
+  }
+
+  body.school .hero__graphic {
+    max-width: 561px;
+    width: 100%;
+  }
+
   body.school .background__image_1 {
     display: block;
     padding-bottom: 23.6111111111%;
@@ -2538,6 +2718,10 @@ body.school .reg-form {
 
   body.school .background__image_3 img {
     filter: brightness(0.7) blur(3px);
+  }
+
+  body.school .hello-h1__title {
+    max-width: 100%;
   }
 }
 

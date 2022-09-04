@@ -34,7 +34,7 @@ body.school {
    .hero {
       position: relative;
       overflow: hidden;
-      padding-top: 49px;
+      padding-top: 66px;
       padding-bottom: 119px;
       &__decor {
          .stroke-text {
@@ -47,26 +47,40 @@ body.school {
                left: percent(26, 375);
             }
          }
-         :nth-of-type(3) {
-            font-size: 62px;
-            top: 518px;
-            transform: rotate(12deg);
-            position: absolute;
-         }
-         :nth-of-type(4) {
-            font-size: 45px;
-            position: absolute;
-            top: 308px;
-            right: 10px;
-            transform: rotate(-15deg);
-         }
+        .star-decor {
+            &:nth-of-type(1) {
+                font-size: 62px;
+                top: 518px;
+                transform: rotate(12deg);
+                position: absolute;
+             }
+             &:nth-of-type(2) {
+                font-size: 45px;
+                position: absolute;
+                top: 308px;
+                right: 10px;
+                transform: rotate(-15deg);
+             }
+        } 
       }
       &__inner {
+        @media (min-width:1200px) {
+            display: flex;
+            justify-content: space-between;
+        }
       }
       &__content {
          margin-bottom: 47px;
+         @media (min-width: 1200px) {
+            max-width: percent(432, 1110);
+            width: 100%;
+         }
       }
       &__graphic {
+        @media (min-width: 1200px) {
+            max-width: 561px;
+            width: 100%;
+        }
          .double-block_square {
             max-width: 309px;
             transform: translate(26px, 0px) rotate(-5.95deg);
@@ -87,7 +101,7 @@ body.school {
       .benefits-item {
          max-width: 167px;
          padding: 10px 10px 14px;
-         margin-bottom: 15px;
+         margin-bottom: 17px;
          &__img {
             width: 36px;
             height: 36px;
@@ -108,22 +122,22 @@ body.school {
    }
    .fees {
       overflow: hidden;
-      padding-top: 110px;
+      padding-top: 107px;
       position: relative;
       &__decor {
          :nth-of-type(1) {
-            top: 216px;
+            top: 213px;
             left: percent(-17, 375);
             z-index: 10;
          }
          :nth-of-type(2) {
-            top: 47px;
+            top: 44px;
             left: percent(148, 375);
          }
          .star-decor {
             position: absolute;
             font-size: 62px;
-            top: 35px;
+            top: 32px;
             left: 20px;
          }
       }
@@ -152,8 +166,66 @@ body.school {
          .tabs__nav {
             margin-bottom: 14px;
          }
-         .premium-card__heading {
-            margin-bottom: 50px;
+         .tabs__item {
+            display: none;
+            &.active {
+                display: block;
+            }
+         }
+
+         .premium-card {
+            &__image {
+                max-width: 100%;
+                padding-bottom: 48.712%;
+                top: 83px;
+                left: -98px;
+                &--first {
+                }
+                &--second {
+                    top: 75px;
+                    left: -93px;
+                }
+                &--third {
+                    top: 71px;
+                }
+            }
+            &__body {
+                &--second {
+                    .stroke-text {
+                        transform: translateX(-51%);
+                    }
+                    .premium-card__heading {
+                        transform: translate(8px, 0px);
+                    }
+                    .premium-card__list {
+                        transform: translate(-2px, -3px);
+                    }
+                }
+                &--third {
+                    .stroke-text {
+                        text-transform: capitalize;
+                        transform: translate(0px, -3px);
+                        left: -6px;
+                    }
+                    .premium-card__heading {
+                        transform: translate(11px,29px);
+                    }
+                    .premium-card__btn {
+                        transform: translateX(-2px);
+                    }
+                }
+            }
+            &__heading {
+                margin-bottom: 50px;
+                margin-top: -29px;
+            }
+            &__list {
+                transform: translate(1px, -3px);
+            }
+            &__footer {
+                transform: translateY(-3px);
+                padding: 14px 28px 18px 24px;
+            }
          }
       }
    }
@@ -228,6 +300,9 @@ body.school {
    .hello-h1 {
       &__title {
          max-width: 255px;
+         @media (min-width:1200px) {
+            max-width: 100%;
+         }
       }
       &__text {
          max-width: 270px;
@@ -242,30 +317,110 @@ body.school {
       &__title {
          max-width: 270px;
       }
-      &__text {
-      }
-   }
-   .content-text {
    }
    .reg-form {
-      overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    padding-top: 95px;
+    padding-bottom: 31px;
+      .backgroung {
+        &__image {
+            &_1 {
+                width: percent(170, 375);
+                right: percent(-45, 375);
+                top: 30px;
+            }
+            &_2 {
+                width: 25.6%;
+                padding-bottom: 25.6%;
+                filter: blur(0px);
+                transform: rotate(54deg);
+                left: -36px;
+                top: -11px;
+            }
+            &_3 {
+
+            }
+            &_4 {
+
+            }
+        }
+      }
       &__title {
+        color: #fcffff;
+        margin-bottom: 8px;
       }
       &__suptitile {
+        @include fl(16,28);
+        padding: 5px 22px;
+        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+        border-radius: 12px;
+        max-width: 191px;
+        margin-bottom: 21px;
+        span {
+            font-weight: 800;
+        }
       }
    }
    .form {
+      .input {
+        margin-bottom: 8px;
+      }
+      textarea {
+        height: 120px;
+      }
+      
       &__label {
+        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+        border-radius: 9px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include fl(18, 26);
       }
       &__input {
+        appearance: none;
+      }
+      &__input:checked + .form__label {
+        color: #1D1F21;
+        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+        -webkit-text-fill-color: unset;
+      }
+      .btn {
+        width: 100%;
+        min-height: 56px;
+        margin-bottom: 18px;
+        font-weight: 700;
+        @include fl(18, 26);
       }
    }
    .radio {
       &__body {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
       }
-   }
-   .btn {
-   }
-   .grad-bg {
+      &__btn {
+        background: #212426;
+        max-width: 109px;
+        min-height: 50px;
+        width: 100%;
+        
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__label {
+        color: #C8D2DC;
+        @include fl(14,21);
+        margin-bottom: 6px;
+      }
    }
 }

@@ -110,7 +110,7 @@
         								"title" : "One week access",
         								"class" : "first",
 										"btntext" : "Choose",
-        								"price" : "250.99"
+        								"price" : "$250.99"
 									})
 								</div>
 								<div class="tabs__item" id="tab_2">
@@ -120,17 +120,17 @@
         								"title" : "One month access",
         								"class" : "second",
 										"btntext" : "Choose",
-        								"price" : "250.99"
+        								"price" : "$250.99"
 									})
 								</div>
 								<div class="tabs__item" id="tab_3">
 									@@include('./components/blocks/_premium-card.html', {
-										"text" : "year",
+										"text" : "Individual",
         								"img": "12",
         								"title" : "Individual lesson",
         								"class" : "third",
 										"btntext" : "Choose",
-        								"price" : "250.99"
+        								"price" : "$250.99"
 									})
 								</div>
 							</div>
@@ -148,16 +148,37 @@
 						<span>5/10</span> already tooken!
 					</p>
 					<form class="form">
-						@@include('./components/blocks/_input.html')
-						@@include('./components/blocks/_input.html')
-						@@include('./components/blocks/_textarea.html')
+						@@include('./components/blocks/_input.html', {
+							'label': 'Name',
+							'for': 'name',
+							'type': 'text',
+							'placeholder': 'Your name'
+						})
+						@@include('./components/blocks/_input.html', {
+							'label': 'Mail',
+							'for': 'mail',
+							'type': 'text',
+							'placeholder': 'Your mail',
+						})
+						@@include('./components/blocks/_textarea.html', {
+							'label': 'Design preferences',
+							'for': 'question',
+							'placeholder': 'Your comment',
+						})
+						<p class="radio__label">Choose your plan</p>
 						<div class="radio__body">
-							<label class="form__label" for="plan_1"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_1">
-							<label class="form__label" for="plan_2"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_2">
-							<label class="form__label" for="plan_3"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_3">
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_1">
+								<label class="form__label" for="plan_1">One week</label>
+							</div>
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_2" checked>
+								<label class="form__label" for="plan_2">Individual</label>
+							</div>
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_3">
+								<label class="form__label" for="plan_3">One month</label>
+							</div>
 						</div>
 						<button class="btn grad-bg" type="submit" form="form-1" value="Submit">
 							Sign up
