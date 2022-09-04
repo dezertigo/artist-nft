@@ -10,13 +10,11 @@ body.school {
          position: absolute;
          z-index: -1;
          @media (max-width: 768px) {
-            top: 22px;
-            // top: percent(22, ВЫСОТА БЛОКА MAIN);
+            top: percent(22, 2900);
             left: percent(-180, 375);
          }
          @media (min-width: 769px) {
-            top: 892px;
-            // top: percent(892, ВЫСОТА БЛОКА MAIN);
+            top: percent(892, 2880);
             left: percent(-788, 1440);
          }
          img {
@@ -52,8 +50,11 @@ body.school {
             &:nth-of-type(2) {
                top: 690px;
                left: percent(26, 375);
-               @media (min-width:1200px) {
+               @media (min-width: 800px) {
                 top: 610px;
+                left: percent(200, 800);
+               }
+               @media (min-width:1200px) {
                 left: percent(376, 1440);
                }
             }

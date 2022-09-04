@@ -2302,7 +2302,7 @@ body.school .radio__label {
   }
 
   body.school main .blur-img {
-    top: 892px;
+    top: 30.9722222222%;
     left: -54.7222222222%;
   }
 
@@ -2359,6 +2359,11 @@ body.school .radio__label {
 
   .footer .social-icons {
     transform: translate(-6px, 4px);
+  }
+
+  body.school .hero__decor .stroke-text:nth-of-type(2) {
+    top: 610px;
+    left: 25%;
   }
 
   body.school .hero__inner {
@@ -2883,7 +2888,6 @@ body.school .radio__label {
   }
 
   body.school .hero__decor .stroke-text:nth-of-type(2) {
-    top: 610px;
     left: 26.1111111111%;
   }
 
@@ -3203,7 +3207,7 @@ body.school .radio__label {
 
 @media (max-width: 768px) {
   body.school main .blur-img {
-    top: 22px;
+    top: 0.7586206897%;
     left: -48%;
   }
 
