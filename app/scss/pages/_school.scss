@@ -36,15 +36,26 @@ body.school {
       overflow: hidden;
       padding-top: 66px;
       padding-bottom: 119px;
+      @media (min-width:1200px) {
+        padding-bottom: 109px;
+      }
       &__decor {
          .stroke-text {
             &:nth-of-type(1) {
                top: 11px;
                left: percent(-147, 375);
+               @media (min-width: 1200px) {
+                top: 86px;
+                left: percent(-103, 1440);
+               }
             }
             &:nth-of-type(2) {
                top: 690px;
                left: percent(26, 375);
+               @media (min-width:1200px) {
+                top: 610px;
+                left: percent(376, 1440);
+               }
             }
          }
         .star-decor {
@@ -53,6 +64,10 @@ body.school {
                 top: 518px;
                 transform: rotate(12deg);
                 position: absolute;
+                @media (min-width: 1200px) {
+                    left: percent(641, 1440);
+                    top: 380px;
+                }
              }
              &:nth-of-type(2) {
                 font-size: 45px;
@@ -60,34 +75,76 @@ body.school {
                 top: 308px;
                 right: 10px;
                 transform: rotate(-15deg);
+                @media (min-width: 600px) {
+                    right: percent(106, 800);
+                }
+                @media (min-width: 1200px) {
+                    right: percent(110, 1440);
+                    top: 245px;
+                }
              }
         } 
       }
       &__inner {
-        @media (min-width:1200px) {
+        @media (min-width:800px) {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
       }
       &__content {
          margin-bottom: 47px;
-         @media (min-width: 1200px) {
+         @media (min-width: 800px) {
             max-width: percent(432, 1110);
             width: 100%;
+            margin-top: 35px;
          }
       }
+      .hello-h1 {
+        @media (min-width: 400px) {
+            &__title {
+                max-width: percent(255, 375);
+            }
+            &__text {
+                max-width: percent(270, 375);
+            }
+        }
+        @media (min-width: 800px) {
+            &__title {
+                max-width: 100%;
+            }
+            &__text {
+                max-width: percent(270, 430);
+            }
+        }
+      }
       &__graphic {
-        @media (min-width: 1200px) {
+        @media (min-width: 800px) {
             max-width: 561px;
             width: 100%;
         }
          .double-block_square {
             max-width: 309px;
             transform: translate(26px, 0px) rotate(-5.95deg);
+            @media (min-width:800px) {
+                max-width: 570px;
+                transform: translate(-35px,-14px) rotate(-5.95deg);
+            }
             img {
                width: 120%;
                height: 140%;
                transform: translate(-53px, -59px);
+               @media (min-width: 800px) {
+                width: 125%;
+                height: 128%;
+               }
+            }
+         }
+         .double-block {
+            &__image {
+                @media (min-width: 800px) {
+                    transform: translate(-78px,-36px) rotate(5.95deg);
+                }
             }
          }
       }
@@ -98,54 +155,119 @@ body.school {
          flex-wrap: wrap;
          justify-content: space-between;
       }
-      .benefits-item {
-         max-width: 167px;
-         padding: 10px 10px 14px;
-         margin-bottom: 17px;
-         &__img {
-            width: 36px;
-            height: 36px;
-            margin-bottom: 7px;
-            svg {
-               width: 15px !important;
-               height: 15px !important;
+      .hello-h2 {
+        @media (min-width: 1200px) {
+            text-align: center;
+            
+         }
+         &__label {
+            @media (min-width: 1200px) {
+                transform: translateX(-8px);
             }
          }
          &__title {
-            @include fl(14, 20);
-         }
-         &__text {
-            @include fl(12, 20);
-            max-width: 140px;
-         }
+            @media (min-width: 1200px) {
+                margin: 0 auto 29px;
+            }
+        }
+      }
+      .benefits-item {
+        @media (max-width: 800px) {
+            max-width: 167px;
+            padding: 10px 10px 14px;
+            margin-bottom: 17px;
+            &__img {
+               width: 36px;
+               height: 36px;
+               margin-bottom: 7px;
+               svg {
+                  width: 15px !important;
+                  height: 15px !important;
+               }
+            }
+            &__title {
+                @include fl(14, 20);
+             }
+             &__text {
+                @include fl(12, 20);
+                max-width: 140px;
+             }
+        }
+        @media (min-width: 1200px) {
+            padding: 18px 15px 32px;
+            &__title {
+                margin-bottom: 4px;
+            }
+        }
       }
    }
    .fees {
       overflow: hidden;
       padding-top: 107px;
       position: relative;
+      @media (min-width: 1200px) {
+        padding-top: 77px;
+      }
       &__decor {
          :nth-of-type(1) {
             top: 213px;
             left: percent(-17, 375);
             z-index: 10;
+            @media (min-width: 1200px) {
+                top: 107px;
+                left: percent(-38, 1440);
+            }
          }
          :nth-of-type(2) {
             top: 44px;
             left: percent(148, 375);
+            @media (min-width: 1200px) {
+                top: 107px;
+                left: percent(1105, 1440)
+            }
          }
          .star-decor {
             position: absolute;
             font-size: 62px;
             top: 32px;
             left: 20px;
+            @media (min-width: 1200px) {
+                font-size: 62px;
+                left: percent(390, 1440);
+                top: 60px;
+            }
+         }
+         .fees__circle {
+            @media (min-width: 1200px) {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                opacity: 0.4;
+                border: 1px solid #FCFFFF;
+                display: block;
+                border-radius: 100%;
+                right: percent(352, 1440);
+                top: 205px;
+                left: unset;
+            }
          }
       }
       .hello-h2 {
          margin-bottom: 93px;
+         @media (min-width: 1200px) {
+            text-align: center;
+            &__title {
+                margin: 0 auto;
+            }
+            &__text {
+                margin: 10px auto 0;
+                max-width: 415px;
+            }
+         }
          &__text {
             transform: translateY(4px);
          }
+         
       }
       .background {
          &__image {
@@ -156,20 +278,58 @@ body.school {
                filter: blur(6px);
                top: 160px;
                right: -10px;
+            @media (min-width: 800px) {
+                width: 340px;
+                height: 340px;
+                filter: blur(0);
+                top: 166px;
+            }
+            }
+            &_2 {
+                @media (min-width: 800px) {
+                    top: 65px;
+                    filter: brightness(0.9) blur(6px);
+                }
             }
             &_3 {
                display: none;
+               @media (min-width: 1200px) {
+                display: block;
+                top: 17.861111%;
+               }
             }
          }
       }
       &__inner {
          .tabs__nav {
             margin-bottom: 14px;
+            @media (min-width: 600px) {
+                max-width: 500px;
+                margin: 0 auto 14px;
+            }
+            @media (min-width: 800px) {
+                display: none;
+            }
+         }
+         .tabs__content {
+            @media (min-width: 900px) {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+            }
          }
          .tabs__item {
             display: none;
             &.active {
                 display: block;
+            }
+            @media (min-width: 900px) {
+                display: block;
+                max-width: 350px;
+                width: 100%;
+                &:nth-of-type(2) {
+                    order: 3;
+                }
             }
          }
 
@@ -180,25 +340,63 @@ body.school {
                 top: 83px;
                 left: -98px;
                 &--first {
+                    @media (min-width: 800px) {
+                        top: 77px;
+                        left: -102px;
+
+                    }
                 }
                 &--second {
                     top: 75px;
                     left: -93px;
+                    @media (min-width: 1200px) {
+                        top: 71px;
+                    }
                 }
                 &--third {
                     top: 71px;
+                    @media (min-width: 800px) {
+                        top: 68px;
+                    }
                 }
             }
             &__body {
+                &--first {
+                    @media (min-width: 800px) {
+                        .premium-card__heading {
+                            transform: translate(6px, -5px);
+                        }
+                        .premium-card__list {
+                            transform: translate(-3px,-7px);
+                        }
+                        .premium-card__footer {
+                            transform: translate(3px, -2px);
+                        }
+                    }
+                }
                 &--second {
                     .stroke-text {
                         transform: translateX(-51%);
+                        @media (min-width: 800px) {
+                                left: 54.4%;
+                        }
                     }
                     .premium-card__heading {
                         transform: translate(8px, 0px);
+                        @media (min-width: 800px) {
+                            transform: translate(8px,-5px);
+                        }
                     }
                     .premium-card__list {
                         transform: translate(-2px, -3px);
+                        @media (min-width: 1200px) {
+                            transform: translate(-1px,-7px);
+                        }
+                    }
+                    .premium-card__footer {
+                        @media (min-width: 800px) {
+                            transform: translate(5px, -2px);
+                        }
                     }
                 }
                 &--third {
@@ -206,9 +404,25 @@ body.school {
                         text-transform: capitalize;
                         transform: translate(0px, -3px);
                         left: -6px;
+                        @media (min-width: 800px) {
+                            transform: translate(0,-5px);
+                        }
                     }
                     .premium-card__heading {
                         transform: translate(11px,29px);
+                        @media (min-width: 800px) {
+                            transform: translate(6px,23px);
+                        }
+                    }
+                    .premium-card__list {
+                        @media (min-width: 800px) {
+                            transform: translate(-1px,-7px);
+                        }
+                    }
+                    .premium-card__footer {
+                        @media (min-width: 800px) {
+                            transform: translate(4px, -3px);
+                        }
                     }
                     .premium-card__btn {
                         transform: translateX(-2px);
@@ -228,11 +442,6 @@ body.school {
             }
          }
       }
-   }
-   &__circle {
-   }
-
-   &__inner {
    }
    .background {
       &__image {
@@ -306,16 +515,25 @@ body.school {
       }
       &__text {
          max-width: 270px;
+         @media (min-width: 1200px) {
+            transform: translateX(2px);
+         }
       }
       .btn {
          width: 100%;
          max-width: 193px;
+         @media (min-width:1200px) {
+            max-width: 212px;
+         }
       }
    }
    .hello-h2 {
       margin-bottom: 29px;
       &__title {
          max-width: 270px;
+         @media (min-width:1200px) {
+            max-width: 450px;
+         }
       }
    }
    .reg-form {
@@ -323,12 +541,26 @@ body.school {
     overflow: hidden;
     padding-top: 95px;
     padding-bottom: 31px;
+    @media (min-width: 800px) {
+        padding-top: 56px;
+        padding-bottom: 65px;
+    }
       .backgroung {
         &__image {
             &_1 {
                 width: percent(170, 375);
                 right: percent(-45, 375);
                 top: 30px;
+                @media (min-width: 800px) {
+                   right: unset;
+                   left: percent(170, 1440);
+                   top: 260px;
+                   max-width: 185px;
+                   padding-bottom: 10%;
+                   width: 100%;
+                   transform: rotate(-3.92deg);
+                   z-index: -1;
+                }
             }
             &_2 {
                 width: 25.6%;
@@ -337,18 +569,42 @@ body.school {
                 transform: rotate(54deg);
                 left: -36px;
                 top: -11px;
+                z-index: -1;
+                @media (min-width: 800px) {
+                    transform: rotate(75deg);
+                    max-width: percent(250, 1440);
+                    top: 327px;
+                    left: -75px;
+                }
             }
             &_3 {
-
+                @media (min-width: 568px) {
+                    display: none;
+                }
+                @media (min-width: 800px) {
+                    display: block;
+                    top: 658px;
+                    left: percent(252, 1440);
+                }
             }
             &_4 {
-
+                @media (min-width:568px) {
+                    display: none;
+                }
+                @media (min-width: 800px) {
+                    display: block;
+                    top: 219px;
+                    right: percent(-185, 1440);
+                }
             }
         }
       }
       &__title {
         color: #fcffff;
         margin-bottom: 8px;
+        @media (min-width: 800px) {
+            text-align: center;
+        }
       }
       &__suptitile {
         @include fl(16,28);
@@ -360,9 +616,22 @@ body.school {
         span {
             font-weight: 800;
         }
+        @media (min-width: 800px) {
+            margin: 0 auto 21px;
+        }
       }
    }
    .form {
+    @media (min-width:450px) {
+        max-width: percent(410, 450);
+        margin: 0 auto;
+    }
+    @media (min-width: 800px) {
+        max-width: percent(410, 800);
+    }
+    @media (min-width: 1200px) {
+        max-width: percent(410, 1110);
+    }
       .input {
         margin-bottom: 8px;
       }
@@ -383,6 +652,7 @@ body.school {
         align-items: center;
         justify-content: center;
         @include fl(18, 26);
+        
       }
       &__input {
         appearance: none;
@@ -398,6 +668,15 @@ body.school {
         margin-bottom: 18px;
         font-weight: 700;
         @include fl(18, 26);
+        @media (min-width: 800px) {
+            min-height: 64px;
+            margin-bottom: 23px;
+        }
+      }
+      .confirm {
+        @media (min-width: 800px) {
+            transform: translateX(2px);
+        }
       }
    }
    .radio {
@@ -405,12 +684,19 @@ body.school {
         display: flex;
         justify-content: space-between;
         margin-bottom: 18px;
+        @media (min-width: 800px) {
+            margin-bottom: 39px;
+        }
       }
       &__btn {
         background: #212426;
         max-width: 109px;
         min-height: 50px;
         width: 100%;
+        @media (min-width: 800px) {
+            min-height: 64px;
+            max-width: 120px;
+        }
         
         border-radius: 9px;
         display: flex;

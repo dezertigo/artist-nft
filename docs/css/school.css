@@ -1825,34 +1825,6 @@ body.school .benefits__inner {
   justify-content: space-between;
 }
 
-body.school .benefits .benefits-item {
-  max-width: 167px;
-  padding: 10px 10px 14px;
-  margin-bottom: 17px;
-}
-
-body.school .benefits .benefits-item__img {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 7px;
-}
-
-body.school .benefits .benefits-item__img svg {
-  width: 15px !important;
-  height: 15px !important;
-}
-
-body.school .benefits .benefits-item__title {
-  font-size: 0.875em;
-  line-height: 1.4285714286;
-}
-
-body.school .benefits .benefits-item__text {
-  font-size: 0.75em;
-  line-height: 1.6666666667;
-  max-width: 140px;
-}
-
 body.school .fees {
   overflow: hidden;
   padding-top: 107px;
@@ -2052,6 +2024,7 @@ body.school .reg-form .backgroung__image_2 {
   transform: rotate(54deg);
   left: -36px;
   top: -11px;
+  z-index: -1;
 }
 
 body.school .reg-form__title {
@@ -2142,11 +2115,28 @@ body.school .radio__label {
   margin-bottom: 6px;
 }
 
+@media (min-width: 400px) {
+  body.school .hero .hello-h1__title {
+    max-width: 68%;
+  }
+
+  body.school .hero .hello-h1__text {
+    max-width: 72%;
+  }
+}
+
 @media (min-width: 431px) {
   .contact-form__top {
     text-align: center;
     margin: 0 auto 36px;
     max-width: 400px;
+  }
+}
+
+@media (min-width: 450px) {
+  body.school .form {
+    max-width: 91.1111111111%;
+    margin: 0 auto;
   }
 }
 
@@ -2223,6 +2213,25 @@ body.school .radio__label {
 
   .backgroung__image_4 img {
     filter: blur(4px) hue-rotate(194deg);
+  }
+
+  body.school .reg-form .backgroung__image_3 {
+    display: none;
+  }
+
+  body.school .reg-form .backgroung__image_4 {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  body.school .hero__decor .star-decor:nth-of-type(2) {
+    right: 13.25%;
+  }
+
+  body.school .fees__inner .tabs__nav {
+    max-width: 500px;
+    margin: 0 auto 14px;
   }
 }
 
@@ -2350,6 +2359,193 @@ body.school .radio__label {
 
   .footer .social-icons {
     transform: translate(-6px, 4px);
+  }
+
+  body.school .hero__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body.school .hero__content {
+    max-width: 38.9189189189%;
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  body.school .hero .hello-h1__title {
+    max-width: 100%;
+  }
+
+  body.school .hero .hello-h1__text {
+    max-width: 62.7906976744%;
+  }
+
+  body.school .hero__graphic {
+    max-width: 561px;
+    width: 100%;
+  }
+
+  body.school .hero__graphic .double-block_square {
+    max-width: 570px;
+    transform: translate(-35px, -14px) rotate(-5.95deg);
+  }
+
+  body.school .hero__graphic .double-block_square img {
+    width: 125%;
+    height: 128%;
+  }
+
+  body.school .hero__graphic .double-block__image {
+    transform: translate(-78px, -36px) rotate(5.95deg);
+  }
+
+  body.school .fees .background__image_1 {
+    width: 340px;
+    height: 340px;
+    filter: blur(0);
+    top: 166px;
+  }
+
+  body.school .fees .background__image_2 {
+    top: 65px;
+    filter: brightness(0.9) blur(6px);
+  }
+
+  body.school .fees__inner .tabs__nav {
+    display: none;
+  }
+
+  body.school .fees__inner .premium-card__image--first {
+    top: 77px;
+    left: -102px;
+  }
+
+  body.school .fees__inner .premium-card__image--third {
+    top: 68px;
+  }
+
+  body.school .fees__inner .premium-card__body--first .premium-card__heading {
+    transform: translate(6px, -5px);
+  }
+
+  body.school .fees__inner .premium-card__body--first .premium-card__list {
+    transform: translate(-3px, -7px);
+  }
+
+  body.school .fees__inner .premium-card__body--first .premium-card__footer {
+    transform: translate(3px, -2px);
+  }
+
+  body.school .fees__inner .premium-card__body--second .stroke-text {
+    left: 54.4%;
+  }
+
+  body.school .fees__inner .premium-card__body--second .premium-card__heading {
+    transform: translate(8px, -5px);
+  }
+
+  body.school .fees__inner .premium-card__body--second .premium-card__footer {
+    transform: translate(5px, -2px);
+  }
+
+  body.school .fees__inner .premium-card__body--third .stroke-text {
+    transform: translate(0, -5px);
+  }
+
+  body.school .fees__inner .premium-card__body--third .premium-card__heading {
+    transform: translate(6px, 23px);
+  }
+
+  body.school .fees__inner .premium-card__body--third .premium-card__list {
+    transform: translate(-1px, -7px);
+  }
+
+  body.school .fees__inner .premium-card__body--third .premium-card__footer {
+    transform: translate(4px, -3px);
+  }
+
+  body.school .reg-form {
+    padding-top: 56px;
+    padding-bottom: 65px;
+  }
+
+  body.school .reg-form .backgroung__image_1 {
+    right: unset;
+    left: 11.8055555556%;
+    top: 260px;
+    max-width: 185px;
+    padding-bottom: 10%;
+    width: 100%;
+    transform: rotate(-3.92deg);
+    z-index: -1;
+  }
+
+  body.school .reg-form .backgroung__image_2 {
+    transform: rotate(75deg);
+    max-width: 17.3611111111%;
+    top: 327px;
+    left: -75px;
+  }
+
+  body.school .reg-form .backgroung__image_3 {
+    display: block;
+    top: 658px;
+    left: 17.5%;
+  }
+
+  body.school .reg-form .backgroung__image_4 {
+    display: block;
+    top: 219px;
+    right: -12.8472222222%;
+  }
+
+  body.school .reg-form__title {
+    text-align: center;
+  }
+
+  body.school .reg-form__suptitile {
+    margin: 0 auto 21px;
+  }
+
+  body.school .form {
+    max-width: 51.25%;
+  }
+
+  body.school .form .btn {
+    min-height: 64px;
+    margin-bottom: 23px;
+  }
+
+  body.school .form .confirm {
+    transform: translateX(2px);
+  }
+
+  body.school .radio__body {
+    margin-bottom: 39px;
+  }
+
+  body.school .radio__btn {
+    min-height: 64px;
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 900px) {
+  body.school .fees__inner .tabs__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  body.school .fees__inner .tabs__item {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  body.school .fees__inner .tabs__item:nth-of-type(2) {
+    order: 3;
   }
 }
 
@@ -2677,18 +2873,107 @@ body.school .radio__label {
     line-height: 1.75;
   }
 
-  body.school .hero__inner {
-    display: flex;
+  body.school .hero {
+    padding-bottom: 109px;
   }
 
-  body.school .hero__content {
-    max-width: 38.9189189189%;
-    width: 100%;
+  body.school .hero__decor .stroke-text:nth-of-type(1) {
+    top: 86px;
+    left: -7.1527777778%;
   }
 
-  body.school .hero__graphic {
-    max-width: 561px;
-    width: 100%;
+  body.school .hero__decor .stroke-text:nth-of-type(2) {
+    top: 610px;
+    left: 26.1111111111%;
+  }
+
+  body.school .hero__decor .star-decor:nth-of-type(1) {
+    left: 44.5138888889%;
+    top: 380px;
+  }
+
+  body.school .hero__decor .star-decor:nth-of-type(2) {
+    right: 7.6388888889%;
+    top: 245px;
+  }
+
+  body.school .benefits .hello-h2 {
+    text-align: center;
+  }
+
+  body.school .benefits .hello-h2__label {
+    transform: translateX(-8px);
+  }
+
+  body.school .benefits .hello-h2__title {
+    margin: 0 auto 29px;
+  }
+
+  body.school .benefits .benefits-item {
+    padding: 18px 15px 32px;
+  }
+
+  body.school .benefits .benefits-item__title {
+    margin-bottom: 4px;
+  }
+
+  body.school .fees {
+    padding-top: 77px;
+  }
+
+  body.school .fees__decor :nth-of-type(1) {
+    top: 107px;
+    left: -2.6388888889%;
+  }
+
+  body.school .fees__decor :nth-of-type(2) {
+    top: 107px;
+    left: 76.7361111111%;
+  }
+
+  body.school .fees__decor .star-decor {
+    font-size: 62px;
+    left: 27.0833333333%;
+    top: 60px;
+  }
+
+  body.school .fees__decor .fees__circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0.4;
+    border: 1px solid #FCFFFF;
+    display: block;
+    border-radius: 100%;
+    right: 24.4444444444%;
+    top: 205px;
+    left: unset;
+  }
+
+  body.school .fees .hello-h2 {
+    text-align: center;
+  }
+
+  body.school .fees .hello-h2__title {
+    margin: 0 auto;
+  }
+
+  body.school .fees .hello-h2__text {
+    margin: 10px auto 0;
+    max-width: 415px;
+  }
+
+  body.school .fees .background__image_3 {
+    display: block;
+    top: 17.861111%;
+  }
+
+  body.school .fees__inner .premium-card__image--second {
+    top: 71px;
+  }
+
+  body.school .fees__inner .premium-card__body--second .premium-card__list {
+    transform: translate(-1px, -7px);
   }
 
   body.school .background__image_1 {
@@ -2722,6 +3007,22 @@ body.school .radio__label {
 
   body.school .hello-h1__title {
     max-width: 100%;
+  }
+
+  body.school .hello-h1__text {
+    transform: translateX(2px);
+  }
+
+  body.school .hello-h1 .btn {
+    max-width: 212px;
+  }
+
+  body.school .hello-h2__title {
+    max-width: 450px;
+  }
+
+  body.school .form {
+    max-width: 36.9369369369%;
   }
 }
 
@@ -2867,6 +3168,36 @@ body.school .radio__label {
     width: 100%;
     height: 1px;
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 800px) {
+  body.school .benefits .benefits-item {
+    max-width: 167px;
+    padding: 10px 10px 14px;
+    margin-bottom: 17px;
+  }
+
+  body.school .benefits .benefits-item__img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 7px;
+  }
+
+  body.school .benefits .benefits-item__img svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  body.school .benefits .benefits-item__title {
+    font-size: 0.875em;
+    line-height: 1.4285714286;
+  }
+
+  body.school .benefits .benefits-item__text {
+    font-size: 0.75em;
+    line-height: 1.6666666667;
+    max-width: 140px;
   }
 }
 
