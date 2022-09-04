@@ -2,31 +2,58 @@ body.home {
    main {
       overflow: hidden;
       position: relative;
-   }
-   .blur {
-      &_1 {
-         top: 187px;
-         left: -14px;
-      }
-      &_2 {
-         top: 790px;
-         left: 15px;
-      }
-      &_3 {
-         top: 2123px;
-         left: 33px;
-         @media (min-width: 769px) {
-            &-1 {
-               top: percent(137, 3424);
-               left: -470px;
+      // .blur-svg {
+      //    display: none;
+      //    svg {
+      //       &:nth-child(1) {
+      //          top: 34px;
+      //          left: -182px;
+      //          @media (min-width: 769px) {
+      //             width: 1245px;
+      //             height: 1199px;
+      //             top: -100px;
+      //             left: -611px;
+      //          }
+      //       }
+      //       &:nth-child(2) {
+      //          top: 660px;
+      //          left: -106px;
+      //       }
+      //       &:nth-child(3) {
+      //          top: 1573px;
+      //          left: -560px;
+      //       }
+      //    }
+      // }
+      .blur-img {
+         &_1 {
+            @media (max-width: 768px) {
+               top: percent(34, 3488);
+               left: percent(-182, 375);
             }
-            &-2 {
-               top: percent(755, 3424);
-               left: -40px;
+            @media (min-width: 769px) {
+               top: percent(-100, 3424);
+               left: percent(-611, 1440);
             }
-            &-3 {
-               top: percent(1942, 3424);
-               left: 340px;
+         }
+         &_2 {
+            @media (max-width: 768px) {
+               top: percent(660, 3488);
+               left: percent(-106, 375);
+            }
+            @media (min-width: 769px) {
+               top: percent(463, 3424);
+               left: percent(-288, 1440);
+            }
+         }
+         &_3 {
+            @media (max-width: 768px) {
+               top: percent(1573, 3488);
+               left: percent(-560, 375);
+            }
+            @media (min-width: 769px) {
+               top: percent(1687, 3424);
+               left: percent(100, 1440);
             }
          }
       }

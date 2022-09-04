@@ -11,8 +11,23 @@
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
+			<div class='blur-img blur-img_left'>
+				<picture>
+					<source type='image/png' srcset='@img/blur/auction/left.png'
+						media="(min-width: 769px)">
+					<source type='image/png' srcset='@img/blur/auction/mob.png'
+						media="(min-width: 100px)">
+					<img src='@img/blur/auction/left.png' alt='background image'>
+				</picture>
+			</div>
+			<div class='blur-img blur-img_right'>
+				<picture>
+					<source type='image/png' srcset='@img/blur/auction/right.png'
+						media="(min-width: 769px)">
+					<img src='@img/blur/auction/right.png' alt='background image'>
+				</picture>
+			</div>
 			<section class="pricing">
-				
 				<div class="background">
 					<div class='background__image background__image_1'>
 						<picture>
@@ -32,13 +47,13 @@
 							<img src="./img/bg/premiun_diamond.png" alt="background diamong image">
 						</picture>
 					</div>
-				</div>	
+				</div>
 				<div class="pricing__decor">
 					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'make art',
+					'text': 'make art',
 					})
 					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'not war',
+					'text': 'not war',
 					})
 					<i class="star-decor"></i>
 					<div class="pricing__circle"></div>
@@ -48,33 +63,33 @@
 					<div class="pricing__inner">
 						<div class="tabs pricing__tabs">
 							@@include('./components/blocks/_tabs__nav.html', {
-								'btn1': 'One week',
-								'btn2': 'Month',
-								'btn3': 'Year',
+							'btn1': 'One week',
+							'btn2': 'Month',
+							'btn3': 'Year',
 							})
 							<div class="tabs__content">
 								<div class="tabs__item active" id="tab_1">
 									@@include('./components/blocks/_premium-card.html', {
-										"text" : "1 week",
-        								"img": "06",
-        								"title" : "One week access",
-        								"class" : "first"
+									"text" : "1 week",
+									"img": "06",
+									"title" : "One week access",
+									"class" : "first"
 									})
 								</div>
 								<div class="tabs__item" id="tab_2">
 									@@include('./components/blocks/_premium-card.html', {
-										"text" : "month",
-        								"img": "08",
-        								"title" : "One month access",
-        								"class" : "second"
+									"text" : "month",
+									"img": "08",
+									"title" : "One month access",
+									"class" : "second"
 									})
 								</div>
 								<div class="tabs__item" id="tab_3">
 									@@include('./components/blocks/_premium-card.html', {
-										"text" : "year",
-        								"img": "07",
-        								"title" : "One year access",
-        								"class" : "third"
+									"text" : "year",
+									"img": "07",
+									"title" : "One year access",
+									"class" : "third"
 									})
 								</div>
 							</div>

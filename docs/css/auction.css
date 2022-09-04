@@ -882,14 +882,6 @@ body.product-1-unlocked .header .menu__item_nft svg {
   display: none;
 }
 
-body.nfts .header .menu__item_nft a,
-body.product-1-unlocked .header .menu__item_nft a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 body.nfts .header .menu__item_nft a:after,
 body.product-1-unlocked .header .menu__item_nft a:after {
   content: "";
@@ -955,7 +947,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: block;
   font-size: 16px;
   line-height: 21px;
-  color: #C8D2DC;
+  color: #c8d2dc;
   opacity: 0.6;
 }
 
@@ -976,7 +968,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
 
 .footer__copy {
   text-align: center;
-  color: #C8D2DC;
+  color: #c8d2dc;
   font-size: 14px;
   line-height: 21px;
 }
@@ -1437,6 +1429,15 @@ body.product-1-unlocked .header__buttons .premium-acess {
   object-fit: contain;
 }
 
+body.auction main {
+  position: relative;
+  overflow: hidden;
+}
+
+body.auction main .blur-img {
+  display: none;
+}
+
 body.auction .hero {
   position: relative;
 }
@@ -1868,6 +1869,32 @@ body.auction .about .banner__image_main img {
     top: 25.1121076233%;
     left: 22.202166065%;
     transform: rotate(8.04deg);
+  }
+
+  body.auction main .blur-img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+
+  body.auction main .blur-img_left {
+    top: -5.3245805981%;
+    left: -39.7916666667%;
+  }
+
+  body.auction main .blur-img_left img {
+    width: 1245px;
+    height: 1199px;
+  }
+
+  body.auction main .blur-img_right {
+    top: -3.2822757112%;
+    left: 52.3611111111%;
+  }
+
+  body.auction main .blur-img_right img {
+    width: 1245px;
+    height: 1199px;
   }
 
   body.auction .hero__decor {
@@ -2445,6 +2472,7 @@ body.auction .about .banner__image_main img {
   body.nfts .header .menu__item_nft span,
   body.product-1-unlocked .header .menu__item_nft span {
     transform: translate(11px, -2px);
+    display: inline-block;
   }
 }
 
@@ -2458,6 +2486,7 @@ body.auction .about .banner__image_main img {
   }
 
   .header__action-wrapper {
+    transition: all 0.3s ease;
     padding-right: 4%;
     padding-left: 4%;
     position: absolute;
@@ -2524,6 +2553,11 @@ body.auction .about .banner__image_main img {
     flex-direction: column;
     row-gap: 20px;
     text-align: right;
+  }
+
+  .menu a {
+    width: 100%;
+    text-align: left;
   }
 
   .menu li {

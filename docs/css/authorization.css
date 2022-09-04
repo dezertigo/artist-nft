@@ -782,6 +782,21 @@ h6 {
   column-gap: 16px;
 }
 
+body.authorization main {
+  position: relative;
+  overflow: hidden;
+}
+
+body.authorization main .blur-img {
+  position: absolute;
+  z-index: -1;
+}
+
+body.authorization main .blur-img_left img {
+  width: 1245px;
+  height: 1199px;
+}
+
 body.authorization .hero__decor .star-decor {
   position: absolute;
   z-index: 1;
@@ -1118,6 +1133,21 @@ body.sign-up .hero__link {
 }
 
 @media (min-width: 769px) {
+  body.authorization main .blur-img_left {
+    top: -16.6666666667%;
+    left: -680px;
+  }
+
+  body.authorization main .blur-img_right {
+    top: -16.6666666667%;
+    left: 61.0416666667%;
+  }
+
+  body.authorization main .blur-img_right img {
+    width: 1245px;
+    height: 1199px;
+  }
+
   body.authorization .hero__decor .star-decor {
     top: 280px;
     left: 25.7638888889%;
@@ -1280,6 +1310,15 @@ body.sign-up .hero__link {
 }
 
 @media (max-width: 768px) {
+  body.authorization main .blur-img_left {
+    left: -515px;
+    top: -761px;
+  }
+
+  body.authorization main .blur-img_right {
+    display: none;
+  }
+
   body.sign-up .hero__row {
     justify-content: space-between;
   }

@@ -879,14 +879,6 @@ body.product-1-unlocked .header .menu__item_nft svg {
   display: none;
 }
 
-body.nfts .header .menu__item_nft a,
-body.product-1-unlocked .header .menu__item_nft a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 body.nfts .header .menu__item_nft a:after,
 body.product-1-unlocked .header .menu__item_nft a:after {
   content: "";
@@ -952,7 +944,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: block;
   font-size: 16px;
   line-height: 21px;
-  color: #C8D2DC;
+  color: #c8d2dc;
   opacity: 0.6;
 }
 
@@ -973,7 +965,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
 
 .footer__copy {
   text-align: center;
-  color: #C8D2DC;
+  color: #c8d2dc;
   font-size: 14px;
   line-height: 21px;
 }
@@ -2280,6 +2272,7 @@ body.product-1-unlocked .form .contact-form h2 {
   body.nfts .header .menu__item_nft span,
   body.product-1-unlocked .header .menu__item_nft span {
     transform: translate(11px, -2px);
+    display: inline-block;
   }
 }
 
@@ -2293,6 +2286,7 @@ body.product-1-unlocked .form .contact-form h2 {
   }
 
   .header__action-wrapper {
+    transition: all 0.3s ease;
     padding-right: 4%;
     padding-left: 4%;
     position: absolute;
@@ -2359,6 +2353,11 @@ body.product-1-unlocked .form .contact-form h2 {
     flex-direction: column;
     row-gap: 20px;
     text-align: right;
+  }
+
+  .menu a {
+    width: 100%;
+    text-align: left;
   }
 
   .menu li {

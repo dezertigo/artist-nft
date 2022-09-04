@@ -10,13 +10,22 @@
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
-			<section class="hero">
+			<div class='blur-img blur-img_left'>
+				<picture>
+					<source type='image/png' srcset='@img/blur/auction/left.png'
+						media="(min-width: 769px)">
+					<source type='image/png' srcset='@img/blur/main/mob-01.png'
+						media="(min-width: 100px)">
+					<img src='@img/blur/auction/left.png' alt='background image'>
+				</picture>
+			</div>
+			<section class=" hero">
 				<div class="hero__decor">
 					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'CUTOM BY YOUR OWN'
+					'text': 'CUTOM BY YOUR OWN'
 					})
 					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'UNIQUE CLOTHES'
+					'text': 'UNIQUE CLOTHES'
 					})
 					<i class="star-decor"></i>
 					<i class="star-decor"></i>
@@ -28,9 +37,9 @@
 						</div>
 						<div class="hero__graphic">
 							@@include('./components/blocks/_double-block.html', {
-								"modify" : "square",
-								"img": "10",
-								"imgAlt": "product image"
+							"modify" : "square",
+							"img": "10",
+							"imgAlt": "product image"
 							})
 						</div>
 					</div>
@@ -40,7 +49,8 @@
 				<div class="benefits__container">
 					@@loop('./components/blocks/_hello-h2.html', './json/school/hello-h2.json')
 					<div class="benefits__inner">
-						@@loop('./components/blocks/_benefits-item.html', './json/school/benefits-item.json')
+						@@loop('./components/blocks/_benefits-item.html',
+						'./json/school/benefits-item.json')
 					</div>
 				</div>
 			</section>
@@ -67,10 +77,10 @@
 				</div>
 				<div class="fees__decor">
 					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'make art'
+					'text': 'make art'
 					})
 					@@include('./components/blocks/_stroke-text.html', {
-						'text': 'not war'
+					'text': 'not war'
 					})
 					<i class="star-decor"></i>
 					<div class="fees__circle"></div>
@@ -81,16 +91,50 @@
 							Artist School Fees
 						</h2>
 						<p class="hello-h2__text content-text">
-							Indulgence announcing uncommonly met she continuing two unpleasing terminated
+							Indulgence announcing uncommonly met she continuing two unpleasing
+							terminated
 						</p>
 					</div>
 					<div class="fees__inner">
-						@@include('./components/blocks/_tabs__nav.html', {
-							'btn1': 'One week',
-							'btn2': 'Month',
-							'btn3': 'Individual',
-						})
-						@@loop('./components/blocks/_premium-card.html', './json/school/premium-card.json')
+						<div class="tabs pricing__tabs">
+							@@include('./components/blocks/_tabs__nav.html', {
+								'btn1': 'One week',
+								'btn2': 'Month',
+								'btn3': 'Individual',
+							})
+							<div class="tabs__content">
+								<div class="tabs__item active" id="tab_1">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "1 week",
+        								"img": "11",
+        								"title" : "One week access",
+        								"class" : "first",
+										"btntext" : "Choose",
+        								"price" : "$250.99"
+									})
+								</div>
+								<div class="tabs__item" id="tab_2">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "month",
+        								"img": "13",
+        								"title" : "One month access",
+        								"class" : "second",
+										"btntext" : "Choose",
+        								"price" : "$250.99"
+									})
+								</div>
+								<div class="tabs__item" id="tab_3">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "Individual",
+        								"img": "12",
+        								"title" : "Individual lesson",
+        								"class" : "third",
+										"btntext" : "Choose",
+        								"price" : "$250.99"
+									})
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -104,16 +148,37 @@
 						<span>5/10</span> already tooken!
 					</p>
 					<form class="form">
-						@@include('./components/blocks/_input.html')
-						@@include('./components/blocks/_input.html')
-						@@include('./components/blocks/_textarea.html')
+						@@include('./components/blocks/_input.html', {
+							'label': 'Name',
+							'for': 'name',
+							'type': 'text',
+							'placeholder': 'Your name'
+						})
+						@@include('./components/blocks/_input.html', {
+							'label': 'Mail',
+							'for': 'mail',
+							'type': 'text',
+							'placeholder': 'Your mail',
+						})
+						@@include('./components/blocks/_textarea.html', {
+							'label': 'Design preferences',
+							'for': 'question',
+							'placeholder': 'Your comment',
+						})
+						<p class="radio__label">Choose your plan</p>
 						<div class="radio__body">
-							<label class="form__label" for="plan_1"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_1">
-							<label class="form__label" for="plan_2"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_2">
-							<label class="form__label" for="plan_3"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_3">
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_1">
+								<label class="form__label" for="plan_1">One week</label>
+							</div>
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_2" checked>
+								<label class="form__label" for="plan_2">Individual</label>
+							</div>
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_3">
+								<label class="form__label" for="plan_3">One month</label>
+							</div>
 						</div>
 						<button class="btn grad-bg" type="submit" form="form-1" value="Submit">
 							Sign up

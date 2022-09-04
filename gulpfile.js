@@ -193,13 +193,12 @@ function watcher() {
          baseDir: "./docs",
       },
    });
-   // gulp.watch(paths.html.dest).on('change', browsersync.reload)
    gulp.watch(paths.html.app, html);
    gulp.watch(paths.html.components, htmlComponents);
    gulp.watch(paths.scss.app, scss);
    gulp.watch(paths.js.app, js);
-   // gulp.watch(paths.images.app.img, img);
-   // gulp.watch(paths.images.app.svg, img);
+   gulp.watch(paths.images.app.img, img);
+   gulp.watch(paths.images.app.svg, img);
 }
 
 exports.clean = clean;

@@ -2,6 +2,34 @@ body.auction {
    // ===================================================================================
    // Hero === Hero === Hero === Hero == Hero == Hero === Hero === Hero === Hero === Hero
    // ===================================================================================
+   main {
+      position: relative;
+      overflow: hidden;
+      .blur-img {
+         display: none;
+         @media (min-width: 769px) {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            &_left {
+               top: percent(-73, 1371);
+               left: percent(-573, 1440);
+               img {
+                  width: 1245px;
+                  height: 1199px;
+               }
+            }
+            &_right {
+               top: percent(-45, 1371);
+               left: percent(754, 1440);
+               img {
+                  width: 1245px;
+                  height: 1199px;
+               }
+            }
+         }
+      }
+   }
    .hero {
       position: relative;
       &__decor {

@@ -875,14 +875,6 @@ body.product-1-unlocked .header .menu__item_nft svg {
   display: none;
 }
 
-body.nfts .header .menu__item_nft a,
-body.product-1-unlocked .header .menu__item_nft a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 body.nfts .header .menu__item_nft a:after,
 body.product-1-unlocked .header .menu__item_nft a:after {
   content: "";
@@ -948,7 +940,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: block;
   font-size: 16px;
   line-height: 21px;
-  color: #C8D2DC;
+  color: #c8d2dc;
   opacity: 0.6;
 }
 
@@ -969,7 +961,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
 
 .footer__copy {
   text-align: center;
-  color: #C8D2DC;
+  color: #c8d2dc;
   font-size: 14px;
   line-height: 21px;
 }
@@ -1612,6 +1604,16 @@ body.product-1-unlocked .header__buttons .premium-acess {
   line-height: 1.5454545455;
 }
 
+body.pricing main {
+  position: relative;
+  overflow: hidden;
+}
+
+body.pricing main .blur-img {
+  position: absolute;
+  z-index: -1;
+}
+
 body.pricing .pricing {
   position: relative;
   padding: 36px 0 12px;
@@ -1634,7 +1636,7 @@ body.pricing .pricing__circle {
   width: 25px;
   height: 25px;
   border-radius: 100%;
-  border: 1px solid #FCFFFF;
+  border: 1px solid #fcffff;
   opacity: 0.4;
   position: absolute;
   right: 34px;
@@ -1881,6 +1883,27 @@ body.pricing .pricing .background__image_3 img {
 
   .header__premium-btn i {
     font-size: 1.25em;
+  }
+
+  body.pricing main .blur-img_left {
+    top: -24.2802303263%;
+    left: -52.5694444444%;
+  }
+
+  body.pricing main .blur-img_left img {
+    width: 1245px;
+    height: 1199px;
+  }
+
+  body.pricing main .blur-img_right {
+    display: block;
+    top: -26.8714011516%;
+    left: 48.6111111111%;
+  }
+
+  body.pricing main .blur-img_right img {
+    width: 1245px;
+    height: 1199px;
   }
 }
 
@@ -2408,6 +2431,7 @@ body.pricing .pricing .background__image_3 img {
   body.nfts .header .menu__item_nft span,
   body.product-1-unlocked .header .menu__item_nft span {
     transform: translate(11px, -2px);
+    display: inline-block;
   }
 }
 
@@ -2421,6 +2445,7 @@ body.pricing .pricing .background__image_3 img {
   }
 
   .header__action-wrapper {
+    transition: all 0.3s ease;
     padding-right: 4%;
     padding-left: 4%;
     position: absolute;
@@ -2489,6 +2514,11 @@ body.pricing .pricing .background__image_3 img {
     text-align: right;
   }
 
+  .menu a {
+    width: 100%;
+    text-align: left;
+  }
+
   .menu li {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -2505,6 +2535,22 @@ body.pricing .pricing .background__image_3 img {
     width: 100%;
     height: 1px;
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 768px) {
+  body.pricing main .blur-img_left {
+    top: -53.8784067086%;
+    left: -14.1333333333%;
+  }
+
+  body.pricing main .blur-img_left img {
+    width: 1245px;
+    height: 1199px;
+  }
+
+  body.pricing main .blur-img_right {
+    display: none;
   }
 }
 

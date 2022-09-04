@@ -59,6 +59,8 @@
          top: 0;
          right: -100vw;
          &-wrapper {
+            transition: all 0.3s ease;
+
             padding-right: percent(15, 375);
             padding-left: percent(15, 375);
             position: absolute;
@@ -255,6 +257,10 @@
       flex-direction: column;
       row-gap: 20px;
       text-align: right;
+      a {
+         width: 100%;
+         text-align: left;
+      }
    }
    @media (min-width: 1050px) {
       flex: 1 1 auto;
@@ -454,10 +460,10 @@ body.product-1-unlocked {
             }
 
             a {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               position: relative;
+               // display: flex;
+               // justify-content: flex-start;
+               // align-items: center;
+               // position: relative;
                &:after {
                   content: "";
                   position: absolute;
@@ -481,6 +487,7 @@ body.product-1-unlocked {
                z-index: 1;
                @media (max-width: 1050px) {
                   transform: translate(11px, -2px);
+                  display: inline-block;
                }
             }
          }

@@ -95,7 +95,16 @@
 	</div>
 </header>
 		<main>
-			<section class="hero">
+			<div class='blur-img blur-img_left'>
+				<picture>
+					<source type='image/png' srcset='img/blur/auction/left.png'
+						media="(min-width: 769px)">
+					<source type='image/png' srcset='img/blur/main/mob-01.png'
+						media="(min-width: 100px)">
+					<img src='img/blur/auction/left.png' alt='background image'>
+				</picture>
+			</div>
+			<section class=" hero">
 				<div class="hero__decor">
 					<p class="stroke-text">CUTOM BY YOUR OWN</p>
 					<p class="stroke-text">UNIQUE CLOTHES</p>
@@ -106,7 +115,7 @@
 					<div class="hero__inner">
 						<div class="hero__content">
 							<div class="hello-h1">
-	<h1 class="hello-h1__title">Register to be a desinger</h1>
+	<h1 class="hello-h1__title">Register to be a designer</h1>
 	<p class="hello-h1__text content-text">Indulgence announcing uncommonly met she continuing two unpleasing terminated</p>
 	
 	<div class="hello-h1__buttons">
@@ -252,11 +261,13 @@
 							Artist School Fees
 						</h2>
 						<p class="hello-h2__text content-text">
-							Indulgence announcing uncommonly met she continuing two unpleasing terminated
+							Indulgence announcing uncommonly met she continuing two unpleasing
+							terminated
 						</p>
 					</div>
 					<div class="fees__inner">
-						<div class="tabs__nav">
+						<div class="tabs pricing__tabs">
+							<div class="tabs__nav">
     <button class="tabs__nav-btn active" type="button" data-tab="#tab_1">
         One week
     </button>
@@ -267,7 +278,9 @@
         Individual
     </button>
 </div>
-						<div class="premium-card">
+							<div class="tabs__content">
+								<div class="tabs__item active" id="tab_1">
+									<div class="premium-card">
     <div class="premium-card__body premium-card__body--first">
         <p class="stroke-text">1 week</p>
         <div class="premium-card__image premium-card__image--first">
@@ -318,10 +331,13 @@
             </button>
         </div>
         <p class="premium-card__price">
-            250.99
+            $250.99
         </p>
     </div>
-</div><div class="premium-card">
+</div>
+								</div>
+								<div class="tabs__item" id="tab_2">
+									<div class="premium-card">
     <div class="premium-card__body premium-card__body--second">
         <p class="stroke-text">month</p>
         <div class="premium-card__image premium-card__image--second">
@@ -372,10 +388,13 @@
             </button>
         </div>
         <p class="premium-card__price">
-            250.99
+            $250.99
         </p>
     </div>
-</div><div class="premium-card">
+</div>
+								</div>
+								<div class="tabs__item" id="tab_3">
+									<div class="premium-card">
     <div class="premium-card__body premium-card__body--third">
         <p class="stroke-text">Individual</p>
         <div class="premium-card__image premium-card__image--third">
@@ -386,7 +405,7 @@
         </div>
         <div class="premium-card__heading">
             <p class="premium-card__title">
-                individual lesson
+                Individual lesson
             </p>
             <p class="premium-card__subtitle">
                 Purchasing this access you get
@@ -426,10 +445,13 @@
             </button>
         </div>
         <p class="premium-card__price">
-            250.99
+            $250.99
         </p>
     </div>
 </div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -470,29 +492,36 @@
 					<form class="form">
 						
 <div class="input">
-	<label for="input-@@for">@@label</label>
-	<input type="@@type" id="input-@@for" placeholder="@@placeholder">
+	<label for="input-name">Name</label>
+	<input type="text" id="input-name" placeholder="Your name">
 </div>
 
 
 						
 <div class="input">
-	<label for="input-@@for">@@label</label>
-	<input type="@@type" id="input-@@for" placeholder="@@placeholder">
+	<label for="input-mail">Mail</label>
+	<input type="text" id="input-mail" placeholder="Your mail">
 </div>
 
 
 						<div class="input">
-	<label for="textarea-@@for">@@label</label>
-	<textarea id="textarea-@@for" placeholder="@@placeholder"></textarea>
+	<label for="textarea-question">Design preferences</label>
+	<textarea id="textarea-question" placeholder="Your comment"></textarea>
 </div>
+						<p class="radio__label">Choose your plan</p>
 						<div class="radio__body">
-							<label class="form__label" for="plan_1"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_1">
-							<label class="form__label" for="plan_2"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_2">
-							<label class="form__label" for="plan_3"></label>
-							<input class="form__input" name="plan" type="radio" id="plan_3">
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_1">
+								<label class="form__label" for="plan_1">One week</label>
+							</div>
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_2" checked>
+								<label class="form__label" for="plan_2">Individual</label>
+							</div>
+							<div class="radio__btn">
+								<input class="form__input" name="plan" type="radio" id="plan_3">
+								<label class="form__label" for="plan_3">One month</label>
+							</div>
 						</div>
 						<button class="btn grad-bg" type="submit" form="form-1" value="Submit">
 							Sign up

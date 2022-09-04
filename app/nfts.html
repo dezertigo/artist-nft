@@ -9,6 +9,13 @@
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
+			<div class='blur-img'>
+				<picture>
+					<source type='image/png' srcset='@img/blur/main/desk-03.png'
+						media="(min-width: 769px)">
+					<img src='@img/blur/main/desk-03.png' alt='background image'>
+				</picture>
+			</div>
 			<section class="hero">
 				<div class="hero__decor">
 					@@include('./components/blocks/_stroke-text.html', {
