@@ -1,0 +1,33 @@
+.blur-img {
+   position: absolute;
+   &_1 {
+      img {
+         @media (max-width: 768px) {
+            width: 791px;
+            height: 762px;
+         }
+         @media (min-width: 769px) {
+            width: 1245px;
+            height: 1199px;
+         }
+      }
+   }
+   &_2 {
+      img {
+         @media (max-width: 768px) {
+            width: 752px;
+            height: 724px;
+         }
+         @media (min-width: 769px) {
+            width: 1245px;
+            height: 1199px;
+         }
+      }
+   }
+   &_3 {
+      img {
+         width: 1245px;
+         height: 1199px;
+      }
+   }
+}

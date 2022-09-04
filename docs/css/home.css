@@ -1623,15 +1623,13 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: none;
 }
 
-.blur {
+.blur-img {
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.blur svg {
-  position: absolute;
-  z-index: -1;
+.blur-img_3 img {
+  width: 1245px;
+  height: 1199px;
 }
 
 body.home main {
@@ -1639,41 +1637,19 @@ body.home main {
   position: relative;
 }
 
-body.home main .blur {
-  display: none;
-}
-
-body.home main .blur svg:nth-child(1) {
-  top: 34px;
+body.home main .blur-img_1 {
+  top: 0.9747706422%;
   left: -182px;
 }
 
-body.home main .blur svg:nth-child(2) {
-  top: 660px;
+body.home main .blur-img_2 {
+  top: 18.9220183486%;
   left: -106px;
 }
 
-body.home main .blur svg:nth-child(3) {
-  top: 1573px;
+body.home main .blur-img_3 {
+  top: 45.0974770642%;
   left: -560px;
-}
-
-body.home main .blur-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-body.home main .blur-img img {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
 }
 
 body.home .hero {
@@ -2213,14 +2189,17 @@ body.home .form .contact-form__container {
     min-width: 116px;
   }
 
-  .blur svg:nth-child(1) {
+  .blur-img_1 img {
     width: 1245px;
     height: 1199px;
   }
 
-  body.home main .blur svg:nth-child(1) {
+  .blur-img_2 img {
     width: 1245px;
     height: 1199px;
+  }
+
+  body.home main .blur-img_1 {
     top: -100px;
     left: -611px;
   }
@@ -2420,13 +2399,6 @@ body.home .form .contact-form__container {
   body.home .form .contact-form__container {
     padding-top: 5.625%;
     padding-bottom: 6.3194444444%;
-  }
-}
-
-@media (min-width: 769px) and (min-width: 769px) {
-  .blur svg:nth-child(2) {
-    width: 1245px;
-    height: 1199px;
   }
 }
 
@@ -2955,6 +2927,16 @@ body.home .form .contact-form__container {
     width: 100%;
     height: 1px;
     background: rgba(252, 255, 255, 0.05);
+  }
+
+  .blur-img_1 img {
+    width: 791px;
+    height: 762px;
+  }
+
+  .blur-img_2 img {
+    width: 752px;
+    height: 724px;
   }
 
   body.home .biography__graphic {
