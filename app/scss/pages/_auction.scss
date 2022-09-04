@@ -12,19 +12,19 @@ body.auction {
             position: absolute;
             z-index: -1;
             &_left {
+               top: percent(-73, 1371);
+               left: percent(-573, 1440);
                img {
                   width: 1245px;
                   height: 1199px;
-                  top: percent(-73, 1371);
-                  left: percent(-573, 1440);
                }
             }
             &_right {
+               top: percent(-45, 1371);
+               left: percent(754, 1440);
                img {
                   width: 1245px;
                   height: 1199px;
-                  top: percent(-45, 1371);
-                  left: percent(754, 1440);
                }
             }
          }

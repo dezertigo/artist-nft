@@ -1877,18 +1877,24 @@ body.auction .about .banner__image_main img {
     z-index: -1;
   }
 
+  body.auction main .blur-img_left {
+    top: -5.3245805981%;
+    left: -39.7916666667%;
+  }
+
   body.auction main .blur-img_left img {
     width: 1245px;
     height: 1199px;
-    top: -5.3245805981%;
-    left: -39.7916666667%;
+  }
+
+  body.auction main .blur-img_right {
+    top: -3.2822757112%;
+    left: 52.3611111111%;
   }
 
   body.auction main .blur-img_right img {
     width: 1245px;
     height: 1199px;
-    top: -3.2822757112%;
-    left: 52.3611111111%;
   }
 
   body.auction .hero__decor {
