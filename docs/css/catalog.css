@@ -1416,7 +1416,7 @@ body.catalog .stroke-text:nth-child(2) {
 }
 
 body.catalog .gallery {
-  background: #1d1f21;
+  background: transparent;
   color: #fff;
   padding: 26px 0 38px;
   position: relative;
@@ -1560,7 +1560,7 @@ body.catalog .gallery__inner {
 
   body.catalog main .blur-img {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     top: -6.6955684008%;
     left: 5.625%;
   }

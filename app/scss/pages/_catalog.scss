@@ -8,7 +8,7 @@ body.catalog {
          }
          @media (min-width: 769px) {
             position: absolute;
-            z-index: 1;
+            z-index: -1;
             top: percent(-139, 2076);
             left: percent(81, 1440);
             img {
@@ -32,7 +32,7 @@ body.catalog {
    }
 
    .gallery {
-      background: $darkColor;
+      background: transparent;
       color: #fff;
       padding: 26px 0 38px;
       position: relative;
