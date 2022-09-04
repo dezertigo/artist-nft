@@ -1,5 +1,6 @@
 .blur-img {
    position: absolute;
+   z-index: -1;
    &_1 {
       img {
          @media (max-width: 768px) {

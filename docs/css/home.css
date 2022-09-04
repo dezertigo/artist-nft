@@ -1625,6 +1625,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
 
 .blur-img {
   position: absolute;
+  z-index: -1;
 }
 
 .blur-img_3 img {
@@ -1635,21 +1636,6 @@ body.product-1-unlocked .header__buttons .premium-acess {
 body.home main {
   overflow: hidden;
   position: relative;
-}
-
-body.home main .blur-img_1 {
-  top: 0.9747706422%;
-  left: -182px;
-}
-
-body.home main .blur-img_2 {
-  top: 18.9220183486%;
-  left: -106px;
-}
-
-body.home main .blur-img_3 {
-  top: 45.0974770642%;
-  left: -560px;
 }
 
 body.home .hero {
@@ -2200,8 +2186,18 @@ body.home .form .contact-form__container {
   }
 
   body.home main .blur-img_1 {
-    top: -100px;
-    left: -611px;
+    top: -2.9205607477%;
+    left: -42.4305555556%;
+  }
+
+  body.home main .blur-img_2 {
+    top: 13.5221962617%;
+    left: -20%;
+  }
+
+  body.home main .blur-img_3 {
+    top: 49.2698598131%;
+    left: 6.9444444444%;
   }
 
   body.home .hero__decor :nth-child(1) {
@@ -2937,6 +2933,21 @@ body.home .form .contact-form__container {
   .blur-img_2 img {
     width: 752px;
     height: 724px;
+  }
+
+  body.home main .blur-img_1 {
+    top: 0.9747706422%;
+    left: -48.5333333333%;
+  }
+
+  body.home main .blur-img_2 {
+    top: 18.9220183486%;
+    left: -28.2666666667%;
+  }
+
+  body.home main .blur-img_3 {
+    top: 45.0974770642%;
+    left: -149.3333333333%;
   }
 
   body.home .biography__graphic {

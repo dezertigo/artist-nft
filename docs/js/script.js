@@ -32,16 +32,18 @@ window.addEventListener("load", () => {
          } else if (e.target.closest(".spoiler__preview")) {
             //Трудночитаемый код на коленке. лучше сюда не лезть.
             // Изменение высоты открытого меню при клике на спойлер
-            if (!qs(".spoiler").classList.contains("opened")) {
-               setTimeout(() => {
-                  qs(".header__action-wrapper").style.height =
-                     qs(".header__action-wrapper").scrollHeight + qs("header .spoiler__wrapper").scrollHeight + "px";
-               }, 300);
-            } else {
-               setTimeout(() => {
-                  qs(".header__action-wrapper").style.height =
-                     qs(".header__action-wrapper").scrollHeight - qs("header .spoiler__wrapper").scrollHeight + "px";
-               }, 300);
+            if (window.innerWidth <= 1050) {
+               if (!qs(".spoiler").classList.contains("opened")) {
+                  setTimeout(() => {
+                     qs(".header__action-wrapper").style.height =
+                        qs(".header__action-wrapper").scrollHeight + qs("header .spoiler__wrapper").scrollHeight + "px";
+                  }, 300);
+               } else {
+                  setTimeout(() => {
+                     qs(".header__action-wrapper").style.height =
+                        qs(".header__action-wrapper").scrollHeight - qs("header .spoiler__wrapper").scrollHeight + "px";
+                  }, 300);
+               }
             }
          } else if (!e.target.closest(".burger") && !e.target.closest(".header__action-wrapper")) {
             burger.classList.remove("active");
