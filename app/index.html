@@ -11,6 +11,12 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			@@include('./components/blocks/_blur-final.html')
+			<div class='blur-img'>
+				<picture>
+					<source type='image/webp' srcset='@img/blur/mob-01.webp'>
+					<img src='@img/blur/mob-01.png' alt='blur'>
+				</picture>
+			</div>
 			<section class="hero">
 				<div class="hero__decor">
 					@@include('./components/blocks/_stroke-text.html', {
