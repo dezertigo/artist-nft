@@ -1346,6 +1346,11 @@ body.product-1-unlocked .header__buttons .premium-acess {
   color: #1d1f21;
 }
 
+body.nfts main {
+  position: relative;
+  overflow: hidden;
+}
+
 body.nfts .hero {
   padding-top: 26px;
   text-align: center;
@@ -1619,6 +1624,18 @@ body.nfts .cards__container .btn a {
   .pagination__pages h5 {
     width: 48px;
     height: 48px;
+  }
+
+  body.nfts main .blur-img {
+    position: absolute;
+    z-index: -1;
+    top: -4.5085955238%;
+    left: 5.625%;
+  }
+
+  body.nfts main .blur-img img {
+    width: 1245px;
+    height: 1199px;
   }
 
   body.nfts .hero {
@@ -2159,6 +2176,10 @@ body.nfts .cards__container .btn a {
 
   .paint-block {
     border-radius: 0.75rem;
+  }
+
+  body.nfts main .blur-img {
+    display: none;
   }
 
   body.nfts .cards__container > :first-child,

@@ -1,4 +1,23 @@
 body.nfts {
+   main {
+      position: relative;
+      overflow: hidden;
+      .blur-img {
+         @media (max-width: 768px) {
+            display: none;
+         }
+         @media (min-width: 769px) {
+            position: absolute;
+            z-index: -1;
+            top: percent(-139, 3083);
+            left: percent(81, 1440);
+            img {
+               width: 1245px;
+               height: 1199px;
+            }
+         }
+      }
+   }
    // ===================================================================================
    // Hero ==== Hero ==== Hero ==== Hero === Hero ==== Hero ==== Hero ==== Hero ==== Hero
    // ===================================================================================

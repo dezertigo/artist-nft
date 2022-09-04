@@ -1404,6 +1404,11 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: none;
 }
 
+body.product-1 main {
+  position: relative;
+  overflow: hidden;
+}
+
 body.product-1 .hero__body .paint-block {
   border-radius: 7.69517px;
 }
@@ -1798,6 +1803,18 @@ body.product-1 .form .contact-form h2 {
 
   .bread-crumbs {
     padding-bottom: 19px;
+  }
+
+  body.product-1 main .blur-img {
+    position: absolute;
+    z-index: -1;
+    top: -5.5377574371%;
+    left: -45.2777777778%;
+  }
+
+  body.product-1 main .blur-img img {
+    width: 1245px;
+    height: 1199px;
   }
 
   body.product-1 .hero__body {
@@ -2330,6 +2347,10 @@ body.product-1 .form .contact-form h2 {
 @media (max-width: 768px) {
   .paint-block {
     border-radius: 0.75rem;
+  }
+
+  body.product-1 main .blur-img {
+    display: none;
   }
 
   body.product-1 .hero__body .paint-block {
