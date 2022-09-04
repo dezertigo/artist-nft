@@ -11,16 +11,25 @@
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
+			<div class='blur-img'>
+				<picture>
+					<source type='image/png' srcset='@img/blur/main/desk-01.png'
+						media="(min-width: 769px)">
+					<source type='image/png' srcset='@img/blur/main/mob-01.png'
+						media="(min-width: 100px)">
+					<img src='@img/blur/main/mob-01.png' alt='background image'>
+				</picture>
+			</div>
 			<section class="hero">
-					@@include('./components/blocks/_stroke-text.html',{
-						'text' : 'BECOME A PART'
-					})
-					@@include('./components/blocks/_stroke-text.html',{
-						'text' : 'OF OUR TEAM'
-					})
-					<i class="star-decor"></i>
-					<i class="star-decor"></i>
-					<div class="hero__circle"></div>
+				@@include('./components/blocks/_stroke-text.html',{
+				'text' : 'BECOME A PART'
+				})
+				@@include('./components/blocks/_stroke-text.html',{
+				'text' : 'OF OUR TEAM'
+				})
+				<i class="star-decor"></i>
+				<i class="star-decor"></i>
+				<div class="hero__circle"></div>
 				<div class="hero__container">
 					<div class="hero__inner">
 						<div class="hero__content">
@@ -28,9 +37,9 @@
 						</div>
 						<div class="hero__graphic">
 							@@include("./components/blocks/_double-block.html", {
-								"modify" : "square",
-								"img": "09",
-								"imgAlt": "product image",
+							"modify" : "square",
+							"img": "09",
+							"imgAlt": "product image",
 							})
 						</div>
 					</div>
@@ -40,7 +49,8 @@
 				<div class="benefits__container">
 					@@loop("./components/blocks/_hello-h2.html", "./json/team/hello-h2.json")
 					<div class="benefits__inner">
-						@@loop('./components/blocks/_benefits-item.html', './json/team/benefits-item.json')
+						@@loop('./components/blocks/_benefits-item.html',
+						'./json/team/benefits-item.json')
 					</div>
 				</div>
 			</section>

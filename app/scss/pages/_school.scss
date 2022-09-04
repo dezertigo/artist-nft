@@ -1,239 +1,271 @@
 .chromeperfectpixel-layer-img {
-    object-fit: contain !important;
+   object-fit: contain !important;
 }
 
 body.school {
-    .hero {
-        position: relative;
-        overflow: hidden;
-        padding-top: 49px;
-        padding-bottom: 119px;
-        &__decor {
-            .stroke-text {
-                &:nth-of-type(1) {
-                    top: 11px;
-                    left: percent(-147, 375);
-                    
-                }
-                &:nth-of-type(2) {
-                    top: 690px;
-                    left: percent(26, 375);
-                }
+   main {
+      position: relative;
+      overflow: hidden;
+      .blur-img {
+         position: absolute;
+         z-index: -1;
+         @media (max-width: 768px) {
+            top: 22px;
+            // top: percent(22, ВЫСОТА БЛОКА MAIN);
+            left: percent(-180, 375);
+         }
+         @media (min-width: 769px) {
+            top: 892px;
+            // top: percent(892, ВЫСОТА БЛОКА MAIN);
+            left: percent(-788, 1440);
+         }
+         img {
+            @media (max-width: 768px) {
+               width: 791px;
+               height: 762px;
             }
-            :nth-of-type(3) {
-                font-size: 62px;
-                top: 518px;
-                transform: rotate(12deg);
-                position: absolute;
+            @media (min-width: 769px) {
+               width: 1245px;
+               height: 1199px;
             }
-            :nth-of-type(4) {
-                font-size: 45px;
-                position: absolute;
-                top: 308px;
-                right: 10px;
-                transform: rotate(-15deg);
-            }
-           
-        }
-        &__inner {}
-        &__content {
-            margin-bottom: 47px;
-        }
-        &__graphic {
-            .double-block_square {
-                max-width: 309px;
-                transform: translate(26px,0px) rotate(-5.95deg);
-                img {
-                    width: 120%;
-                    height: 140%;
-                    transform: translate(-53px, -59px);
-                }
-            }
-        }
+         }
       }
-      .benefits {
-           &__inner {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
+   }
+   .hero {
+      position: relative;
+      overflow: hidden;
+      padding-top: 49px;
+      padding-bottom: 119px;
+      &__decor {
+         .stroke-text {
+            &:nth-of-type(1) {
+               top: 11px;
+               left: percent(-147, 375);
             }
-            .benefits-item {
-                max-width: 167px;
-                padding: 10px 10px 14px;
-                margin-bottom: 15px;
-                &__img {
-                    width: 36px;
-                    height: 36px;
-                    margin-bottom: 7px;
-                    svg {
-                        width: 15px !important;
-                        height: 15px !important;
-                    }
-                }
-                &__title {
-                    @include fl(14, 20);
-                }
-                &__text {
-                    @include fl(12,20);
-                    max-width: 140px;
-                }
+            &:nth-of-type(2) {
+               top: 690px;
+               left: percent(26, 375);
             }
+         }
+         :nth-of-type(3) {
+            font-size: 62px;
+            top: 518px;
+            transform: rotate(12deg);
+            position: absolute;
+         }
+         :nth-of-type(4) {
+            font-size: 45px;
+            position: absolute;
+            top: 308px;
+            right: 10px;
+            transform: rotate(-15deg);
+         }
       }
-        .fees {
-            overflow: hidden;
-            padding-top: 110px;
-            position: relative;
-                &__decor {
-                    :nth-of-type(1) {
-                        top: 216px;
-                        left: percent(-17,375);
-                        z-index: 10;
-                    }
-                    :nth-of-type(2) {
-                        top: 47px;
-                        left: percent(148, 375);
-                    }
-                    .star-decor {
-                        position: absolute;
-                        font-size: 62px;
-                        top: 35px;
-                        left: 20px;
-                    }
-                }
-                .hello-h2 {
-                    margin-bottom: 93px;
-                    &__text {
-                        transform: translateY(4px);
-                    }
-                }
-                .background {
-                    &__image {
-                        &_1 {
-                            display: block;
-                            width: 145px;
-                            height: 145px;
-                            filter: blur(6px);
-                            top: 160px;
-                            right: -10px;
-                        }
-                        &_3 {
-                            display: none;
-                        }
-                    }
-                }
-                &__inner {
-                    .tabs__nav {
-                        margin-bottom: 14px;
-                    }
-                    .premium-card__heading {
-                        margin-bottom: 50px;
-                    }
-                }
-
+      &__inner {
+      }
+      &__content {
+         margin-bottom: 47px;
+      }
+      &__graphic {
+         .double-block_square {
+            max-width: 309px;
+            transform: translate(26px, 0px) rotate(-5.95deg);
+            img {
+               width: 120%;
+               height: 140%;
+               transform: translate(-53px, -59px);
             }
-            &__circle {}
-      
-            &__inner {
-                
+         }
+      }
+   }
+   .benefits {
+      &__inner {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+      .benefits-item {
+         max-width: 167px;
+         padding: 10px 10px 14px;
+         margin-bottom: 15px;
+         &__img {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 7px;
+            svg {
+               width: 15px !important;
+               height: 15px !important;
             }
-        .background {
-            &__image {
-                position: absolute;
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-                &_1 {
-                    display: none;
-                    width: percent(36, 375);
-                    padding-bottom: percent(36, 375);
-                    img {
-                    filter: brightness(0.9) hue-rotate(202deg);
-                    }
-                    @media (min-width: 1200px) {
-                        display: block;
-                        padding-bottom: percent(340, 1440);
-                        width: percent(340, 1440);
-                        transform: rotate(75deg);
-                        left: percent(-118, 1440);
-                        top: 157px;
-                    }
-                }
-                &_2 {
-                    display: none;
-                    width: percent(36, 375);
-                    padding-bottom: percent(36, 375);
-                    img {
-                    filter: brightness(0.8) blur(4px) hue-rotate(158deg);
-                    }
-                    @media (min-width: 1200px) {
-                        display: block;
-                        right: percent(304, 1440);
-                        top: percent(52, 1440);
-                        width: percent(145, 1440);
-                        padding-bottom: percent(145, 1440);
-                        filter: brightness(0.6) blur(6px);
-                    }
-                }
-                &_3 {
-                    width: percent(75, 375);
-                    padding-bottom: percent(75,375);
-                    right: percent(-24, 375);
-                    top: 81px;
-                    img {
-                    filter: brightness(0.7) blur(4px);
-                    }
-                    @media (min-width: 1200px) {
-                        width: percent(267, 1440);
-                        padding-bottom: percent(267, 1440);
-                        top: percent(214, 1440);
-                        right: percent(-82, 1440);
-                        img {
-                            filter: brightness(0.7) blur(3px);
-                        }
-                    }
-                }
-            }
-        }
-      .hello-h1 {
-        &__title {
-            max-width: 255px;
-        }
-        &__text {
-            max-width: 270px;
-        }
-        .btn {
-            width: 100%;
-            max-width: 193px;
-        }
+         }
+         &__title {
+            @include fl(14, 20);
+         }
+         &__text {
+            @include fl(12, 20);
+            max-width: 140px;
+         }
+      }
+   }
+   .fees {
+      overflow: hidden;
+      padding-top: 110px;
+      position: relative;
+      &__decor {
+         :nth-of-type(1) {
+            top: 216px;
+            left: percent(-17, 375);
+            z-index: 10;
+         }
+         :nth-of-type(2) {
+            top: 47px;
+            left: percent(148, 375);
+         }
+         .star-decor {
+            position: absolute;
+            font-size: 62px;
+            top: 35px;
+            left: 20px;
+         }
       }
       .hello-h2 {
-        margin-bottom: 29px;
-        &__title {
-            max-width: 270px;
-        }
-        &__text {}
+         margin-bottom: 93px;
+         &__text {
+            transform: translateY(4px);
+         }
       }
-      .content-text {
+      .background {
+         &__image {
+            &_1 {
+               display: block;
+               width: 145px;
+               height: 145px;
+               filter: blur(6px);
+               top: 160px;
+               right: -10px;
+            }
+            &_3 {
+               display: none;
+            }
+         }
       }
-      .reg-form {
-        overflow: hidden;
-        &__title {}
-        &__suptitile {}
+      &__inner {
+         .tabs__nav {
+            margin-bottom: 14px;
+         }
+         .premium-card__heading {
+            margin-bottom: 50px;
+         }
       }
-      .form {
-        &__label {}
-        &__input {}
+   }
+   &__circle {
+   }
+
+   &__inner {
+   }
+   .background {
+      &__image {
+         position: absolute;
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+         &_1 {
+            display: none;
+            width: percent(36, 375);
+            padding-bottom: percent(36, 375);
+            img {
+               filter: brightness(0.9) hue-rotate(202deg);
+            }
+            @media (min-width: 1200px) {
+               display: block;
+               padding-bottom: percent(340, 1440);
+               width: percent(340, 1440);
+               transform: rotate(75deg);
+               left: percent(-118, 1440);
+               top: 157px;
+            }
+         }
+         &_2 {
+            display: none;
+            width: percent(36, 375);
+            padding-bottom: percent(36, 375);
+            img {
+               filter: brightness(0.8) blur(4px) hue-rotate(158deg);
+            }
+            @media (min-width: 1200px) {
+               display: block;
+               right: percent(304, 1440);
+               top: percent(52, 1440);
+               width: percent(145, 1440);
+               padding-bottom: percent(145, 1440);
+               filter: brightness(0.6) blur(6px);
+            }
+         }
+         &_3 {
+            width: percent(75, 375);
+            padding-bottom: percent(75, 375);
+            right: percent(-24, 375);
+            top: 81px;
+            img {
+               filter: brightness(0.7) blur(4px);
+            }
+            @media (min-width: 1200px) {
+               width: percent(267, 1440);
+               padding-bottom: percent(267, 1440);
+               top: percent(214, 1440);
+               right: percent(-82, 1440);
+               img {
+                  filter: brightness(0.7) blur(3px);
+               }
+            }
+         }
       }
-      .radio {
-        &__body {}
+   }
+   .hello-h1 {
+      &__title {
+         max-width: 255px;
+      }
+      &__text {
+         max-width: 270px;
       }
       .btn {
+         width: 100%;
+         max-width: 193px;
       }
-      .grad-bg {
-      }    
+   }
+   .hello-h2 {
+      margin-bottom: 29px;
+      &__title {
+         max-width: 270px;
+      }
+      &__text {
+      }
+   }
+   .content-text {
+   }
+   .reg-form {
+      overflow: hidden;
+      &__title {
+      }
+      &__suptitile {
+      }
+   }
+   .form {
+      &__label {
+      }
+      &__input {
+      }
+   }
+   .radio {
+      &__body {
+      }
+   }
+   .btn {
+   }
+   .grad-bg {
+   }
 }
