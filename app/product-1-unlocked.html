@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/product-1-unlocked.min.css',
+'title': 'Name of Product',
+})
+
+<body class="product-1-unlocked">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__container">
+					@@include('./components/blocks/_bread-crumbs.html', {
+					'first': 'Main page',
+					'second': 'NFT',
+					'link1': 'nfts.html',
+					'third': 'Name of product',
+					})
+					<div class="hero__body">
+						@@include('./components/blocks/_paint-block.html', {
+						'modify': 'blue'
+						})
+						<div class="hero__content">
+							@@loop('./components/blocks/_hello-h2.html', './json/product-1/hello-h2.json')
+							<div class="hero__card">
+								<div class="hero__line">
+									<h4 class="hero__price">$100 322</h4>
+									@@include("./components/base/_btn.html", {
+									"text": "Buy now",
+									"modify": "big grad-bg",
+									"icon": "usd"
+									})
+								</div>
+								<p class="hero__text">You can purchase Art or NFT using popular system of
+									payment. We accepting PayPal, Visa/Mastercard.
+									Any crypto currency</p>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="process">
+				<div class="process__container">
+					<div class="process__head">
+						<i class="video"></i>
+						<h6>proccess</h6>
+					</div>
+					<div class="process__video">
+						<video src="img/video.mp4"></video>
+						<div class='process__poster'>
+							<picture>
+								<source type='image/webp' srcset='@img/gallery/04.webp'>
+								<img src='@img/gallery/04.jpg' alt='video poster'>
+							</picture>
+						</div>
+						<svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M19.5 35.75C16.2861 35.75 13.1443 34.797 10.472 33.0114C7.79969 31.2258 5.71689 28.6879 4.48697 25.7186C3.25704 22.7493 2.93524 19.482 3.56225 16.3298C4.18926 13.1776 5.73692 10.2821 8.00952 8.00952C10.2821 5.73692 13.1776 4.18926 16.3298 3.56225C19.482 2.93524 22.7493 3.25704 25.7186 4.48697C28.6879 5.71689 31.2258 7.79969 33.0114 10.472C34.797 13.1443 35.75 16.2861 35.75 19.5C35.7449 23.8082 34.0313 27.9385 30.9849 30.9849C27.9385 34.0313 23.8082 35.7449 19.5 35.75Z"
+								fill="#B2B1FF" />
+							<path
+								d="M16.25 27.4475C15.3883 27.4439 14.5631 27.0997 13.9542 26.4899C13.3454 25.8802 13.0023 25.0544 13 24.1927V14.8077C13.0003 14.2373 13.1507 13.6771 13.436 13.1832C13.7213 12.6893 14.1315 12.2791 14.6254 11.9939C15.1194 11.7086 15.6797 11.5583 16.25 11.5581C16.8204 11.5579 17.3808 11.7077 17.875 11.9925L26 16.685C26.4941 16.9704 26.9044 17.3808 27.1896 17.8749C27.4748 18.3691 27.625 18.9296 27.625 19.5002C27.625 20.0708 27.4748 20.6313 27.1896 21.1255C26.9044 21.6196 26.4941 22.03 26 22.3154L17.875 27.0079C17.3815 27.2949 16.8209 27.4465 16.25 27.4475Z"
+								fill="#6563FF" />
+						</svg>
+						<div class="process__line">
+							<div class="process__about">
+								<div class='process__image'>
+									<picture>
+										<source type='image/webp' srcset='@img/photo/video-girl.webp'>
+										<img src='@img/photo/video-girl.jpg' alt='personal avatar'>
+									</picture>
+								</div>
+								<p>Perchen Arts</p>
+							</div>
+							<div class="process__premium">
+								<i class="crown"></i>
+								<p>premium content</p>
+							</div>
+							<p class="process__date content-text-mobile">10/09/2021</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="form">
+				@@include('./components/blocks/_background.html')
+				@@include('./components/blocks/_contact-form.html')
+			</div>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html')
+</body>
+
+</html>

@@ -3,34 +3,34 @@ body.home {
       overflow: hidden;
       position: relative;
    }
-   // .blur {
-   //    &_1 {
-   //       top: 187px;
-   //       left: -14px;
-   //    }
-   //    &_2 {
-   //       top: 790px;
-   //       left: 15px;
-   //    }
-   //    &_3 {
-   //       top: 2123px;
-   //       left: 33px;
-   //       @media (min-width: 769px) {
-   //          &-1 {
-   //             top: percent(137, 3424);
-   //             left: -470px;
-   //          }
-   //          &-2 {
-   //             top: percent(755, 3424);
-   //             left: -40px;
-   //          }
-   //          &-3 {
-   //             top: percent(1942, 3424);
-   //             left: 340px;
-   //          }
-   //       }
-   //    }
-   // }
+   .blur {
+      &_1 {
+         top: 187px;
+         left: -14px;
+      }
+      &_2 {
+         top: 790px;
+         left: 15px;
+      }
+      &_3 {
+         top: 2123px;
+         left: 33px;
+         @media (min-width: 769px) {
+            &-1 {
+               top: percent(137, 3424);
+               left: -470px;
+            }
+            &-2 {
+               top: percent(755, 3424);
+               left: -40px;
+            }
+            &-3 {
+               top: percent(1942, 3424);
+               left: 340px;
+            }
+         }
+      }
+   }
    // ===================================================================================
    // Hero ==== Hero ==== Hero ==== Hero === Hero ==== Hero ==== Hero ==== Hero ==== Hero
    // ===================================================================================
@@ -287,7 +287,7 @@ body.home {
                pointer-events: none;
                z-index: 1;
                @include fl(62);
-               top: percent(249, 711.5);
+               top: percent(242, 774);
                left: percent(77, 1440);
             }
          }
@@ -302,7 +302,7 @@ body.home {
                height: 25px;
                border: 1px solid rgba(252, 255, 255, 0.4);
                border-radius: 50%;
-               top: percent(419, 711.5);
+               top: percent(408, 774);
                left: percent(102, 1440);
             }
          }
@@ -437,22 +437,28 @@ body.home {
          &__image {
             &_1 {
                display: block;
-               top: 21px;
-               left: percent(288, 375);
+               top: 10px;
+               left: percent(313, 375);
 
                @media (min-width: 568px) {
                   top: percent(327, 881.06);
                   left: percent(-125, 1440);
+                  img {
+                     filter: brightness(0.9) hue-rotate(202deg);
+                  }
                }
             }
             &_2 {
                display: block;
-               top: 6px;
-               left: percent(313, 375);
+               top: 19px;
+               left: percent(288, 375);
 
                @media (min-width: 568px) {
                   top: percent(227, 881.06);
                   left: percent(165, 1440);
+                  img {
+                     filter: brightness(0.7) blur(4px) hue-rotate(158deg);
+                  }
                }
             }
             &_3 {

@@ -1,0 +1,16 @@
+<div class="chat-list-items__item">
+	<div class="chat-list-items__photo @@if (context.premium) {premium}">
+		<picture>
+			<source type='image/webp' srcset='@img/photo/@@photo.webp'>
+			<img src='@img/photo/@@photo.jpg' alt='personal photo'>
+		</picture>
+	</div>
+	<div class="chat-list-items__content">
+		<div class="chat-list-items__row">
+			<p class="chat-list-items__name">@@name</p>
+			<p class="chat-list-items__time">10 min ago</p>
+		</div>
+		<p class="chat-list-items__message">Message that have been writed Lorem ipsum dolor sit amet.
+		</p>
+	</div>
+</div>

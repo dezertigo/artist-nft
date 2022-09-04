@@ -11,17 +11,17 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="hero">
+				<div class="hero__decor">
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'CUTOM BY YOUR OWN'
+					})
+					@@include('./components/blocks/_stroke-text.html', {
+						'text': 'UNIQUE CLOTHES'
+					})
+					<i class="star-decor"></i>
+					<i class="star-decor"></i>
+				</div>
 				<div class="hero__container">
-					<div class="hero__decor">
-						@@include('./components/blocks/_stroke-text.html', {
-							'text': 'CUTOM BY YOUR OWN'
-						})
-						@@include('./components/blocks/_stroke-text.html', {
-							'text': 'UNIQUE CLOTHES'
-						})
-						<i class="star-decor"></i>
-						<i class="star-decor"></i>
-					</div>
 					<div class="hero__inner">
 						<div class="hero__content">
 							@@loop('./components/blocks/_hello-h1.html', './json/school/hello-h1.json')
@@ -39,7 +39,9 @@
 			<section class="benefits">
 				<div class="benefits__container">
 					@@loop('./components/blocks/_hello-h2.html', './json/school/hello-h2.json')
-					@@loop('./components/blocks/_benefits-item.html', './json/school/benefits-item.json')
+					<div class="benefits__inner">
+						@@loop('./components/blocks/_benefits-item.html', './json/school/benefits-item.json')
+					</div>
 				</div>
 			</section>
 			<section class="fees">
@@ -83,6 +85,11 @@
 						</p>
 					</div>
 					<div class="fees__inner">
+						@@include('./components/blocks/_tabs__nav.html', {
+							'btn1': 'One week',
+							'btn2': 'Month',
+							'btn3': 'Individual',
+						})
 						@@loop('./components/blocks/_premium-card.html', './json/school/premium-card.json')
 					</div>
 				</div>

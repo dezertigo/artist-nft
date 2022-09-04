@@ -42,6 +42,42 @@
 					</div>
 				</div>
 			</section>
+			<section class="process">
+				<div class="process__container">
+					<div class="process__head">
+						<i class="video"></i>
+						<h6>proccess</h6>
+					</div>
+					<div class="process__video">
+						<div class='process__poster'>
+							<picture>
+								<source type='image/webp' srcset='@img/gallery/04.webp'>
+								<img src='@img/gallery/04.jpg' alt='video poster'>
+							</picture>
+						</div>
+						<div class="process__locked">
+							<h6 class="process__locked-caption">
+								avalaible for premium
+							</h6>
+							<div class="process__locked-text">
+								<i class="lock"></i>
+								<h4 class="process__locked-title">
+									CONTENT LOCKED
+								</h4>
+							</div>
+							@@include("./components/base/_btn.html", {
+							"text": "Unlock",
+							"modify": "small dark-bg",
+							"icon": "arrow-next-grad"
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="form">
+				@@include('./components/blocks/_background.html')
+				@@include('./components/blocks/_contact-form.html')
+			</div>
 		</main>
 		@@include('./components/structure/_footer.html')
 	</div>

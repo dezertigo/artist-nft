@@ -1,0 +1,135 @@
+.forum-card {
+   background-color: #212426;
+   border-radius: 12px;
+   overflow: hidden;
+   transition: all 0.3s ease;
+   &:hover {
+      img {
+         transform: scale(1.15);
+      }
+   }
+   &__bg {
+      width: 100%;
+      padding-bottom: percent(175, 290);
+      position: relative;
+      overflow: hidden;
+      @media (min-width: 1000px) {
+         padding-bottom: 50%;
+      }
+
+      img {
+         transition: all 0.3s ease;
+         position: absolute;
+         top: 0;
+         left: 0;
+         // width: 120%;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      &_big {
+         img {
+            @media (max-width: 768px) {
+               width: 120%;
+            }
+         }
+      }
+   }
+
+   &__body {
+      position: relative;
+      padding-top: 16px;
+      padding-bottom: 28px;
+      padding-left: 12px;
+      padding-right: 11px;
+      @media (min-width: 1000px) {
+         padding-bottom: 22px;
+         padding-left: 28px;
+         padding-right: 22px;
+      }
+   }
+   &__photo {
+      position: absolute;
+      top: 0;
+      left: 12px;
+      transform: translate(0, -45%);
+      z-index: 1;
+      @include fl(69.66);
+      @media (min-width: 769px) {
+         @include fl(75);
+      }
+      @media (min-width: 1000px) {
+         @include fl(80);
+         left: 21px;
+      }
+      @media (min-width: 1200px) {
+         @include fl(85);
+      }
+      @media (min-width: 1400px) {
+         @include fl(91.56);
+      }
+   }
+   &__date {
+      text-align: right;
+      color: #c8d2dc;
+      font-family: $ff2;
+      @include fl(14, 19);
+      margin-bottom: 12px;
+      @media (min-width: 1000px) {
+         margin-bottom: 24px;
+      }
+   }
+   &__name {
+      color: #c8d2dc;
+      font-family: $ff2;
+      @include fl(14, 19);
+      margin-bottom: 1px;
+      @media (min-width: 1200px) {
+         transform: translate(0, 1px);
+      }
+   }
+   &__title {
+      color: #fcffff;
+      margin-bottom: 14px;
+      @media (min-width: 1000px) {
+         margin-bottom: 5px;
+      }
+   }
+   &__row {
+      display: flex;
+      align-items: center;
+      .btn {
+         font-weight: 700;
+         width: 153px;
+         height: 40px;
+         min-height: auto;
+         margin-right: 23.5px;
+         a {
+            @media (max-width: 1200px) {
+               letter-spacing: 0.01em;
+            }
+            transform: translate(2px, 0px);
+            @include fl(14, 20);
+            @media (min-width: 1200px) {
+               @include fl(14, 20);
+            }
+         }
+      }
+   }
+   &__back-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      i {
+         @include fl(16.67);
+         margin-right: 11.5px;
+      }
+      p {
+         font-weight: 700;
+         @include fl(14, 20);
+         color: #c5ff98;
+      }
+   }
+}

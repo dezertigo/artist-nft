@@ -1,0 +1,55 @@
+<div class="forum-comment">
+	<div class="forum-comment__top">
+		<div class="forum-comment__buttons">
+			<div class="forum-comment__arrow"><i class="arrow-down-btn arrow-down-btn_rotate"></i>
+			</div>
+			<p class="forum-comment__num">12</p>
+			<div class="forum-comment__arrow"><i class="arrow-down-btn"></i></div>
+		</div>
+		<div class="forum-comment__photo">
+			<i class="avatar"><span class="path1"></span><span class="path2"></span><span
+					class="path3"></span><span class="path4"></span><span class="path5"></span><span
+					class="path6"></span><span class="path7"></span><span class="path8"></span><span
+					class="path9"></span><span class="path10"></span><span class="path11"></span><span
+					class="path12"></span></i>
+		</div>
+		<div class="forum-comment__text-line">
+			<div class="forum-comment__text-line-left">
+				<p class="forum-comment__name">@@name</p>
+			</div>
+			<p class="forum-comment__date">@@date</p>
+		</div>
+		<h3 class="forum-comment__title">@@title</h3>
+	</div>
+	<div class="forum-comment__body">
+		<p class="forum-comment__text content-text">@@text</p>
+		@@if (context.name2) {
+		<div class="forum-comment__answer">
+			<p class="forum-comment__name-2">@@name2</p>
+			<p class="forum-comment__text-2 content-text">@@text2</p>
+		</div>
+		}
+		<div class="forum-comment__row">
+			@@include("../base/_btn.html", {
+			"text": "View answers (23)",
+			"modify": "grad-text",
+			})
+			<div class="forum-comment__back-btn">
+				<i class="turn-down"></i>
+				<p>Answer</p>
+			</div>
+		</div>
+		@@if (context.input) {
+		<div class="forum-comment__write">
+			<label for="answer">Your answer</label>
+			<div class="forum-comment__input-parent">
+				<input type="text" id="answer" placeholder="Your answer">
+				@@include("../base/_btn.html", {
+				"text": "Send",
+				"modify": "grad-text",
+				})
+			</div>
+		</div>
+		}
+	</div>
+</div>

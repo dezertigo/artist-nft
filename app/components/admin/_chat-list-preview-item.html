@@ -1,0 +1,13 @@
+<div class="swiper-slide">
+	<div class="chat-list-preview__item">
+		<div class="chat-list-preview__photo @@if (context.premium) {premium}">
+			<picture>
+				<source type='image/webp' srcset='@img/photo/@@photo.webp'>
+				<img src='@img/photo/@@photo.jpg' alt='personal photo'>
+			</picture>
+			@@if (context.premium) {<i class="crown"></i>}
+		</div>
+		<p class="chat-list-preview__name">@@name</p>
+		<p class="chat-list-preview__time">10 min ago</p>
+	</div>
+</div>

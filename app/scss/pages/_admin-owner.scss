@@ -1,0 +1,91 @@
+body.admin {
+   background-color: #1d1f21;
+   // max-height: 100vh;
+   // overflow: hidden;
+   // @media (min-width: 769px) {
+   //    background-color: #1d1f21;
+   // }
+   .wrapper {
+      max-height: 100vh;
+      overflow: hidden;
+   }
+   main {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 769px) {
+         flex-direction: row;
+      }
+   }
+   section {
+      display: none;
+      &:before {
+         display: none;
+      }
+      &.active {
+         display: block;
+         flex: 1 1 auto;
+         background-color: #1d1f21;
+         position: relative;
+         @media (min-width: 769px) {
+            background-color: #212426;
+         }
+         @media (min-width: 1000px) {
+            border-radius: 32px 0px 0px 0px;
+         }
+      }
+   }
+   .messages {
+      position: relative;
+      overflow: hidden;
+
+      &__cntr {
+         padding-left: percent(15, 375);
+         padding-right: percent(15, 375);
+         @media (min-width: 769px) {
+            display: flex;
+            padding-left: 29px;
+            padding-right: 32px;
+            height: 100%;
+         }
+      }
+      &__preview {
+         position: relative;
+         z-index: 0;
+         @media (min-width: 769px) {
+            flex: 0 0 317px;
+            padding-top: 32px;
+            padding-right: 29px;
+            position: relative;
+            &:after {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 100%;
+               width: 1px;
+               height: 100%;
+               transform: translate(-100%, 0);
+               background: rgba(82, 89, 96, 0.3);
+            }
+         }
+      }
+      &__chat {
+         @media (max-width: 768px) {
+            background-color: #1d1f21;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 100%;
+            transition: left 0.8s ease;
+            width: 100%;
+            &.visible {
+               transition: left 0.8s ease;
+               left: 0;
+            }
+         }
+         @media (min-width: 769px) {
+            flex: 1 1 auto;
+            // position: relative;
+         }
+      }
+   }
+}
