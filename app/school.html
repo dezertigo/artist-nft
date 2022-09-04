@@ -85,12 +85,45 @@
 						</p>
 					</div>
 					<div class="fees__inner">
-						@@include('./components/blocks/_tabs__nav.html', {
-							'btn1': 'One week',
-							'btn2': 'Month',
-							'btn3': 'Individual',
-						})
-						@@loop('./components/blocks/_premium-card.html', './json/school/premium-card.json')
+						<div class="tabs pricing__tabs">
+							@@include('./components/blocks/_tabs__nav.html', {
+								'btn1': 'One week',
+								'btn2': 'Month',
+								'btn3': 'Individual',
+							})
+							<div class="tabs__content">
+								<div class="tabs__item active" id="tab_1">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "1 week",
+        								"img": "11",
+        								"title" : "One week access",
+        								"class" : "first",
+										"btntext" : "Choose",
+        								"price" : "250.99"
+									})
+								</div>
+								<div class="tabs__item" id="tab_2">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "month",
+        								"img": "13",
+        								"title" : "One month access",
+        								"class" : "second",
+										"btntext" : "Choose",
+        								"price" : "250.99"
+									})
+								</div>
+								<div class="tabs__item" id="tab_3">
+									@@include('./components/blocks/_premium-card.html', {
+										"text" : "year",
+        								"img": "12",
+        								"title" : "Individual lesson",
+        								"class" : "third",
+										"btntext" : "Choose",
+        								"price" : "250.99"
+									})
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
