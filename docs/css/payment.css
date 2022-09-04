@@ -1433,6 +1433,44 @@ body.product-1-unlocked .header__buttons .premium-acess {
   transform: translateX(-2px);
 }
 
+.tabs__nav {
+  padding: 7px 8px;
+  display: flex;
+  justify-content: space-between;
+  background: #212426;
+  border-radius: 12px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.tabs__nav :nth-of-type(1) {
+  transform: translateX(-1px);
+}
+
+.tabs__nav :nth-of-type(2) {
+  transform: translateX(2px);
+}
+
+.tabs__nav :nth-of-type(3) {
+  transform: translateX(3px);
+}
+
+.tabs__nav-btn {
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  border-radius: 12px;
+  max-width: 111px;
+  height: 48px;
+  width: 100%;
+  background: transparent;
+}
+
+.tabs__nav-btn.active {
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  color: #1d1f21;
+  font-weight: 700;
+}
+
 body.payment .payment {
   padding-top: 34px;
   padding-bottom: 48px;
@@ -2006,6 +2044,33 @@ body.payment .popup__form .btn {
   .tabs__confirm a {
     transform: translateX(-1px);
     letter-spacing: -0.06em;
+  }
+
+  .tabs__nav :nth-of-type(2) {
+    transform: translateX(-2px);
+  }
+
+  .tabs__nav :nth-of-type(3) {
+    transform: translateX(-1px);
+  }
+
+  .tabs__nav {
+    max-width: 77.037037037%;
+    width: 100%;
+    transform: translate(-5px, -4px);
+    justify-content: flex-start;
+  }
+
+  .tabs__nav-btn.active {
+    font-size: 1.125em;
+    line-height: 1.3333333333;
+  }
+
+  .tabs__nav-btn {
+    max-width: 129px;
+    height: 56px;
+    font-size: 1em;
+    line-height: 1.75;
   }
 
   body.payment .payment {

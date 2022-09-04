@@ -1,20 +1,26 @@
 [
     {
         "text" : "1 week",
-        "img": "06",
+        "img": "11",
         "title" : "One week access",
-        "class" : "first"
+        "class" : "first",
+        "btntext" : "Choose",
+        "price" : "250.99"
     },
     {
         "text" : "month",
-        "img": "08",
+        "img": "13",
         "title" : "One month access",
-        "class" : "second"
+        "class" : "second",
+        "btntext" : "Choose",
+        "price" : "250.99"
     },
     {
         "text" : "Individual",
-        "img": "07",
+        "img": "12",
         "title" : "individual lesson",
-        "class" : "third"
+        "class" : "third",
+        "btntext" : "Choose",
+        "price" : "250.99"
     }
 ]
