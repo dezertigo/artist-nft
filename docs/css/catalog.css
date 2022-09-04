@@ -1399,6 +1399,11 @@ body.product-1-unlocked .header__buttons .premium-acess {
   color: #fff;
 }
 
+body.catalog main {
+  position: relative;
+  overflow: hidden;
+}
+
 body.catalog .stroke-text {
   display: none;
   transform: translateY(32px);
@@ -1551,6 +1556,18 @@ body.catalog .gallery__inner {
 
   .header__premium-btn i {
     font-size: 1.25em;
+  }
+
+  body.catalog main .blur-img {
+    position: absolute;
+    z-index: 1;
+    top: -6.6955684008%;
+    left: 5.625%;
+  }
+
+  body.catalog main .blur-img img {
+    width: 1245px;
+    height: 1199px;
   }
 }
 
@@ -1990,6 +2007,12 @@ body.catalog .gallery__inner {
     width: 100%;
     height: 1px;
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 768px) {
+  body.catalog main .blur-img {
+    display: none;
   }
 }
 
