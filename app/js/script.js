@@ -129,6 +129,10 @@ window.addEventListener("load", () => {
 
    // ! index.html
    if (qs("body.home")) {
+      // Relocate
+      qs(".hello-h1 .premium-acess").addEventListener("click", () => {
+         document.location.href = "payment.html";
+      });
       // Move graphic
       window.addEventListener("resize", moveBlock);
       moveBlock();

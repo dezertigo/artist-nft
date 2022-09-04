@@ -1429,6 +1429,15 @@ body.product-1-unlocked .header__buttons .premium-acess {
   object-fit: contain;
 }
 
+body.auction main {
+  position: relative;
+  overflow: hidden;
+}
+
+body.auction main .blur-img {
+  display: none;
+}
+
 body.auction .hero {
   position: relative;
 }
@@ -1860,6 +1869,26 @@ body.auction .about .banner__image_main img {
     top: 25.1121076233%;
     left: 22.202166065%;
     transform: rotate(8.04deg);
+  }
+
+  body.auction main .blur-img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+
+  body.auction main .blur-img_left img {
+    width: 1245px;
+    height: 1199px;
+    top: -5.3245805981%;
+    left: -39.7916666667%;
+  }
+
+  body.auction main .blur-img_right img {
+    width: 1245px;
+    height: 1199px;
+    top: -3.2822757112%;
+    left: 52.3611111111%;
   }
 
   body.auction .hero__decor {

@@ -1,4 +1,39 @@
 body.authorization {
+   main {
+      position: relative;
+      overflow: hidden;
+      .blur-img {
+         position: absolute;
+         z-index: -1;
+         &_left {
+            @media (max-width: 768px) {
+               left: -515px;
+               top: -761px;
+            }
+            @media (min-width: 769px) {
+               top: percent(-150, 900);
+               left: -680px;
+            }
+            img {
+               width: 1245px;
+               height: 1199px;
+            }
+         }
+         &_right {
+            @media (max-width: 768px) {
+               display: none;
+            }
+            @media (min-width: 769px) {
+               top: percent(-150, 900);
+               left: percent(879, 1440);
+               img {
+                  width: 1245px;
+                  height: 1199px;
+               }
+            }
+         }
+      }
+   }
    .hero {
       // position: relative;
       &__decor {
