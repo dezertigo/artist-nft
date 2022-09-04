@@ -1762,6 +1762,16 @@ body.product-1-unlocked .header__buttons .premium-acess {
   object-fit: contain !important;
 }
 
+body.school main {
+  position: relative;
+  overflow: hidden;
+}
+
+body.school main .blur-img {
+  position: absolute;
+  z-index: -1;
+}
+
 body.school .hero {
   position: relative;
   overflow: hidden;
@@ -2114,6 +2124,16 @@ body.school .reg-form {
 
   .header__premium-btn i {
     font-size: 1.25em;
+  }
+
+  body.school main .blur-img {
+    top: 892px;
+    left: -54.7222222222%;
+  }
+
+  body.school main .blur-img img {
+    width: 1245px;
+    height: 1199px;
   }
 }
 
@@ -2663,6 +2683,18 @@ body.school .reg-form {
     width: 100%;
     height: 1px;
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 768px) {
+  body.school main .blur-img {
+    top: 22px;
+    left: -48%;
+  }
+
+  body.school main .blur-img img {
+    width: 791px;
+    height: 762px;
   }
 }
 

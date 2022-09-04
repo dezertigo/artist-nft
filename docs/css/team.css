@@ -1506,6 +1506,16 @@ body.product-1-unlocked .header__buttons .premium-acess {
   object-fit: contain !important;
 }
 
+body.team main {
+  overflow: hidden;
+  position: relative;
+}
+
+body.team main .blur-img {
+  position: absolute;
+  z-index: -1;
+}
+
 body.team .hero {
   padding-top: 62px;
   overflow: hidden;
@@ -1545,7 +1555,7 @@ body.team .hero .star-decor:nth-of-type(2) {
 body.team .hero__circle {
   position: absolute;
   opacity: 0.4;
-  border: 1px solid #FCFFFF;
+  border: 1px solid #fcffff;
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -1784,6 +1794,16 @@ body.team .form .backgroung__image_2 {
 
   .header__premium-btn i {
     font-size: 1.25em;
+  }
+
+  body.team main .blur-img {
+    top: -6.9593147752%;
+    left: -38.8888888889%;
+  }
+
+  body.team main .blur-img img {
+    width: 1245px;
+    height: 1199px;
   }
 }
 
@@ -2381,6 +2401,18 @@ body.team .form .backgroung__image_2 {
   body.team .benefits .benefits-item__text {
     font-size: 0.75em;
     line-height: 1.6666666667;
+  }
+}
+
+@media (max-width: 768px) {
+  body.team main .blur-img {
+    top: 0.7816091954%;
+    left: -42.4%;
+  }
+
+  body.team main .blur-img img {
+    width: 791px;
+    height: 762px;
   }
 }
 
