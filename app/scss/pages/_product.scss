@@ -193,7 +193,7 @@ body.product {
          }
       }
       &__form {
-         padding: 59px 0 24px;
+         padding: 59px 0 21px;
          position: relative;
          @media (min-width: 1200px) {
             padding: 59px 0 39px;
@@ -236,6 +236,9 @@ body.product {
          }
       }
       .contact-form {
+         &__top {
+            margin-bottom: 49px;
+         }
          @media (min-width: 1200px) {
             &__top {
                margin-bottom: 29px;
@@ -255,6 +258,19 @@ body.product {
          }
          .select:last-child {
             transform: translateX(-2px);
+         }
+         .btn {
+            color: #1D1F21;
+            @media (max-width: 800px) {
+               max-width: 345px;
+               margin: 0 auto;
+               transform: translate(-3px,-3px);
+            }
+         }
+         .confirm {
+            @media (max-width: 800px) {
+               transform: translateY(-3px);
+            }
          }
          @media (min-width: 1200px) {
             .select:nth-of-type(2) {
@@ -277,7 +293,7 @@ body.product {
             }
             .btn {
                color: #1d1f21;
-               transform: translate(0px, 0px);
+               transform: translate(0px, 1px);
             }
             .confirm {
                transform: translate(1px, 2px);
@@ -327,7 +343,6 @@ body.product {
          }
       }
       .radio {
-         transform: translateY(3px);
          @media (min-width: 1200px) {
             transform: translate(2px, 12px);
          }
@@ -479,6 +494,11 @@ body.product {
             &:checked + .radio__label {
                z-index: 15;
             }
+         }
+      }
+      .radio + .input {
+         @media (max-width: 800px) {
+            transform: translateY(-3px);
          }
       }
    }

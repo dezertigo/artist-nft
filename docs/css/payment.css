@@ -480,6 +480,11 @@ i {
   content: "\e923";
 }
 
+.chromeperfectpixel-layer-img {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -2264,6 +2269,18 @@ body.payment .popup__form .btn {
     width: 100%;
     height: 1px;
     opacity: 0.1;
+  }
+}
+
+@media (max-width: 800px) {
+  body.payment .payment__content .btn {
+    max-width: 100%;
+  }
+
+  body.payment .payment__content .btn a {
+    font-size: 1.125em;
+    line-height: 1.4444444444;
+    letter-spacing: -0.08em;
   }
 }
 

@@ -102,6 +102,7 @@ window.addEventListener("load", () => {
             document.location.href = "product.html";
          }
       }
+
    }
 
    // ! Spoiler.html
@@ -561,4 +562,11 @@ window.addEventListener("load", () => {
          });
       });
    }
+    
+   //!team.html
+    if(qs('body.team')) {
+      qs(".school-link").addEventListener("click", () => {
+         document.location.href = "school.html";
+      });
+    }
 });

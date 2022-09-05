@@ -113,6 +113,9 @@ body.pricing {
             max-width: 271px;
             margin-bottom: 17px;
             transform: translateX(3px);
+            @media (min-width: 500px) {
+               max-width: percent(410,460);
+            }
             @media (min-width: 768px) {
                max-width: percent(469, 800);
                text-align: center;
@@ -126,6 +129,9 @@ body.pricing {
          &__text {
             max-width: 277px;
             margin-bottom: 13px;
+            @media (min-width:500px) {
+               max-width: percent(410, 460);
+            }
             @media (min-width: 768px) {
                max-width: percent(380, 800);
                text-align: center;
@@ -144,13 +150,14 @@ body.pricing {
          @media (min-width: 500px) {
             max-width: 450px;
             margin: 0 auto 20px;
+            justify-content: space-between;
          }
-         @media (min-width: 1200px) {
+         @media (min-width: 1250px) {
             display: none;
          }
       }
       .tabs__item {
-         @media (min-width: 1200px) {
+         @media (min-width: 1250px) {
             display: block;
             max-width: 350px;
             width: 100%;
@@ -162,9 +169,13 @@ body.pricing {
       .tabs__content {
          @media (min-width: 1200px) {
             max-width: 100%;
+         }
+         @media (min-width: 1250px) {
+            max-width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
          }
       }
       .background {

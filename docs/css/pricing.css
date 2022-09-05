@@ -480,6 +480,11 @@ i {
   content: "\e923";
 }
 
+.chromeperfectpixel-layer-img {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -1389,9 +1394,9 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .premium-card {
   background: #212426;
   border-radius: 12px;
-  border: 5px solid transparent;
   transition: all 0.3s ease;
   max-width: 100%;
+  border: 5px solid transparent;
 }
 
 .premium-card:hover {
@@ -1535,7 +1540,6 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .premium-card__list {
   max-width: 294px;
   margin: 0 auto;
-  transform: translate(-2px, -3px);
 }
 
 .premium-card__item {
@@ -1573,6 +1577,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .premium-card__btn {
@@ -1750,9 +1755,18 @@ body.pricing .pricing .background__image_3 img {
     padding-bottom: 35px;
   }
 
+  body.pricing .pricing .hello-h1__title {
+    max-width: 89.1304347826%;
+  }
+
+  body.pricing .pricing .hello-h1__text {
+    max-width: 89.1304347826%;
+  }
+
   body.pricing .pricing .tabs__nav {
     max-width: 450px;
     margin: 0 auto 20px;
+    justify-content: space-between;
   }
 }
 
@@ -2342,25 +2356,8 @@ body.pricing .pricing .background__image_3 img {
     max-width: 37.3873873874%;
   }
 
-  body.pricing .pricing .tabs__nav {
-    display: none;
-  }
-
-  body.pricing .pricing .tabs__item {
-    display: block;
-    max-width: 350px;
-    width: 100%;
-  }
-
-  body.pricing .pricing .tabs__item:nth-child(2) {
-    order: 2;
-  }
-
   body.pricing .pricing .tabs__content {
     max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   body.pricing .pricing .background__image_1 {
@@ -2412,6 +2409,28 @@ body.pricing .pricing .background__image_3 img {
   body.nfts .header__container,
   body.product-1-unlocked .header__container {
     padding-right: 11.4583333333%;
+  }
+
+  body.pricing .pricing .tabs__nav {
+    display: none;
+  }
+
+  body.pricing .pricing .tabs__item {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  body.pricing .pricing .tabs__item:nth-child(2) {
+    order: 2;
+  }
+
+  body.pricing .pricing .tabs__content {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
   }
 }
 

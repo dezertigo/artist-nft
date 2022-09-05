@@ -6,13 +6,21 @@
     &.none {
        display: none;
     }
+    &__text {
+      @media (min-width: 1200px) {
+         transform: translateY(-3px);
+      }
+    }
     &--big {
        @media (min-width: 630px) {
         grid-column: span 2;
        }
-       @media (min-width:1200px) {
+       @media (min-width: 1200px) {
         .card-item__text {
-            transform: translateY(6px);
+            transform: translateY(3px);
+        }
+        .card-item__content-box .card-item__price {
+         transform: translateY(-8px);
         }
        }
     }
@@ -38,7 +46,7 @@
        .btn.small {
         max-width: 134px;
         width: 100%;
-        transform: translate(6px, -4px);
+        transform: translate(5px,-2px);
         a {
             z-index: 0;
         }
@@ -47,7 +55,7 @@
     &__locked-caption {
       text-transform: lowercase;
       @media (min-width: 1200px) {
-         transform: translateX(2px);
+         transform: translate(2px, -3px);
       }
     }
     &__locked-text {
