@@ -480,6 +480,11 @@ i {
   content: "\e923";
 }
 
+.chromeperfectpixel-layer-img {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+
 body.lock {
   overflow: hidden;
 }

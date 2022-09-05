@@ -91,7 +91,9 @@ body.school {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 40px;
         }
+        
       }
       &__content {
          margin-bottom: 47px;
@@ -108,6 +110,14 @@ body.school {
             }
             &__text {
                 max-width: percent(270, 375);
+            }
+        }
+        @media (min-width: 500px) {
+            &__title {
+                max-width: percent(410, 460);
+            }
+            &__text {
+                max-width: percent(410, 460);
             }
         }
         @media (min-width: 800px) {
@@ -127,6 +137,9 @@ body.school {
          .double-block_square {
             max-width: 309px;
             transform: translate(26px, 0px) rotate(-5.95deg);
+            @media (min-width: 450px) {
+                max-width: percent(309, 360);
+            }
             @media (min-width:800px) {
                 max-width: 570px;
                 transform: translate(-35px,-14px) rotate(-5.95deg);
@@ -155,8 +168,16 @@ body.school {
          display: flex;
          flex-wrap: wrap;
          justify-content: space-between;
+         @media (min-width: 500px) {
+            gap: 25px;
+         }
       }
       .hello-h2 {
+        @media (min-width: 500px) {
+            &__title {
+                max-width: 100%;
+            }
+        }
         @media (min-width: 1200px) {
             text-align: center;
             
@@ -169,6 +190,7 @@ body.school {
          &__title {
             @media (min-width: 1200px) {
                 margin: 0 auto 29px;
+                transform: translate(11px, -2px);
             }
         }
       }
@@ -284,6 +306,7 @@ body.school {
                 height: 340px;
                 filter: blur(0);
                 top: 166px;
+                z-index: -1;
             }
             }
             &_2 {
@@ -308,15 +331,15 @@ body.school {
                 max-width: 500px;
                 margin: 0 auto 14px;
             }
-            @media (min-width: 800px) {
+            @media (min-width: 1000px) {
                 display: none;
             }
          }
          .tabs__content {
-            @media (min-width: 900px) {
+            @media (min-width: 1000px) {
                 display: flex;
                 justify-content: space-between;
-                gap: 15px;
+                gap: 25px;
             }
          }
          .tabs__item {
@@ -324,7 +347,7 @@ body.school {
             &.active {
                 display: block;
             }
-            @media (min-width: 900px) {
+            @media (min-width: 1000px) {
                 display: block;
                 max-width: 350px;
                 width: 100%;
@@ -440,6 +463,14 @@ body.school {
             &__footer {
                 transform: translateY(-3px);
                 padding: 14px 28px 18px 24px;
+                @media (min-width: 1250px) {
+                    .premium-card__btn {
+                        transform: translate(-1px,-2px);
+                    }
+                    .premium-card__price {
+                        transform: translateX(-3px);
+                    }
+                }
             }
          }
       }
@@ -523,13 +554,15 @@ body.school {
       .btn {
          width: 100%;
          max-width: 193px;
+         transform: translateY(3px);
          @media (min-width:1200px) {
             max-width: 212px;
+            transform: translateY(0px);
          }
       }
    }
    .hello-h2 {
-      margin-bottom: 29px;
+      margin-bottom: 30px;
       &__title {
          max-width: 270px;
          @media (min-width:1200px) {

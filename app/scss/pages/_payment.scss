@@ -27,6 +27,15 @@ body.payment {
                 max-width: percent(540, 1110);
                 width: 100%;
             }
+            .btn {
+                @media (max-width: 800px) {
+                    max-width: 100%;
+                    a {
+                        @include fl(18,26);
+                        letter-spacing: -0.08em;
+                    }
+                }
+            }
         }
         &__desc {
             padding: 20px 12px 6px 19px;

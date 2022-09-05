@@ -480,6 +480,11 @@ i {
   content: "\e923";
 }
 
+.chromeperfectpixel-layer-img {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -1812,9 +1817,9 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .premium-card {
   background: #212426;
   border-radius: 12px;
-  border: 5px solid transparent;
   transition: all 0.3s ease;
   max-width: 100%;
+  border: 5px solid transparent;
 }
 
 .premium-card:hover {
@@ -1958,7 +1963,6 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .premium-card__list {
   max-width: 294px;
   margin: 0 auto;
-  transform: translate(-2px, -3px);
 }
 
 .premium-card__item {
@@ -1996,6 +2000,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .premium-card__btn {

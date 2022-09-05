@@ -480,6 +480,11 @@ i {
   content: "\e923";
 }
 
+.chromeperfectpixel-layer-img {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -1715,7 +1720,7 @@ body.team .form .backgroung__image_2 {
   body.team .form .backgroung__image_1 {
     top: 0;
     right: -32px;
-    transform: rotate(0deg);
+    transform: rotate(75deg);
   }
 
   body.team .form .backgroung__image_3 {

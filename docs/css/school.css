@@ -480,6 +480,11 @@ i {
   content: "\e923";
 }
 
+.chromeperfectpixel-layer-img {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -1326,9 +1331,9 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .premium-card {
   background: #212426;
   border-radius: 12px;
-  border: 5px solid transparent;
   transition: all 0.3s ease;
   max-width: 100%;
+  border: 5px solid transparent;
 }
 
 .premium-card:hover {
@@ -1472,7 +1477,6 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .premium-card__list {
   max-width: 294px;
   margin: 0 auto;
-  transform: translate(-2px, -3px);
 }
 
 .premium-card__item {
@@ -1510,6 +1514,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .premium-card__btn {
@@ -1994,10 +1999,11 @@ body.school .hello-h1__text {
 body.school .hello-h1 .btn {
   width: 100%;
   max-width: 193px;
+  transform: translateY(3px);
 }
 
 body.school .hello-h2 {
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 body.school .hello-h2__title {
@@ -2134,6 +2140,10 @@ body.school .radio__label {
 }
 
 @media (min-width: 450px) {
+  body.school .hero__graphic .double-block_square {
+    max-width: 85.8333333333%;
+  }
+
   body.school .form {
     max-width: 91.1111111111%;
     margin: 0 auto;
@@ -2177,6 +2187,22 @@ body.school .radio__label {
     max-width: 350px;
     width: 100%;
     margin: 0 auto;
+  }
+
+  body.school .hero .hello-h1__title {
+    max-width: 89.1304347826%;
+  }
+
+  body.school .hero .hello-h1__text {
+    max-width: 89.1304347826%;
+  }
+
+  body.school .benefits__inner {
+    gap: 25px;
+  }
+
+  body.school .benefits .hello-h2__title {
+    max-width: 100%;
   }
 }
 
@@ -2370,6 +2396,7 @@ body.school .radio__label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
   }
 
   body.school .hero__content {
@@ -2410,15 +2437,12 @@ body.school .radio__label {
     height: 340px;
     filter: blur(0);
     top: 166px;
+    z-index: -1;
   }
 
   body.school .fees .background__image_2 {
     top: 65px;
     filter: brightness(0.9) blur(6px);
-  }
-
-  body.school .fees__inner .tabs__nav {
-    display: none;
   }
 
   body.school .fees__inner .premium-card__image--first {
@@ -2536,24 +2560,6 @@ body.school .radio__label {
   }
 }
 
-@media (min-width: 900px) {
-  body.school .fees__inner .tabs__content {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-  }
-
-  body.school .fees__inner .tabs__item {
-    display: block;
-    max-width: 350px;
-    width: 100%;
-  }
-
-  body.school .fees__inner .tabs__item:nth-of-type(2) {
-    order: 3;
-  }
-}
-
 @media (min-width: 1000px) {
   h1 {
     font-size: 3.125em;
@@ -2587,6 +2593,26 @@ body.school .radio__label {
 
   .contact-form__body .btn {
     margin-bottom: 3px;
+  }
+
+  body.school .fees__inner .tabs__nav {
+    display: none;
+  }
+
+  body.school .fees__inner .tabs__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  body.school .fees__inner .tabs__item {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  body.school .fees__inner .tabs__item:nth-of-type(2) {
+    order: 3;
   }
 }
 
@@ -2911,6 +2937,7 @@ body.school .radio__label {
 
   body.school .benefits .hello-h2__title {
     margin: 0 auto 29px;
+    transform: translate(11px, -2px);
   }
 
   body.school .benefits .benefits-item {
@@ -3019,6 +3046,7 @@ body.school .radio__label {
 
   body.school .hello-h1 .btn {
     max-width: 212px;
+    transform: translateY(0px);
   }
 
   body.school .hello-h2__title {
@@ -3049,6 +3077,14 @@ body.school .radio__label {
   body.nfts .header__container,
   body.product-1-unlocked .header__container {
     padding-right: 11.4583333333%;
+  }
+
+  body.school .fees__inner .premium-card__footer .premium-card__btn {
+    transform: translate(-1px, -2px);
+  }
+
+  body.school .fees__inner .premium-card__footer .premium-card__price {
+    transform: translateX(-3px);
   }
 }
 
