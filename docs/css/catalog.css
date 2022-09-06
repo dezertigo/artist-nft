@@ -1288,6 +1288,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
 
 .card-item__content:hover {
   background: linear-gradient(175deg, rgba(104, 128, 255, 0.9) 0%, rgba(60, 167, 244, 0.9) 55.2%, rgba(140, 69, 255, 0.9) 100%);
+  border-radius: 12px;
   opacity: 1;
 }
 

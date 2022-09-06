@@ -718,6 +718,7 @@ body.school {
         display: flex;
         justify-content: space-between;
         margin-bottom: 18px;
+        
         @media (min-width: 800px) {
             margin-bottom: 39px;
         }
@@ -727,6 +728,7 @@ body.school {
         max-width: 109px;
         min-height: 50px;
         width: 100%;
+        position: relative;
         @media (min-width: 800px) {
             min-height: 64px;
             max-width: 120px;
@@ -738,6 +740,11 @@ body.school {
         justify-content: center;
       }
       &__label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         color: #C8D2DC;
         @include fl(14,21);
         margin-bottom: 6px;

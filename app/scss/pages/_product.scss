@@ -365,61 +365,71 @@ body.product {
                background: #ca3838;
             }
             :nth-of-type(2) {
-               left: -8px;
+               position: absolute;
+               left:0;
                &::before {
                   background: #eb8032;
                }
             }
             :nth-of-type(3) {
-               left: -16px;
+               position: absolute;
+               left: 24px;
                &::before {
                   background: #ffda57;
                }
             }
             :nth-of-type(4) {
-               left: -24px;
+               position: absolute;
+               left: 48px;
                &::before {
                   background: #79ce60;
                }
             }
             :nth-of-type(5) {
-               left: -32px;
+               position: absolute;
+               left: 72px;
                &::before {
                   background: #60ceb4;
                }
             }
             :nth-of-type(6) {
-               left: -40px;
+               position: absolute;
+               left: 96px;
                &::before {
                   background: #41d4f4;
                }
             }
             :nth-of-type(7) {
-               left: -48px;
+               position: absolute;
+               left: 120px;
                &::before {
                   background: #4153f4;
                }
             }
             :nth-of-type(8) {
-               left: -56px;
+               position: absolute;
+               left: 144px;
                &::before {
                   background: #6541f4;
                }
             }
             :nth-of-type(9) {
-               left: -64px;
+               position: absolute;
+               left: 168px;
                &::before {
                   background: #b041f4;
                }
             }
             :nth-of-type(10) {
-               left: -72px;
+               position: absolute;
+               left: 192px;
                &::before {
                   background: #c45297;
                }
             }
             :nth-of-type(11) {
-               left: -80px;
+               position: absolute;
+               left: 216px;
                &::before {
                   background: #a14051;
                }

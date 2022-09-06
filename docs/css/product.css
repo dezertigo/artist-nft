@@ -1353,6 +1353,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
 
 .card-item__content:hover {
   background: linear-gradient(175deg, rgba(104, 128, 255, 0.9) 0%, rgba(60, 167, 244, 0.9) 55.2%, rgba(140, 69, 255, 0.9) 100%);
+  border-radius: 12px;
   opacity: 1;
 }
 
@@ -1835,7 +1836,8 @@ body.product .product .radio__body :nth-of-type(1)::before {
 }
 
 body.product .product .radio__body :nth-of-type(2) {
-  left: -8px;
+  position: absolute;
+  left: 0;
 }
 
 body.product .product .radio__body :nth-of-type(2)::before {
@@ -1843,7 +1845,8 @@ body.product .product .radio__body :nth-of-type(2)::before {
 }
 
 body.product .product .radio__body :nth-of-type(3) {
-  left: -16px;
+  position: absolute;
+  left: 24px;
 }
 
 body.product .product .radio__body :nth-of-type(3)::before {
@@ -1851,7 +1854,8 @@ body.product .product .radio__body :nth-of-type(3)::before {
 }
 
 body.product .product .radio__body :nth-of-type(4) {
-  left: -24px;
+  position: absolute;
+  left: 48px;
 }
 
 body.product .product .radio__body :nth-of-type(4)::before {
@@ -1859,7 +1863,8 @@ body.product .product .radio__body :nth-of-type(4)::before {
 }
 
 body.product .product .radio__body :nth-of-type(5) {
-  left: -32px;
+  position: absolute;
+  left: 72px;
 }
 
 body.product .product .radio__body :nth-of-type(5)::before {
@@ -1867,7 +1872,8 @@ body.product .product .radio__body :nth-of-type(5)::before {
 }
 
 body.product .product .radio__body :nth-of-type(6) {
-  left: -40px;
+  position: absolute;
+  left: 96px;
 }
 
 body.product .product .radio__body :nth-of-type(6)::before {
@@ -1875,7 +1881,8 @@ body.product .product .radio__body :nth-of-type(6)::before {
 }
 
 body.product .product .radio__body :nth-of-type(7) {
-  left: -48px;
+  position: absolute;
+  left: 120px;
 }
 
 body.product .product .radio__body :nth-of-type(7)::before {
@@ -1883,7 +1890,8 @@ body.product .product .radio__body :nth-of-type(7)::before {
 }
 
 body.product .product .radio__body :nth-of-type(8) {
-  left: -56px;
+  position: absolute;
+  left: 144px;
 }
 
 body.product .product .radio__body :nth-of-type(8)::before {
@@ -1891,7 +1899,8 @@ body.product .product .radio__body :nth-of-type(8)::before {
 }
 
 body.product .product .radio__body :nth-of-type(9) {
-  left: -64px;
+  position: absolute;
+  left: 168px;
 }
 
 body.product .product .radio__body :nth-of-type(9)::before {
@@ -1899,7 +1908,8 @@ body.product .product .radio__body :nth-of-type(9)::before {
 }
 
 body.product .product .radio__body :nth-of-type(10) {
-  left: -72px;
+  position: absolute;
+  left: 192px;
 }
 
 body.product .product .radio__body :nth-of-type(10)::before {
@@ -1907,7 +1917,8 @@ body.product .product .radio__body :nth-of-type(10)::before {
 }
 
 body.product .product .radio__body :nth-of-type(11) {
-  left: -80px;
+  position: absolute;
+  left: 216px;
 }
 
 body.product .product .radio__body :nth-of-type(11)::before {

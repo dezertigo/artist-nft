@@ -2108,6 +2108,7 @@ body.school .radio__btn {
   max-width: 109px;
   min-height: 50px;
   width: 100%;
+  position: relative;
   border-radius: 9px;
   display: flex;
   align-items: center;
@@ -2115,6 +2116,11 @@ body.school .radio__btn {
 }
 
 body.school .radio__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   color: #C8D2DC;
   font-size: 0.875em;
   line-height: 1.5;
