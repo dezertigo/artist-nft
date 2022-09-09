@@ -2074,6 +2074,8 @@ body.school .form__label {
   justify-content: center;
   font-size: 1.125em;
   line-height: 1.4444444444;
+  position: absolute;
+  cursor: pointer;
 }
 
 body.school .form__input {
@@ -2116,11 +2118,6 @@ body.school .radio__btn {
 }
 
 body.school .radio__label {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   color: #C8D2DC;
   font-size: 0.875em;
   line-height: 1.5;
