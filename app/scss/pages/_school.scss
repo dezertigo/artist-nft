@@ -686,7 +686,8 @@ body.school {
         align-items: center;
         justify-content: center;
         @include fl(18, 26);
-        
+        position: absolute;
+        cursor: pointer;
       }
       &__input {
         appearance: none;
@@ -740,11 +741,6 @@ body.school {
         justify-content: center;
       }
       &__label {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
         color: #C8D2DC;
         @include fl(14,21);
         margin-bottom: 6px;
