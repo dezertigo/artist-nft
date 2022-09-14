@@ -52,7 +52,7 @@ div.orders {
    }
    &__heading {
       @media (max-width: 768px) {
-         display: none;
+         display: none !important;
       }
       @media (min-width: 769px) {
          color: #fcffff;
