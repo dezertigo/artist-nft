@@ -102,7 +102,6 @@ window.addEventListener("load", () => {
             document.location.href = "product.html";
          }
       }
-
    }
 
    // ! Spoiler.html
@@ -350,12 +349,16 @@ window.addEventListener("load", () => {
                   actualizeHeight();
                   window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
                }
-            } else if (!e.target.closest(".admin-burger") && !e.target.closest(".aside__action-wrapper")) {
+            } else if (
+               (!e.target.closest(".admin-burger") && !e.target.closest(".aside__action-wrapper")) ||
+               e.target.closest(".menu li")
+            ) {
                adminBurger.classList.remove("active");
                adminHeader.classList.remove("active");
                asideAction.classList.remove("active");
                body.classList.remove("lock");
                closeBurger();
+               actualizeHeight();
             }
          }
          function closeBurger() {
@@ -562,11 +565,11 @@ window.addEventListener("load", () => {
          });
       });
    }
-    
+
    //!team.html
-    if(qs('body.team')) {
+   if (qs("body.team")) {
       qs(".school-link").addEventListener("click", () => {
          document.location.href = "school.html";
       });
-    }
+   }
 });

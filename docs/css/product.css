@@ -1609,6 +1609,13 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .confirm input[type=checkbox] {
   width: 0;
   height: 0;
+  visibility: hidden;
+}
+
+@-moz-document url-prefix()  {
+  .confirm input[type=checkbox] {
+    margin: 0 -4px 0 0;
+  }
 }
 
 .confirm a {
