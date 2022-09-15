@@ -556,8 +556,8 @@ body.school {
          max-width: 193px;
          transform: translateY(3px);
          @media (min-width:1200px) {
-            max-width: 212px;
-            transform: translateY(0px);
+            max-width: 209px;
+            transform: translate(2px, 0px);
          }
       }
    }
@@ -698,9 +698,10 @@ body.school {
         -webkit-text-fill-color: unset;
       }
       .btn {
+        max-width: 406px;
         width: 100%;
         min-height: 56px;
-        margin-bottom: 18px;
+        margin: 0 auto 18px;
         font-weight: 700;
         @include fl(18, 26);
         @media (min-width: 800px) {

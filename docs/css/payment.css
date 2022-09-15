@@ -2124,6 +2124,10 @@ body.payment .popup__form .btn {
     transform: translateY(-2px);
   }
 
+  body.payment .tabs__content {
+    max-width: 75.9259259259%;
+  }
+
   body.payment .popup {
     max-width: 45.045045045%;
     padding: 45px 29px 45px 0px;
@@ -2135,7 +2139,7 @@ body.payment .popup__form .btn {
   }
 
   body.payment .popup__form {
-    max-width: 93.6073059361%;
+    max-width: 87.0488322718%;
   }
 }
 
