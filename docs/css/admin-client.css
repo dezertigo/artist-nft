@@ -2257,7 +2257,7 @@ body.admin .messages__preview {
   }
 
   .orders__heading {
-    display: none;
+    display: none !important;
   }
 
   .orders__items {

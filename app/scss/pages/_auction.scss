@@ -381,7 +381,7 @@ body.auction {
             column-gap: 30px;
             align-items: flex-start;
             padding-top: 33px;
-            padding-bottom: 42px;
+            padding-bottom: 40px;
          }
          @media (min-width: 1250px) {
             padding-right: percent(150, 1440);
@@ -437,7 +437,8 @@ body.auction {
       // .about__body
       &__body {
          padding-top: 16px;
-         padding-bottom: 23px;
+         // padding-bottom: 23px;
+         padding-bottom: 25px;
          padding-left: 16px;
          padding-right: 13px;
          background-color: #212426;
@@ -526,6 +527,9 @@ body.auction {
             flex: 0 0 345px;
             margin-top: 59px;
             margin-top: percent(59, 1125);
+            &__content {
+               margin-bottom: 2px;
+            }
          }
          i {
             @media (min-width: 769px) {

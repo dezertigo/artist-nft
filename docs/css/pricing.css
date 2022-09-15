@@ -1749,6 +1749,7 @@ body.pricing .pricing .background__image_3 img {
     max-width: 350px;
     width: 100%;
     margin: 0 auto;
+    max-height: 650px;
   }
 
   body.pricing .pricing {
@@ -2316,7 +2317,7 @@ body.pricing .pricing .background__image_3 img {
 
   body.pricing .pricing {
     padding-top: 62px;
-    padding-bottom: 43px;
+    padding-bottom: 51px;
   }
 
   body.pricing .pricing__decor .stroke-text {

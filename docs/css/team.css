@@ -1388,6 +1388,13 @@ body.product-1-unlocked .header__buttons .premium-acess {
 .confirm input[type=checkbox] {
   width: 0;
   height: 0;
+  visibility: hidden;
+}
+
+@-moz-document url-prefix()  {
+  .confirm input[type=checkbox] {
+    margin: 0 -4px 0 0;
+  }
 }
 
 .confirm a {
@@ -1481,7 +1488,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   background: #212426;
   border-radius: 12px;
   color: #FCFFFF;
-  padding: 18px 19px 32px;
+  padding: 18px 19px 37px;
 }
 
 .benefits-item__img {
@@ -2198,7 +2205,7 @@ body.team .form .backgroung__image_2 {
   }
 
   body.team .form {
-    padding-top: 35px;
+    padding-top: 29px;
     padding-bottom: 90px;
   }
 

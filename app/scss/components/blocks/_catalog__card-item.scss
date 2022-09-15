@@ -26,6 +26,9 @@
     }
     .image {
        padding-bottom: calc(412 / 345 * 100%);
+       @media (min-width: 1200px) {
+         padding-bottom: calc(412 / 343.99 * 100%);
+       }
        &.blur {
           filter: blur(22px);
           opacity: 0.17;
@@ -47,6 +50,10 @@
         max-width: 134px;
         width: 100%;
         transform: translate(5px,-2px);
+        @media (min-width: 1200px) {
+         padding: 19px 13px 18px 24px;
+         transform: translateX(1px);
+        }
         a {
             z-index: 0;
         }
@@ -187,5 +194,8 @@
  .card-item--big {
     .image {
        padding-bottom: calc(200 / 345 * 100%);
+       @media (min-width: 1200px) {
+         padding-bottom: calc(200 / 347.77 * 100%);
+       }
     }
  }

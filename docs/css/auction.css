@@ -1588,7 +1588,7 @@ body.auction .about__head:before {
 
 body.auction .about__body {
   padding-top: 16px;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
   padding-left: 16px;
   padding-right: 13px;
   background-color: #212426;
@@ -1990,7 +1990,7 @@ body.auction .about .banner__image_main img {
     column-gap: 30px;
     align-items: flex-start;
     padding-top: 33px;
-    padding-bottom: 42px;
+    padding-bottom: 40px;
   }
 
   body.auction .about__content {
@@ -2015,6 +2015,10 @@ body.auction .about .banner__image_main img {
     flex: 0 0 345px;
     margin-top: 59px;
     margin-top: 5.2444444444%;
+  }
+
+  body.auction .about .banner__content {
+    margin-bottom: 2px;
   }
 
   body.auction .about .banner i {
