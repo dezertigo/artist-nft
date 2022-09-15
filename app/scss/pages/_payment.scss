@@ -164,6 +164,13 @@ body.payment {
             }
         }
     }
+    .tabs {
+        &__content {
+            @media (min-width: 1200px) {
+                max-width: percent(410, 540);
+            }
+        }
+    }
     .popup {
         max-width: 100%;
         padding: 23px 28px 15px 18px;
@@ -180,7 +187,6 @@ body.payment {
         &.active {
             display: block;
         }
-        &__body {}
         &__title {
             @include fl(26, 34);
             @media (min-width: 1200px) {
@@ -200,7 +206,7 @@ body.payment {
                 max-width: 100%;
             }
             @media (min-width:1200px) {
-                max-width: percent(410, 438);
+                max-width: percent(410, 471);
             }
         }
     }

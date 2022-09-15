@@ -1303,7 +1303,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   background: #212426;
   border-radius: 12px;
   color: #FCFFFF;
-  padding: 18px 19px 32px;
+  padding: 18px 19px 37px;
 }
 
 .benefits-item__img {
@@ -2098,9 +2098,10 @@ body.school .form__input:checked + .form__label {
 }
 
 body.school .form .btn {
+  max-width: 406px;
   width: 100%;
   min-height: 56px;
-  margin-bottom: 18px;
+  margin: 0 auto 18px;
   font-weight: 700;
   font-size: 1.125em;
   line-height: 1.4444444444;
@@ -2197,6 +2198,7 @@ body.school .radio__label {
     max-width: 350px;
     width: 100%;
     margin: 0 auto;
+    max-height: 650px;
   }
 
   body.school .hero .hello-h1__title {
@@ -3055,8 +3057,8 @@ body.school .radio__label {
   }
 
   body.school .hello-h1 .btn {
-    max-width: 212px;
-    transform: translateY(0px);
+    max-width: 209px;
+    transform: translate(2px, 0px);
   }
 
   body.school .hello-h2__title {

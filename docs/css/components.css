@@ -2045,7 +2045,7 @@ body.product-1-unlocked .header__buttons .premium-acess {
   background: #212426;
   border-radius: 12px;
   color: #FCFFFF;
-  padding: 18px 19px 32px;
+  padding: 18px 19px 37px;
 }
 
 .benefits-item__img {
@@ -2139,6 +2139,7 @@ body.components .example-form {
     max-width: 350px;
     width: 100%;
     margin: 0 auto;
+    max-height: 650px;
   }
 }
 

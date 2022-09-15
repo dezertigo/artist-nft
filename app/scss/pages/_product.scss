@@ -161,6 +161,9 @@ body.product {
          }
          > div {
             max-width: percent(309, 345);
+            @media (min-width: 1200px) {
+               max-width: percent(310.17, 345);
+            }
          }
          @media (min-width: 768px) {
             max-width: 561px;
@@ -169,6 +172,10 @@ body.product {
          @media (min-width: 1180px) {
             margin-bottom: 71px;
          }
+         .double-block__image {
+            transform: translate(34px,13px) rotate(5.95deg);
+         }
+          
       }
       &__gallery {
          display: grid;
@@ -196,7 +203,7 @@ body.product {
          padding: 59px 0 21px;
          position: relative;
          @media (min-width: 1200px) {
-            padding: 59px 0 39px;
+            padding: 61px 0 48px;
          }
          .backgroung {
             &__image {
@@ -255,6 +262,9 @@ body.product {
          transform: translateY(1px);
          .select {
             margin-bottom: 4px;
+            @media (min-width: 1200px) {
+               row-gap: 4px;
+            }
          }
          .select:last-child {
             transform: translateX(-2px);
@@ -273,9 +283,10 @@ body.product {
             }
          }
          @media (min-width: 1200px) {
+            row-gap: 13px;
             .select:nth-of-type(2) {
                order: 3;
-               transform: translateY(-8px);
+               transform: translateY(-2px);
                select {
                   transform: translateX(2px);
                }
@@ -289,14 +300,14 @@ body.product {
                order: 3;
             }
             .input {
-               transform: translate(1px, 1px);
+               transform: translate(1px, 7px);
             }
             .btn {
                color: #1d1f21;
-               transform: translate(0px, 1px);
+               transform: translate(0px, 9px);
             }
             .confirm {
-               transform: translate(1px, 2px);
+               transform: translate(1px, 12px);
             }
          }
       }
@@ -332,6 +343,7 @@ body.product {
             appearance: none;
             -webkit-appearance: none;
             width: 100%;
+            min-height: 64px;
             padding: 21px 32px;
             background: #212426;
             border-radius: 9px;
@@ -344,7 +356,7 @@ body.product {
       }
       .radio {
          @media (min-width: 1200px) {
-            transform: translate(2px, 12px);
+            transform: translate(2px, 14px);
          }
          span {
             display: block;
@@ -366,70 +378,70 @@ body.product {
             }
             :nth-of-type(2) {
                position: absolute;
-               left:0;
+               left:24px;
                &::before {
                   background: #eb8032;
                }
             }
             :nth-of-type(3) {
                position: absolute;
-               left: 24px;
+               left: 48px;
                &::before {
                   background: #ffda57;
                }
             }
             :nth-of-type(4) {
                position: absolute;
-               left: 48px;
+               left: 72px;
                &::before {
                   background: #79ce60;
                }
             }
             :nth-of-type(5) {
                position: absolute;
-               left: 72px;
+               left: 96px;
                &::before {
                   background: #60ceb4;
                }
             }
             :nth-of-type(6) {
                position: absolute;
-               left: 96px;
+               left: 120px;
                &::before {
                   background: #41d4f4;
                }
             }
             :nth-of-type(7) {
                position: absolute;
-               left: 120px;
+               left: 144px;
                &::before {
                   background: #4153f4;
                }
             }
             :nth-of-type(8) {
                position: absolute;
-               left: 144px;
+               left: 168px;
                &::before {
                   background: #6541f4;
                }
             }
             :nth-of-type(9) {
                position: absolute;
-               left: 168px;
+               left: 192px;
                &::before {
                   background: #b041f4;
                }
             }
             :nth-of-type(10) {
                position: absolute;
-               left: 192px;
+               left: 216px;
                &::before {
                   background: #c45297;
                }
             }
             :nth-of-type(11) {
                position: absolute;
-               left: 216px;
+               left: 240px;
                &::before {
                   background: #a14051;
                }
