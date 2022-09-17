@@ -1284,6 +1284,8 @@ body.admin .wrapper {
 body.admin main {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body.admin section {
@@ -1303,7 +1305,8 @@ body.admin section.active {
 
 body.admin .messages {
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body.admin .messages__cntr {
@@ -2232,7 +2235,6 @@ body.admin .messages__preview {
   }
 
   .orders__title {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;

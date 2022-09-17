@@ -6,6 +6,8 @@ body.admin {
    main {
       display: flex;
       flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
       @media (min-width: 769px) {
          flex-direction: row;
       }
@@ -30,7 +32,8 @@ body.admin {
    }
    .messages {
       position: relative;
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
 
       &__cntr {
          padding-left: percent(15, 375);
