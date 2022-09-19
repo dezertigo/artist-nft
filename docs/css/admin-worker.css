@@ -2441,6 +2441,7 @@ body.admin .messages__preview {
   }
 
   .orders__title {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
