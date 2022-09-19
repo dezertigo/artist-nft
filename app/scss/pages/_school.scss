@@ -674,10 +674,7 @@ body.school {
       }
       
       &__label {
-        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #1D1F21;
         font-weight: 700;
         border-radius: 9px;
         height: 100%;
@@ -688,14 +685,23 @@ body.school {
         @include fl(18, 26);
         position: absolute;
         cursor: pointer;
+        span {
+            background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
       }
       &__input {
         appearance: none;
       }
       &__input:checked + .form__label {
-        color: #1D1F21;
-        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
-        -webkit-text-fill-color: unset;
+          background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+          span {
+            color: #1D1F21;
+            -webkit-text-fill-color: unset;
+        }
       }
       .btn {
         max-width: 406px;

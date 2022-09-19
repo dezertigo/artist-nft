@@ -2068,10 +2068,7 @@ body.school .form textarea {
 }
 
 body.school .form__label {
-  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1D1F21;
   font-weight: 700;
   border-radius: 9px;
   height: 100%;
@@ -2085,6 +2082,14 @@ body.school .form__label {
   cursor: pointer;
 }
 
+body.school .form__label span {
+  background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 body.school .form__input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2092,8 +2097,11 @@ body.school .form__input {
 }
 
 body.school .form__input:checked + .form__label {
-  color: #1D1F21;
   background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+}
+
+body.school .form__input:checked + .form__label span {
+  color: #1D1F21;
   -webkit-text-fill-color: unset;
 }
 
